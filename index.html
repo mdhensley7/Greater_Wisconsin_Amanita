@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amanita Key Project</title>
+
+    <!-- Basic CSS embedded; you can move this to style.css later -->
+    <style>
+        :root {
+            --bg: #fafafa;
+            --fg: #222;
+            --accent: #5a6f4e; /* muted green */
+            --accent-light: #cdd6c3;
+            --max-width: 900px;
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--accent);
+            color: white;
+            padding: 1.2rem;
+        }
+
+        header h1 {
+            margin-bottom: 0.4rem;
+        }
+
+        nav {
+            margin-top: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.2rem;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Amanita Dichotomous Key</h1>
+        <p>A field-friendly interactive key for the genus <em>Amanita</em></p>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Key</a>
+            <a href="#">Species List</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Welcome</h2>
+            <p>
+                This site will eventually host a fully interactive dichotomous key to species of the 
+                genus <em>Amanita</em>, including subgenera *Amanita*, *Lepidella*, *Amanitina*, 
+                and others. The goal is to create an accessible, accurate, and open tool for mycologists, 
+                students, and enthusiasts.
+            </p>
+            <p>
+                For now, this homepage serves as the foundational structure for the project. More 
+                components and features will be added as development continues.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Project Goals</h2>
+            <ul>
+                <li>Develop a clear, reliable dichotomous key for North American and global *Amanita* species.</li>
+                <li>Provide accessible morphological explanations with diagrams and photos.</li>
+                <li>Allow interactive branching choices (y/n, trait options, etc.).</li>
+                <li>Link each terminal choice to species descriptions and ecology.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        Built with GitHub Pages • 
+        <a href="https://github.com/">View Source</a>
+    </footer>
+
+</body>
+</html>
