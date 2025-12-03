@@ -84,17 +84,15 @@
 
 <body>
 
-    <header>
-        <h1>Amanita Dichotomous Key</h1>
-        <p>A field-friendly interactive key for the genus <em>Amanita</em></p>
+    <div id="header-placeholder"></div>
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Key</a>
-            <a href="Pages/Species_Descriptions/index.html">Species List</a>
-            <a href="#">About</a>
-        </nav>
-    </header>
+    <script>
+        fetch("/Components/header.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("header-placeholder").innerHTML = html;
+            });
+    </script>
 
     <main class="container">
 
