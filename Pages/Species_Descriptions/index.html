@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amanita Species List</title>
+
+    <style>
+        :root {
+            --bg: #fafafa;
+            --fg: #222;
+            --accent: #5a6f4e;
+            --accent-light: #cdd6c3;
+            --max-width: 900px;
+            --radius: 8px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--accent);
+            color: white;
+            padding: 1.2rem;
+        }
+
+        header h1 {
+            margin-bottom: 0.4rem;
+        }
+
+        nav {
+            margin-top: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.2rem;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .species-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .species-list li {
+            margin: 0.4rem 0;
+        }
+
+        .species-list a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .species-list a:hover {
+            text-decoration: underline;
+        }
+
+        .alphabet-nav {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .alphabet-nav a {
+            margin-right: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .alphabet-nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Amanita Species List</h1>
+        <p>An alphabetical directory of species in the genus <em>Amanita</em></p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="key.html">Key</a>
+            <a href="species.html">Species List</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+
+            <h2>Browse by Alphabet</h2>
+
+            <!-- A–Z quick navigation -->
+            <div class="alphabet-nav">
+                <a href="#A">A</a>
+                <a href="#B">B</a>
+                <a href="#C">C</a>
+                <a href="#D">D</a>
+                <a href="#E">E</a>
+                <a href="#F">F</a>
+                <a href="#G">G</a>
+                <a href="#H">H</a>
+                <a href="#I">I</a>
+                <a href="#J">J</a>
+                <a href="#K">K</a>
+                <a href="#L">L</a>
+                <a href="#M">M</a>
+                <a href="#N">N</a>
+                <a href="#O">O</a>
+                <a href="#P">P</a>
+                <a href="#Q">Q</a>
+                <a href="#R">R</a>
+                <a href="#S">S</a>
+                <a href="#T">T</a>
+                <a href="#U">U</a>
+                <a href="#V">V</a>
+                <a href="#W">W</a>
+                <a href="#X">X</a>
+                <a href="#Y">Y</a>
+                <a href="#Z">Z</a>
+            </div>
+
+            <!-- Species list template -->
+            <h3 id="A">A</h3>
+            <ul class="species-list">
+                <li><a href="#">Amanita abrupta</a></li>
+                <li><a href="#">Amanita albocreata</a></li>
+                <li><a href="#">Amanita alboporpurata</a></li>
+                <li><a href="#">Amanita amerimuscaria</a></li>
+                <li><a href="#">Amanita aprica</a></li>
+            </ul>
+
+            <h3 id="B">B</h3>
+            <ul class="species-list">
+                <li><a href="#">Amanita basii</a></li>
+                <li><a href="#">Amanita bisporigera</a></li>
+                <li><a href="#">Amanita brunnescens</a></li>
+            </ul>
+
+            <h3 id="C">C</h3>
+            <ul class="species-list">
+                <li><a href="#">Amanita caesarea</a></li>
+                <li><a href="#">Amanita cinnamomea</a></li>
+                <li><a href="#">Amanita citrina</a></li>
+            </ul>
+
+            <!-- Continue A–Z as needed -->
+            <p style="margin-top: 2rem; color: #555; font-size: 0.9rem;">
+                Additional species will be added as the database is expanded.
+            </p>
+
+        </section>
+    </main>
+
+    <footer>
+        Built with GitHub Pages • 
+        <a href="https://github.com/">View Source</a>
+    </footer>
+
+</body>
+</html>
