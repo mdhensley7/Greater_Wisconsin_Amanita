@@ -67,6 +67,27 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.08);
             margin-bottom: 2rem;
         }
+        
+        .section-card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 1.6rem;
+            box-shadow: 0 14px 35px rgba(25, 50, 34, 0.08);
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(91, 118, 92, 0.1);
+        }
+
+        .section-card h2 {
+            margin-bottom: 0.9rem;
+            font-size: 1.45rem;
+            color: #274233;
+        }
+
+        .section-card p,
+        .section-card li {
+            margin-bottom: 0.9rem;
+            color: var(--muted);
+        }
 
         footer {
             text-align: center;
@@ -96,35 +117,30 @@
 
     <main class="container">
 
-        <section class="card">
-            <h2>Welcome</h2>
-            <p>
-                This site will eventually host a fully interactive dichotomous key to species of the 
-                genus <em>Amanita</em>, including subgenera *Amanita*, *Lepidella*, *Amanitina*, 
-                and others. The goal is to create an accessible, accurate, and open tool for mycologists, 
-                students, and enthusiasts.
-            </p>
-            <p>
-                For now, this homepage serves as the foundational structure for the project. More 
-                components and features will be added as development continues.
-            </p>
+        <section class="section-card">
+            <p class="eyebrow" style="color: var(--accent); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.82rem; margin-bottom: 0.75rem;">What is this?Where am I? Who are you?</p>
+            <h1 class="page-title">Greater Wisconsin Amanita</h1>
+            <p class="page-intro">Hello and welcome! This is the Greater Wisconsin Amanita Identification Tool, created by Mike Hensley and Jason Raiti. We built it to help mushroom enthusiasts move beyond guesses and explore Amanita species through the real traits mycologists use in the field.</p>
         </section>
 
-        <section class="card">
-            <h2>Project Goals</h2>
+
+        <section class="section-card">
+            <h2>How to Use the Application</h2>
+            <p>The site is organized to help you move from morphological trait-based search to local observations and confirmation based on rigorous scientific data from the Greater Wisconsin Amanita project.</p>
             <ul>
-                <li>Develop a clear, reliable dichotomous key for North American and global *Amanita* species.</li>
-                <li>Provide accessible morphological explanations with diagrams and photos.</li>
-                <li>Allow interactive branching choices (y/n, trait options, etc.).</li>
-                <li>Link each terminal choice to species descriptions and ecology.</li>
+                <li><strong>Identify!:</strong> Enter morphological traits to narrow species candidates.</li>
+                <li><strong>Cross Reference:</strong> Compare multiple Amanita species using previous observations for visual confirmation.</li>
+                <li><strong>Species List:</strong> Browse species descriptions and species details as the project grows and more data becomes available.</li>
             </ul>
+            <p>Start with the Identify! page and your morphological observations to find potential matches, then optionally use Cross Reference to confirm your identifications with nearby Wisconsin observations.</p>
         </section>
+        
 
     </main>
 
     <footer>
-        Built for the Greater Wisconsin Amanita project • 
-        <a href="https://github.com/">View Source</a>
+        Check out our code to make your own tool for your region and study system! • 
+        <a href="https://github.com/mdhensley7/Greater_Wisconsin_Amanita">View Source</a>
     </footer>
 
 </body>

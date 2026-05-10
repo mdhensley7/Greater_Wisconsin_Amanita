@@ -3,362 +3,48 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amanita Search - Amanita Key Project</title>
-
-    <!-- Basic CSS embedded; you can move this to style.css later -->
-    <style>
-        :root {
-            --bg: #fafafa;
-            --fg: #222;
-            --accent: #5a6f4e; /* muted green */
-            --accent-light: #cdd6c3;
-            --max-width: 900px;
-            --radius: 8px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--fg);
-            line-height: 1.6;
-        }
-
-        header {
-            background: var(--accent);
-            color: white;
-            padding: 1.2rem;
-        }
-
-        header h1 {
-            margin-bottom: 0.4rem;
-        }
-
-        nav {
-            margin-top: 0.5rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 1.2rem;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: var(--max-width);
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: var(--radius);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            margin-bottom: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        input {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: var(--radius);
-            font-size: 1rem;
-        }
-
-        h3 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-            font-size: 1.2rem;
-        }
-
-        button {
-            background: var(--accent);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius);
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #4a5f3e;
-        }
-
-        #results {
-            margin-top: 2rem;
-            padding: 1rem;
-            background: var(--accent-light);
-            border-radius: var(--radius);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: #555;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-    </style>
+    <title>Amanita Cap Search - Amanita Key Project</title>
+    <link rel="stylesheet" href="./css/search.css" />
 </head>
-
 <body>
-
     <div id="header-placeholder"></div>
 
-    <script>
-        fetch("../../Components/header.html")
-            .then(r => r.text())
-            .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
-            });
-    </script>
-
     <main class="container">
-
         <section class="card">
-            <h2>Morphological Search</h2>
-            <p>
-                Enter the morphological features of your Amanita specimen to search for possible species matches.
-                This tool will query the database once the backend is implemented.
-            </p>
+            <div class="section-title">
+                <div>
+                    <h2>Morphological Search</h2>
+                    <p class="page-intro">
+                        Search Amanita records by visible cap traits. Start with the obvious features,
+                        then open “More cap traits” if you want to narrow the search.
+                    </p>
+                </div>
+            </div>
 
             <form id="search-form">
                 <h3>Cap</h3>
-                <div class="form-group">
-                    <label for="cap-center-color">Center Color:</label>
-                    <select id="cap-center-color">
-                        <option value="">Select...</option>
-                        <option value="white">White</option>
-                        <option value="cream">Cream</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="orange">Orange</option>
-                        <option value="red">Red</option>
-                        <option value="brown">Brown</option>
-                        <option value="gray">Gray</option>
-                        <option value="green">Green</option>
-                        <option value="purple">Purple</option>
-                    </select>
-                </div>
+                <div id="major-fields"></div>
 
-                <div class="form-group">
-                    <label for="cap-margin-color">Margin Color:</label>
-                    <select id="cap-margin-color">
-                        <option value="">Select...</option>
-                        <option value="white">White</option>
-                        <option value="cream">Cream</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="orange">Orange</option>
-                        <option value="red">Red</option>
-                        <option value="brown">Brown</option>
-                        <option value="gray">Gray</option>
-                        <option value="green">Green</option>
-                        <option value="purple">Purple</option>
-                    </select>
-                </div>
+                <details class="more-traits" id="more-cap-traits">
+                    <summary>More cap traits</summary>
+                    <div id="more-fields"></div>
+                </details>
 
-                <div class="form-group">
-                    <label for="cap-striate">Striate:</label>
-                    <select id="cap-striate">
-                        <option value="">Select...</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
+                <div class="button-row">
+                    <button type="submit">Search</button>
+                    <button class="secondary" type="reset">Clear</button>
                 </div>
-
-                <div class="form-group">
-                    <label for="cap-universal-veil">Universal Veil:</label>
-                    <select id="cap-universal-veil">
-                        <option value="">Select...</option>
-                        <option value="present">Present</option>
-                        <option value="absent">Absent</option>
-                        <option value="warts">Warts</option>
-                        <option value="patches">Patches</option>
-                    </select>
-                </div>
-
-                <h3>Volva</h3>
-                <div class="form-group">
-                    <label for="volva-form">Form:</label>
-                    <select id="volva-form">
-                        <option value="">Select...</option>
-                        <option value="saccate">Saccate</option>
-                        <option value="free">Free</option>
-                        <option value="rim">Rim</option>
-                        <option value="patchy">Patchy</option>
-                        <option value="absent">Absent</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="volva-texture">Texture:</label>
-                    <select id="volva-texture">
-                        <option value="">Select...</option>
-                        <option value="smooth">Smooth</option>
-                        <option value="scaly">Scaly</option>
-                        <option value="fibrous">Fibrous</option>
-                        <option value="membranous">Membranous</option>
-                    </select>
-                </div>
-
-                <h3>Stipe</h3>
-                <div class="form-group">
-                    <label for="stipe-length">Length (mm):</label>
-                    <input type="number" id="stipe-length" min="0" step="1">
-                </div>
-
-                <div class="form-group">
-                    <label for="stipe-width">Width (mm):</label>
-                    <input type="number" id="stipe-width" min="0" step="1">
-                </div>
-
-                <div class="form-group">
-                    <label for="stipe-color">Color:</label>
-                    <select id="stipe-color">
-                        <option value="">Select...</option>
-                        <option value="white">White</option>
-                        <option value="cream">Cream</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="orange">Orange</option>
-                        <option value="red">Red</option>
-                        <option value="brown">Brown</option>
-                        <option value="gray">Gray</option>
-                        <option value="green">Green</option>
-                        <option value="purple">Purple</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="stipe-decoration">Decoration:</label>
-                    <select id="stipe-decoration">
-                        <option value="">Select...</option>
-                        <option value="smooth">Smooth</option>
-                        <option value="scaly">Scaly</option>
-                        <option value="zonate">Zonate</option>
-                        <option value="fibrous">Fibrous</option>
-                        <option value="floccose">Floccose</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="stipe-annulus">Annulus:</label>
-                    <select id="stipe-annulus">
-                        <option value="">Select...</option>
-                        <option value="present">Present</option>
-                        <option value="absent">Absent</option>
-                        <option value="superior">Superior</option>
-                        <option value="median">Median</option>
-                        <option value="inferior">Inferior</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="stipe-basal-bulb">Basal Bulb:</label>
-                    <select id="stipe-basal-bulb">
-                        <option value="">Select...</option>
-                        <option value="present">Present</option>
-                        <option value="absent">Absent</option>
-                        <option value="bulbous">Bulbous</option>
-                        <option value="tapering">Tapering</option>
-                        <option value="marginate">Marginate</option>
-                    </select>
-                </div>
-
-                <h3>Tree Host</h3>
-                <div class="form-group">
-                    <label for="tree-host">Host:</label>
-                    <select id="tree-host">
-                        <option value="">Select...</option>
-                        <option value="oak">Oak</option>
-                        <option value="pine">Pine</option>
-                        <option value="birch">Birch</option>
-                        <option value="spruce">Spruce</option>
-                        <option value="fir">Fir</option>
-                        <option value="hardwood">Hardwood</option>
-                        <option value="conifer">Conifer</option>
-                        <option value="deciduous">Deciduous</option>
-                        <option value="evergreen">Evergreen</option>
-                    </select>
-                </div>
-
-                <button type="submit">Search</button>
             </form>
 
             <div id="results"></div>
         </section>
-
     </main>
 
     <footer>
-        Built with GitHub Pages • 
+        Built with GitHub Pages •
         <a href="https://github.com/">View Source</a>
     </footer>
 
-    <script>
-        document.getElementById('search-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const capCenterColor = document.getElementById('cap-center-color').value;
-            const capMarginColor = document.getElementById('cap-margin-color').value;
-            const capStriate = document.getElementById('cap-striate').value;
-            const capUniversalVeil = document.getElementById('cap-universal-veil').value;
-            const volvaForm = document.getElementById('volva-form').value;
-            const volvaTexture = document.getElementById('volva-texture').value;
-            const stipeLength = document.getElementById('stipe-length').value;
-            const stipeWidth = document.getElementById('stipe-width').value;
-            const stipeColor = document.getElementById('stipe-color').value;
-            const stipeDecoration = document.getElementById('stipe-decoration').value;
-            const stipeAnnulus = document.getElementById('stipe-annulus').value;
-            const stipeBasalBulb = document.getElementById('stipe-basal-bulb').value;
-            const treeHost = document.getElementById('tree-host').value;
-
-            const selectedTraits = [];
-            if (capCenterColor) selectedTraits.push(`Cap Center Color: ${capCenterColor}`);
-            if (capMarginColor) selectedTraits.push(`Cap Margin Color: ${capMarginColor}`);
-            if (capStriate) selectedTraits.push(`Cap Striate: ${capStriate}`);
-            if (capUniversalVeil) selectedTraits.push(`Cap Universal Veil: ${capUniversalVeil}`);
-            if (volvaForm) selectedTraits.push(`Volva Form: ${volvaForm}`);
-            if (volvaTexture) selectedTraits.push(`Volva Texture: ${volvaTexture}`);
-            if (stipeLength) selectedTraits.push(`Stipe Length: ${stipeLength} mm`);
-            if (stipeWidth) selectedTraits.push(`Stipe Width: ${stipeWidth} mm`);
-            if (stipeColor) selectedTraits.push(`Stipe Color: ${stipeColor}`);
-            if (stipeDecoration) selectedTraits.push(`Stipe Decoration: ${stipeDecoration}`);
-            if (stipeAnnulus) selectedTraits.push(`Stipe Annulus: ${stipeAnnulus}`);
-            if (stipeBasalBulb) selectedTraits.push(`Stipe Basal Bulb: ${stipeBasalBulb}`);
-            if (treeHost) selectedTraits.push(`Tree Host: ${treeHost}`);
-
-            const message = selectedTraits.length > 0 
-                ? `Backend query coming soon. Selected traits: ${selectedTraits.join(', ')}`
-                : 'Please select at least one trait to search.';
-
-            document.getElementById('results').innerHTML = `<p>${message}</p>`;
-        });
-    </script>
-
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>

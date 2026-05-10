@@ -68,6 +68,38 @@
             padding: 2rem;
         }
 
+        .species-input {
+            margin-bottom: 1.5rem;
+        }
+
+        .species-input label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .species-input input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: var(--radius);
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .species-input button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+        }
+
+        .species-input button:hover {
+            background: #4a5f3e;
+        }
+
         .species-section {
             margin-bottom: 3rem;
             border: 1px solid var(--accent-light);
@@ -135,6 +167,14 @@
         <h1>Amanita Cross Reference</h1>
         <p>Compare iNaturalist data for multiple Amanita species.</p>
 
+        <div class="species-input">
+            <form id="species-form">
+                <label for="species-input">Species to compare (comma-separated):</label>
+                <input type="text" id="species-input" value="amanita bisporigera, amanita citrina" />
+                <button type="submit">Load Species</button>
+            </form>
+        </div>
+
         <div id="map-container" class="map-container"></div>
 
         <div class="filters" id="filters"></div>
@@ -158,15 +198,34 @@
                 document.getElementById('header-placeholder').innerHTML = data;
             });
 
-        // Get species from URL
+        function parseSpeciesList(value) {
+            return value
+                .split(',')
+                .map(s => s.trim())
+                .filter(Boolean);
+        }
+
+        const defaultSpecies = ['amanita bisporigera', 'amanita citrina'];
         const urlParams = new URLSearchParams(window.location.search);
         const speciesParam = urlParams.get('species');
-        if (speciesParam) {
-            const speciesNames = speciesParam.split(',').map(s => s.trim());
+        const speciesInput = document.getElementById('species-input');
+        const speciesForm = document.getElementById('species-form');
+
+        const initialSpecies = speciesParam ? parseSpeciesList(speciesParam) : defaultSpecies;
+        speciesInput.value = initialSpecies.join(', ');
+        fetchSpeciesData(initialSpecies);
+
+        speciesForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const speciesNames = parseSpeciesList(speciesInput.value);
+            if (speciesNames.length === 0) {
+                document.getElementById('content').innerHTML = '<p>Please enter at least one species name.</p>';
+                return;
+            }
+            const encodedSpecies = encodeURIComponent(speciesNames.join(','));
+            history.replaceState(null, '', `?species=${encodedSpecies}`);
             fetchSpeciesData(speciesNames);
-        } else {
-            document.getElementById('content').innerHTML = '<p>No species specified. Use ?species=Name1,Name2 in the URL.</p>';
-        }
+        });
     </script>
 </body>
 </html>
