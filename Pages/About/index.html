@@ -92,6 +92,20 @@
             padding: 1.2rem;
             border-radius: 14px;
             border: 1px solid rgba(85, 124, 82, 0.12);
+            display: grid;
+            gap: 0.9rem;
+            text-align: center;
+        }
+
+        .developer-card-image {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 0.75rem;
+            border: 2px solid rgba(85, 124, 82, 0.18);
+            box-shadow: 0 10px 25px rgba(25, 50, 34, 0.08);
         }
 
         .developer-card h3 {
@@ -130,36 +144,21 @@
         <section class="section-card">
             <p class="eyebrow" style="color: var(--accent); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.82rem; margin-bottom: 0.75rem;">About the Project</p>
             <h1 class="page-title">Greater Wisconsin Amanita</h1>
-            <p class="page-intro">This project is designed to help naturalists, students, and mushroom enthusiasts identify Amanita species with a focus on Wisconsin and nearby regions. It combines structured search, local observation data, and species reference content in a simple, field-friendly interface.</p>
-        </section>
-
-        <section class="section-card">
-            <h2>How to Use the Application</h2>
-            <p>The site is organized to help you move from trait-based search to local observations and species details.</p>
-            <ul>
-                <li><strong>Search:</strong> Enter morphological traits to narrow species candidates based on cap color, volva, stipe, and host tree.</li>
-                <li><strong>Cross Reference:</strong> Compare multiple Amanita species using research-grade iNaturalist observations and local mapping data.</li>
-                <li><strong>Species List:</strong> Browse species descriptions and species details as the directory grows.</li>
-            </ul>
-            <p>Start with the Search page, then use Cross Reference to compare species and verify identification using nearby Wisconsin observations.</p>
-        </section>
-
-        <section class="section-card">
-            <h2>Project Context</h2>
-            <p>Wisconsin hosts a diverse and important suite of Amanita species, some of which are toxic and others edible. This project is meant to be a trusted reference for those working in the field and for anyone who wants to learn more about local Amanita diversity.</p>
-            <p>It is built to be approachable, but also grounded in scientific observation data from iNaturalist and local mycological knowledge.</p>
+            <p class="page-intro">Hello and welcome! This project is designed to help naturalists, students, and mushroom enthusiasts identify Amanita species with a focus on Wisconsin and nearby regions. It combines morphological search, local observation data, and Mike's biodiversity research. This project is meant to make identifying Amanita species in the field easier as an augmentation to traditional field guides and computer vision based tools.</p>
         </section>
 
         <section class="section-card">
             <h2>Developers</h2>
             <div class="developer-grid">
                 <div class="developer-card">
+                    <img class="developer-card-image" src="michael_headshot.jpg" alt="Mike Hensley headshot">
                     <h3>Mike Hensley</h3>
-                    <p>Mike is project lead. He is focused on project direction, describing Wisconsin Amanita species, and making identification tools easier to use for foragers, students, and educators.</p>
+                    <p>Mike is our intrepid project lead. He is focused on project direction, describing Wisconsin Amanita species, and making identification tools easier to use for foragers, students, and educators. When not working on the project, he enjoys mountain biking and crushing beers.</p>
                 </div>
                 <div class="developer-card">
+                    <img class="developer-card-image" src="jason_headshot.png" alt="Jason Raiti headshot">
                     <h3>Jason Raiti</h3>
-                    <p>Jason is Mike's buddy and is responsible for building the website and various integrations. When not coding, he's likely enjoying the outdoors or playing guitar for Mike to help me maintain sanity while working on the dataset.</p>
+                    <p>Jason is Mike's buddy and is responsible for building the website and all the various integrations. When not coding, he's likely enjoying the outdoors or playing guitar for Mike to help him maintain sanity while working on the dataset.</p>
                 </div>
             </div>
         </section>
@@ -169,14 +168,23 @@
             <div class="contact-list">
                 <div class="contact-item">
                     <strong>Project inquiries</strong>
-                    <p>For questions, suggestions, or collaboration, please reach out using the project's repository or email support at <a href="mailto:mhensley7@gmail.com">mhensley7@gmail.com</a>.</p>
-                </div>
-                <div class="contact-item">
-                    <strong>Stay involved</strong>
-                    <p>We welcome feedback on species coverage, trait search behavior, and interface improvements. If you have local Amanita expertise or observation data, please let us know.</p>
+                    <p>For questions, suggestions, or collaboration, please reach out using the project's repository or email us at <a href="mailto:mhensley7@gmail.com">mhensley7@gmail.com</a>.</p>
                 </div>
             </div>
         </section>
+
+        <section class="section-card">
+            <h2>How to Use the Application</h2>
+            <p>The site is organized to help you move from morphological trait-based search to local observations and confirmation based on rigorous scientific data from the Greater Wisconsin Amanita project.</p>
+            <ul>
+                <li><strong>Search:</strong> Enter morphological traits to narrow species candidates.</li>
+                <li><strong>Cross Reference:</strong> Compare multiple Amanita species using previous observations for visual confirmation.</li>
+                <li><strong>Species List:</strong> Browse species descriptions and species details as the project grows and more data becomes available.</li>
+            </ul>
+            <p>Start with the Search page and your morphological observations to find potential matches, then use Cross Reference to confirm your identifications with nearby Wisconsin observations.</p>
+        </section>
+        
+        
     </main>
 
     <script>
