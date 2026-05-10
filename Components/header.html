@@ -1,47 +1,104 @@
 <!-- BEGIN HEADER COMPONENT -->
 <style>
     .site-header {
-        background: #5a6f4e;
+        background: linear-gradient(135deg, #2f4f2f 0%, #486848 100%);
         color: white;
-        padding: 1.2rem;
-        margin-bottom: 2rem;
+        padding: 1.5rem 1.5rem 1.2rem;
+        margin-bottom: 1.5rem;
         font-family: system-ui, sans-serif;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .header-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .brand-group {
+        max-width: 720px;
+    }
+
+    .eyebrow {
+        margin: 0 0 0.35rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        opacity: 0.85;
     }
 
     .site-header h1 {
-        margin-bottom: 0.4rem;
+        margin: 0;
+        font-size: 2.1rem;
+        line-height: 1.1;
     }
 
-    .site-header p {
-        margin: 0;
-        opacity: 0.95;
+    .site-subtitle {
+        margin: 0.65rem 0 0;
+        max-width: 680px;
+        opacity: 0.92;
+        font-size: 1rem;
+        line-height: 1.7;
     }
 
     .site-nav {
-        margin-top: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1rem;
     }
 
     .site-nav a {
+        display: inline-flex;
+        align-items: center;
         color: white;
         text-decoration: none;
-        margin-right: 1.2rem;
+        padding: 0.65rem 1rem;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
         font-weight: 600;
+        transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .site-nav a:hover {
-        text-decoration: underline;
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+        background: rgba(255, 255, 255, 0.18);
+        transform: translateY(-1px);
+    }
+
+    .site-nav a.active {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 720px) {
+        .site-header {
+            padding: 1.2rem 1rem 1rem;
+        }
+
+        .site-nav {
+            width: 100%;
+            justify-content: center;
+        }
     }
 </style>
 
 <header class="site-header">
-    <h1>Amanita Dichotomous Key</h1>
-    <p>A field-friendly identification tool for the genus <em>Amanita</em></p>
+    <div class="header-top">
+        <div class="brand-group">
+            <p class="eyebrow">Greater Wisconsin Amanita</p>
+            <h1>Amanita Dichotomous Key</h1>
+            <p class="site-subtitle">A field-friendly identification tool for the genus <em>Amanita</em> with local Wisconsin focus, built to support accurate mushroom identification and species research.</p>
+        </div>
+    </div>
 
     <nav class="site-nav">
         <a href="/index.html">Home</a>
-        <a href="#">Key</a>
+        <a href="/Pages/Search/index.html">Search</a>
+        <a href="/Pages/Cross_Reference/index.html">Cross Reference</a>
         <a href="/Pages/Species_Descriptions/index.html">Species List</a>
-        <a href="#">About</a>
+        <a href="/Pages/About/index.html">About</a>
     </nav>
 </header>
 <!-- END HEADER COMPONENT -->
