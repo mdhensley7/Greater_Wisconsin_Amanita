@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amanita Search - Amanita Key Project</title>
+    <title>Amanita Cap Search - Amanita Key Project</title>
 
-    <!-- Basic CSS embedded; you can move this to style.css later -->
     <style>
         :root {
             --bg: #fafafa;
-            --fg: #222;
-            --accent: #5a6f4e; /* muted green */
-            --accent-light: #cdd6c3;
-            --max-width: 900px;
-            --radius: 8px;
+            --card: #ffffff;
+            --fg: #222222;
+            --muted: #666666;
+            --border: #d8d8d8;
+            --accent: #5a6f4e;
+            --accent-dark: #4a5f3e;
+            --accent-light: #eef3e8;
+            --danger-light: #fff6e6;
+            --max-width: 920px;
+            --radius: 12px;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
         }
 
         * {
@@ -23,35 +28,10 @@
         }
 
         body {
-            font-family: system-ui, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background: var(--bg);
             color: var(--fg);
             line-height: 1.6;
-        }
-
-        header {
-            background: var(--accent);
-            color: white;
-            padding: 1.2rem;
-        }
-
-        header h1 {
-            margin-bottom: 0.4rem;
-        }
-
-        nav {
-            margin-top: 0.5rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 1.2rem;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
         }
 
         .container {
@@ -61,57 +41,255 @@
         }
 
         .card {
-            background: white;
-            padding: 1.5rem;
+            background: var(--card);
+            padding: 1.4rem;
             border-radius: var(--radius);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.4rem;
         }
 
-        .form-group {
-            margin-bottom: 1rem;
+        .page-intro {
+            color: var(--muted);
+            max-width: 70ch;
+            margin-top: 0.35rem;
         }
 
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+        .section-title {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
         }
 
-        input {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: var(--radius);
-            font-size: 1rem;
+        h2, h3, h4 {
+            color: var(--fg);
+            line-height: 1.25;
         }
 
         h3 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            margin-top: 1.25rem;
+            margin-bottom: 0.75rem;
             color: var(--accent);
             font-size: 1.2rem;
+        }
+
+        h4 {
+            margin-bottom: 0.4rem;
+            font-size: 1rem;
+        }
+
+        .field-group {
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .field-group:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .field-label-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        label,
+        .field-label {
+            display: block;
+            font-weight: 700;
+        }
+
+        .field-note {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .subfield {
+            margin-top: 0.85rem;
+        }
+
+        .subfield-title {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            color: #333;
+        }
+
+        .chip-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .chip input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .chip span {
+            display: inline-flex;
+            align-items: center;
+            min-height: 2.25rem;
+            padding: 0.45rem 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: white;
+            color: var(--fg);
+            cursor: pointer;
+            user-select: none;
+            transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+        }
+
+        .chip input:checked + span {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+
+        .chip input:focus-visible + span {
+            outline: 3px solid var(--accent-light);
+            outline-offset: 2px;
+        }
+
+        select,
+        input[type="number"] {
+            width: 100%;
+            padding: 0.65rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            background: white;
+        }
+
+        .inline-number-row {
+            display: grid;
+            grid-template-columns: minmax(120px, 1fr) auto;
+            align-items: center;
+            gap: 0.75rem;
+            max-width: 420px;
+        }
+
+        .checkbox-row {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            color: var(--fg);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .radio-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        details.field-help {
+            margin-top: 0.45rem;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        details.field-help summary {
+            width: fit-content;
+            cursor: pointer;
+            color: var(--accent-dark);
+            font-weight: 700;
+        }
+
+        details.more-traits {
+            background: var(--accent-light);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        details.more-traits > summary {
+            cursor: pointer;
+            font-weight: 800;
+            color: var(--accent-dark);
+        }
+
+        .conditional-panel {
+            display: none;
+            margin-top: 0.85rem;
+            padding: 0.85rem;
+            border-radius: var(--radius);
+            background: #f7f9f4;
+            border: 1px solid #dbe4d0;
+        }
+
+        .conditional-panel.is-visible {
+            display: block;
+        }
+
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.2rem;
         }
 
         button {
             background: var(--accent);
             color: white;
             border: none;
-            padding: 0.75rem 1.5rem;
+            padding: 0.8rem 1.25rem;
             border-radius: var(--radius);
             font-size: 1rem;
+            font-weight: 700;
             cursor: pointer;
         }
 
         button:hover {
-            background: #4a5f3e;
+            background: var(--accent-dark);
+        }
+
+        button.secondary {
+            background: #eeeeee;
+            color: #222222;
+        }
+
+        button.secondary:hover {
+            background: #e0e0e0;
         }
 
         #results {
-            margin-top: 2rem;
+            margin-top: 1.4rem;
             padding: 1rem;
             background: var(--accent-light);
             border-radius: var(--radius);
+        }
+
+        #results:empty {
+            display: none;
+        }
+
+        .query-preview {
+            white-space: pre-wrap;
+            overflow-x: auto;
+            background: #1f241c;
+            color: #f3f7ef;
+            padding: 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+        }
+
+        .warning-box {
+            background: var(--danger-light);
+            border: 1px solid #f1d19a;
+            border-radius: var(--radius);
+            padding: 0.85rem;
+            color: #5b4217;
+            margin-top: 1rem;
         }
 
         footer {
@@ -125,240 +303,617 @@
             color: var(--accent);
             text-decoration: none;
         }
+
+        @media (max-width: 640px) {
+            .container {
+                margin-top: 1rem;
+            }
+
+            .card {
+                padding: 1rem;
+            }
+
+            .inline-number-row {
+                grid-template-columns: 1fr;
+            }
+
+            .chip span {
+                min-height: 2.4rem;
+                padding: 0.5rem 0.7rem;
+            }
+        }
     </style>
 </head>
 
 <body>
-
     <div id="header-placeholder"></div>
 
     <script>
         fetch("../../Components/header.html")
-            .then(r => r.text())
+            .then(response => response.ok ? response.text() : "")
             .then(html => {
                 document.getElementById("header-placeholder").innerHTML = html;
+            })
+            .catch(() => {
+                // Header is optional. The page still works if the shared component fails to load.
             });
     </script>
 
     <main class="container">
-
         <section class="card">
-            <h2>Morphological Search and Identification</h2>
-            <p>
-                Enter the morphological features of your Amanita specimen to search for possible species matches.
-                This tool will query a database of collections from the Greater Wisconsin Amanita biodiversity survey.
-            </p>
+            <div class="section-title">
+                <div>
+                    <h2>Morphological Search</h2>
+                    <p class="page-intro">
+                        Search Amanita records by visible cap traits. Start with the obvious features,
+                        then open “More cap traits” if you want to narrow the search.
+                    </p>
+                </div>
+            </div>
 
             <form id="search-form">
                 <h3>Cap</h3>
-                <div class="form-group">
-                    <label for="cap-center-color">Center Color:</label>
-                    <select id="cap-center-color">
-                        <option value="">Select...</option>
-                        <option value="white">White</option>
-                        <option value="cream">Cream</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="orange">Orange</option>
-                        <option value="red">Red</option>
-                        <option value="brown">Brown</option>
-                        <option value="gray">Gray</option>
-                        <option value="green">Green</option>
-                        <option value="purple">Purple</option>
+
+                <div class="field-group" id="cap-color-field">
+                    <div class="field-label-row">
+                        <span class="field-label">Cap color</span>
+                    </div>
+                    <p class="field-note">
+                        Select as many color words as seem reasonable. The search will cast a wide net.
+                    </p>
+
+                    <div class="subfield">
+                        <span class="subfield-title">Center color</span>
+                        <div class="chip-grid" id="center-color-chips"></div>
+                    </div>
+
+                    <div class="subfield">
+                        <span class="subfield-title">Center color modifiers</span>
+                        <div class="chip-grid" id="center-modifier-chips"></div>
+                    </div>
+
+                    <div class="subfield">
+                        <label class="checkbox-row" for="use-margin-color">
+                            <input type="checkbox" id="use-margin-color" />
+                            Add separate margin color
+                        </label>
+                    </div>
+
+                    <div class="conditional-panel" id="margin-color-panel">
+                        <div class="subfield">
+                            <span class="subfield-title">Margin color</span>
+                            <div class="chip-grid" id="margin-color-chips"></div>
+                        </div>
+
+                        <div class="subfield">
+                            <span class="subfield-title">Margin color modifiers</span>
+                            <div class="chip-grid" id="margin-modifier-chips"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="pileus-shape">Pileus shape</label>
+                    <p class="field-note">Select the closest overall cap shape. Skip this if the mushroom is old or distorted.</p>
+                    <select id="pileus-shape" name="shape">
+                        <option value="">Any / not sure</option>
+                        <option value="applanate">Applanate</option>
+                        <option value="campanulate">Campanulate</option>
+                        <option value="concave">Concave</option>
+                        <option value="convex">Convex</option>
+                        <option value="plano-concave">Plano-concave</option>
+                        <option value="plano-convex">Plano-convex</option>
                     </select>
+                    <details class="field-help">
+                        <summary>Shape terms</summary>
+                        <p>
+                            Convex means rounded outward. Plano-convex means mostly flat but still rounded.
+                            Applanate means flat. Campanulate means bell-shaped.
+                        </p>
+                    </details>
                 </div>
 
-                <div class="form-group">
-                    <label for="cap-margin-color">Margin Color:</label>
-                    <select id="cap-margin-color">
-                        <option value="">Select...</option>
-                        <option value="white">White</option>
-                        <option value="cream">Cream</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="orange">Orange</option>
-                        <option value="red">Red</option>
-                        <option value="brown">Brown</option>
-                        <option value="gray">Gray</option>
-                        <option value="green">Green</option>
-                        <option value="purple">Purple</option>
-                    </select>
+                <div class="field-group">
+                    <span class="field-label">Striations</span>
+                    <p class="field-note">Look for fine lines or grooves near the cap margin.</p>
+                    <div class="radio-row" id="striations-radio"></div>
+                    <details class="field-help">
+                        <summary>What are striations?</summary>
+                        <p>
+                            Striations are fine radial lines at the cap margin, often caused by the gills showing through thin cap tissue.
+                        </p>
+                    </details>
                 </div>
 
-                <div class="form-group">
-                    <label for="cap-striate">Striate:</label>
-                    <select id="cap-striate">
-                        <option value="">Select...</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
+                <div class="field-group">
+                    <span class="field-label">Universal veil remnants on cap</span>
+                    <p class="field-note">Look for warts, patches, powder, or other veil material on the cap surface.</p>
+                    <div class="radio-row" id="universal-veil-radio"></div>
+                    <details class="field-help">
+                        <summary>What is the universal veil?</summary>
+                        <p>
+                            The universal veil is tissue that encloses young Amanita mushrooms. Remnants may remain as warts or patches on the cap.
+                        </p>
+                    </details>
                 </div>
 
-                <div class="form-group">
-                    <label for="cap-universal-veil">Universal Veil:</label>
-                    <select id="cap-universal-veil">
-                        <option value="">Select...</option>
-                        <option value="present">Present</option>
-                        <option value="absent">Absent</option>
-                        <option value="warts">Warts</option>
-                        <option value="patches">Patches</option>
-                    </select>
-                </div>
+                <details class="more-traits" id="more-cap-traits">
+                    <summary>More cap traits</summary>
 
-                <h3>Volva</h3>
-                <div class="form-group">
-                    <label for="volva-form">Form:</label>
-                    <select id="volva-form">
-                        <option value="">Select...</option>
-                        <option value="saccate">Saccate</option>
-                        <option value="free">Free</option>
-                        <option value="rim">Rim</option>
-                        <option value="patchy">Patchy</option>
-                        <option value="absent">Absent</option>
-                    </select>
-                </div>
+                    <div class="field-group">
+                        <label for="diameter-mm">Pileus diameter</label>
+                        <p class="field-note">Enter the cap diameter in millimeters.</p>
+                        <div class="inline-number-row">
+                            <input type="number" id="diameter-mm" min="0" step="1" inputmode="numeric" placeholder="e.g., 55" />
+                            <label class="checkbox-row" for="diameter-approximate">
+                                <input type="checkbox" id="diameter-approximate" />
+                                Approximate
+                            </label>
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="volva-texture">Texture:</label>
-                    <select id="volva-texture">
-                        <option value="">Select...</option>
-                        <option value="smooth">Smooth</option>
-                        <option value="scaly">Scaly</option>
-                        <option value="fibrous">Fibrous</option>
-                        <option value="membranous">Membranous</option>
-                    </select>
-                </div>
+                    <div class="field-group">
+                        <span class="field-label">Surface texture</span>
+                        <p class="field-note">Choose one or more texture words if they seem clear.</p>
+                        <div class="chip-grid" id="surface-texture-chips"></div>
+                    </div>
 
-                <h3>Stipe</h3>
-                <div class="form-group">
-                    <label for="stipe-length">Length (mm):</label>
-                    <input type="number" id="stipe-length" min="0" step="1">
-                </div>
+                    <div class="field-group">
+                        <label for="umbonate">Umbonate</label>
+                        <select id="umbonate" name="umbonate">
+                            <option value="">Any / not sure</option>
+                            <option value="umbonate">Umbonate</option>
+                            <option value="minutely umbonate">Minutely umbonate</option>
+                            <option value="not umbonate">Not umbonate</option>
+                        </select>
+                        <details class="field-help">
+                            <summary>What does umbonate mean?</summary>
+                            <p>Umbonate means the cap has a central bump or knob.</p>
+                        </details>
+                    </div>
 
-                <div class="form-group">
-                    <label for="stipe-width">Width (mm):</label>
-                    <input type="number" id="stipe-width" min="0" step="1">
-                </div>
+                    <div class="field-group" id="striation-length-group">
+                        <label for="striation-length-mm">Striation length</label>
+                        <p class="field-note">Optional. Enter the approximate length of marginal striations in millimeters.</p>
+                        <div class="inline-number-row">
+                            <input type="number" id="striation-length-mm" min="0" step="1" inputmode="numeric" placeholder="e.g., 8" />
+                            <label class="checkbox-row" for="striation-length-approximate">
+                                <input type="checkbox" id="striation-length-approximate" />
+                                Approximate
+                            </label>
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="stipe-color">Color:</label>
-                    <select id="stipe-color">
-                        <option value="">Select...</option>
-                        <option value="white">White</option>
-                        <option value="cream">Cream</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="orange">Orange</option>
-                        <option value="red">Red</option>
-                        <option value="brown">Brown</option>
-                        <option value="gray">Gray</option>
-                        <option value="green">Green</option>
-                        <option value="purple">Purple</option>
-                    </select>
-                </div>
+                    <div class="field-group">
+                        <span class="field-label">Staining</span>
+                        <p class="field-note">Use this only if you observed staining or clearly saw no staining.</p>
+                        <div class="radio-row" id="staining-radio"></div>
+                        <div class="conditional-panel" id="staining-color-panel">
+                            <div class="subfield">
+                                <span class="subfield-title">Staining color</span>
+                                <div class="chip-grid" id="staining-color-chips"></div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
 
-                <div class="form-group">
-                    <label for="stipe-decoration">Decoration:</label>
-                    <select id="stipe-decoration">
-                        <option value="">Select...</option>
-                        <option value="smooth">Smooth</option>
-                        <option value="scaly">Scaly</option>
-                        <option value="zonate">Zonate</option>
-                        <option value="fibrous">Fibrous</option>
-                        <option value="floccose">Floccose</option>
-                    </select>
+                <div class="button-row">
+                    <button type="submit">Search</button>
+                    <button class="secondary" type="reset">Clear</button>
                 </div>
-
-                <div class="form-group">
-                    <label for="stipe-annulus">Annulus:</label>
-                    <select id="stipe-annulus">
-                        <option value="">Select...</option>
-                        <option value="present">Present</option>
-                        <option value="absent">Absent</option>
-                        <option value="superior">Superior</option>
-                        <option value="median">Median</option>
-                        <option value="inferior">Inferior</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="stipe-basal-bulb">Basal Bulb:</label>
-                    <select id="stipe-basal-bulb">
-                        <option value="">Select...</option>
-                        <option value="present">Present</option>
-                        <option value="absent">Absent</option>
-                        <option value="bulbous">Bulbous</option>
-                        <option value="tapering">Tapering</option>
-                        <option value="marginate">Marginate</option>
-                    </select>
-                </div>
-
-                <h3>Tree Host</h3>
-                <div class="form-group">
-                    <label for="tree-host">Host:</label>
-                    <select id="tree-host">
-                        <option value="">Select...</option>
-                        <option value="oak">Oak</option>
-                        <option value="pine">Pine</option>
-                        <option value="birch">Birch</option>
-                        <option value="spruce">Spruce</option>
-                        <option value="fir">Fir</option>
-                        <option value="hardwood">Hardwood</option>
-                        <option value="conifer">Conifer</option>
-                        <option value="deciduous">Deciduous</option>
-                        <option value="evergreen">Evergreen</option>
-                    </select>
-                </div>
-
-                <button type="submit">Search</button>
             </form>
 
             <div id="results"></div>
         </section>
-
     </main>
 
     <footer>
-        Built with GitHub Pages • 
+        Built with GitHub Pages •
         <a href="https://github.com/">View Source</a>
     </footer>
 
     <script>
-        document.getElementById('search-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const capCenterColor = document.getElementById('cap-center-color').value;
-            const capMarginColor = document.getElementById('cap-margin-color').value;
-            const capStriate = document.getElementById('cap-striate').value;
-            const capUniversalVeil = document.getElementById('cap-universal-veil').value;
-            const volvaForm = document.getElementById('volva-form').value;
-            const volvaTexture = document.getElementById('volva-texture').value;
-            const stipeLength = document.getElementById('stipe-length').value;
-            const stipeWidth = document.getElementById('stipe-width').value;
-            const stipeColor = document.getElementById('stipe-color').value;
-            const stipeDecoration = document.getElementById('stipe-decoration').value;
-            const stipeAnnulus = document.getElementById('stipe-annulus').value;
-            const stipeBasalBulb = document.getElementById('stipe-basal-bulb').value;
-            const treeHost = document.getElementById('tree-host').value;
+        // ---------------------------------------------------------------------
+        // Search configuration
+        // ---------------------------------------------------------------------
+        // The frontend uses friendly search tokens, but the database columns stay
+        // unchanged. Later, send the object from buildSearchPayload() to Supabase
+        // or to an API route that performs species-level matching.
 
-            const selectedTraits = [];
-            if (capCenterColor) selectedTraits.push(`Cap Center Color: ${capCenterColor}`);
-            if (capMarginColor) selectedTraits.push(`Cap Margin Color: ${capMarginColor}`);
-            if (capStriate) selectedTraits.push(`Cap Striate: ${capStriate}`);
-            if (capUniversalVeil) selectedTraits.push(`Cap Universal Veil: ${capUniversalVeil}`);
-            if (volvaForm) selectedTraits.push(`Volva Form: ${volvaForm}`);
-            if (volvaTexture) selectedTraits.push(`Volva Texture: ${volvaTexture}`);
-            if (stipeLength) selectedTraits.push(`Stipe Length: ${stipeLength} mm`);
-            if (stipeWidth) selectedTraits.push(`Stipe Width: ${stipeWidth} mm`);
-            if (stipeColor) selectedTraits.push(`Stipe Color: ${stipeColor}`);
-            if (stipeDecoration) selectedTraits.push(`Stipe Decoration: ${stipeDecoration}`);
-            if (stipeAnnulus) selectedTraits.push(`Stipe Annulus: ${stipeAnnulus}`);
-            if (stipeBasalBulb) selectedTraits.push(`Stipe Basal Bulb: ${stipeBasalBulb}`);
-            if (treeHost) selectedTraits.push(`Tree Host: ${treeHost}`);
+        const COLOR_OPTIONS = [
+            { label: "White", value: "white", terms: ["white"] },
+            { label: "Cream", value: "cream", terms: ["cream"] },
+            { label: "Yellow", value: "yellow", terms: ["yellow"] },
+            { label: "Orange", value: "orange", terms: ["orange"] },
+            { label: "Red", value: "red", terms: ["red", "redd"] },
+            { label: "Brown", value: "brown", terms: ["brown"] },
+            { label: "Gray/Grey", value: "gray", terms: ["gray", "grey"] },
+            { label: "Green", value: "green", terms: ["green"] },
+            { label: "Pink", value: "pink", terms: ["pink"] },
+            { label: "Purple", value: "purple", terms: ["purple"] }
+        ];
 
-            const message = selectedTraits.length > 0 
-                ? `Backend query coming soon. Selected traits: ${selectedTraits.join(', ')}`
-                : 'Please select at least one trait to search.';
+        const COLOR_MODIFIERS = [
+            { label: "Light", value: "light", terms: ["light"] },
+            { label: "Dark", value: "dark", terms: ["dark"] },
+            { label: "Bright", value: "bright", terms: ["bright"] },
+            { label: "Dingy", value: "dingy", terms: ["dingy"] },
+            { label: "Shiny", value: "shiny", terms: ["shiny"] },
+            { label: "Reddish", value: "reddish", terms: ["reddish", "red", "redd"] },
+            { label: "Yellowish", value: "yellowish", terms: ["yellowish", "yellow"] },
+            { label: "Grayish", value: "grayish", terms: ["grayish", "gray", "grey"] },
+            { label: "Greenish", value: "greenish", terms: ["greenish", "green"] },
+            { label: "Pinkish", value: "pinkish", terms: ["pinkish", "pink"] }
+        ];
 
-            document.getElementById('results').innerHTML = `<p>${message}</p>`;
-        });
+        const SURFACE_TEXTURE_OPTIONS = [
+            { label: "Dry", value: "dry", terms: ["dry"] },
+            { label: "Smooth / glabrous", value: "smooth", terms: ["smooth", "glabrous", "glaborous"] },
+            { label: "Viscid / sticky", value: "viscid", terms: ["viscid", "sticky"] },
+            { label: "Silky", value: "silky", terms: ["silky"] },
+            { label: "Wrinkly", value: "wrinkly", terms: ["wrinkly", "wrinkled"] }
+        ];
+
+        const STAINING_COLOR_OPTIONS = [
+            { label: "Brown", value: "brown", terms: ["brown"] },
+            { label: "Red-brown", value: "red brown", terms: ["red", "redd", "brown"] },
+            { label: "Gray/Grey", value: "gray", terms: ["gray", "grey"] },
+            { label: "Lavender", value: "lavender", terms: ["lavender"] }
+        ];
+
+        const TRI_STATE_OPTIONS = [
+            { label: "Any", value: "" },
+            { label: "Present", value: "present" },
+            { label: "Absent", value: "absent" }
+        ];
+
+        const STAINING_STATE_OPTIONS = [
+            { label: "Any", value: "" },
+            { label: "Present", value: "present" },
+            { label: "No staining", value: "absent" }
+        ];
+
+        const FIELD_COLUMNS = {
+            species: "species",
+            diameter: "diameter_mm",
+            centerColor: "centercolor",
+            marginColor: "margincolor",
+            shape: "shape",
+            surfaceTexture: "surfacetexture",
+            umbonate: "umbonate",
+            striationLength: "striationlength_mm",
+            universalVeil: "universalveilpresent",
+            staining: "staining"
+        };
+
+        // ---------------------------------------------------------------------
+        // UI builders
+        // ---------------------------------------------------------------------
+
+        function createChipGroup(containerId, inputName, options) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = "";
+
+            options.forEach(option => {
+                const label = document.createElement("label");
+                label.className = "chip";
+
+                const input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = inputName;
+                input.value = option.value;
+                input.dataset.terms = JSON.stringify(option.terms || [option.value]);
+
+                const span = document.createElement("span");
+                span.textContent = option.label;
+
+                label.appendChild(input);
+                label.appendChild(span);
+                container.appendChild(label);
+            });
+        }
+
+        function createRadioGroup(containerId, inputName, options, defaultValue = "") {
+            const container = document.getElementById(containerId);
+            container.innerHTML = "";
+
+            options.forEach(option => {
+                const label = document.createElement("label");
+                label.className = "chip";
+
+                const input = document.createElement("input");
+                input.type = "radio";
+                input.name = inputName;
+                input.value = option.value;
+                input.checked = option.value === defaultValue;
+
+                const span = document.createElement("span");
+                span.textContent = option.label;
+
+                label.appendChild(input);
+                label.appendChild(span);
+                container.appendChild(label);
+            });
+        }
+
+        function getCheckedValues(name) {
+            return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`))
+                .map(input => input.value)
+                .filter(Boolean);
+        }
+
+        function getCheckedTerms(name) {
+            const terms = Array.from(document.querySelectorAll(`input[name="${name}"]:checked`))
+                .flatMap(input => {
+                    try {
+                        return JSON.parse(input.dataset.terms || "[]");
+                    } catch {
+                        return [input.value];
+                    }
+                })
+                .map(term => term.toLowerCase().trim())
+                .filter(Boolean);
+
+            return Array.from(new Set(terms));
+        }
+
+        function getRadioValue(name) {
+            const selected = document.querySelector(`input[name="${name}"]:checked`);
+            return selected ? selected.value : "";
+        }
+
+        function makeTextCondition(field, terms) {
+            const uniqueTerms = Array.from(new Set(terms.map(term => term.toLowerCase().trim()).filter(Boolean)));
+            if (uniqueTerms.length === 0) return null;
+
+            return {
+                field,
+                mode: "text_any_terms_case_insensitive",
+                joinWithinField: "OR",
+                terms: uniqueTerms
+            };
+        }
+
+        function makeExactTextCondition(field, value) {
+            if (!value) return null;
+
+            return {
+                field,
+                mode: "text_contains_case_insensitive",
+                value: value.toLowerCase().trim()
+            };
+        }
+
+        function makeNumericCondition(field, value, approximate) {
+            const numericValue = Number(value);
+            if (!Number.isFinite(numericValue)) return null;
+
+            if (!approximate) {
+                return {
+                    field,
+                    mode: "numeric_exact",
+                    value: numericValue
+                };
+            }
+
+            // Tolerance can be tuned later. For now this is deliberately generous
+            // for field observations: ±20%, with a minimum window of ±5 mm.
+            const tolerance = Math.max(Math.round(numericValue * 0.2), 5);
+
+            return {
+                field,
+                mode: "numeric_range_approximate",
+                value: numericValue,
+                min: Math.max(0, numericValue - tolerance),
+                max: numericValue + tolerance,
+                tolerance_mm: tolerance
+            };
+        }
+
+        // ---------------------------------------------------------------------
+        // Query builder
+        // ---------------------------------------------------------------------
+
+        function buildSearchPayload() {
+            const conditions = [];
+
+            const centerColorTerms = [
+                ...getCheckedTerms("center_color"),
+                ...getCheckedTerms("center_modifier")
+            ];
+            const centerColorCondition = makeTextCondition(FIELD_COLUMNS.centerColor, centerColorTerms);
+            if (centerColorCondition) conditions.push(centerColorCondition);
+
+            const useMarginColor = document.getElementById("use-margin-color").checked;
+            if (useMarginColor) {
+                const marginColorTerms = [
+                    ...getCheckedTerms("margin_color"),
+                    ...getCheckedTerms("margin_modifier")
+                ];
+                const marginColorCondition = makeTextCondition(FIELD_COLUMNS.marginColor, marginColorTerms);
+                if (marginColorCondition) conditions.push(marginColorCondition);
+            }
+
+            const shape = document.getElementById("pileus-shape").value;
+            const shapeCondition = makeExactTextCondition(FIELD_COLUMNS.shape, shape);
+            if (shapeCondition) conditions.push(shapeCondition);
+
+            const striationState = getRadioValue("striations");
+            if (striationState === "present") {
+                conditions.push({
+                    field: FIELD_COLUMNS.striationLength,
+                    mode: "numeric_greater_than",
+                    value: 0
+                });
+            } else if (striationState === "absent") {
+                conditions.push({
+                    field: FIELD_COLUMNS.striationLength,
+                    mode: "numeric_equals",
+                    value: 0
+                });
+            }
+
+            const universalVeilState = getRadioValue("universal_veil");
+            if (universalVeilState === "present") {
+                conditions.push(makeTextCondition(FIELD_COLUMNS.universalVeil, ["present"]));
+            } else if (universalVeilState === "absent") {
+                conditions.push(makeTextCondition(FIELD_COLUMNS.universalVeil, ["absent"]));
+            }
+
+            const diameterCondition = makeNumericCondition(
+                FIELD_COLUMNS.diameter,
+                document.getElementById("diameter-mm").value,
+                document.getElementById("diameter-approximate").checked
+            );
+            if (diameterCondition) conditions.push(diameterCondition);
+
+            const surfaceTextureTerms = getCheckedTerms("surface_texture");
+            const surfaceTextureCondition = makeTextCondition(FIELD_COLUMNS.surfaceTexture, surfaceTextureTerms);
+            if (surfaceTextureCondition) conditions.push(surfaceTextureCondition);
+
+            const umbonate = document.getElementById("umbonate").value;
+            const umbonateCondition = makeExactTextCondition(FIELD_COLUMNS.umbonate, umbonate);
+            if (umbonateCondition) conditions.push(umbonateCondition);
+
+            const striationLengthCondition = makeNumericCondition(
+                FIELD_COLUMNS.striationLength,
+                document.getElementById("striation-length-mm").value,
+                document.getElementById("striation-length-approximate").checked
+            );
+            if (striationLengthCondition) conditions.push(striationLengthCondition);
+
+            const stainingState = getRadioValue("staining_state");
+            if (stainingState === "present") {
+                const stainingColorTerms = getCheckedTerms("staining_color");
+                if (stainingColorTerms.length > 0) {
+                    conditions.push(makeTextCondition(FIELD_COLUMNS.staining, stainingColorTerms));
+                } else {
+                    conditions.push({
+                        field: FIELD_COLUMNS.staining,
+                        mode: "text_not_contains_case_insensitive",
+                        value: "no staining"
+                    });
+                }
+            } else if (stainingState === "absent") {
+                conditions.push(makeTextCondition(FIELD_COLUMNS.staining, ["no staining"]));
+            }
+
+            return {
+                resultLevel: "species",
+                groupBy: FIELD_COLUMNS.species,
+                matchingLogic: {
+                    acrossFields: "AND",
+                    withinTextField: "OR",
+                    caseSensitive: false,
+                    missingDatabaseValuesDisqualify: false,
+                    matchScore: "not implemented yet"
+                },
+                conditions: conditions.filter(Boolean)
+            };
+        }
+
+        // ---------------------------------------------------------------------
+        // Supabase integration placeholder
+        // ---------------------------------------------------------------------
+        // Later, replace this with a Supabase query or, preferably, a Supabase RPC
+        // function that accepts the payload and returns species-level grouped results.
+        //
+        // Recommended eventual return shape:
+        // [
+        //   {
+        //     species: "Amanita example",
+        //     matched_specimen_count: 4,
+        //     total_specimen_count: 9,
+        //     matched_fields: ["centercolor", "shape", "universalveilpresent"],
+        //     score: null
+        //   }
+        // ]
+
+        async function performSearch(payload) {
+            const results = document.getElementById("results");
+
+            if (payload.conditions.length === 0) {
+                results.innerHTML = `
+                    <div class="warning-box">
+                        Select at least one trait to search.
+                    </div>
+                `;
+                return;
+            }
+
+            // Temporary behavior: show the clean query payload.
+            // Replace this block once Supabase is connected.
+            results.innerHTML = `
+                <h3>Search payload preview</h3>
+                <p class="field-note">
+                    This is the object to send to Supabase or to a matching API.
+                    Results should be grouped by species.
+                </p>
+                <pre class="query-preview">${escapeHtml(JSON.stringify(payload, null, 2))}</pre>
+            `;
+        }
+
+        function escapeHtml(value) {
+            return String(value)
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#039;");
+        }
+
+        // ---------------------------------------------------------------------
+        // Event wiring
+        // ---------------------------------------------------------------------
+
+        function initializeSearchForm() {
+            createChipGroup("center-color-chips", "center_color", COLOR_OPTIONS);
+            createChipGroup("center-modifier-chips", "center_modifier", COLOR_MODIFIERS);
+            createChipGroup("margin-color-chips", "margin_color", COLOR_OPTIONS);
+            createChipGroup("margin-modifier-chips", "margin_modifier", COLOR_MODIFIERS);
+            createChipGroup("surface-texture-chips", "surface_texture", SURFACE_TEXTURE_OPTIONS);
+            createChipGroup("staining-color-chips", "staining_color", STAINING_COLOR_OPTIONS);
+
+            createRadioGroup("striations-radio", "striations", TRI_STATE_OPTIONS, "");
+            createRadioGroup("universal-veil-radio", "universal_veil", TRI_STATE_OPTIONS, "");
+            createRadioGroup("staining-radio", "staining_state", STAINING_STATE_OPTIONS, "");
+
+            const useMarginColor = document.getElementById("use-margin-color");
+            const marginPanel = document.getElementById("margin-color-panel");
+            useMarginColor.addEventListener("change", () => {
+                marginPanel.classList.toggle("is-visible", useMarginColor.checked);
+            });
+
+            const stainingPanel = document.getElementById("staining-color-panel");
+            document.getElementById("staining-radio").addEventListener("change", () => {
+                stainingPanel.classList.toggle("is-visible", getRadioValue("staining_state") === "present");
+            });
+
+            const striationLengthGroup = document.getElementById("striation-length-group");
+            document.getElementById("striations-radio").addEventListener("change", () => {
+                const present = getRadioValue("striations") === "present";
+                striationLengthGroup.style.display = present ? "block" : "none";
+            });
+            striationLengthGroup.style.display = "none";
+
+            const form = document.getElementById("search-form");
+            form.addEventListener("submit", async event => {
+                event.preventDefault();
+                const payload = buildSearchPayload();
+                await performSearch(payload);
+            });
+
+            form.addEventListener("reset", () => {
+                window.setTimeout(() => {
+                    marginPanel.classList.remove("is-visible");
+                    stainingPanel.classList.remove("is-visible");
+                    striationLengthGroup.style.display = "none";
+                    document.getElementById("results").innerHTML = "";
+                }, 0);
+            });
+        }
+
+        initializeSearchForm();
     </script>
-
 </body>
 </html>
