@@ -1,0 +1,143 @@
+specimen_id,species,position,form,color,staining,remainingpercent,condition
+30208,Amanita aff citrina,superior,membranous,light yellow,no,100,free
+30208_2,Amanita aff citrina,,,,,,
+30213,Amanita aff citrina,superior,membranous,light yellow,no,75,free
+30214,Amanita aff citrina,superior,"membranous, folded",yellow,no,50,collapsed
+30216,Amanita aff citrina,superior,membranous,light yellow,no,75,collapsed
+30217,Amanita aff citrina,superior,submembranous,white,no,75,attached to gills
+30218,Amanita aff citrina,superior,membranous,light bright yellow,no,50,free
+30219,Amanita aff citrina,superior,submembranous,white,no,75,attached to gills
+40220,Amanita aff citrina,superior,submembranous,yellow,no,75,free
+30193,Amanita albiceps,,,,,,
+30193_2,Amanita albiceps,,,,,,
+30193_3,Amanita albiceps,,,,,,
+30237,Amanita albiceps,,,,,,
+30257,Amanita albiceps,,,,,,
+30257_2,Amanita albiceps,,,,,,
+30195,Amanita amerivirosa,at apex,submembranous,white,no,100,attached to gills
+30203,Amanita amerivirosa,superior,submembranous,dingy white,no,25,collapsed
+30204,Amanita amerivirosa,superior,submembranous,white,no,50,collapsed
+30204_2,Amanita amerivirosa,superior,submembranous,white,no,,
+30204_3,Amanita amerivirosa,superior,submembranous,white,no,,attached to gills
+30204_4,Amanita amerivirosa,superior,submembranous,white,no,,
+30209,Amanita amerivirosa,,,,,,
+30267,Amanita amerivirosa,,,,,,
+30269,Amanita amerivirosa,,,,,,
+30270,Amanita amerivirosa,,,,,,
+30181,Amanita bisporigera,superior,membranous,white,maybe slight brownish,100,collapsed
+30199,Amanita bisporigera,superior,submembranous,white,no,50,
+30199_2,Amanita bisporigera,superior,submembranous,white,no,,
+30199_3,Amanita bisporigera,superior,submembranous,white,no,,
+30199_4,Amanita bisporigera,superior,submembranous,white,no,,
+30200,Amanita bisporigera,,,,,,
+30240,Amanita bisporigera,superior,submembranous,white,no,,collapsed
+30273,Amanita bisporigera,,,,,,
+30275,Amanita bisporigera,superior,submembranous,white,no,,
+30277,Amanita bisporigera,superior,submembranous,white,no,,
+30246,Amanita brunnescens,,,,,,
+30248,Amanita brunnescens,,,,,,
+30253,Amanita brunnescens,,,,,,
+30254,Amanita brunnescens,superior,mebranous,white,no,100,free
+30258,Amanita brunnescens,superior,submembranous,light brown white,no,75,collapsed
+30259,Amanita brunnescens,superior,membranous,light brown white,no,90,free
+30263,Amanita brunnescens,superior,submembranous,brown,no,25,collapsed
+30265,Amanita brunnescens,at apex,,,,,
+30271,Amanita brunnescens,at apex,membranous,white,no,100,free
+30272,Amanita brunnescens,,,,,,
+30215,Amanita centrascura,,,,,,
+30220,Amanita centrascura,,,,,,
+30278,Amanita centrascura,,,,,,
+30192,Amanita chrysoblema,superior,line,light yellow,no,1,
+30196,Amanita chrysoblema,,,,,,
+30197,Amanita chrysoblema,,,,,,
+30210,Amanita chrysoblema,at apex,submembranous,light yellow,no,25,collapsed
+30211,Amanita chrysoblema,immature specimen,,,,,
+30244,Amanita confundens,,,,,,
+30251,Amanita confundens,,,,,,
+30201,Amanita flavoconia,superior,membranous,yellow,no,50,collapsed
+30205,Amanita flavoconia,,,,,,
+30206,Amanita flavoconia,superior,submembranous,yellow,no,25,collapsed
+30228,Amanita flavoconia,superior,submembranous,dark yellow,no,50,collapsed
+30238,Amanita flavorubens,superior,membranous,white yellow,no,100,free
+30283,Amanita flavorubens,superior,membranous,yellow,no,75,free
+30190,Amanita frostiana,,submembranous,white yellow,,100,attached to gills
+30191,Amanita frostiana,superior,submembranous,white yellow,no,,collapsed
+30229,Amanita frostiana,mid,line,dark yellow,no,0,
+30242,Amanita frostiana,mid,line,orange,no,,
+30261,Amanita frostiana,mid,submembranous,yellow,no,50,collapsed
+30243,Amanita fulva,,,,,,
+30245,Amanita fulva,,,,,,
+30255,Amanita fulva,,,,,,
+30186,Amanita fusca,,,,,,
+30281,Amanita fusca,,,,,,
+30282,Amanita fusca,,,,,,
+30285,Amanita fusca,,,,,,
+30247,Amanita griseoumbonata,,,,,,
+30287,Amanita lavendula,superior,submembranous,yellow,no,25,collapsed
+30291,Amanita lavendula,,,,,,
+30221,Amanita multisquamosa,superior,submembranous,white,,100,
+30222,Amanita multisquamosa,superior,membranous,light brown white,no,50,free
+30223,Amanita multisquamosa,superior,membranous,light brown white,no,50,free
+30223_2,Amanita multisquamosa,mid,membranous,light brown white,no,,free
+30223_3,Amanita multisquamosa,mid,membranous,light brown white,no,,free
+30224,Amanita multisquamosa,superior,membranous,light brown white,no,50,free
+30224_2,Amanita multisquamosa,mid,membranous,light brown white,no,51,free
+30183,Amanita oberwinklerana,superior,submembranous,light yellow,,100,collapsed
+30225,Amanita populiphila,,,,,,
+30280,Amanita populiphila,,,,,,
+30280_2,Amanita populiphila,,,,,,
+30280_3,Amanita populiphila,,,,,,
+30280_4,Amanita populiphila,,,,,,
+30280_5,Amanita populiphila,,,,,,
+30280_6,Amanita populiphila,,,,,,
+30280_7,Amanita populiphila,,,,,,
+30202,Amanita porphyria,superior,submembranous,grey,no,50,collapsed
+30207,Amanita porphyria,superior,membranous,grey brown,no,75,collapsed
+30286,Amanita porphyria,superior,membranous,grey,no,100,free
+30293,Amanita porphyria,superior,membranous,grey,no,100,free
+30189,Amanita rhacopus,,,,,,
+30233,Amanita rhacopus,,,,,,
+30234,Amanita rhacopus,,,,,,
+30256,Amanita rhacopus,,,,,,
+30264,Amanita rubescens var alba,,,,,,
+30198,Amanita sinicoflava,,,,,,
+30235,Amanita solaniolens,,,,,,
+30236,Amanita solaniolens,superior,still attached,white light brown,,,
+30260,Amanita solaniolens,superior,submembranous,,no,,
+30194,Amanita sp  vag1,,,,,,
+30194_2,Amanita sp  vag2,,,,,,
+30230,Amanita sp amerirubescens,at apex,submembranous,pink,,75,attached to gills
+30230_2,Amanita sp amerirubescens,at apex,submembranous,pink,,,attached to gills
+30230_3,Amanita sp amerirubescens,at apex,submembranous,pink,,,attached to gills
+30230_4,Amanita sp amerirubescens,at apex,submembranous,pink,,,attached to gills
+30230_5,Amanita sp amerirubescens,at apex,submembranous,pink,,,attached to gills
+30230_6,Amanita sp amerirubescens,at apex,submembranous,pink,,,attached to gills
+30230_7,Amanita sp amerirubescens,at apex,submembranous,pink,,,attached to gills
+30230_8,Amanita sp amerirubescens,at apex,submembranous,pink,,,attached to gills
+30231,Amanita sp amerirubescens,at apex,submembranous,white,brick,5,attached to gills
+30232,Amanita sp amerirubescens,superior,as line,,,,
+30252,Amanita sp amerirubescens,superior,membranous,white,no,75,collapsed
+30212,Amanita sp ami1,,,,,,
+30274,Amanita sp ami2,,,,,,
+30274_2,Amanita sp ami2,,,,,,
+30185,Amanita sp aurorae,,,,,,
+30268,Amanita sp jakeslandingensis,,,,,,
+30188,Amanita sp longicuneus,,,,,,
+30276,Amanita sp phal1 (IN46),superior,membranous,,no,,free
+30262,Amanita sp subnigra,,,,,,
+30250,Amanita sp vag2,,,,,,
+30250_2,Amanita sp vag3,,,,,,
+30226,Amanita stranella,,,,,,
+30226_2,Amanita stranella,,,,,,
+30227,Amanita stranella,,,,,,
+30249,Amanita stranella,,,,,,
+30249_2,Amanita stranella,,,,,,
+30182,Amanita suballiacea,superior,membranous,white,,100,free
+30184,Amanita suballiacea,superior,line,yellow,,1,
+30187,Amanita suballiacea,at apex,submembranous,white,light yellow in places,80,collapsed
+30187_2,Amanita suballiacea,at apex,"membranous, thin",white,,100,free
+30187_3,Amanita suballiacea,at apex,"membranous, thin",white,,100,free
+30279,Amanita suballiacea,,pulverulent,,,,
+30284,Amanita suballiacea,superior,membranous,white,no,100,free
+30239,Amanita virginiana,superior,submembranous,white,no,100,free
+30239_2,Amanita virginiana,,,,,,
