@@ -64,7 +64,9 @@ function wireSearchForm() {
     form.addEventListener("submit", async event => {
         event.preventDefault();
         const payload = buildSearchPayload();
-        const response = await searchSpecies(payload);
+        console.log("payload:", payload);
+        const response = await searchSpecies(payload);     
+        console.log("searchSpecies response:", response);
         renderResults(results, response);
     });
 
