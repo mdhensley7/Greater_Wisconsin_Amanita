@@ -1,136 +1,102 @@
 specimen_id,species,length_mm,width_mm,shape
 30181,Amanita bisporigera,13,11,subglobose
 30182,Amanita suballiacea,27,47,ovoid
-30183,Amanita oberwinklerana,27,22,subglobose
+30183,Amanita cf. oberwinkleriana,27,22,subglobose
 30184,Amanita suballiacea,20,24,subglobose
-30185,Amanita sp aurorae,0,0,no bulb
+30185,Amanita cf. aurorae nom prov.,0,0,no bulb
 30186,Amanita fusca,0,0,no bulb
 30187,Amanita suballiacea,32,35,subglobose
-30187_2,Amanita suballiacea,18,23,subglobose
-30187_3,Amanita suballiacea,40,42,subglobose
-30188,Amanita sp longicuneus,0,0,no bulb
+30188,Amanita fuscozonata,0,0,no bulb
 30189,Amanita rhacopus,0,0,no bulb
 30190,Amanita frostiana,20,15,subglobose
 30191,Amanita frostiana,15,18,subglobose
 30192,Amanita chrysoblema,25,22,subglobose
-30193,Amanita albiceps,0,0,no bulb
-30193_2,Amanita albiceps,0,0,no bulb
-30193_3,Amanita albiceps,0,0,no bulb
-30194,Amanita sp  vag1,0,0,no bulb
-30194_2,Amanita sp  vag2,0,0,no bulb
+30193,Amanita confundens,0,0,no bulb
+30194,Amanita aff. fulva,0,0,no bulb
 30195,Amanita amerivirosa,20,32,ovoid
 30196,Amanita chrysoblema,35,27,fusiform
 30197,Amanita chrysoblema,30,20,fusiform
 30198,Amanita sinicoflava,0,0,no bulb
 30199,Amanita bisporigera,22,22,globose
-30199_2,Amanita bisporigera,,,
-30199_3,Amanita bisporigera,,,
-30199_4,Amanita bisporigera,,,
 30200,Amanita bisporigera,15,13,subglobose
 30201,Amanita flavoconia,15,11,fusiform
 30202,Amanita porphyria,23,30,ovoid
 30203,Amanita amerivirosa,25,30,ovoid
 30204,Amanita amerivirosa,15,20,ovoid
-30204_2,Amanita amerivirosa,,,
-30204_3,Amanita amerivirosa,,,
-30204_4,Amanita amerivirosa,,,
 30205,Amanita flavoconia,15,10,fusiform
 30206,Amanita flavoconia,6,9,ovoid
 30207,Amanita porphyria,10,22,ovoid
-30208,Amanita aff citrina,20,23,subglobose
-30208_2,Amanita aff citrina,,,
+30208,Amanita aff. citrina,20,23,subglobose
 30209,Amanita amerivirosa,18,24,subglobose
 30210,Amanita chrysoblema,,,
 30211,Amanita chrysoblema,35,30,subglobose
-30212,Amanita sp ami1,21,19,globose
-30213,Amanita aff citrina,17,30,ovoid
-30214,Amanita aff citrina,10,20,ovoid
+30212,Amanita sp. 'GWA-ami1',21,19,globose
+30213,Amanita aff. citrina,17,30,ovoid
+30214,Amanita aff. citrina,10,20,ovoid
 30215,Amanita centrascura,0,0,no bulb
-30216,Amanita aff citrina,20,20,globose
-30217,Amanita aff citrina,22,23,globose
-30218,Amanita aff citrina,13,15,subglobose
-30219,Amanita aff citrina,20,27,ovoid
+30216,Amanita aff. citrina,20,20,globose
+30217,Amanita aff. citrina,22,23,globose
+30218,Amanita aff. citrina,13,15,subglobose
+30219,Amanita aff. citrina,20,27,ovoid
 30220,Amanita centrascura,0,0,no bulb
 30221,Amanita multisquamosa,20,15,napiform
 30222,Amanita multisquamosa,16,26,fusiform
 30223,Amanita multisquamosa,22,15,fusiform
-30223_2,Amanita multisquamosa,25,18,fusiform
-30223_3,Amanita multisquamosa,25,18,fusiform
 30224,Amanita multisquamosa,20,15,fusiform
-30224_2,Amanita multisquamosa,25,20,fusiform
 30225,Amanita populiphila,10,18,napiform
 30226,Amanita stranella,25,20,napiform
-30226_2,Amanita stranella,,,
 30227,Amanita stranella,15,10,napiform
 30228,Amanita flavoconia,20,10,ovoid
 30229,Amanita frostiana,15,13,subglobose
-30230,Amanita sp amerirubescens,20,20,globose
-30230_2,Amanita sp amerirubescens,30,25,subglobose
-30230_3,Amanita sp amerirubescens,25,25,globose
-30230_4,Amanita sp amerirubescens,,,
-30230_5,Amanita sp amerirubescens,25,25,globose
-30230_6,Amanita sp amerirubescens,30,30,globose
-30230_7,Amanita sp amerirubescens,15,15,globose
-30230_8,Amanita sp amerirubescens,17,20,subglobose
-30231,Amanita sp amerirubescens,13,22,
-30232,Amanita sp amerirubescens,15,18,subglobose
+30230,Amanita amerirubescens nom prov.,20,20,globose
+30231,Amanita amerirubescens nom prov.,13,22,
+30232,Amanita amerirubescens nom prov.,15,18,subglobose
 30233,Amanita rhacopus,0,0,no bulb
 30234,Amanita rhacopus,0,0,no bulb
 30235,Amanita solaniolens,7,9,ovoid
 30236,Amanita solaniolens,30,14,
-30237,Amanita albiceps,,,
+30237,Amanita confundens,,,
 30238,Amanita flavorubens,30,14,fusiform
 30239,Amanita virginiana,0,0,no bulb
-30239_2,Amanita virginiana,0,0,no bulb
 30240,Amanita bisporigera,22,15,subglobose
 30242,Amanita frostiana,10,12,subglobose
-30243,Amanita fulva,0,0,no bulb
-30244,Amanita confundens,0,0,no bulb
-30245,Amanita fulva,0,0,no bulb
+30243,Amanita aff. fulva,0,0,no bulb
+30244,Amanita coryli,0,0,no bulb
+30245,Amanita aff. fulva,0,0,no bulb
 30246,Amanita brunnescens,30,35,ovoid
-30247,Amanita griseoumbonata,0,0,no bulb
+30247,Amanita aff. griseoumbonata,0,0,no bulb
 30248,Amanita brunnescens,25,30,ovoid
 30249,Amanita stranella,,,
-30249_2,Amanita stranella,10,10,globose
-30250,Amanita sp vag2,0,0,no bulb
-30250_2,Amanita sp vag3,0,0,no bulb
-30251,Amanita confundens,0,0,no bulb
-30252,Amanita sp amerirubescens,,,
+30250,Amanita coryli,0,0,no bulb
+30251,Amanita coryli,0,0,no bulb
+30252,Amanita amerirubescens nom prov.,,,
 30253,Amanita brunnescens,25,35,ovoid
 30254,Amanita brunnescens,15,25,ovoid
-30255,Amanita fulva,0,0,no bulb
+30255,Amanita aff. fulva,0,0,no bulb
 30256,Amanita rhacopus,0,0,no bulb
-30257,Amanita albiceps,0,0,no bulb
-30257_2,Amanita albiceps,0,0,no bulb
+30257,Amanita confundens,0,0,no bulb
 30258,Amanita brunnescens,20,30,ovoid
 30259,Amanita brunnescens,20,20,globose
 30260,Amanita solaniolens,15,20,ovoid
 30261,Amanita frostiana,17,15,subglobose
-30262,Amanita sp subnigra,0,0,no bulb
+30262,Amanita subnigra nom prov.,0,0,no bulb
 30263,Amanita brunnescens,20,25,ovoid
-30264,Amanita rubescens var alba,20,20,globose
+30264,Amanita amerirubescens nom prov.,20,20,globose
 30265,Amanita brunnescens,20,30,ovoid
 30267,Amanita amerivirosa,25,30,ovoid
-30268,Amanita sp jakeslandingensis,0,0,no bulb
+30268,Amanita jakeslandingensis nom prov.,0,0,no bulb
 30269,Amanita amerivirosa,25,35,ovoid
 30270,Amanita amerivirosa,25,35,ovoid
 30271,Amanita brunnescens,20,25,ovoid
 30272,Amanita brunnescens,10,17,ovoid
 30273,Amanita bisporigera,15,20,ovoid
-30274,Amanita sp ami2,30,30,globose
-30274_2,Amanita sp ami2,25,20,subglobose
+30274,Amanita sp. 'GWA-ami2',30,30,globose
 30275,Amanita bisporigera,15,23,ovoid
-30276,Amanita sp phal1 (IN46),20,25,ovoid
+30276,Amanita sp. 'GWA-phal1',20,25,ovoid
 30277,Amanita bisporigera,10,10,globose
 30278,Amanita centrascura,0,0,no bulb
 30279,Amanita suballiacea,35,40,globose
 30280,Amanita populiphila,0,0,no bulb
-30280_2,Amanita populiphila,0,0,no bulb
-30280_3,Amanita populiphila,0,0,no bulb
-30280_4,Amanita populiphila,0,0,no bulb
-30280_5,Amanita populiphila,0,0,no bulb
-30280_6,Amanita populiphila,0,0,no bulb
-30280_7,Amanita populiphila,0,0,no bulb
 30281,Amanita fusca,0,0,no bulb
 30282,Amanita fusca,0,0,no bulb
 30283,Amanita flavorubens,25,20,subglobose
@@ -140,4 +106,38 @@ specimen_id,species,length_mm,width_mm,shape
 30287,Amanita lavendula,25,20,subglobose
 30291,Amanita lavendula,10,15,subglobose
 30293,Amanita porphyria,25,20,subglobose
-40220,Amanita aff citrina,24,20,subglobose
+40220,Amanita aff. citrina,24,20,subglobose
+30187_2,Amanita suballiacea,18,23,subglobose
+30187_3,Amanita suballiacea,40,42,subglobose
+30193_2,Amanita confundens,0,0,no bulb
+30193_3,Amanita confundens,0,0,no bulb
+30194_2,Amanita aff. fulva,0,0,no bulb
+30199_2,Amanita bisporigera,,,
+30199_3,Amanita bisporigera,,,
+30199_4,Amanita bisporigera,,,
+30204_2,Amanita amerivirosa,,,
+30204_3,Amanita amerivirosa,,,
+30204_4,Amanita amerivirosa,,,
+30208_2,Amanita aff. citrina,,,
+30223_2,Amanita multisquamosa,25,18,fusiform
+30223_3,Amanita multisquamosa,25,18,fusiform
+30224_2,Amanita multisquamosa,25,20,fusiform
+30226_2,Amanita stranella,,,
+30230_2,Amanita amerirubescens nom prov.,30,25,subglobose
+30230_3,Amanita amerirubescens nom prov.,25,25,globose
+30230_4,Amanita amerirubescens nom prov.,,,
+30230_5,Amanita amerirubescens nom prov.,25,25,globose
+30230_6,Amanita amerirubescens nom prov.,30,30,globose
+30230_7,Amanita amerirubescens nom prov.,15,15,globose
+30230_8,Amanita amerirubescens nom prov.,17,20,subglobose
+30239_2,Amanita virginiana,0,0,no bulb
+30249_2,Amanita stranella,10,10,globose
+30250_2,Amanita coryli,0,0,no bulb
+30257_2,Amanita confundens,0,0,no bulb
+30274_2,Amanita sp. 'GWA-ami2',25,20,subglobose
+30280_2,Amanita populiphila,0,0,no bulb
+30280_3,Amanita populiphila,0,0,no bulb
+30280_4,Amanita populiphila,0,0,no bulb
+30280_5,Amanita populiphila,0,0,no bulb
+30280_6,Amanita populiphila,0,0,no bulb
+30280_7,Amanita populiphila,0,0,no bulb

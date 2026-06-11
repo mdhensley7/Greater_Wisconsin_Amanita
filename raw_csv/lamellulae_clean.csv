@@ -1,18 +1,18 @@
 specimen_id,species,form,amount,distribution,end
 30181,Amanita bisporigera,uneven lengths,plentiful,uneven,not observed
 30182,Amanita suballiacea,uneven lengths,plentiful,uneven,not observed
-30183,Amanita oberwinklerana,uneven lengths,dispersed,uneven,not observed
+30183,Amanita cf. oberwinkleriana,uneven lengths,dispersed,uneven,not observed
 30184,Amanita suballiacea,uneven lengths,dispersed,uneven,not observed
-30185,Amanita sp aurorae,uneven lengths,dispersed,uneven,not observed
+30185,Amanita cf. aurorae nom prov.,uneven lengths,dispersed,uneven,not observed
 30186,Amanita fusca,uneven lengths,dispersed,uneven,not observed
 30187,Amanita suballiacea,uneven lengths,plentiful,uneven,not observed
-30188,Amanita sp longicuneus,,,,
+30188,Amanita fuscozonata,,,,
 30189,Amanita rhacopus,uneven lengths,plentiful,uneven,not observed
 30190,Amanita frostiana,uneven lengths,plentiful,uneven,not observed
 30191,Amanita frostiana,uneven lengths,plentiful,uneven,not observed
 30192,Amanita chrysoblema,uneven lengths,plentiful,uneven,not observed
-30193,Amanita albiceps,uneven lengths,plentiful,uneven,not observed
-30194,Amanita sp  vag1,uneven lengths,plentiful,uneven,not observed
+30193,Amanita confundens,uneven lengths,plentiful,uneven,not observed
+30194,Amanita aff. fulva,uneven lengths,plentiful,uneven,not observed
 30195,Amanita amerivirosa,uneven lengths,dispersed,uneven,not observed
 30196,Amanita chrysoblema,,,,
 30197,Amanita chrysoblema,uneven lengths,plentiful,uneven,not observed
@@ -26,18 +26,18 @@ specimen_id,species,form,amount,distribution,end
 30205,Amanita flavoconia,uneven lengths,plentiful,uneven,not observed
 30206,Amanita flavoconia,uneven lengths,plentiful,even,not observed
 30207,Amanita porphyria,uneven lengths,plentiful,uneven,not observed
-30208,Amanita aff citrina,uneven lengths,plentiful,even,not observed
+30208,Amanita aff. citrina,uneven lengths,plentiful,even,not observed
 30209,Amanita amerivirosa,uneven lengths,plentiful,uneven,not observed
 30210,Amanita chrysoblema,uneven lengths,plentiful,uneven,not observed
 30211,Amanita chrysoblema,not observed,not observed,not observed,not observed
-30212,Amanita sp ami1,uneven lengths,plentiful,uneven,rounded truncate
-30213,Amanita aff citrina,uneven lengths,plentiful,uneven,rounded truncate
-30214,Amanita aff citrina,uneven lengths,plentiful,uneven,rounded truncate
+30212,Amanita sp. 'GWA-ami1',uneven lengths,plentiful,uneven,rounded truncate
+30213,Amanita aff. citrina,uneven lengths,plentiful,uneven,rounded truncate
+30214,Amanita aff. citrina,uneven lengths,plentiful,uneven,rounded truncate
 30215,Amanita centrascura,uneven lengths,plentiful,uneven,truncate
-30216,Amanita aff citrina,uneven lengths,plentiful,uneven,rounded truncate
-30217,Amanita aff citrina,uneven lengths,plentiful,uneven,rounded truncate
-30218,Amanita aff citrina,uneven lengths,plentiful,even,rounded truncate
-30219,Amanita aff citrina,uneven lengths,not observed,not observed,not observed
+30216,Amanita aff. citrina,uneven lengths,plentiful,uneven,rounded truncate
+30217,Amanita aff. citrina,uneven lengths,plentiful,uneven,rounded truncate
+30218,Amanita aff. citrina,uneven lengths,plentiful,even,rounded truncate
+30219,Amanita aff. citrina,uneven lengths,not observed,not observed,not observed
 30220,Amanita centrascura,uneven lengths,dispersed,uneven,rounded truncate
 30221,Amanita multisquamosa,uneven lengths,plentiful,uneven,truncate
 30222,Amanita multisquamosa,uneven lengths,plentiful,uneven,truncate
@@ -48,51 +48,51 @@ specimen_id,species,form,amount,distribution,end
 30227,Amanita stranella,uneven lengths,plentiful,uneven,truncate
 30228,Amanita flavoconia,uneven lengths,plentiful,uneven,rounded truncate
 30229,Amanita frostiana,uneven lengths,plentiful,uneven,truncate
-30230,Amanita amerirubescens,uneven lengths,plentiful,even,reduced
-30231,Amanita rubescens var alba,uneven lengths,plentiful,uneven,truncate
-30232,Amanita rubescens var alba,uneven lengths,dispersed,uneven,truncate
+30230,Amanita amerirubescens nom prov.,uneven lengths,plentiful,even,reduced
+30231,Amanita amerirubescens nom prov.,uneven lengths,plentiful,uneven,truncate
+30232,Amanita amerirubescens nom prov.,uneven lengths,dispersed,uneven,truncate
 30233,Amanita rhacopus,uneven lengths,plentiful,uneven,truncate
 30234,Amanita rhacopus,uneven lengths,plentiful,uneven,truncate
 30235,Amanita solaniolens,uneven lengths,plentiful,even,rounded truncate
 30236,Amanita solaniolens,uneven lengths,plentiful,uneven,rounded truncate
-30237,Amanita albiceps,uneven lengths,plentiful,uneven,truncate
+30237,Amanita confundens,uneven lengths,plentiful,uneven,truncate
 30238,Amanita flavorubens,uneven lengths,dispersed,uneven,truncate
 30239,Amanita virginiana,uneven lengths,plentiful,uneven,truncate
 30240,Amanita bisporigera,uneven lengths,dispersed,uneven,rounded truncate
 30242,Amanita frostiana,uneven lengths,dispersed,uneven,truncate
-30243,Amanita fulva,uneven lengths,not observed,not observed,not observed
-30244,Amanita confundens,uneven lengths,dispersed,uneven,truncate
-30245,Amanita fulva,not observed,not observed,not observed,not observed
+30243,Amanita aff. fulva,uneven lengths,not observed,not observed,not observed
+30244,Amanita coryli,uneven lengths,dispersed,uneven,truncate
+30245,Amanita aff. fulva,not observed,not observed,not observed,not observed
 30246,Amanita brunnescens,not observed,not observed,not observed,not observed
-30247,Amanita griseoumbonata,not observed,not observed,not observed,not observed
+30247,Amanita aff. griseoumbonata,not observed,not observed,not observed,not observed
 30248,Amanita brunnescens,uneven lengths,plentiful,uneven,rounded truncate
 30249,Amanita stranella,uneven lengths,dispersed,uneven,truncate
-30250,Amanita sp vag2,two lengths,dispersed,uneven,truncate
-30251,Amanita confundens,uneven lengths,dispersed,uneven,rounded truncate
-30252,Amanita rubescens var alba,uneven lengths,plentiful,uneven,truncate
+30250,Amanita coryli,two lengths,dispersed,uneven,truncate
+30251,Amanita coryli,uneven lengths,dispersed,uneven,rounded truncate
+30252,Amanita amerirubescens nom prov.,uneven lengths,plentiful,uneven,truncate
 30253,Amanita brunnescens,not observed,not observed,not observed,not observed
 30254,Amanita brunnescens,uneven lengths,plentiful,uneven,rounded truncate
-30255,Amanita fulva,uneven lengths,dispersed,uneven,truncate
+30255,Amanita aff. fulva,uneven lengths,dispersed,uneven,truncate
 30256,Amanita rhacopus,uneven lengths,not observed,uneven,truncate
-30257,Amanita albiceps,uneven lengths,plentiful,uneven,truncate
+30257,Amanita confundens,uneven lengths,plentiful,uneven,truncate
 30258,Amanita brunnescens,uneven lengths,plentiful,uneven,rounded truncate
 30259,Amanita brunnescens,uneven lengths,plentiful,uneven,rounded truncate
 30260,Amanita solaniolens,uneven lengths,plentiful,uneven,rounded truncate
 30261,Amanita frostiana,not observed,not observed,not observed,not observed
-30262,Amanita sp subnigra,uneven lengths,not observed,not observed,not observed
+30262,Amanita subnigra nom prov.,uneven lengths,not observed,not observed,not observed
 30263,Amanita brunnescens,uneven lengths,plentiful,uneven,truncate
-30264,Amanita rubescens var alba,not observed,not observed,not observed,not observed
+30264,Amanita amerirubescens nom prov.,not observed,not observed,not observed,not observed
 30265,Amanita brunnescens,uneven lengths,plentiful,even,rounded truncate
 30267,Amanita amerivirosa,uneven lengths,dispersed,uneven,truncate
-30268,Amanita sp jakeslandingensis,,,,
+30268,Amanita jakeslandingensis nom prov.,,,,
 30269,Amanita amerivirosa,uneven lengths,dispersed,uneven,truncate
 30270,Amanita amerivirosa,uneven lengths,dispersed,uneven,truncate
 30271,Amanita brunnescens,uneven lengths,plentiful,uneven,truncate
 30272,Amanita brunnescens,not observed,not observed,not observed,not observed
 30273,Amanita bisporigera,uneven lengths,plentiful,uneven,truncate
-30274,Amanita sp ami2,not observed,not observed,not observed,not observed
+30274,Amanita sp. 'GWA-ami2',not observed,not observed,not observed,not observed
 30275,Amanita bisporigera,uneven lengths,plentiful,uneven,truncate
-30276,Amanita sp phal1 (IN46),two lengths,plentiful,even,truncate
+30276,Amanita sp. 'GWA-phal1',two lengths,plentiful,even,truncate
 30277,Amanita bisporigera,uneven lengths,plentiful,uneven,truncate
 30278,Amanita centrascura,uneven lengths,plentiful,uneven,truncate
 30279,Amanita suballiacea,not observed,not observed,not observed,not observed
@@ -106,35 +106,35 @@ specimen_id,species,form,amount,distribution,end
 30287,Amanita lavendula,uneven lengths,plentiful,uneven,reduced
 30291,Amanita lavendula,uneven lengths,plentiful,even,truncate
 30293,Amanita porphyria,uneven lengths,plentiful,uneven,rounded truncate
-40220,Amanita aff citrina,uneven lengths,plentiful,even,rounded truncate
+40220,Amanita aff. citrina,uneven lengths,plentiful,even,rounded truncate
 30187_2,Amanita suballiacea,uneven lengths,plentiful,uneven,not observed
 30187_3,Amanita suballiacea,uneven lengths,plentiful,uneven,not observed
-30193_2,Amanita albiceps,uneven lengths,plentiful,uneven,not observed
-30193_3,Amanita albiceps,uneven lengths,plentiful,uneven,not observed
-30194_2,Amanita sp  vag1,uneven lengths,plentiful,uneven,not observed
+30193_2,Amanita confundens,uneven lengths,plentiful,uneven,not observed
+30193_3,Amanita confundens,uneven lengths,plentiful,uneven,not observed
+30194_2,Amanita aff. fulva,uneven lengths,plentiful,uneven,not observed
 30199_2,Amanita bisporigera,uneven lengths,dispersed,uneven,not observed
 30199_3,Amanita bisporigera,uneven lengths,dispersed,uneven,not observed
 30199_4,Amanita bisporigera,uneven lengths,dispersed,uneven,not observed
 30204_2,Amanita amerivirosa,uneven lengths,plentiful,uneven,not observed
 30204_3,Amanita amerivirosa,uneven lengths,plentiful,uneven,not observed
 30204_4,Amanita amerivirosa,uneven lengths,plentiful,uneven,not observed
-30208_2,Amanita aff citrina,uneven lengths,plentiful,even,not observed
+30208_2,Amanita aff. citrina,uneven lengths,plentiful,even,not observed
 30223_2,Amanita multisquamosa,uneven lengths,plentiful,uneven,truncate
 30223_3,Amanita multisquamosa,uneven lengths,plentiful,uneven,truncate
 30224_2,Amanita multisquamosa,uneven lengths,plentiful,uneven,truncate
 30226_2,Amanita stranella,uneven lengths,plentiful,uneven,truncate
-30230_2,Amanita amerirubescens,uneven lengths,plentiful,even,reduced
-30230_3,Amanita amerirubescens,uneven lengths,plentiful,even,reduced
-30230_4,Amanita amerirubescens,uneven lengths,plentiful,even,reduced
-30230_5,Amanita amerirubescens,uneven lengths,plentiful,even,reduced
-30230_6,Amanita amerirubescens,uneven lengths,plentiful,even,reduced
-30230_7,Amanita amerirubescens,uneven lengths,plentiful,even,reduced
-30230_8,Amanita amerirubescens,uneven lengths,plentiful,even,reduced
+30230_2,Amanita amerirubescens nom prov.,uneven lengths,plentiful,even,reduced
+30230_3,Amanita amerirubescens nom prov.,uneven lengths,plentiful,even,reduced
+30230_4,Amanita amerirubescens nom prov.,uneven lengths,plentiful,even,reduced
+30230_5,Amanita amerirubescens nom prov.,uneven lengths,plentiful,even,reduced
+30230_6,Amanita amerirubescens nom prov.,uneven lengths,plentiful,even,reduced
+30230_7,Amanita amerirubescens nom prov.,uneven lengths,plentiful,even,reduced
+30230_8,Amanita amerirubescens nom prov.,uneven lengths,plentiful,even,reduced
 30239_2,Amanita virginiana,uneven lengths,plentiful,uneven,truncate
 30249_2,Amanita stranella,uneven lengths,dispersed,uneven,truncate
-30250_2,Amanita sp vag2,two lengths,dispersed,uneven,truncate
-30257_2,Amanita albiceps,uneven lengths,plentiful,uneven,truncate
-30274_2,Amanita sp ami2,not observed,not observed,not observed,not observed
+30250_2,Amanita coryli,two lengths,dispersed,uneven,truncate
+30257_2,Amanita confundens,uneven lengths,plentiful,uneven,truncate
+30274_2,Amanita sp. 'GWA-ami2',not observed,not observed,not observed,not observed
 30280_2,Amanita populiphila,uneven lengths,plentiful,uneven,truncate
 30280_3,Amanita populiphila,uneven lengths,plentiful,uneven,truncate
 30280_4,Amanita populiphila,uneven lengths,plentiful,uneven,truncate

@@ -57,7 +57,6 @@ export const STAINING_COLOR_OPTIONS = [
 ];
 
 export const TRI_STATE_OPTIONS = [
-    { label: "Any", value: ANY_VALUE },
     { label: "Present", value: "present" },
     { label: "Absent", value: "absent" }
 ];

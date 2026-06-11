@@ -27,7 +27,7 @@ export const CAP_COLOR_CONFIG = {
     id: "capColor",
     type: "capColor",
     label: "Cap color",
-    note: "Select as many color words as seem reasonable. The search will cast a wide net.",
+    note: "Select as many colors as seem reasonable. The search will cast a wide net.",
     centerColor: {
         inputName: "center_color",
         modifierName: "center_modifier",
@@ -51,12 +51,12 @@ export const MAJOR_FIELDS = [
     {
         id: "shape",
         type: "select",
-        label: "Pileus shape",
+        label: "Cap shape",
         column: FIELD_COLUMNS.shape,
         options: SHAPE_OPTIONS,
         note: "Select the closest overall cap shape. Skip this if the mushroom is old or distorted.",
         helpSummary: "Shape terms",
-        helpText: "Convex means rounded outward. Plano-convex means mostly flat but still rounded. Applanate means flat. Campanulate means bell-shaped."
+        helpText: "Convex = rounded outward. Plano-convex = flat-rounded. Applanate = flat. Campanulate = bell-shaped. Concave = rounded inward. Plano-concave = flat-rounded inward."
     },
     {
         id: "striations",
@@ -76,7 +76,7 @@ export const MAJOR_FIELDS = [
         options: TRI_STATE_OPTIONS,
         note: "Look for warts, patches, powder, or other veil material on the cap surface.",
         helpSummary: "What is the universal veil?",
-        helpText: "The universal veil is tissue that encloses young Amanita mushrooms. Remnants may remain as warts or patches on the cap."
+        helpText: "The universal veil is the outer tissue layer that encloses young Amanita mushrooms. Remnants may remain as warts or patches on the cap."
     }
 ];
 
@@ -84,13 +84,13 @@ export const MORE_FIELDS = [
     {
         id: "diameter",
         type: "numberWithApprox",
-        label: "Pileus diameter",
+        label: "Cap diameter",
         column: FIELD_COLUMNS.diameter,
         inputId: "diameter-mm",
         approximateId: "diameter-approximate",
         placeholder: "e.g., 55",
         unit: "mm",
-        note: "Enter the cap diameter in millimeters."
+        note: "Enter the approximate cap diameter in millimeters."
     },
     {
         id: "surfaceTexture",
@@ -135,6 +135,6 @@ export const MORE_FIELDS = [
         colorPanelId: "staining-color-panel",
         stateOptions: STAINING_STATE_OPTIONS,
         colorOptions: STAINING_COLOR_OPTIONS,
-        note: "Use this only if you observed staining or clearly saw no staining."
+        note: "Is there a color change when the mushroom is bruised or cut?",
     }
 ];

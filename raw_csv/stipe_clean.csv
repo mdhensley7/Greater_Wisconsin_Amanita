@@ -1,136 +1,102 @@
 specimen_id,species,length_mm,width_mm,color,shape,decoration_bottom,decoration_top,staining,annulus,universal_veil,context_type,context_color,context_stain
 30181,Amanita bisporigera,93,21,white,narrowing upward,fibrillose,smooth,not apparent,present,present,,,no
 30182,Amanita suballiacea,75,62,white,narrowing upward,fibrillose,,not apparent,present,present,solid spongy,white,no
-30183,Amanita oberwinklerana,93,7,white light yellow,narrowing upward,minutely fibrillose,smooth,not apparent,present,present,,,no
+30183,Amanita cf. oberwinkleriana,93,7,white light yellow,narrowing upward,minutely fibrillose,smooth,not apparent,present,present,,,no
 30184,Amanita suballiacea,112,8,white light yellow,narrowing upward,flocculose,smooth,not apparent,present,present,spongy,cream,no
-30185,Amanita sp aurorae,55,4,light orange,narrowing upward,fuzzy,,not apparent,absent,present,,,no
+30185,Amanita cf. aurorae nom prov.,55,4,light orange,narrowing upward,fuzzy,,not apparent,absent,present,,,no
 30186,Amanita fusca,24,5,white light brown,narrowing upward,minutely scabrous,,grey,absent,present,,,no
 30187,Amanita suballiacea,125,18,white,cylindrical,floccose,scabrous,not apparent,present,present,,,no
-30187_2,Amanita suballiacea,112,11,white,cylindrical,majorly floccose peeling,,not apparent,present,present,solid,white to light yellow at edge,no
-30187_3,Amanita suballiacea,190,17,white,cylindrical,majorly floccose,,not apparent,present,present,,,no
-30188,Amanita sp longicuneus,42,2,white light brown,narrowing upward,minutely scabrous,,not apparent,absent,present,,,no
+30188,Amanita fuscozonata,42,2,white light brown,narrowing upward,minutely scabrous,,not apparent,absent,present,,,no
 30189,Amanita rhacopus,115,10,light brown white,narrowing upward,scabrous,,not apparent,absent,present,stuffed,white,no
 30190,Amanita frostiana,55,9,white light yellow,cylindrical,floccose,,brown,present,present,stuffed,white,yellow
 30191,Amanita frostiana,45,7, dingy white,narrowing upward,scabrous,,not apparent,present,present,stuffed,white,no
 30192,Amanita chrysoblema,51,7, dingy white,cylindrical,streaking,streaking,not apparent,present,present,solid spongy,white,no
-30193,Amanita albiceps,97,8,white,narrowing upward,smooth,,not apparent,absent,present,,,no
-30193_2,Amanita albiceps,90,6,white,narrowing upward,smooth,,not apparent,absent,present,,,no
-30193_3,Amanita albiceps,85,7,white,narrowing upward,smooth,,not apparent,absent,present,,,no
-30194,Amanita sp  vag1,100,6, dingy white,narrowing upward,smooth,,not apparent,absent,present,barely stuffed,white,no
-30194_2,Amanita sp  vag2,75,5,white,narrowing upward,smooth,,not apparent,absent,present,,,no
+30193,Amanita confundens,97,8,white,narrowing upward,smooth,,not apparent,absent,present,,,no
+30194,Amanita aff. fulva,100,6, dingy white,narrowing upward,smooth,,not apparent,absent,present,barely stuffed,white,no
 30195,Amanita amerivirosa,147,9, dingy white,narrowing upward,scabrous,,not apparent,present,present,solid-spongy,white,no
 30196,Amanita chrysoblema,60,14,light yellow,narrowing upward,minutely fibrillose,,not apparent,absent,present,,,no
 30197,Amanita chrysoblema,85,9, dingy yellow white,cylindrical,floccose,,not apparent,absent,absent,,,no
 30198,Amanita sinicoflava,90,7,light brown white,narrowing upward,scabrous,smooth,not apparent,absent,present,,,no
 30199,Amanita bisporigera,125,10,white,cylindrical,flocculose,smooth,not apparent,present,present,stuffed,white,no
-30199_2,Amanita bisporigera,105,9, dingy white,narrowing upward,flocculose,smooth,not apparent,present,present,stuffed,white,no
-30199_3,Amanita bisporigera,85,9,white,narrowing upward,flocculose,smooth,not apparent,present,present,stuffed,white,no
-30199_4,Amanita bisporigera,50,9,white,cylindrical,flocculose,smooth,not apparent,present,present,stuffed,white,no
 30200,Amanita bisporigera,50,6,light brown white,cylindrical,,,not apparent,absent,present,,,no
 30201,Amanita flavoconia,48,5,light yellow,narrowing upward,smooth,smooth,not apparent,present,absent,hollow,white,no
 30202,Amanita porphyria,105,7,grey brown,narrowing upward,scabrous,smooth,not apparent,present,absent,,,no
 30203,Amanita amerivirosa,70,10,dingy white,cylindrical,,,not apparent,present,present,hollow,white,no
 30204,Amanita amerivirosa,114,13,dingy white,narrowing upward,smooth,floccose,not apparent,present,absent,stuffed,white,no
-30204_2,Amanita amerivirosa,105,9,white,narrowing upward,smooth,floccose,not apparent,present,absent,stuffed,white,no
-30204_3,Amanita amerivirosa,100,11,white,narrowing upward,smooth,floccose,not apparent,present,absent,stuffed,white,no
-30204_4,Amanita amerivirosa,80,10,white,cylindrical,smooth,floccose,not apparent,present,absent,stuffed,white,no
 30205,Amanita flavoconia,47,5,yellow brown,narrowing upward,smooth,smooth,not apparent,absent,absent,,,no
 30206,Amanita flavoconia,37,4,yellow,narrowing upward,fibrillose,smooth,not apparent,present,absent,,,no
 30207,Amanita porphyria,95,9,dingy white,narrowing upward,floccose,smooth,not apparent,present,present,,,no
-30208,Amanita aff citrina,65,7,dingy white,cylindrical,smooth,smooth,not apparent,present,present,,,no
-30208_2,Amanita aff citrina,60,8,white,cylindrical,smooth,smooth,not apparent,present,present,,,no
+30208,Amanita aff. citrina,65,7,dingy white,cylindrical,smooth,smooth,not apparent,present,present,,,no
 30209,Amanita amerivirosa,33,11,white,narrowing upward,scabrous,smooth,not apparent,present,present,,,no
 30210,Amanita chrysoblema,75,9,light yellow,cylindrical,floccose,floccose,not apparent,present,present,,,no
 30211,Amanita chrysoblema,,,,,,,,,,,,
-30212,Amanita sp ami1,45,6,white light brown,narrowing upward,floccose,scabrous,not apparent,absent,present,,,no
-30213,Amanita aff citrina,120,8,white light yellow,cylindrical,minutely scabrous,smooth,not apparent,present,present,hollow,white,no
-30214,Amanita aff citrina,60,5,white light yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
+30212,Amanita sp. 'GWA-ami1',45,6,white light brown,narrowing upward,floccose,scabrous,not apparent,absent,present,,,no
+30213,Amanita aff. citrina,120,8,white light yellow,cylindrical,minutely scabrous,smooth,not apparent,present,present,hollow,white,no
+30214,Amanita aff. citrina,60,5,white light yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
 30215,Amanita centrascura,100,9,light grey white,cylindrical,smooth,smooth,not apparent,absent,present,,,no
-30216,Amanita aff citrina,95,7,white light brown,cylindrical,minutely scabrous,smooth,grey,present,present,,,no
-30217,Amanita aff citrina,73,8,white,narrowing upward,fibrillose,smooth,light brown,present,present,,,no
-30218,Amanita aff citrina,70,5,light bright yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
-30219,Amanita aff citrina,85,10,light yellow,narrowing upward,fribrillose,smooth,not apparent,present,present,,,no
+30216,Amanita aff. citrina,95,7,white light brown,cylindrical,minutely scabrous,smooth,grey,present,present,,,no
+30217,Amanita aff. citrina,73,8,white,narrowing upward,fibrillose,smooth,light brown,present,present,,,no
+30218,Amanita aff. citrina,70,5,light bright yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
+30219,Amanita aff. citrina,85,10,light yellow,narrowing upward,fribrillose,smooth,not apparent,present,present,,,no
 30220,Amanita centrascura,123,5,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,hollow,white,no
 30221,Amanita multisquamosa,83,8,white,narrowing upward,fibrillose,smooth,brown,present,present,,,no
 30222,Amanita multisquamosa,61,7,white,narrowing upward,floccose,smooth,not apparent,present,present,,,no
 30223,Amanita multisquamosa,67,8,white,narrowing upward,floccose,smooth,not apparent,present,present,,,no
-30223_2,Amanita multisquamosa,72,9,white,narrowing upward,flocculose,smooth,not apparent,present,present,,,no
-30223_3,Amanita multisquamosa,75,8,white,narrowing upward,flocculose,smooth,not apparent,present,present,,,no
 30224,Amanita multisquamosa,99,8,light brown white yellow,narrowing upward,floccose,smooth,not apparent,present,present,,,no
-30224_2,Amanita multisquamosa,105,9,white,narrowing upward,fibrillose,smooth,not apparent,present,present,,,no
 30225,Amanita populiphila,55,10,white,narrowing upward,minutely fibrillose,smooth,not apparent,absent,present,,,no
 30226,Amanita stranella,65,9,white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
-30226_2,Amanita stranella,,,white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
 30227,Amanita stranella,52,5,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,,,no
 30228,Amanita flavoconia,40,9,yellos,narrowing upward,smooth,smooth,not apparent,present,absent,,white,no
 30229,Amanita frostiana,55,7,yellow,cylindrical,fibrillose,smooth,not apparent,present,absent,,white,no
-30230,Amanita sp amerirubescens,90,10,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
-30230_2,Amanita sp amerirubescens,108,12,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
-30230_3,Amanita sp amerirubescens,135,13,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
-30230_4,Amanita sp amerirubescens,180,15,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
-30230_5,Amanita sp amerirubescens,125,17,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
-30230_6,Amanita sp amerirubescens,137,20,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
-30230_7,Amanita sp amerirubescens,40,5,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
-30230_8,Amanita sp amerirubescens,95,13,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
-30231,Amanita sp amerirubescens,112,17,white,narrowing upward,transverse cracks,smooth,brown red,,absent,,,no
-30232,Amanita sp amerirubescens,87,12,red brown,narrowing upward,minutely fibrillose,smooth,brown red,present,absent,,,no
+30230,Amanita amerirubescens nom prov.,90,10,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
+30231,Amanita amerirubescens nom prov.,112,17,white,narrowing upward,transverse cracks,smooth,brown red,,absent,,,no
+30232,Amanita amerirubescens nom prov.,87,12,red brown,narrowing upward,minutely fibrillose,smooth,brown red,present,absent,,,no
 30233,Amanita rhacopus,140,10,light brown white,narrowing upward,minutely scabrous,smooth,not apparent,absent,present,,,no
 30234,Amanita rhacopus,169,15,grey brown,narrowing upward,minutely scabrous,smooth,not apparent,absent,present,,,no
 30235,Amanita solaniolens,50,6,white,cylindrical,smooth,smooth,not apparent,present,present,,,no
 30236,Amanita solaniolens,77,10,light brown white,narrowing upward,streaking,smooth,not apparent,present,present,,,no
-30237,Amanita albiceps,105,7,white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
+30237,Amanita confundens,105,7,white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
 30238,Amanita flavorubens,85,11,yellow,narrowing upward,floccose,floccose,brown red,present,absent,,white,brick
 30239,Amanita virginiana,55,7,white,cylindrical,smooth,smooth,not apparent,present,present,,,no
-30239_2,Amanita virginiana,45,5,white,cylindrical,smooth,smooth,not apparent,present,present,,,no
 30240,Amanita bisporigera,115,5,white,narrowing upward,minutely scabrous,smooth,not apparent,present,present,,,no
 30242,Amanita frostiana,60,7,light yellow,cylindrical,floccose,smooth,not apparent,present,present,,,no
-30243,Amanita fulva,60,9,light brown white,narrowing upward,smooth,smooth,not apparent,,present,stuffed,cream,no
-30244,Amanita confundens,70,5,white,narrowing upward,minutely scabrous,smooth,not apparent,,present,stuffed,white,no
-30245,Amanita fulva,,,light orange,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
+30243,Amanita aff. fulva,60,9,light brown white,narrowing upward,smooth,smooth,not apparent,,present,stuffed,cream,no
+30244,Amanita coryli,70,5,white,narrowing upward,minutely scabrous,smooth,not apparent,,present,stuffed,white,no
+30245,Amanita aff. fulva,,,light orange,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
 30246,Amanita brunnescens,50,20,white,narrowing upward,smooth,smooth,not apparent,,absent,solid-spongy,white,brown
-30247,Amanita griseoumbonata,85,10,white,narrowing upward,smooth,smooth,not apparent,absent,present,solid-spongy,white,no
+30247,Amanita aff. griseoumbonata,85,10,white,narrowing upward,smooth,smooth,not apparent,absent,present,solid-spongy,white,no
 30248,Amanita brunnescens,80,15,white,narrowing upward,minutely scabrous,smooth,not apparent,,absent,,,no
 30249,Amanita stranella,65,5,white,cylindrical,minutely scabrous,smooth,not apparent,absent,present,,,no
-30249_2,Amanita stranella,40,5,white,cylindrical,minutely scabrous,smooth,not apparent,absent,present,,,no
-30250,Amanita sp vag2,80,10,light brown white,cylindrical,smooth,smooth,not apparent,absent,present,,,no
-30250_2,Amanita sp vag3,50,8,light brown white,cylindrical,smooth,smooth,not apparent,absent,present,,,no
-30251,Amanita confundens,165,15,white,narrowing upward,streaking,smooth,not apparent,absent,present,,,no
-30252,Amanita sp amerirubescens,45,10,light brown red,cylindrical,fibrillose,smooth,brown red,present,absent,stuffed,,brown red
+30250,Amanita coryli,80,10,light brown white,cylindrical,smooth,smooth,not apparent,absent,present,,,no
+30251,Amanita coryli,165,15,white,narrowing upward,streaking,smooth,not apparent,absent,present,,,no
+30252,Amanita amerirubescens nom prov.,45,10,light brown red,cylindrical,fibrillose,smooth,brown red,present,absent,stuffed,,brown red
 30253,Amanita brunnescens,30,15,white,narrowing upward,,,not apparent,,absent,,,no
 30254,Amanita brunnescens,115,15,white,cylindrical,fibrillose,smooth,not apparent,present,absent,,,no
-30255,Amanita fulva,70,7,light brown white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
+30255,Amanita aff. fulva,70,7,light brown white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
 30256,Amanita rhacopus,85,7,white light grey,narrowing upward,minutely scabrous,smooth,not apparent,absent,present,hollow,white,no
-30257,Amanita albiceps,70,5,white,narrowing upward,smooth,smooth,not apparent,absent,present,hollow,white,no
-30257_2,Amanita albiceps,100,10,white,narrowing upward,smooth,smooth,not apparent,absent,present,hollow,white,no
+30257,Amanita confundens,70,5,white,narrowing upward,smooth,smooth,not apparent,absent,present,hollow,white,no
 30258,Amanita brunnescens,75,13,white,narrowing upward,streaking,,,present,absent,,,no
 30259,Amanita brunnescens,80,10,white,narrowing downward,streaking,smooth,light brown,present,present,,,no
 30260,Amanita solaniolens,65,7,white light brown,narrowing downward,streaking,minutely scabrous,not apparent,present,present,,,no
 30261,Amanita frostiana,70,5,light yellow,narrowing upward,floccose,smooth,not apparent,present,present,,,no
-30262,Amanita sp subnigra,105,7,white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
+30262,Amanita subnigra nom prov.,105,7,white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
 30263,Amanita brunnescens,140,13,white light brown,narrowing upward,streaking,smooth,brown red,present,absent,,white,no
-30264,Amanita rubescens var alba,30,17,white,,,,brown red,,absent,,,no
+30264,Amanita amerirubescens nom prov.,30,17,white,,,,brown red,,absent,,,no
 30265,Amanita brunnescens,90,15,white,narrowing upward,streaking,smooth,brown streak,,present,,,no
 30267,Amanita amerivirosa,135,15,white,narrowing upward,scabrous,smooth,not apparent,absent,present,,,no
-30268,Amanita sp jakeslandingensis,110,8,light brown,narrowing upward,minutely scabrous,smooth,not apparent,absent,present,,,no
+30268,Amanita jakeslandingensis nom prov.,110,8,light brown,narrowing upward,minutely scabrous,smooth,not apparent,absent,present,,,no
 30269,Amanita amerivirosa,130,15,white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
 30270,Amanita amerivirosa,65,15,white,narrowing upward,scabrous,,not apparent,,present,,,no
 30271,Amanita brunnescens,105,15,white,narrowing upward,smooth,smooth,brown,,present,,,no
 30272,Amanita brunnescens,110,5,light brown white,cylindrical,smooth,smooth,brown,present,present,,,no
 30273,Amanita bisporigera,110,10,white,narrowing upward,minutely scabrous,smooth,not apparent,present,present,stuffed,white,no
-30274,Amanita sp ami2,70,15,white,cylindrical,smooth,smooth,brown,,present,stuffed,white,brown
-30274_2,Amanita sp ami2,60,10,white,cylindrical,smooth,smooth,brown,,present,stuffed,white,brown
+30274,Amanita sp. 'GWA-ami2',70,15,white,cylindrical,smooth,smooth,brown,,present,stuffed,white,brown
 30275,Amanita bisporigera,140,7,white,narrowing upward,smooth,smooth,not apparent,present,present,,,no
-30276,Amanita sp phal1 (IN46),70,12,white,cylindrical,scabrous,scabrous,not apparent,present,present,solid,white,no
+30276,Amanita sp. 'GWA-phal1',70,12,white,cylindrical,scabrous,scabrous,not apparent,present,present,solid,white,no
 30277,Amanita bisporigera,90,3,white,narrowing upward,smooth,minutely fibrillose,not apparent,present,present,,,no
 30278,Amanita centrascura,130,7,light brown white,narrowing upward,minutely scabrous,smooth,not apparent,absent,present,hollow,white,no
 30279,Amanita suballiacea,55,20,white,narrowing upward,scabrous,smooth,not apparent,,present,,,no
 30280,Amanita populiphila,75,15,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,,,no
-30280_2,Amanita populiphila,90,15,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,,,no
-30280_3,Amanita populiphila,75,10,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,,,no
-30280_4,Amanita populiphila,70,7,white,narrowing upward,floccose,smooth,not apparent,absent,present,,,no
-30280_5,Amanita populiphila,60,10,white,narrowing upward,floccose,smooth,not apparent,absent,present,,,no
-30280_6,Amanita populiphila,70,14,white,narrowing upward,floccose,smooth,not apparent,absent,present,,,no
-30280_7,Amanita populiphila,75,15,white,narrowing upward,floccose,smooth,not apparent,absent,present,,,no
 30281,Amanita fusca,50,6,light brown white,cylindrical,minutely scabrous,smooth,not apparent,absent,present,stuffed,white,no
 30282,Amanita fusca,80,5,light brown white,narrowing upward,minutely fibrillose,smooth,not apparent,absent,present,,,no
 30283,Amanita flavorubens,60,18,yellow,narrowing upward,fibrillose,minutely scabrous,brown red,present,absent,,,no
@@ -140,4 +106,38 @@ specimen_id,species,length_mm,width_mm,color,shape,decoration_bottom,decoration_
 30287,Amanita lavendula,90,10,white,narrowing upward,smooth,smooth,not apparent,present,absent,,,no
 30291,Amanita lavendula,60,5, dingy white,cylindrical,scabrous,minutely scabrous,not apparent,present,present,,,no
 30293,Amanita porphyria,95,10,light brown,narrowing upward,scabrous,smooth,not apparent,present,absent,,,no
-40220,Amanita aff citrina,85,10,light brown white,cylindrical,minutely fibrillose,smooth,not apparent,present,present,,,no
+40220,Amanita aff. citrina,85,10,light brown white,cylindrical,minutely fibrillose,smooth,not apparent,present,present,,,no
+30187_2,Amanita suballiacea,112,11,white,cylindrical,majorly floccose peeling,,not apparent,present,present,solid,white to light yellow at edge,no
+30187_3,Amanita suballiacea,190,17,white,cylindrical,majorly floccose,,not apparent,present,present,,,no
+30193_2,Amanita confundens,90,6,white,narrowing upward,smooth,,not apparent,absent,present,,,no
+30193_3,Amanita confundens,85,7,white,narrowing upward,smooth,,not apparent,absent,present,,,no
+30194_2,Amanita aff. fulva,75,5,white,narrowing upward,smooth,,not apparent,absent,present,,,no
+30199_2,Amanita bisporigera,105,9, dingy white,narrowing upward,flocculose,smooth,not apparent,present,present,stuffed,white,no
+30199_3,Amanita bisporigera,85,9,white,narrowing upward,flocculose,smooth,not apparent,present,present,stuffed,white,no
+30199_4,Amanita bisporigera,50,9,white,cylindrical,flocculose,smooth,not apparent,present,present,stuffed,white,no
+30204_2,Amanita amerivirosa,105,9,white,narrowing upward,smooth,floccose,not apparent,present,absent,stuffed,white,no
+30204_3,Amanita amerivirosa,100,11,white,narrowing upward,smooth,floccose,not apparent,present,absent,stuffed,white,no
+30204_4,Amanita amerivirosa,80,10,white,cylindrical,smooth,floccose,not apparent,present,absent,stuffed,white,no
+30208_2,Amanita aff. citrina,60,8,white,cylindrical,smooth,smooth,not apparent,present,present,,,no
+30223_2,Amanita multisquamosa,72,9,white,narrowing upward,flocculose,smooth,not apparent,present,present,,,no
+30223_3,Amanita multisquamosa,75,8,white,narrowing upward,flocculose,smooth,not apparent,present,present,,,no
+30224_2,Amanita multisquamosa,105,9,white,narrowing upward,fibrillose,smooth,not apparent,present,present,,,no
+30226_2,Amanita stranella,,,white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
+30230_2,Amanita amerirubescens nom prov.,108,12,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
+30230_3,Amanita amerirubescens nom prov.,135,13,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
+30230_4,Amanita amerirubescens nom prov.,180,15,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
+30230_5,Amanita amerirubescens nom prov.,125,17,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
+30230_6,Amanita amerirubescens nom prov.,137,20,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
+30230_7,Amanita amerirubescens nom prov.,40,5,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
+30230_8,Amanita amerirubescens nom prov.,95,13,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
+30239_2,Amanita virginiana,45,5,white,cylindrical,smooth,smooth,not apparent,present,present,,,no
+30249_2,Amanita stranella,40,5,white,cylindrical,minutely scabrous,smooth,not apparent,absent,present,,,no
+30250_2,Amanita coryli,50,8,light brown white,cylindrical,smooth,smooth,not apparent,absent,present,,,no
+30257_2,Amanita confundens,100,10,white,narrowing upward,smooth,smooth,not apparent,absent,present,hollow,white,no
+30274_2,Amanita sp. 'GWA-ami2',60,10,white,cylindrical,smooth,smooth,brown,,present,stuffed,white,brown
+30280_2,Amanita populiphila,90,15,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,,,no
+30280_3,Amanita populiphila,75,10,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,,,no
+30280_4,Amanita populiphila,70,7,white,narrowing upward,floccose,smooth,not apparent,absent,present,,,no
+30280_5,Amanita populiphila,60,10,white,narrowing upward,floccose,smooth,not apparent,absent,present,,,no
+30280_6,Amanita populiphila,70,14,white,narrowing upward,floccose,smooth,not apparent,absent,present,,,no
+30280_7,Amanita populiphila,75,15,white,narrowing upward,floccose,smooth,not apparent,absent,present,,,no
