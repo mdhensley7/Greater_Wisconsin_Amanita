@@ -216,10 +216,34 @@
         }
 
         .photo-placeholder img {
+            display: none;
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
             border-radius: 6px;
+        }
+
+        .photo-placeholder.has-image img {
+            display: block;
+        }
+
+        .photo-placeholder.has-image .placeholder-text {
+            display: none;
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .photo-gallery .photo-placeholder {
+            margin-top: 0;
+        }
+
+        .photo-slot-empty {
+            display: none;
         }
 
         /* Grid layout for desktop */
@@ -258,137 +282,35 @@
 </head>
 <body>
     <!-- Header Component -->
-    <div class="site-header">
-        <div class="header-top">
-            <div class="brand-group">
-                <p class="eyebrow">Amanita Key Project</p>
-                <h1>Greater Wisconsin Amanita</h1>
-                <p class="site-subtitle">Morphological Features Reference</p>
-            </div>
-        </div>
-        <nav class="site-nav">
-            <a href="../../index.html">Home</a>
-            <a href="../About/index.html">About</a>
-            <a href="../Morphology_Primer/index.html" class="nav-active">Morphology Primer</a>
-            <a href="../Dichotomous_Key/index.html">Dichotomous Key</a>
-            <a href="../Cross_Reference/index.html">Cross Reference</a>
-            <a href="../Species_Descriptions/index.html">Species</a>
-            <a href="../Search/index.html">Search</a>
-        </nav>
-    </div>
+    <div id="header-placeholder"></div>
 
-    <!-- Header Styles (moved inline for completeness) -->
-    <style>
-        .site-header {
-            background: linear-gradient(135deg, #2f4f2f 0%, #486848 100%);
-            color: white;
-            padding: 1.5rem 1.5rem 1.2rem;
-            margin-bottom: 1.5rem;
-            font-family: system-ui, sans-serif;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .header-top {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .brand-group {
-            max-width: 720px;
-        }
-
-        .eyebrow {
-            margin: 0 0 0.35rem;
-            font-size: 0.9rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            opacity: 0.85;
-        }
-
-        .site-header h1 {
-            margin: 0;
-            font-size: 2.1rem;
-            line-height: 1.1;
-        }
-
-        .site-subtitle {
-            margin: 0.65rem 0 0;
-            max-width: 680px;
-            opacity: 0.92;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .site-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1rem;
-        }
-
-        .site-nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: background-color 0.2s ease;
-        }
-
-        .site-nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .site-nav a.nav-active {
-            background-color: rgba(255, 255, 255, 0.3);
-            border-bottom: 2px solid white;
-        }
-
-        @media (max-width: 768px) {
-            .site-header {
-                padding: 1rem;
-            }
-
-            .site-header h1 {
-                font-size: 1.7rem;
-            }
-
-            .site-subtitle {
-                font-size: 0.9rem;
-            }
-
-            .site-nav {
-                gap: 0.5rem;
-                flex-direction: column;
-            }
-
-            .site-nav a {
-                display: inline-block;
-                padding: 0.4rem 0.8rem;
-                font-size: 0.85rem;
-            }
-        }
-    </style>
+    <script>
+        fetch("/Components/header.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("header-placeholder").innerHTML = html;
+            });
+    </script>
 
     <div class="container">
-        <h1 class="page-title">Morphological Features of Amanita</h1>
+        <h1 class="page-title">Morphological Features of <em>Amanita</em></h1>
         <p class="page-intro">
-            This guide explains the key morphological features used to identify Amanita species in Greater Wisconsin.
-            Each feature is organized by the part of the mushroom: the <strong>cap (pileus)</strong>, the <strong>cup-like base (volva)</strong>,
-            the <strong>stem (stipe)</strong>, and the <strong>tree host</strong>. Understanding these features will help you make accurate field observations and identifications.
+            This guide explains the key morphological features used to identify <em>Amanita</em> species.
+            Each feature is organized by the part of the mushroom: the <strong>cap (pileus)</strong>, the <strong>cup-like base (volva)</strong>, and
+            the <strong>stem (stipe)</strong>. Within each part of the mushroom is an array of descriptive devices which can be used to sufficiently 
+            delineate mushrooms into the section of the genus with which they belong and sometimes even down to the species.
             Expand each section below to learn more about what to look for.
         </p>
 
+        <div class="section-card">
+            <h2 class="section-heading"><em>Amanita</em> mushroom development</h2>
+            <p class="category-intro">
+                Insert a labelled diagram of mushroom development from egg to maturity.GET DIAGRAM FROM CECELIA
+            </p>
+        </div>
         <!-- CAP (PILEUS) SECTION -->
         <div class="section-card">
             <h2 class="section-heading">Cap (Pileus)</h2>
-            <p class="category-intro">
-                The cap is the topmost, usually umbrella-shaped part of the mushroom. Its characteristics are among the most visible and important for identification.
-            </p>
 
             <div class="feature-section">
                 <details>
@@ -396,22 +318,32 @@
                     <div class="feature-content">
                         <div class="feature-definition">
                             <h4>Definition</h4>
-                            <p>The width of the cap measured across the widest point, typically in millimeters.</p>
+                            <p>The width of the cap measured across the widest point.</p>
                         </div>
                         <div class="feature-variations">
                             <h4>Variations</h4>
+                            <p>Due to mushroom size plasticity, sorting species into distinct size categories can sometimes help organize them.</p>
                             <ul class="variations-list">
-                                <li><strong>Small:</strong> Less than 40mm (1.5 in)</li>
-                                <li><strong>Medium:</strong> 40-80mm (1.5-3 in)</li>
-                                <li><strong>Large:</strong> Greater than 80mm (3+ in)</li>
+                                <li><strong>Small:</strong> Less than 40mm (~1.5 in)</li>
+                                <li><strong>Medium:</strong> 40-80mm (~1.5-3 in)</li>
+                                <li><strong>Large:</strong> Greater than 80mm (~3+ in)</li>
                             </ul>
                         </div>
                         <div class="feature-observation">
-                            <h4>What to Look For</h4>
-                            <p>Measure across the cap at its widest point. Size can vary within a species depending on conditions and maturity.</p>
+                            <h4>Important note:</h4>
+                            <p>Size can vary drastically within a species depending on conditions and maturity. Noting relative maturity stage can help alleviate confusion.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="cap-diameter" data-placeholder="true">
-                            Photo: Cap Diameter Example
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-diameter">
+                                <span class="placeholder-text">Photo: Cap Diameter Measurement</span>
+                                <img src="/Pages/images/morpho_primer/diameter1.png" alt="Cap diameter measurement example" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-diameter-2">
+                                <img src="/Pages/images/morpho_primer/cap-diameter-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-diameter-3">
+                                <img src="/Pages/images/morpho_primer/cap-diameter-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -419,25 +351,31 @@
                 <details>
                     <summary>Center Color</summary>
                     <div class="feature-content">
-                        <div class="feature-definition">
-                            <h4>Definition</h4>
-                            <p>The color of the cap disk (the central area, not including the margin/edge).</p>
-                        </div>
                         <div class="feature-variations">
                             <h4>Common Colors</h4>
                             <ul class="variations-list">
-                                <li><strong>White:</strong> Pure white, often found in white Amanita species</li>
-                                <li><strong>Yellow/Green:</strong> Pale to bright yellows or greenish tones</li>
-                                <li><strong>Brown/Red:</strong> Ranging from light tan to deep brown or reddish</li>
-                                <li><strong>Gray:</strong> Silvery or muted gray tones</li>
+                                <li><strong>White:</strong> Pure white, but often found with subtle yellow or even pink hues in the center</li>
+                                <li><strong>Yellow/Green:</strong> Pale to bright, citrine yellows or greenish tones</li>
+                                <li><strong>Yellow/Orange:</strong> Bright yellow to deep orange right at the center</li>
+                                <li><strong>Brown/Red:</strong> Ranging from light tan to deep brown sometimes with reddish staining</li>
+                                <li><strong>Gray:</strong> Silvery or muted gray tones. Some species exhibit both gray and brown mushrooms</li>
                             </ul>
                         </div>
                         <div class="feature-observation">
                             <h4>What to Look For</h4>
-                            <p>Observe the cap color in natural light if possible. Note if the color is uniform or has gradients. Staining or bruising may change color over time.</p>
+                            <p>Observe the cap color in natural light if possible. Staining or bruising may change color over time so document color before removing mushroom</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="cap-center-color" data-placeholder="true">
-                            Photo: Cap Color Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-center-color">
+                                <span class="placeholder-text">Photo: Cap Color Examples</span>
+                                <img src="/Pages/images/morpho_primer/capcolor1.JPG" alt="Photo: Cap Color Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-center-color-2">
+                                <img src="/Pages/images/morpho_primer/cap-center-color-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-center-color-3">
+                                <img src="/Pages/images/morpho_primer/cap-center-color-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -447,22 +385,19 @@
                     <div class="feature-content">
                         <div class="feature-definition">
                             <h4>Definition</h4>
-                            <p>The color of the edge or outer rim of the cap, which often differs from the center color.</p>
+                            <p>The color of the edge or outer rim of the cap. Often differs from the center even just slightly.</p>
                         </div>
-                        <div class="feature-variations">
-                            <h4>Color Patterns</h4>
-                            <ul class="variations-list">
-                                <li><strong>Matching center:</strong> Margin color is the same as or similar to the center</li>
-                                <li><strong>Lighter:</strong> Margin is paler than the center</li>
-                                <li><strong>Contrasting:</strong> Margin is distinctly different (e.g., white margin with colored center)</li>
-                            </ul>
-                        </div>
-                        <div class="feature-observation">
-                            <h4>What to Look For</h4>
-                            <p>Compare the edge color to the center color. This distinction helps differentiate species with similar overall appearance.</p>
-                        </div>
-                        <div class="photo-placeholder" data-feature-type="cap-margin-color" data-placeholder="true">
-                            Photo: Cap Margin Colors
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-margin-color">
+                                <span class="placeholder-text">Photo: Cap Margin Colors</span>
+                                <img src="/Pages/images/morpho_primer/capcolor2.jpg" alt="Photo: Cap Margin Colors" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-margin-color-2">
+                                <img src="/Pages/images/morpho_primer/cap-margin-color-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-margin-color-3">
+                                <img src="/Pages/images/morpho_primer/cap-margin-color-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -470,16 +405,12 @@
                 <details>
                     <summary>Shape</summary>
                     <div class="feature-content">
-                        <div class="feature-definition">
-                            <h4>Definition</h4>
-                            <p>The overall outline and geometry of the cap as viewed from the side, which changes as the mushroom matures.</p>
-                        </div>
                         <div class="feature-variations">
-                            <h4>Common Shapes</h4>
+                            <h4>Descriptive terms</h4>
                             <ul class="variations-list">
                                 <li><strong>Convex:</strong> Rounded like an upside-down bowl</li>
                                 <li><strong>Plano-convex:</strong> Flat center with rounded edges</li>
-                                <li><strong>Applanate:</strong> Flattened, like a pancake</li>
+                                <li><strong>Applanate/planar:</strong> Flat</li>
                                 <li><strong>Campanulate:</strong> Bell-shaped</li>
                                 <li><strong>Plano-concave:</strong> Flat to slightly depressed in center</li>
                             </ul>
@@ -488,8 +419,17 @@
                             <h4>What to Look For</h4>
                             <p>View the cap from the side. Note that young mushrooms often have more convex caps that flatten or depress as they age.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="cap-shape" data-placeholder="true">
-                            Photo: Cap Shape Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-shape">
+                                <span class="placeholder-text">Photo: Cap Shape Examples</span>
+                                <img src="/Pages/images/morpho_primer/capshapeplanar.JPG" alt="Photo: Cap Shape Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-shape-2">
+                                <img src="/Pages/images/morpho_primer/cap-shape-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-shape-3">
+                                <img src="/Pages/images/morpho_primer/cap-shape-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -515,8 +455,17 @@
                             <h4>What to Look For</h4>
                             <p>Feel the cap gently and observe in different lighting. Viscid caps may lose this quality as they dry. Check if there are visible striations or wrinkles.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="cap-texture" data-placeholder="true">
-                            Photo: Cap Texture Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-texture">
+                                <span class="placeholder-text">Photo: Cap Texture Examples</span>
+                                <img src="/Pages/images/morpho_primer/cap-texture.png" alt="Photo: Cap Texture Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-texture-2">
+                                <img src="/Pages/images/morpho_primer/cap-texture-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-texture-3">
+                                <img src="/Pages/images/morpho_primer/cap-texture-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -539,8 +488,17 @@
                             <h4>What to Look For</h4>
                             <p>Look at the cap from the side and top. A small central bump should be visible if present. This feature can diminish as the mushroom matures.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="cap-umbonate" data-placeholder="true">
-                            Photo: Umbonate Cap Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-umbonate">
+                                <span class="placeholder-text">Photo: Umbonate Cap Examples</span>
+                                <img src="/Pages/images/morpho_primer/cap-umbonate.png" alt="Photo: Umbonate Cap Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-umbonate-2">
+                                <img src="/Pages/images/morpho_primer/cap-umbonate-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-umbonate-3">
+                                <img src="/Pages/images/morpho_primer/cap-umbonate-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -565,8 +523,17 @@
                             <h4>What to Look For</h4>
                             <p>Look at the cap margin and estimate how far inward the grooves extend. These are often more visible on white or pale caps. Young mushrooms may not show striations yet.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="cap-striation" data-placeholder="true">
-                            Photo: Cap Striations
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-striation">
+                                <span class="placeholder-text">Photo: Cap Striations</span>
+                                <img src="/Pages/images/morpho_primer/cap-striation.png" alt="Photo: Cap Striations" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-striation-2">
+                                <img src="/Pages/images/morpho_primer/cap-striation-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-striation-3">
+                                <img src="/Pages/images/morpho_primer/cap-striation-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -589,8 +556,17 @@
                             <h4>What to Look For</h4>
                             <p>Check the margin of the cap for any hanging veil material, especially in young mushrooms. These fragments often wear away as the mushroom ages or weathers.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="cap-appendiculate" data-placeholder="true">
-                            Photo: Cap Margin Fragments
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-appendiculate">
+                                <span class="placeholder-text">Photo: Cap Margin Fragments</span>
+                                <img src="/Pages/images/morpho_primer/cap-appendiculate.png" alt="Photo: Cap Margin Fragments" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-appendiculate-2">
+                                <img src="/Pages/images/morpho_primer/cap-appendiculate-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-appendiculate-3">
+                                <img src="/Pages/images/morpho_primer/cap-appendiculate-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -615,8 +591,17 @@
                             <h4>What to Look For</h4>
                             <p>Look for raised bumps or white/pale patches on the colored cap surface. These are more visible on young specimens. They can wash off in rain or wear away with handling.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="cap-universal-veil" data-placeholder="true">
-                            Photo: Cap Warts and Patches
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-universal-veil">
+                                <span class="placeholder-text">Photo: Cap Warts and Patches</span>
+                                <img src="/Pages/images/morpho_primer/cap-universal-veil.png" alt="Photo: Cap Warts and Patches" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-universal-veil-2">
+                                <img src="/Pages/images/morpho_primer/cap-universal-veil-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-universal-veil-3">
+                                <img src="/Pages/images/morpho_primer/cap-universal-veil-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -641,8 +626,17 @@
                             <h4>What to Look For</h4>
                             <p>Observe if the cap has discolored areas from recent bruising. This is most obvious on young mushrooms. Handle gently to avoid creating additional staining.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="cap-staining" data-placeholder="true">
-                            Photo: Cap Staining Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-staining">
+                                <span class="placeholder-text">Photo: Cap Staining Examples</span>
+                                <img src="/Pages/images/morpho_primer/cap-staining.png" alt="Photo: Cap Staining Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-staining-2">
+                                <img src="/Pages/images/morpho_primer/cap-staining-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-staining-3">
+                                <img src="/Pages/images/morpho_primer/cap-staining-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -667,8 +661,17 @@
                             <h4>What to Look For</h4>
                             <p>Cut the cap vertically to see the interior flesh. The context color is just below the surface. Note if it changes color when exposed to air (oxidation).</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="cap-context" data-placeholder="true">
-                            Photo: Cap Cross-Section Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="cap-context">
+                                <span class="placeholder-text">Photo: Cap Cross-Section Examples</span>
+                                <img src="/Pages/images/morpho_primer/cap-context.png" alt="Photo: Cap Cross-Section Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-context-2">
+                                <img src="/Pages/images/morpho_primer/cap-context-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-context-3">
+                                <img src="/Pages/images/morpho_primer/cap-context-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -704,8 +707,17 @@
                             <h4>What to Look For</h4>
                             <p>Gently dig around the base to expose the volva. Pull up the mushroom carefully to see if there is a cup, rings, or just scattered debris. Different forms are diagnostic of different species.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="volva-form" data-placeholder="true">
-                            Photo: Volva Forms
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="volva-form">
+                                <span class="placeholder-text">Photo: Volva Forms</span>
+                                <img src="/Pages/images/morpho_primer/volva-form.png" alt="Photo: Volva Forms" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-form-2">
+                                <img src="/Pages/images/morpho_primer/volva-form-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-form-3">
+                                <img src="/Pages/images/morpho_primer/volva-form-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -730,8 +742,17 @@
                             <h4>What to Look For</h4>
                             <p>Observe the volva color in natural light. The color can vary depending on moisture and soil conditions. Compare it to the stipe color for contrast.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="volva-color" data-placeholder="true">
-                            Photo: Volva Colors
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="volva-color">
+                                <span class="placeholder-text">Photo: Volva Colors</span>
+                                <img src="/Pages/images/morpho_primer/volva-color.png" alt="Photo: Volva Colors" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-color-2">
+                                <img src="/Pages/images/morpho_primer/volva-color-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-color-3">
+                                <img src="/Pages/images/morpho_primer/volva-color-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -756,8 +777,17 @@
                             <h4>What to Look For</h4>
                             <p>Feel the volva gently and observe the surface under magnification if possible. The texture can help distinguish between similar-looking volvae.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="volva-texture" data-placeholder="true">
-                            Photo: Volva Textures
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="volva-texture">
+                                <span class="placeholder-text">Photo: Volva Textures</span>
+                                <img src="/Pages/images/morpho_primer/volva-texture.png" alt="Photo: Volva Textures" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-texture-2">
+                                <img src="/Pages/images/morpho_primer/volva-texture-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-texture-3">
+                                <img src="/Pages/images/morpho_primer/volva-texture-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -781,8 +811,17 @@
                             <h4>What to Look For</h4>
                             <p>Gently try to move the volva relative to the stipe. Note whether it is a cup that moves freely or a structure that appears fused to the stem base.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="volva-attachment" data-placeholder="true">
-                            Photo: Volva Attachment Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="volva-attachment">
+                                <span class="placeholder-text">Photo: Volva Attachment Examples</span>
+                                <img src="/Pages/images/morpho_primer/volva-attachment.png" alt="Photo: Volva Attachment Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-attachment-2">
+                                <img src="/Pages/images/morpho_primer/volva-attachment-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-attachment-3">
+                                <img src="/Pages/images/morpho_primer/volva-attachment-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -806,8 +845,17 @@
                             <h4>What to Look For</h4>
                             <p>Examine the stipe base from all angles. Note if the volva completely surrounds the stipe or only portions of it. Some volvae appear as a complete rim; others as scattered patches.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="volva-distribution" data-placeholder="true">
-                            Photo: Volva Coverage Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="volva-distribution">
+                                <span class="placeholder-text">Photo: Volva Coverage Examples</span>
+                                <img src="/Pages/images/morpho_primer/volva-distribution.png" alt="Photo: Volva Coverage Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-distribution-2">
+                                <img src="/Pages/images/morpho_primer/volva-distribution-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-distribution-3">
+                                <img src="/Pages/images/morpho_primer/volva-distribution-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -841,8 +889,17 @@
                             <h4>What to Look For</h4>
                             <p>Measure the stipe from where it attaches to the cap to the base. Be aware that stipes can compress or expand depending on moisture and conditions.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="stipe-length" data-placeholder="true">
-                            Photo: Stipe Length Comparison
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="stipe-length">
+                                <span class="placeholder-text">Photo: Stipe Length Comparison</span>
+                                <img src="/Pages/images/morpho_primer/stipe-length.png" alt="Photo: Stipe Length Comparison" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-length-2">
+                                <img src="/Pages/images/morpho_primer/stipe-length-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-length-3">
+                                <img src="/Pages/images/morpho_primer/stipe-length-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -866,8 +923,17 @@
                             <h4>What to Look For</h4>
                             <p>Measure the diameter of the stipe mid-way along its length. Note if the stipe is uniform, tapers toward the top, or widens at the base.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="stipe-width" data-placeholder="true">
-                            Photo: Stipe Width Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="stipe-width">
+                                <span class="placeholder-text">Photo: Stipe Width Examples</span>
+                                <img src="/Pages/images/morpho_primer/stipe-width.png" alt="Photo: Stipe Width Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-width-2">
+                                <img src="/Pages/images/morpho_primer/stipe-width-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-width-3">
+                                <img src="/Pages/images/morpho_primer/stipe-width-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -892,8 +958,17 @@
                             <h4>What to Look For</h4>
                             <p>Observe the stipe color in natural light. Note if the color is uniform from top to bottom or if it changes (e.g., yellower at the base).</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="stipe-color" data-placeholder="true">
-                            Photo: Stipe Color Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="stipe-color">
+                                <span class="placeholder-text">Photo: Stipe Color Examples</span>
+                                <img src="/Pages/images/morpho_primer/stipe-color.png" alt="Photo: Stipe Color Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-color-2">
+                                <img src="/Pages/images/morpho_primer/stipe-color-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-color-3">
+                                <img src="/Pages/images/morpho_primer/stipe-color-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -918,8 +993,17 @@
                             <h4>What to Look For</h4>
                             <p>Observe the stipe from the side. Note if it maintains consistent width or if there are bulges, tapers, or curves.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="stipe-shape" data-placeholder="true">
-                            Photo: Stipe Shape Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="stipe-shape">
+                                <span class="placeholder-text">Photo: Stipe Shape Examples</span>
+                                <img src="/Pages/images/morpho_primer/stipe-shape.png" alt="Photo: Stipe Shape Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-shape-2">
+                                <img src="/Pages/images/morpho_primer/stipe-shape-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-shape-3">
+                                <img src="/Pages/images/morpho_primer/stipe-shape-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -945,8 +1029,17 @@
                             <h4>What to Look For</h4>
                             <p>Examine the stipe carefully for any patterns, zones, or texture changes. Note separately the appearance near the annulus and below it.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="stipe-decoration" data-placeholder="true">
-                            Photo: Stipe Decoration Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="stipe-decoration">
+                                <span class="placeholder-text">Photo: Stipe Decoration Examples</span>
+                                <img src="/Pages/images/morpho_primer/stipe-decoration.png" alt="Photo: Stipe Decoration Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-decoration-2">
+                                <img src="/Pages/images/morpho_primer/stipe-decoration-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-decoration-3">
+                                <img src="/Pages/images/morpho_primer/stipe-decoration-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -971,8 +1064,17 @@
                             <h4>What to Look For</h4>
                             <p>Observe if there are any discolored areas from handling or weather. Note whether staining occurs quickly or slowly after bruising.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="stipe-staining" data-placeholder="true">
-                            Photo: Stipe Staining Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="stipe-staining">
+                                <span class="placeholder-text">Photo: Stipe Staining Examples</span>
+                                <img src="/Pages/images/morpho_primer/stipe-staining.png" alt="Photo: Stipe Staining Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-staining-2">
+                                <img src="/Pages/images/morpho_primer/stipe-staining-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-staining-3">
+                                <img src="/Pages/images/morpho_primer/stipe-staining-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -998,8 +1100,17 @@
                             <h4>What to Look For</h4>
                             <p>Look for a distinct ring or collar on the stipe. Note its position and whether the underside is grooved or smooth. In young mushrooms, the annulus may be attached to the cap edge.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="stipe-annulus" data-placeholder="true">
-                            Photo: Annulus Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="stipe-annulus">
+                                <span class="placeholder-text">Photo: Annulus Examples</span>
+                                <img src="/Pages/images/morpho_primer/stipe-annulus.png" alt="Photo: Annulus Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-annulus-2">
+                                <img src="/Pages/images/morpho_primer/stipe-annulus-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-annulus-3">
+                                <img src="/Pages/images/morpho_primer/stipe-annulus-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -1024,8 +1135,17 @@
                             <h4>What to Look For</h4>
                             <p>Carefully dig around the base to expose any veil material. Pull the mushroom straight up to avoid damaging the volva. Check if the veil is firmly attached or loose.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="stipe-veil-base" data-placeholder="true">
-                            Photo: Stipe Base Veil Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="stipe-veil-base">
+                                <span class="placeholder-text">Photo: Stipe Base Veil Examples</span>
+                                <img src="/Pages/images/morpho_primer/stipe-veil-base.png" alt="Photo: Stipe Base Veil Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-veil-base-2">
+                                <img src="/Pages/images/morpho_primer/stipe-veil-base-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-veil-base-3">
+                                <img src="/Pages/images/morpho_primer/stipe-veil-base-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -1050,8 +1170,17 @@
                             <h4>What to Look For</h4>
                             <p>Cut the stipe lengthwise to observe the internal flesh color. Note if it differs from the surface color or changes upon exposure to air.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="stipe-context" data-placeholder="true">
-                            Photo: Stipe Cross-Section Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="stipe-context">
+                                <span class="placeholder-text">Photo: Stipe Cross-Section Examples</span>
+                                <img src="/Pages/images/morpho_primer/stipe-context.png" alt="Photo: Stipe Cross-Section Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-context-2">
+                                <img src="/Pages/images/morpho_primer/stipe-context-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-context-3">
+                                <img src="/Pages/images/morpho_primer/stipe-context-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -1088,8 +1217,17 @@
                             <h4>What to Look For</h4>
                             <p>Note the trees in the immediate vicinity of the mushroom. Some Amanita species are highly host-specific, while others are more flexible. The presence of certain tree species can narrow down possible species identifications.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="tree-host-overview" data-placeholder="true">
-                            Photo: Wisconsin Tree Species
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="tree-host-overview">
+                                <span class="placeholder-text">Photo: Wisconsin Tree Species</span>
+                                <img src="/Pages/images/morpho_primer/tree-host-overview.png" alt="Photo: Wisconsin Tree Species" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-host-overview-2">
+                                <img src="/Pages/images/morpho_primer/tree-host-overview-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-host-overview-3">
+                                <img src="/Pages/images/morpho_primer/tree-host-overview-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -1115,8 +1253,17 @@
                             <h4>What to Look For</h4>
                             <p>Examine the trees immediately surrounding the mushroom. Look for a tree within 1-3 meters (3-10 feet) that is approximately 1-2 meters (3-6 feet) in diameter at breast height. Take note of multiple tree characteristics if uncertain.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="tree-identification" data-placeholder="true">
-                            Photo: Tree Identification Guide
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="tree-identification">
+                                <span class="placeholder-text">Photo: Tree Identification Guide</span>
+                                <img src="/Pages/images/morpho_primer/tree-identification.png" alt="Photo: Tree Identification Guide" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-identification-2">
+                                <img src="/Pages/images/morpho_primer/tree-identification-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-identification-3">
+                                <img src="/Pages/images/morpho_primer/tree-identification-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -1144,8 +1291,17 @@
                             <h4>What to Look For</h4>
                             <p>Record the common and scientific names of trees near your specimen. This information is valuable for future reference and database records. A field guide or tree identification app can assist in confirmation.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="tree-scientific" data-placeholder="true">
-                            Photo: Tree Bark & Leaf Details
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="tree-scientific">
+                                <span class="placeholder-text">Photo: Tree Bark &amp; Leaf Details</span>
+                                <img src="/Pages/images/morpho_primer/tree-scientific.png" alt="Photo: Tree Bark &amp; Leaf Details" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-scientific-2">
+                                <img src="/Pages/images/morpho_primer/tree-scientific-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-scientific-3">
+                                <img src="/Pages/images/morpho_primer/tree-scientific-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -1171,8 +1327,17 @@
                             <h4>What to Look For</h4>
                             <p>Note the overall forest composition and habitat type. Amanita fruiting is influenced by moisture, temperature, and tree community. The combination of habitat and tree host can help narrow species identification.</p>
                         </div>
-                        <div class="photo-placeholder" data-feature-type="habitat-type" data-placeholder="true">
-                            Photo: Wisconsin Habitat Examples
+                        <div class="photo-gallery">
+                            <div class="photo-placeholder" data-feature-type="habitat-type">
+                                <span class="placeholder-text">Photo: Wisconsin Habitat Examples</span>
+                                <img src="/Pages/images/morpho_primer/habitat-type.png" alt="Photo: Wisconsin Habitat Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="habitat-type-2">
+                                <img src="/Pages/images/morpho_primer/habitat-type-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="habitat-type-3">
+                                <img src="/Pages/images/morpho_primer/habitat-type-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
                         </div>
                     </div>
                 </details>

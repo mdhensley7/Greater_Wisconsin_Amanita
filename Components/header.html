@@ -3,15 +3,15 @@
     .site-header {
         background: linear-gradient(135deg, #2f4f2f 0%, #486848 100%);
         color: white;
-        padding: 1.5rem 1.5rem 1.2rem;
-        margin-bottom: 1.5rem;
+        padding: 1.2rem 1.5rem 1rem;
+        margin-bottom: 1rem;
         font-family: system-ui, sans-serif;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
 
     .header-top {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
         gap: 1rem;
         flex-wrap: wrap;
@@ -19,6 +19,26 @@
 
     .brand-group {
         max-width: 720px;
+    }
+
+    .brand-logo {
+        flex-shrink: 0;
+        width: 128px;
+        height: 128px;
+        color: white;
+        opacity: 0.95;
+    }
+
+    .brand-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    @media (max-width: 720px) {
+        .brand-logo {
+            display: none;
+        }
     }
 
     .eyebrow {
@@ -87,8 +107,20 @@
         background: rgba(255, 255, 255, 0.2);
     }
 
-    .dropdown {
+    .site-nav .dropdown {
         position: relative;
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        border-radius: 0;
+        cursor: auto;
+        transition: none;
+    }
+
+    .site-nav .dropdown:hover,
+    .site-nav .dropdown[open] {
+        background: none;
     }
 
     .dropdown-content {
@@ -155,14 +187,16 @@
         <div class="brand-group">
             <p class="eyebrow">Greater Wisconsin <em>Amanita</em></p>
             <h1><em>Amanita</em> Identification Tool</h1>
-            <p class="site-subtitle">A field-friendly identification tool for the genus <em>Amanita</em> in the upper midwest region using confirmed collections and rigorous scientific data. All you need is a couple of measurements and we take care of the rest!</p>
+        </div>
+        <div class="brand-logo">
+            <img src="/images/gwa_logo.png" alt="Greater Wisconsin Amanita logo">
         </div>
     </div>
 
     <nav class="site-nav">
         <a href="/index.html">Home</a>
-        <a href="/Pages/Search/index.html">Identify!</a>
         <a href="/Pages/Morphology_Primer/index.html">Morphology Primer</a>
+        <a href="/Pages/Search/index.html">Identify!</a>
         <details class="dropdown">
             <summary>More</summary>
             <div class="dropdown-content">
