@@ -26,18 +26,18 @@ specimen_id,species,position,form,color,staining,remainingpercent,condition
 30205,Amanita flavoconia,,,,,,
 30206,Amanita flavoconia,superior,submembranous,yellow,no,25,collapsed
 30207,Amanita porphyria,superior,membranous,grey brown,no,75,collapsed
-30208,Amanita aff. citrina,superior,membranous,light yellow,no,100,free
+30208,Amanita cf. lavendula,superior,membranous,light yellow,no,100,free
 30209,Amanita amerivirosa,,,,,,
 30210,Amanita chrysoblema,at apex,submembranous,light yellow,no,25,collapsed
 30211,Amanita chrysoblema,immature specimen,,,,,
 30212,Amanita sp. 'GWA-ami1',,,,,,
-30213,Amanita aff. citrina,superior,membranous,light yellow,no,75,free
-30214,Amanita aff. citrina,superior,"membranous, folded",yellow,no,50,collapsed
+30213,Amanita cf. lavendula,superior,membranous,light yellow,no,75,free
+30214,Amanita cf. lavendula,superior,"membranous, folded",yellow,no,50,collapsed
 30215,Amanita centrascura,,,,,,
-30216,Amanita aff. citrina,superior,membranous,light yellow,no,75,collapsed
-30217,Amanita aff. citrina,superior,submembranous,white,no,75,attached to gills
-30218,Amanita aff. citrina,superior,membranous,light bright yellow,no,50,free
-30219,Amanita aff. citrina,superior,submembranous,white,no,75,attached to gills
+30216,Amanita cf. lavendula,superior,membranous,light yellow,no,75,collapsed
+30217,Amanita cf. lavendula,superior,submembranous,white,no,75,attached to gills
+30218,Amanita cf. lavendula,superior,membranous,light bright yellow,no,50,free
+30219,Amanita cf. lavendula,superior,submembranous,white,no,75,attached to gills
 30220,Amanita centrascura,,,,,,
 30221,Amanita multisquamosa,superior,submembranous,white,,100,
 30222,Amanita multisquamosa,superior,membranous,light brown white,no,50,free
@@ -103,10 +103,10 @@ specimen_id,species,position,form,color,staining,remainingpercent,condition
 30284,Amanita suballiacea,superior,membranous,white,no,100,free
 30285,Amanita fusca,,,,,,
 30286,Amanita porphyria,superior,membranous,grey,no,100,free
-30287,Amanita lavendula,superior,submembranous,yellow,no,25,collapsed
-30291,Amanita lavendula,,,,,,
+30287,Amanita cf. lavendula,superior,submembranous,yellow,no,25,collapsed
+30291,Amanita cf. lavendula,,,,,,
 30293,Amanita porphyria,superior,membranous,grey,no,100,free
-40220,Amanita aff. citrina,superior,submembranous,yellow,no,75,free
+40220,Amanita cf. lavendula,superior,submembranous,yellow,no,75,free
 30187_2,Amanita suballiacea,at apex,"membranous, thin",white,,100,free
 30187_3,Amanita suballiacea,at apex,"membranous, thin",white,,100,free
 30193_2,Amanita confundens,,,,,,
@@ -118,7 +118,7 @@ specimen_id,species,position,form,color,staining,remainingpercent,condition
 30204_2,Amanita amerivirosa,superior,submembranous,white,no,,
 30204_3,Amanita amerivirosa,superior,submembranous,white,no,,attached to gills
 30204_4,Amanita amerivirosa,superior,submembranous,white,no,,
-30208_2,Amanita aff. citrina,,,,,,
+30208_2,Amanita cf. lavendula,,,,,,
 30223_2,Amanita multisquamosa,mid,membranous,light brown white,no,,free
 30223_3,Amanita multisquamosa,mid,membranous,light brown white,no,,free
 30224_2,Amanita multisquamosa,mid,membranous,light brown white,no,51,free

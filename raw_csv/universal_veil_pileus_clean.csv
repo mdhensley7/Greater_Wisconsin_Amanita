@@ -26,18 +26,18 @@ specimen_id,species,form,color,texture,attachment,distribution
 30205,Amanita flavoconia,warts,dingy white brown,membranous,adnate,center
 30206,Amanita flavoconia,warts,dingy brown,friable,easily removed,sparse center
 30207,Amanita porphyria,patches,dingy brown,membranous,easily removed,sparse uneven
-30208,Amanita aff. citrina,patches,dingy white,submembranous,removable,sparse
+30208,Amanita cf. lavendula,patches,dingy white,submembranous,removable,sparse
 30209,Amanita amerivirosa,,,,,
 30210,Amanita chrysoblema,warts,dingy white  brown,friable,easily removed,common
 30211,Amanita chrysoblema,warts,white,membranous,adnate,dense even
 30212,Amanita sp. 'GWA-ami1',patches,dingy white light brown,membranous,easily removed,sparse
-30213,Amanita aff. citrina,,,,,
-30214,Amanita aff. citrina,patches,dingy brown,membranous,easily removed,sparse center
+30213,Amanita cf. lavendula,,,,,
+30214,Amanita cf. lavendula,patches,dingy brown,membranous,easily removed,sparse center
 30215,Amanita centrascura,,,,,
-30216,Amanita aff. citrina,patches,dingy white,membranous,adnate,sparse center
-30217,Amanita aff. citrina,powder,dingy white,pulverulent,easily removed,sparse margin
-30218,Amanita aff. citrina,,,,,
-30219,Amanita aff. citrina,patches,white,membranous,adnate,sparse margin
+30216,Amanita cf. lavendula,patches,dingy white,membranous,adnate,sparse center
+30217,Amanita cf. lavendula,powder,dingy white,pulverulent,easily removed,sparse margin
+30218,Amanita cf. lavendula,,,,,
+30219,Amanita cf. lavendula,patches,white,membranous,adnate,sparse margin
 30220,Amanita centrascura,,,,,
 30221,Amanita multisquamosa,warts,brown white,membranous,adnate,common even
 30222,Amanita multisquamosa,warts,white light brown,submembranous,easily removed,dense even
@@ -103,10 +103,10 @@ specimen_id,species,form,color,texture,attachment,distribution
 30284,Amanita suballiacea,,,,,
 30285,Amanita fusca,patches,white,membranous,adnate,sparse margin
 30286,Amanita porphyria,powder,brown,pulverulent,easily removed,sparse uneven
-30287,Amanita lavendula,,,,,
-30291,Amanita lavendula,patches,brown,pulverulent,easily removed,sparse uneven
+30287,Amanita cf. lavendula,,,,,
+30291,Amanita cf. lavendula,patches,brown,pulverulent,easily removed,sparse uneven
 30293,Amanita porphyria,powder,brown  dingy white,pulverulent,easily removed,common uneven
-40220,Amanita aff. citrina,patches,white light brown,pulverulent,easily removed,dense center
+40220,Amanita cf. lavendula,patches,white light brown,pulverulent,easily removed,dense center
 30187_2,Amanita suballiacea,,,,,
 30187_3,Amanita suballiacea,,,,,
 30193_2,Amanita confundens,,,,,
@@ -118,7 +118,7 @@ specimen_id,species,form,color,texture,attachment,distribution
 30204_2,Amanita amerivirosa,,,,,
 30204_3,Amanita amerivirosa,,,,,
 30204_4,Amanita amerivirosa,,,,,
-30208_2,Amanita aff. citrina,patches,dingy white,submembranous,removable,sparse
+30208_2,Amanita cf. lavendula,patches,dingy white,submembranous,removable,sparse
 30223_2,Amanita multisquamosa,warts,white light brown,submembranous,easily removed,dense even
 30223_3,Amanita multisquamosa,warts,white light brown,submembranous,easily removed,dense even
 30224_2,Amanita multisquamosa,warts,white light brown,submembranous,easily removed,dense even

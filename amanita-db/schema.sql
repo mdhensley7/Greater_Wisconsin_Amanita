@@ -50,6 +50,56 @@ CREATE TABLE public.basal_bulb (
 
 
 --
+-- Name: basidia; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.basidia (
+    specimen_id text,
+    species text,
+    sectionid text,
+    basidia_count double precision,
+    min_length double precision,
+    avg_length double precision,
+    max_length double precision,
+    min_width double precision,
+    avg_width double precision,
+    max_width double precision,
+    spores_4 double precision,
+    spores_3 double precision,
+    spores_2 double precision,
+    spores_1 double precision,
+    min_s_length double precision,
+    avg_s_length double precision,
+    max_s_length double precision
+);
+
+
+--
+-- Name: basidiospore; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.basidiospore (
+    specimen_id text,
+    species text,
+    sectionid text,
+    spore_count double precision,
+    min_length double precision,
+    p10_length double precision,
+    avg_length double precision,
+    p90_length double precision,
+    max_length double precision,
+    min_width double precision,
+    p10_width double precision,
+    avg_width double precision,
+    p90_width double precision,
+    max_width double precision,
+    min_q double precision,
+    avg_q double precision,
+    max_q double precision
+);
+
+
+--
 -- Name: lamellae; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -198,6 +248,20 @@ CREATE INDEX idx_basal_bulb_specimen_id ON public.basal_bulb USING btree (specim
 
 
 --
+-- Name: idx_basidia_specimen_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_basidia_specimen_id ON public.basidia USING btree (specimen_id);
+
+
+--
+-- Name: idx_basidiospore_specimen_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_basidiospore_specimen_id ON public.basidiospore USING btree (specimen_id);
+
+
+--
 -- Name: idx_lamellae_specimen_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -256,6 +320,22 @@ ALTER TABLE ONLY public.basal_bulb
 
 
 --
+-- Name: basidia basidia_specimen_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.basidia
+    ADD CONSTRAINT basidia_specimen_id_fkey FOREIGN KEY (specimen_id) REFERENCES public.specimens(specimen_id) ON DELETE CASCADE;
+
+
+--
+-- Name: basidiospore basidiospore_specimen_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.basidiospore
+    ADD CONSTRAINT basidiospore_specimen_id_fkey FOREIGN KEY (specimen_id) REFERENCES public.specimens(specimen_id) ON DELETE CASCADE;
+
+
+--
 -- Name: lamellae lamellae_specimen_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -303,5 +383,87 @@ ALTER TABLE ONLY public.universal_veil_stipe_base
     ADD CONSTRAINT universal_veil_stipe_base_specimen_id_fkey FOREIGN KEY (specimen_id) REFERENCES public.specimens(specimen_id) ON DELETE CASCADE;
 
 
+--
+-- Row level security: public (anon) read-only access.
+-- Every table is SELECT-only for anon/authenticated; the Search tool
+-- never writes, so no other operation is granted anywhere.
+--
+
+ALTER TABLE public.specimens ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.specimens
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
+
+ALTER TABLE public.annulus ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.annulus
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
+
+ALTER TABLE public.basal_bulb ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.basal_bulb
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
+
+ALTER TABLE public.basidia ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.basidia
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
+
+ALTER TABLE public.basidiospore ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.basidiospore
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
+
+ALTER TABLE public.lamellae ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.lamellae
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
+
+ALTER TABLE public.lamellulae ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.lamellulae
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
+
+ALTER TABLE public.pileus ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.pileus
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
+
+ALTER TABLE public.stipe ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.stipe
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
+
+ALTER TABLE public.universal_veil_pileus ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.universal_veil_pileus
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
+
+ALTER TABLE public.universal_veil_stipe_base ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.universal_veil_stipe_base
+    FOR SELECT
+    TO anon, authenticated
+    USING (true);
 
 

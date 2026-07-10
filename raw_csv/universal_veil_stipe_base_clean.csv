@@ -26,18 +26,18 @@ specimen_id,species,type,texture,color,layered,toughorflimsy
 30205,Amanita flavoconia,not evident,,,not layered,
 30206,Amanita flavoconia,not evident,,,not layered,
 30207,Amanita porphyria,saccate,membranous,white,not layered,tough
-30208,Amanita aff. citrina,limbate,membranous,white,not layered,tough
+30208,Amanita cf. lavendula,limbate,membranous,white,not layered,tough
 30209,Amanita amerivirosa,limbate,membranous,dingy white brown,not layered,tough
 30210,Amanita chrysoblema,warts,submembranous,light yellow,layered,
 30211,Amanita chrysoblema,limbate,membranous,dingy white,not layered,tough
 30212,Amanita sp. 'GWA-ami1',saccate,membranous,light brown,not layered,tough
-30213,Amanita aff. citrina,limbate,membranous,white,not layered,tough
-30214,Amanita aff. citrina,limbate,membranous,white,not layered,tough
+30213,Amanita cf. lavendula,limbate,membranous,white,not layered,tough
+30214,Amanita cf. lavendula,limbate,membranous,white,not layered,tough
 30215,Amanita centrascura,sheathing,membranous,white,not layered,tough
-30216,Amanita aff. citrina,limbate,membranous,white,not layered,tough
-30217,Amanita aff. citrina,limbate,membranous,white,not layered,tough
-30218,Amanita aff. citrina,limbate,membranous,white,not layered,toughish
-30219,Amanita aff. citrina,limbate,submembranous,white,not layered,tough
+30216,Amanita cf. lavendula,limbate,membranous,white,not layered,tough
+30217,Amanita cf. lavendula,limbate,membranous,white,not layered,tough
+30218,Amanita cf. lavendula,limbate,membranous,white,not layered,toughish
+30219,Amanita cf. lavendula,limbate,submembranous,white,not layered,tough
 30220,Amanita centrascura,sheathing,membranous,white,not layered,tough
 30221,Amanita multisquamosa,collared,membranous,white,not layered,tough
 30222,Amanita multisquamosa,collared,membranous,white light brown,not layered,tough
@@ -103,10 +103,10 @@ specimen_id,species,type,texture,color,layered,toughorflimsy
 30284,Amanita suballiacea,saccate,membranous,white,not layered,
 30285,Amanita fusca,sheathing,membranous,white,not layered,
 30286,Amanita porphyria,limbate,membranous,light brown,not layered,
-30287,Amanita lavendula,not evident,,,not layered,
-30291,Amanita lavendula,limbate,membranous,light brown,not layered,
+30287,Amanita cf. lavendula,not evident,,,not layered,
+30291,Amanita cf. lavendula,limbate,membranous,light brown,not layered,
 30293,Amanita porphyria,not evident,,,not layered,
-40220,Amanita aff. citrina,limbate,membranous,white light brown,not layered,tough
+40220,Amanita cf. lavendula,limbate,membranous,white light brown,not layered,tough
 30187_2,Amanita suballiacea,saccate,membranous,white,not layered,flimsy
 30187_3,Amanita suballiacea,saccate,membranous,white,not layered,flimsy
 30193_2,Amanita confundens,saccate,membranous,white,not layered,flimsy
@@ -118,7 +118,7 @@ specimen_id,species,type,texture,color,layered,toughorflimsy
 30204_2,Amanita amerivirosa,not evident,,,not layered,
 30204_3,Amanita amerivirosa,not evident,,,not layered,
 30204_4,Amanita amerivirosa,not evident,,,not layered,
-30208_2,Amanita aff. citrina,limbate,membranous,white,not layered,tough
+30208_2,Amanita cf. lavendula,limbate,membranous,white,not layered,tough
 30223_2,Amanita multisquamosa,collared,membranous,white light brown,not layered,tough
 30223_3,Amanita multisquamosa,collared,membranous,white light brown,not layered,tough
 30224_2,Amanita multisquamosa,collared,membranous,white light brown,not layered,tough

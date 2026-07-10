@@ -26,18 +26,18 @@ specimen_id,species,diameter_mm,centercolor,margincolor,shape,surfacetexture,umb
 30205,Amanita flavoconia,45,brown yellow,yellow,applanate,viscid,not umbonate,0,not appendiculate,universal veil present,no staining,white
 30206,Amanita flavoconia,33,brown,orange,plano-convex,viscid,not umbonate,1,not appendiculate,universal veil present,no staining,white
 30207,Amanita porphyria,67,dark brown,light brown,applanate,viscid,not umbonate,0,not appendiculate,universal veil present,no staining,white
-30208,Amanita aff. citrina,52,light yellow green,light yellow,plano-convex,smooth,not umbonate,0,not appendiculate,universal veil present,no staining,white
+30208,Amanita cf. lavendula,52,light yellow green,light yellow,plano-convex,smooth,not umbonate,0,not appendiculate,universal veil present,no staining,white
 30209,Amanita amerivirosa,57,light brown,white,applanate,dry,not umbonate,0,not appendiculate,universal veil absent,no staining,white
 30210,Amanita chrysoblema,70,orange,yellow,plano-convex,sticky,not umbonate,6,not appendiculate,universal veil present,no staining,white
 30211,Amanita chrysoblema,45,light yellow,light yellow,campanulate,dry,not umbonate,0,not appendiculate,universal veil present,no staining,white
 30212,Amanita sp. 'GWA-ami1',50,light brown,light brown,applanate,dry,not umbonate,7,appendiculate,universal veil present,no staining,white
-30213,Amanita aff. citrina,37,bright yellow green,light yellow,convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,no staining,white
-30214,Amanita aff. citrina,25,bright yellow green,light yellow,plano-convex,dry,not umbonate,0,not appendiculate,universal veil present,no staining,white
+30213,Amanita cf. lavendula,37,bright yellow green,light yellow,convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,no staining,white
+30214,Amanita cf. lavendula,25,bright yellow green,light yellow,plano-convex,dry,not umbonate,0,not appendiculate,universal veil present,no staining,white
 30215,Amanita centrascura,52,dark grey ring,light grey,applanate,dry,not umbonate,7,not appendiculate,universal veil absent,no staining,white
-30216,Amanita aff. citrina,55,dingy yellow, light yellow,plano-convex,dry,not umbonate,0,not appendiculate,universal veil present,no staining,white
-30217,Amanita aff. citrina,42,dingy brown,light yellow,plano-convex,glaborous,not umbonate,0,not appendiculate,universal veil present,brown,white
-30218,Amanita aff. citrina,45,bright yellow,bright yellow,convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,no staining,white
-30219,Amanita aff. citrina,75,light yellow green,light yellow green,convex,glaborous,not umbonate,0,not appendiculate,universal veil present,no staining,white
+30216,Amanita cf. lavendula,55,dingy yellow, light yellow,plano-convex,dry,not umbonate,0,not appendiculate,universal veil present,no staining,white
+30217,Amanita cf. lavendula,42,dingy brown,light yellow,plano-convex,glaborous,not umbonate,0,not appendiculate,universal veil present,brown,white
+30218,Amanita cf. lavendula,45,bright yellow,bright yellow,convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,no staining,white
+30219,Amanita cf. lavendula,75,light yellow green,light yellow green,convex,glaborous,not umbonate,0,not appendiculate,universal veil present,no staining,white
 30220,Amanita centrascura,39,light grey ring,grey,applanate,viscid,minutely umbonate,7,not appendiculate,universal veil absent,no staining,white
 30221,Amanita multisquamosa,42, light brown white,white,convex,viscid,not umbonate,3,not appendiculate,universal veil present,light brown,white
 30222,Amanita multisquamosa,53,dark brown, light brown white,applanate,silky,not umbonate,9,not appendiculate,universal veil present,no staining,white
@@ -103,10 +103,10 @@ specimen_id,species,diameter_mm,centercolor,margincolor,shape,surfacetexture,umb
 30284,Amanita suballiacea,75,light yellow pink tint,white,applanate,dry,minutely umbonate,0,not appendiculate,universal veil absent,no staining,white
 30285,Amanita fusca,60,brown grey,brown grey,applanate,dry,not umbonate,5,not appendiculate,universal veil present,no staining,white
 30286,Amanita porphyria,45,brown,brown,applanate,glaborous,not umbonate,0,not appendiculate,universal veil present,no staining,white
-30287,Amanita lavendula,75,dingy yellow,light yellow,plano-convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,lavender,white
-30291,Amanita lavendula,35,yellow,yellow tinge,applanate,viscid,not umbonate,0,not appendiculate,universal veil present,no staining,white
+30287,Amanita cf. lavendula,75,dingy yellow,light yellow,plano-convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,lavender,white
+30291,Amanita cf. lavendula,35,yellow,yellow tinge,applanate,viscid,not umbonate,0,not appendiculate,universal veil present,no staining,white
 30293,Amanita porphyria,55,shiny brown,shiny brown,applanate,glaborous,not umbonate,0,not appendiculate,universal veil present,no staining,white
-40220,Amanita aff. citrina,68,light yellow,white,plano-convex,glaborous,not umbonate,0,not appendiculate,universal veil present,no staining,white
+40220,Amanita cf. lavendula,68,light yellow,white,plano-convex,glaborous,not umbonate,0,not appendiculate,universal veil present,no staining,white
 30187_2,Amanita suballiacea,69,light brown white,white,applanate,dry,not umbonate,0,not appendiculate,universal veil absent,no staining,white
 30187_3,Amanita suballiacea,113,light brown white,white,applanate,dry,not umbonate,0,not appendiculate,universal veil absent,no staining,white
 30193_2,Amanita confundens,37,brown,light brown,plano-convex,dry,not umbonate,8,not appendiculate,universal veil absent,no staining,white
@@ -118,7 +118,7 @@ specimen_id,species,diameter_mm,centercolor,margincolor,shape,surfacetexture,umb
 30204_2,Amanita amerivirosa,63,light yellow,white,plano-convex,viscid,not umbonate,2,not appendiculate,universal veil absent,no staining,white
 30204_3,Amanita amerivirosa,58,white,white,plano-convex,viscid,not umbonate,0,not appendiculate,universal veil absent,no staining,white
 30204_4,Amanita amerivirosa,45,white,white,convex,viscid,not umbonate,0,not appendiculate,universal veil absent,no staining,white
-30208_2,Amanita aff. citrina,48,light yellow,light yellow,campanulate,smooth,not umbonate,0,not appendiculate,universal veil present,no staining,white
+30208_2,Amanita cf. lavendula,48,light yellow,light yellow,campanulate,smooth,not umbonate,0,not appendiculate,universal veil present,no staining,white
 30223_2,Amanita multisquamosa,57,light brown,white,plano-concave,viscid,not umbonate,8,not appendiculate,universal veil present,no staining,white
 30223_3,Amanita multisquamosa,60,light brown,white,plano-concave,silky,not umbonate,6,not appendiculate,universal veil present,no staining,white
 30224_2,Amanita multisquamosa,63,light brown,white,plano-concave,majorly viscid,not umbonate,10,not appendiculate,universal veil present,no staining,white

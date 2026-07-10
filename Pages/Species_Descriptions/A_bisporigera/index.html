@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amanita bisporigera - Greater Wisconsin Amanita</title>
+
+    <style>
+        :root {
+            --bg: #f4f7f2;
+            --surface: #ffffff;
+            --text: #243233;
+            --muted: #5d6f5c;
+            --accent: #3b6b49;
+            --accent-light: #cdd6c3;
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        .page-layout {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .main-column {
+            flex: 1 1 480px;
+            min-width: 0;
+        }
+
+        .gallery-column {
+            flex: 1 1 420px;
+            min-width: 0;
+        }
+
+        @media (max-width: 850px) {
+            .page-layout {
+                flex-direction: column;
+            }
+        }
+
+        .page-title {
+            font-size: 2.1rem;
+            margin-bottom: 1.2rem;
+            color: #1f3e30;
+        }
+
+        .section-card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 1.6rem;
+            box-shadow: 0 14px 35px rgba(25, 50, 34, 0.08);
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(91, 118, 92, 0.1);
+        }
+
+        .section-card h2 {
+            margin-bottom: 0.9rem;
+            font-size: 1.3rem;
+            color: #274233;
+        }
+
+        .placeholder-note {
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.6rem;
+        }
+
+        .gallery-thumb {
+            position: relative;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: var(--accent-light);
+        }
+
+        .gallery-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-thumb:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-note {
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .specimen-label {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.55);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            line-height: 1;
+            padding: 3px 6px;
+            border-radius: 4px;
+            pointer-events: none;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 85vw;
+            max-height: 80vh;
+            border-radius: 8px;
+        }
+
+        .lightbox-close,
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 1.4rem;
+            width: 44px;
+            height: 44px;
+        }
+
+        .lightbox-close {
+            top: 1.2rem;
+            right: 1.2rem;
+        }
+
+        .lightbox-prev {
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-next {
+            right: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            bottom: 1.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .lightbox-image-wrap {
+            position: relative;
+            display: inline-block;
+            max-width: 85vw;
+            max-height: 80vh;
+        }
+
+        .lightbox-image-wrap .specimen-label {
+            top: 12px;
+            left: 12px;
+            font-size: 0.85rem;
+            padding: 4px 9px;
+            border-radius: 6px;
+        }
+
+        /* Related links */
+        .links-section ul {
+            list-style: none;
+        }
+
+        .links-section li {
+            margin-bottom: 0.6rem;
+        }
+
+        .description-section ul {
+            list-style: none;
+        }
+
+        .description-section li {
+            margin-bottom: 0.6rem;
+        }
+
+        /* External references */
+        .external-refs {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            padding: 0 1rem;
+        }
+
+        .ref-groups {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .ref-group h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--muted);
+        }
+
+        .ref-group ul {
+            list-style: none;
+        }
+
+        .ref-group li {
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 850px) {
+            .ref-groups {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <script>
+        fetch("/Components/header.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("header-placeholder").innerHTML = html;
+            });
+    </script>
+
+    <div class="page-layout">
+
+        <main class="main-column">
+            <h1 class="page-title"><em>Amanita bisporigera</em></h1>
+
+            <section class="section-card description-section">
+                <h2>Description links</h2>
+                <ul>
+                    <li>
+                        <!-- TODO: replace with real external description URL -->
+                        <a href="https://amanitaceae.mushroomobserver.org/?Amanita%20bisporigera">Amanitaceae.com (Rod E. Tulloss & Zhu L. Yang)</a>
+                    </li>
+                    <li>
+                        <!-- TODO: replace with real external description URL -->
+                        <a href="https://www.mushroomexpert.com/amanita_bisporigera.html">MushroomExpert.com (Michael Kuo)</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section-card links-section">
+                <h2>MDH additional comments</h2>
+                <!-- TODO: write personal field notes / comments -->
+                <p class="placeholder-note">Add additional comments here.</p>
+            </section>
+        </main>
+
+        <aside class="gallery-column">
+            <section class="section-card">
+                <h2>Photos</h2>
+                <div class="gallery-grid" id="gallery-grid"></div>
+                <p class="gallery-note">Click any photo to browse all images of this species.</p>
+            </section>
+        </aside>
+
+    </div>
+
+    <div class="external-refs">
+        <section class="section-card">
+            <h2>Observations + similar species</h2>
+            <div class="ref-groups">
+                <div class="ref-group">
+                    <h3><em>Amanita bisporigera</em></h3>
+                    <ul>
+                        <!-- TODO: replace with real iNaturalist taxon URL -->
+                        <li><a href="https://www.inaturalist.org/taxa/125390-Amanita-bisporigera">iNaturalist</a></li>
+                        <!-- TODO: replace with real Mushroom Observer URL -->
+                        <li><a href="https://mushroomobserver.org/names/382">Mushroom Observer</a></li>
+                    </ul>
+                </div>
+                <div class="ref-group">
+                    <!-- TODO: replace with actual closest morphological match species name -->
+                    <h3><em>Amanita suballiacea</em></h3>
+                    <ul>
+                        <!-- TODO: replace with real iNaturalist taxon URL -->
+                        <li><a href="https://www.inaturalist.org/taxa/525036-Amanita-suballiacea">iNaturalist</a></li>
+                        <!-- TODO: replace with real Mushroom Observer URL -->
+                        <li><a href="https://mushroomobserver.org/names/41400">Mushroom Observer</a></li>
+                    </ul>
+                </div>
+                <div class="ref-group">
+                    <!-- TODO: replace with actual closest morphological match species name -->
+                    <h3><em>Amanita amerivirosa</em></h3>
+                    <ul>
+                        <!-- TODO: replace with real iNaturalist taxon URL -->
+                        <li><a href="https://www.inaturalist.org/taxa/1231490-Amanita-amerivirosa">iNaturalist</a></li>
+                        <!-- TODO: replace with real Mushroom Observer URL -->
+                        <li><a href="https://mushroomobserver.org/names/59606">Mushroom Observer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev">&#8249;</button>
+        <div class="lightbox-image-wrap">
+            <img id="lightbox-image" src="" alt="">
+            <span class="specimen-label" id="lightbox-label"></span>
+        </div>
+        <button class="lightbox-next" id="lightbox-next">&#8250;</button>
+        <span class="lightbox-counter" id="lightbox-counter"></span>
+    </div>
+
+    <footer>
+        Greater Wisconsin <em>Amanita</em>
+    </footer>
+
+    <script>
+        // All known photos for this species. One thumbnail per specimen is shown
+        // in the preview grid; the lightbox cycles through the full list.
+        const galleryImages = [
+            "/images/specimens/A_bisporigera/30181/30181-01.jpg",
+            "/images/specimens/A_bisporigera/30181/30181-03.jpg",
+            "/images/specimens/A_bisporigera/30181/30181-04.jpg",
+            "/images/specimens/A_bisporigera/30181/30181-05.jpg",
+            "/images/specimens/A_bisporigera/30181/30181-06.jpg",
+            "/images/specimens/A_bisporigera/30181/30181-07.jpg",
+            "/images/specimens/A_bisporigera/30181/30181-08.jpg",
+            "/images/specimens/A_bisporigera/30181/30181-09.jpg",
+            "/images/specimens/A_bisporigera/30181/30181-10.jpg",
+            "/images/specimens/A_bisporigera/30181/30181-11.jpg",
+            "/images/specimens/A_bisporigera/30199/30199-1.jpg",
+            "/images/specimens/A_bisporigera/30199/30199-2.jpg",
+            "/images/specimens/A_bisporigera/30199/30199-3.jpg",
+            "/images/specimens/A_bisporigera/30199/30199-4.jpg",
+            "/images/specimens/A_bisporigera/30199/30199-5.jpg",
+            "/images/specimens/A_bisporigera/30199/30199-6.jpg",
+            "/images/specimens/A_bisporigera/30199/30199-7.jpg",
+            "/images/specimens/A_bisporigera/30199/30199-8.jpg",
+            "/images/specimens/A_bisporigera/30199/30199-9.jpg",
+            "/images/specimens/A_bisporigera/30200/30200-1.jpg",
+            "/images/specimens/A_bisporigera/30200/30200-2.jpg",
+            "/images/specimens/A_bisporigera/30200/30200-3.jpg",
+            "/images/specimens/A_bisporigera/30200/30200-4.jpg",
+            "/images/specimens/A_bisporigera/30240/30240-1.jpg",
+            "/images/specimens/A_bisporigera/30240/30240-2.jpg",
+            "/images/specimens/A_bisporigera/30240/30240-3.jpg",
+            "/images/specimens/A_bisporigera/30240/30240-4.jpg",
+            "/images/specimens/A_bisporigera/30240/30240-5.jpg",
+            "/images/specimens/A_bisporigera/30273/30273-1.jpg",
+            "/images/specimens/A_bisporigera/30273/30273-2.jpg",
+            "/images/specimens/A_bisporigera/30273/30273-3.jpg",
+            "/images/specimens/A_bisporigera/30273/30273-4.jpg",
+            "/images/specimens/A_bisporigera/30273/30273-5.jpg",
+            "/images/specimens/A_bisporigera/30275/30275-1.jpg",
+            "/images/specimens/A_bisporigera/30275/30275-2.jpg",
+            "/images/specimens/A_bisporigera/30275/30275-3.jpg",
+            "/images/specimens/A_bisporigera/30275/30275-4.jpg",
+            "/images/specimens/A_bisporigera/30275/30275-5.jpg",
+            "/images/specimens/A_bisporigera/30277/30277-1.jpg",
+            "/images/specimens/A_bisporigera/30277/30277-2.jpg",
+            "/images/specimens/A_bisporigera/30277/30277-3.jpg",
+            "/images/specimens/A_bisporigera/30277/30277-4.jpg"
+        ];
+
+        // Specimen id (the 30xxx folder name) embedded in each image path.
+        function getSpecimenId(src) {
+            const parts = src.split("/");
+            return parts[parts.length - 2];
+        }
+
+        // One preview thumbnail per specimen folder (first photo of each).
+        const previewIndexes = [];
+        let lastPrefix = null;
+        galleryImages.forEach((src, i) => {
+            const specimenPrefix = src.split("/").slice(0, -1).join("/");
+            if (specimenPrefix !== lastPrefix) {
+                previewIndexes.push(i);
+                lastPrefix = specimenPrefix;
+            }
+        });
+
+        const MAX_PREVIEW_THUMBS = 6;
+        const grid = document.getElementById("gallery-grid");
+        previewIndexes.slice(0, MAX_PREVIEW_THUMBS).forEach(i => {
+            const btn = document.createElement("button");
+            btn.className = "gallery-thumb";
+            const specimenId = getSpecimenId(galleryImages[i]);
+            btn.innerHTML = `
+                <img src="${galleryImages[i]}" alt="Amanita bisporigera specimen photo" loading="lazy">
+                <span class="specimen-label">${specimenId}</span>
+            `;
+            btn.addEventListener("click", () => openLightbox(i));
+            grid.appendChild(btn);
+        });
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImage = document.getElementById("lightbox-image");
+        const lightboxCounter = document.getElementById("lightbox-counter");
+        const lightboxLabel = document.getElementById("lightbox-label");
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightbox();
+            lightbox.classList.add("open");
+        }
+
+        function updateLightbox() {
+            lightboxImage.src = galleryImages[currentIndex];
+            lightboxCounter.textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+            lightboxLabel.textContent = getSpecimenId(galleryImages[currentIndex]);
+        }
+
+        document.getElementById("lightbox-close").addEventListener("click", () => {
+            lightbox.classList.remove("open");
+        });
+
+        document.getElementById("lightbox-prev").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateLightbox();
+        });
+
+        document.getElementById("lightbox-next").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            updateLightbox();
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove("open");
+            }
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (!lightbox.classList.contains("open")) return;
+            if (e.key === "Escape") lightbox.classList.remove("open");
+            if (e.key === "ArrowLeft") document.getElementById("lightbox-prev").click();
+            if (e.key === "ArrowRight") document.getElementById("lightbox-next").click();
+        });
+    </script>
+
+</body>
+</html>

@@ -26,18 +26,18 @@ specimen_id,species,length_mm,width_mm,color,shape,decoration_bottom,decoration_
 30205,Amanita flavoconia,47,5,yellow brown,narrowing upward,smooth,smooth,not apparent,absent,absent,,,no
 30206,Amanita flavoconia,37,4,yellow,narrowing upward,fibrillose,smooth,not apparent,present,absent,,,no
 30207,Amanita porphyria,95,9,dingy white,narrowing upward,floccose,smooth,not apparent,present,present,,,no
-30208,Amanita aff. citrina,65,7,dingy white,cylindrical,smooth,smooth,not apparent,present,present,,,no
+30208,Amanita cf. lavendula,65,7,dingy white,cylindrical,smooth,smooth,not apparent,present,present,,,no
 30209,Amanita amerivirosa,33,11,white,narrowing upward,scabrous,smooth,not apparent,present,present,,,no
 30210,Amanita chrysoblema,75,9,light yellow,cylindrical,floccose,floccose,not apparent,present,present,,,no
 30211,Amanita chrysoblema,,,,,,,,,,,,
 30212,Amanita sp. 'GWA-ami1',45,6,white light brown,narrowing upward,floccose,scabrous,not apparent,absent,present,,,no
-30213,Amanita aff. citrina,120,8,white light yellow,cylindrical,minutely scabrous,smooth,not apparent,present,present,hollow,white,no
-30214,Amanita aff. citrina,60,5,white light yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
+30213,Amanita cf. lavendula,120,8,white light yellow,cylindrical,minutely scabrous,smooth,not apparent,present,present,hollow,white,no
+30214,Amanita cf. lavendula,60,5,white light yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
 30215,Amanita centrascura,100,9,light grey white,cylindrical,smooth,smooth,not apparent,absent,present,,,no
-30216,Amanita aff. citrina,95,7,white light brown,cylindrical,minutely scabrous,smooth,grey,present,present,,,no
-30217,Amanita aff. citrina,73,8,white,narrowing upward,fibrillose,smooth,light brown,present,present,,,no
-30218,Amanita aff. citrina,70,5,light bright yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
-30219,Amanita aff. citrina,85,10,light yellow,narrowing upward,fribrillose,smooth,not apparent,present,present,,,no
+30216,Amanita cf. lavendula,95,7,white light brown,cylindrical,minutely scabrous,smooth,grey,present,present,,,no
+30217,Amanita cf. lavendula,73,8,white,narrowing upward,fibrillose,smooth,light brown,present,present,,,no
+30218,Amanita cf. lavendula,70,5,light bright yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
+30219,Amanita cf. lavendula,85,10,light yellow,narrowing upward,fribrillose,smooth,not apparent,present,present,,,no
 30220,Amanita centrascura,123,5,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,hollow,white,no
 30221,Amanita multisquamosa,83,8,white,narrowing upward,fibrillose,smooth,brown,present,present,,,no
 30222,Amanita multisquamosa,61,7,white,narrowing upward,floccose,smooth,not apparent,present,present,,,no
@@ -103,10 +103,10 @@ specimen_id,species,length_mm,width_mm,color,shape,decoration_bottom,decoration_
 30284,Amanita suballiacea,80,10,light brown,narrowing upward,scabrous,scabrous,not apparent,present,present,,,no
 30285,Amanita fusca,80,10,grey,narrowing upward,minutely fibrillose,smooth,not apparent,absent,present,,,no
 30286,Amanita porphyria,60,7,light brown,narrowing upward,streaking,smooth,not apparent,present,present,,,no
-30287,Amanita lavendula,90,10,white,narrowing upward,smooth,smooth,not apparent,present,absent,,,no
-30291,Amanita lavendula,60,5, dingy white,cylindrical,scabrous,minutely scabrous,not apparent,present,present,,,no
+30287,Amanita cf. lavendula,90,10,white,narrowing upward,smooth,smooth,not apparent,present,absent,,,no
+30291,Amanita cf. lavendula,60,5, dingy white,cylindrical,scabrous,minutely scabrous,not apparent,present,present,,,no
 30293,Amanita porphyria,95,10,light brown,narrowing upward,scabrous,smooth,not apparent,present,absent,,,no
-40220,Amanita aff. citrina,85,10,light brown white,cylindrical,minutely fibrillose,smooth,not apparent,present,present,,,no
+40220,Amanita cf. lavendula,85,10,light brown white,cylindrical,minutely fibrillose,smooth,not apparent,present,present,,,no
 30187_2,Amanita suballiacea,112,11,white,cylindrical,majorly floccose peeling,,not apparent,present,present,solid,white to light yellow at edge,no
 30187_3,Amanita suballiacea,190,17,white,cylindrical,majorly floccose,,not apparent,present,present,,,no
 30193_2,Amanita confundens,90,6,white,narrowing upward,smooth,,not apparent,absent,present,,,no
@@ -118,7 +118,7 @@ specimen_id,species,length_mm,width_mm,color,shape,decoration_bottom,decoration_
 30204_2,Amanita amerivirosa,105,9,white,narrowing upward,smooth,floccose,not apparent,present,absent,stuffed,white,no
 30204_3,Amanita amerivirosa,100,11,white,narrowing upward,smooth,floccose,not apparent,present,absent,stuffed,white,no
 30204_4,Amanita amerivirosa,80,10,white,cylindrical,smooth,floccose,not apparent,present,absent,stuffed,white,no
-30208_2,Amanita aff. citrina,60,8,white,cylindrical,smooth,smooth,not apparent,present,present,,,no
+30208_2,Amanita cf. lavendula,60,8,white,cylindrical,smooth,smooth,not apparent,present,present,,,no
 30223_2,Amanita multisquamosa,72,9,white,narrowing upward,flocculose,smooth,not apparent,present,present,,,no
 30223_3,Amanita multisquamosa,75,8,white,narrowing upward,flocculose,smooth,not apparent,present,present,,,no
 30224_2,Amanita multisquamosa,105,9,white,narrowing upward,fibrillose,smooth,not apparent,present,present,,,no

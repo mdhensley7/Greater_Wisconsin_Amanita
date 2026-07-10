@@ -140,6 +140,14 @@
 <body>
     <div id="header-placeholder"></div>
 
+    <script>
+        fetch("/Components/header.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("header-placeholder").innerHTML = html;
+            });
+    </script>
+    
     <main class="container">
 
         <section class="section-card">

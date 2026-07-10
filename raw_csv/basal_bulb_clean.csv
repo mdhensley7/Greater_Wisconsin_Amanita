@@ -26,18 +26,18 @@ specimen_id,species,length_mm,width_mm,shape
 30205,Amanita flavoconia,15,10,fusiform
 30206,Amanita flavoconia,6,9,ovoid
 30207,Amanita porphyria,10,22,ovoid
-30208,Amanita aff. citrina,20,23,subglobose
+30208,Amanita cf. lavendula,20,23,subglobose
 30209,Amanita amerivirosa,18,24,subglobose
 30210,Amanita chrysoblema,,,
 30211,Amanita chrysoblema,35,30,subglobose
 30212,Amanita sp. 'GWA-ami1',21,19,globose
-30213,Amanita aff. citrina,17,30,ovoid
-30214,Amanita aff. citrina,10,20,ovoid
+30213,Amanita cf. lavendula,17,30,ovoid
+30214,Amanita cf. lavendula,10,20,ovoid
 30215,Amanita centrascura,0,0,no bulb
-30216,Amanita aff. citrina,20,20,globose
-30217,Amanita aff. citrina,22,23,globose
-30218,Amanita aff. citrina,13,15,subglobose
-30219,Amanita aff. citrina,20,27,ovoid
+30216,Amanita cf. lavendula,20,20,globose
+30217,Amanita cf. lavendula,22,23,globose
+30218,Amanita cf. lavendula,13,15,subglobose
+30219,Amanita cf. lavendula,20,27,ovoid
 30220,Amanita centrascura,0,0,no bulb
 30221,Amanita multisquamosa,20,15,napiform
 30222,Amanita multisquamosa,16,26,fusiform
@@ -103,10 +103,10 @@ specimen_id,species,length_mm,width_mm,shape
 30284,Amanita suballiacea,30,25,subglobose
 30285,Amanita fusca,0,0,no bulb
 30286,Amanita porphyria,20,25,subglobose
-30287,Amanita lavendula,25,20,subglobose
-30291,Amanita lavendula,10,15,subglobose
+30287,Amanita cf. lavendula,25,20,subglobose
+30291,Amanita cf. lavendula,10,15,subglobose
 30293,Amanita porphyria,25,20,subglobose
-40220,Amanita aff. citrina,24,20,subglobose
+40220,Amanita cf. lavendula,24,20,subglobose
 30187_2,Amanita suballiacea,18,23,subglobose
 30187_3,Amanita suballiacea,40,42,subglobose
 30193_2,Amanita confundens,0,0,no bulb
@@ -118,7 +118,7 @@ specimen_id,species,length_mm,width_mm,shape
 30204_2,Amanita amerivirosa,,,
 30204_3,Amanita amerivirosa,,,
 30204_4,Amanita amerivirosa,,,
-30208_2,Amanita aff. citrina,,,
+30208_2,Amanita cf. lavendula,,,
 30223_2,Amanita multisquamosa,25,18,fusiform
 30223_3,Amanita multisquamosa,25,18,fusiform
 30224_2,Amanita multisquamosa,25,20,fusiform
