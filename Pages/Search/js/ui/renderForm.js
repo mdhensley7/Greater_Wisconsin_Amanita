@@ -9,6 +9,8 @@ export function renderField(field) {
     switch (field.type) {
         case "capColor":
             return renderCapColorField(field);
+        case "colorChips":
+            return renderColorChipsField(field);
         case "select":
             return renderSelectField(field);
         case "triState":
@@ -32,8 +34,13 @@ function renderFieldShell(field) {
     shell.dataset.fieldId = field.id;
 
     if (field.visibleWhen) {
-        shell.dataset.visibleWhenRadio = field.visibleWhen.radioName;
-        shell.dataset.visibleWhenValue = field.visibleWhen.value;
+        if (field.visibleWhen.radioName) {
+            shell.dataset.visibleWhenRadio = field.visibleWhen.radioName;
+            shell.dataset.visibleWhenValue = field.visibleWhen.value;
+        } else if (field.visibleWhen.selectId) {
+            shell.dataset.visibleWhenSelect = field.visibleWhen.selectId;
+            shell.dataset.visibleWhenHiddenValue = field.visibleWhen.hiddenValue;
+        }
         shell.style.display = "none";
     }
 
@@ -144,6 +151,31 @@ function renderCapColorField(field) {
         centerModifiers,
         marginToggleWrapper,
         marginPanel
+    ]);
+
+    return shell;
+}
+
+function renderColorChipsField(field) {
+    const shell = renderFieldShell(field);
+
+    const color = createElement("div", { className: "subfield" });
+    appendChildren(color, [
+        renderSubfieldTitle("Color"),
+        renderChipGroup(field.colorInputName, field.options)
+    ]);
+
+    const modifiers = createElement("div", { className: "subfield" });
+    appendChildren(modifiers, [
+        renderSubfieldTitle("Color modifiers"),
+        renderChipGroup(field.modifierInputName, field.modifiers)
+    ]);
+
+    appendChildren(shell, [
+        renderLabel(field),
+        renderNote(field),
+        color,
+        modifiers
     ]);
 
     return shell;

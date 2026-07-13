@@ -57,7 +57,7 @@ specimen_id,species,diameter_mm,centercolor,margincolor,shape,surfacetexture,umb
 30236,Amanita solaniolens,60,dark brown,light brown,applanate,viscid,not umbonate,3,not appendiculate,universal veil present,no staining,white
 30237,Amanita confundens,33,shiny grey,shiny light grey,plano-concave,silky,not umbonate,7,not appendiculate,universal veil absent,no staining,white
 30238,Amanita flavorubens,60,brown yellow radiating,yellow,applanate,not observed,not umbonate,3,not appendiculate,universal veil present,red brown,white
-30239,Amanita virginiana,30,grey brown,grey brown,plano-convex,not observed,not umbonate,5,not appendiculate,universal veil absent,no staining,white
+30239,Amanita virginiana,30,grey brown,grey brown,plano-convex,not observed,not umbonate,5,not appendiculate,universal veil present,no staining,white
 30240,Amanita bisporigera,45,light yellow,white,plano-concave,not observed,not umbonate,0,not appendiculate,universal veil present,no staining,white
 30242,Amanita frostiana,40,dark orange,light orange,applanate,viscid,not umbonate,5,not appendiculate,universal veil present,no staining,white
 30243,Amanita aff. fulva,45,light brown, light brown white,campanulate,viscid,not umbonate,6,not appendiculate,universal veil absent,no staining,white
@@ -96,7 +96,7 @@ specimen_id,species,diameter_mm,centercolor,margincolor,shape,surfacetexture,umb
 30277,Amanita bisporigera,30,light brown tinge,white,applanate,dry,umbonate,0,not appendiculate,universal veil absent,no staining,white
 30278,Amanita centrascura,45,brown ring, light brown white,applanate,glaborous,not umbonate,7,not appendiculate,universal veil absent,no staining,white
 30279,Amanita suballiacea,85,white,white,convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,no staining,white
-30280,Amanita populiphila,85,pink  light brown white,pink  light brown white,convex,glaborous,not umbonate,10,not appendiculate,universal veil absent,no staining,white
+30280,Amanita populiphila,85,pink  light brown white,pink  light brown white,convex,glaborous,not umbonate,10,not appendiculate,universal veil present,no staining,white
 30281,Amanita fusca,40, light brown white ring, light brown white,convex,glaborous,not umbonate,5,not appendiculate,universal veil present,no staining,white
 30282,Amanita fusca,35,brown,brown,applanate,dry,minutely umbonate,7,not appendiculate,universal veil absent,no staining,white
 30283,Amanita flavorubens,65,brown,yellow,applanate,dry,not umbonate,0,not appendiculate,universal veil present,red brown,white
@@ -135,9 +135,9 @@ specimen_id,species,diameter_mm,centercolor,margincolor,shape,surfacetexture,umb
 30250_2,Amanita coryli,30,grey brown,light brown,convex,dry,not umbonate,5,not appendiculate,universal veil absent,no staining,white
 30257_2,Amanita confundens,50,white green tint,white,applanate,silky,not umbonate,0,not appendiculate,universal veil absent,no staining,white
 30274_2,Amanita sp. 'GWA-ami2',,light brown,light brown,campanulate,glaborous,not umbonate,0,not appendiculate,universal veil present,light brown,white
-30280_2,Amanita populiphila,70,light brown pink,light brown pink,convex,glaborous,not umbonate,5,not appendiculate,universal veil absent,no staining,white
-30280_3,Amanita populiphila,40,light brown pink,light brown pink,plano-convex,glaborous,not umbonate,5,not appendiculate,universal veil absent,no staining,white
-30280_4,Amanita populiphila,45,light brown pink,light brown pink,applanate,glaborous,not umbonate,12,not appendiculate,universal veil absent,no staining,white
-30280_5,Amanita populiphila,40,light brown pink,light brown pink,applanate,glaborous,not umbonate,3,not appendiculate,universal veil absent,no staining,white
-30280_6,Amanita populiphila,85,light brown pink,light brown pink,applanate,glaborous,not umbonate,20,not appendiculate,universal veil absent,no staining,white
-30280_7,Amanita populiphila,90,light brown pink,light brown pink,campanulate,glaborous,not umbonate,15,not appendiculate,universal veil absent,no staining,white
+30280_2,Amanita populiphila,70,light brown pink,light brown pink,convex,glaborous,not umbonate,5,not appendiculate,universal veil present,no staining,white
+30280_3,Amanita populiphila,40,light brown pink,light brown pink,plano-convex,glaborous,not umbonate,5,not appendiculate,universal veil present,no staining,white
+30280_4,Amanita populiphila,45,light brown pink,light brown pink,applanate,glaborous,not umbonate,12,not appendiculate,universal veil present,no staining,white
+30280_5,Amanita populiphila,40,light brown pink,light brown pink,applanate,glaborous,not umbonate,3,not appendiculate,universal veil present,no staining,white
+30280_6,Amanita populiphila,85,light brown pink,light brown pink,applanate,glaborous,not umbonate,20,not appendiculate,universal veil present,no staining,white
+30280_7,Amanita populiphila,90,light brown pink,light brown pink,campanulate,glaborous,not umbonate,15,not appendiculate,universal veil present,no staining,white

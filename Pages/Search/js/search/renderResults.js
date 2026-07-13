@@ -26,12 +26,23 @@ export function renderResults(container, response) {
 }
 
 function renderSpeciesCard(result) {
+    const href = `/Pages/Species_Descriptions/${slugifySpecies(result.species)}/`;
     return `
         <article class="species-card">
-            <h3>${escapeHtml(result.species)}</h3>
+            <h3><a href="${escapeHtml(href)}">${escapeHtml(result.species)}</a></h3>
             <p>${escapeHtml(result.matched_specimen_count)} matching specimen(s)</p>
         </article>
     `;
+}
+
+// Mirrors the slug convention used to generate species pages: strip the
+// "Amanita " genus prefix, replace anything non-alphanumeric with "_",
+// prefix with "A_". e.g. "Amanita cf. lavendula" -> "A_cf_lavendula".
+function slugifySpecies(species) {
+    let s = String(species ?? "").trim();
+    s = s.replace(/^Amanita\s+/i, "");
+    s = s.replace(/[^a-zA-Z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+    return `A_${s}`;
 }
 
 function escapeHtml(value) {

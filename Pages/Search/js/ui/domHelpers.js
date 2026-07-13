@@ -27,8 +27,22 @@ export function renderHelp(summary, text) {
 
     const details = createElement("details", { className: "field-help" });
     const summaryElement = createElement("summary", { textContent: summary });
-    const paragraph = createElement("p", { textContent: text });
+    const paragraph = createElement("p");
+    appendBoldedText(paragraph, text);
 
     appendChildren(details, [summaryElement, paragraph]);
     return details;
+}
+
+// Splits on **term** markers and renders them as <strong>, everything else
+// as plain text. Lets help text bold defined terms without using innerHTML.
+function appendBoldedText(paragraph, text) {
+    const parts = text.split(/\*\*(.+?)\*\*/g);
+    parts.forEach((part, index) => {
+        if (index % 2 === 1) {
+            paragraph.appendChild(createElement("strong", { textContent: part }));
+        } else if (part) {
+            paragraph.appendChild(document.createTextNode(part));
+        }
+    });
 }

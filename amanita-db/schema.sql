@@ -234,73 +234,83 @@ ALTER TABLE ONLY public.specimens
 
 
 --
--- Name: idx_annulus_specimen_id; Type: INDEX; Schema: public; Owner: -
+-- Name: annulus annulus_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-CREATE INDEX idx_annulus_specimen_id ON public.annulus USING btree (specimen_id);
-
-
---
--- Name: idx_basal_bulb_specimen_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX idx_basal_bulb_specimen_id ON public.basal_bulb USING btree (specimen_id);
+ALTER TABLE ONLY public.annulus
+    ADD CONSTRAINT annulus_pkey PRIMARY KEY (specimen_id);
 
 
 --
--- Name: idx_basidia_specimen_id; Type: INDEX; Schema: public; Owner: -
+-- Name: basal_bulb basal_bulb_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-CREATE INDEX idx_basidia_specimen_id ON public.basidia USING btree (specimen_id);
-
-
---
--- Name: idx_basidiospore_specimen_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX idx_basidiospore_specimen_id ON public.basidiospore USING btree (specimen_id);
+ALTER TABLE ONLY public.basal_bulb
+    ADD CONSTRAINT basal_bulb_pkey PRIMARY KEY (specimen_id);
 
 
 --
--- Name: idx_lamellae_specimen_id; Type: INDEX; Schema: public; Owner: -
+-- Name: basidia basidia_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-CREATE INDEX idx_lamellae_specimen_id ON public.lamellae USING btree (specimen_id);
-
-
---
--- Name: idx_lamellulae_specimen_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX idx_lamellulae_specimen_id ON public.lamellulae USING btree (specimen_id);
+ALTER TABLE ONLY public.basidia
+    ADD CONSTRAINT basidia_pkey PRIMARY KEY (specimen_id);
 
 
 --
--- Name: idx_pileus_specimen_id; Type: INDEX; Schema: public; Owner: -
+-- Name: basidiospore basidiospore_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-CREATE INDEX idx_pileus_specimen_id ON public.pileus USING btree (specimen_id);
-
-
---
--- Name: idx_stipe_specimen_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX idx_stipe_specimen_id ON public.stipe USING btree (specimen_id);
+ALTER TABLE ONLY public.basidiospore
+    ADD CONSTRAINT basidiospore_pkey PRIMARY KEY (specimen_id);
 
 
 --
--- Name: idx_universal_veil_pileus_specimen_id; Type: INDEX; Schema: public; Owner: -
+-- Name: lamellae lamellae_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-CREATE INDEX idx_universal_veil_pileus_specimen_id ON public.universal_veil_pileus USING btree (specimen_id);
+ALTER TABLE ONLY public.lamellae
+    ADD CONSTRAINT lamellae_pkey PRIMARY KEY (specimen_id);
 
 
 --
--- Name: idx_universal_veil_stipe_base_specimen_id; Type: INDEX; Schema: public; Owner: -
+-- Name: lamellulae lamellulae_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-CREATE INDEX idx_universal_veil_stipe_base_specimen_id ON public.universal_veil_stipe_base USING btree (specimen_id);
+ALTER TABLE ONLY public.lamellulae
+    ADD CONSTRAINT lamellulae_pkey PRIMARY KEY (specimen_id);
+
+
+--
+-- Name: pileus pileus_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.pileus
+    ADD CONSTRAINT pileus_pkey PRIMARY KEY (specimen_id);
+
+
+--
+-- Name: stipe stipe_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.stipe
+    ADD CONSTRAINT stipe_pkey PRIMARY KEY (specimen_id);
+
+
+--
+-- Name: universal_veil_pileus universal_veil_pileus_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.universal_veil_pileus
+    ADD CONSTRAINT universal_veil_pileus_pkey PRIMARY KEY (specimen_id);
+
+
+--
+-- Name: universal_veil_stipe_base universal_veil_stipe_base_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.universal_veil_stipe_base
+    ADD CONSTRAINT universal_veil_stipe_base_pkey PRIMARY KEY (specimen_id);
 
 
 --
@@ -465,5 +475,97 @@ CREATE POLICY "Allow public read access" ON public.universal_veil_stipe_base
     FOR SELECT
     TO anon, authenticated
     USING (true);
+
+
+--
+-- Name: specimen_search; Type: VIEW; Schema: public; Owner: -
+--
+-- One row per specimen, joining specimens + pileus + annulus +
+-- basal_bulb + stipe + universal_veil_pileus + universal_veil_stipe_base
+-- on specimen_id. Used by the Search tool instead of querying pileus
+-- directly. security_invoker = true makes the view enforce the
+-- querying role's RLS policies on the underlying tables, rather than
+-- running as the view owner. See
+-- amanita-db/supabase/migrations/20260713144647_add_specimen_search_view.sql
+-- and .../20260713165627_extend_specimen_search_view_veil.sql
+-- for full column-naming rationale.
+--
+
+CREATE OR REPLACE VIEW public.specimen_search
+WITH (security_invoker = true)
+AS
+SELECT
+    s.specimen_id,
+    s.species,
+    s.sectionid,
+    s.collector,
+    s.lat,
+    s.long,
+    s.county,
+    s.site,
+    s.datecollected,
+    s.microscopy,
+    s.hosttree1_common,
+    s.hosttree1_scientific,
+    s.hosttree2_common,
+    s.hosttree2_scientific,
+
+    p.diameter_mm,
+    p.centercolor,
+    p.margincolor,
+    p.shape,
+    p.surfacetexture,
+    p.umbonate,
+    p.striationlength_mm,
+    p.appendiculate,
+    p.universalveilpresent,
+    p.staining,
+    p.contextcolor,
+
+    a.position AS annulus_position,
+    a.form AS annulus_form,
+    a.color AS annulus_color,
+    a.staining AS annulus_staining,
+    a.remainingpercent AS annulus_remainingpercent,
+    a.condition AS annulus_condition,
+
+    bb.length_mm AS basal_bulb_length_mm,
+    bb.width_mm AS basal_bulb_width_mm,
+    bb.shape AS basal_bulb_shape,
+
+    st.length_mm AS stipe_length_mm,
+    st.width_mm AS stipe_width_mm,
+    st.color AS stipe_color,
+    st.shape AS stipe_shape,
+    st.decoration_bottom AS stipe_decoration_bottom,
+    st.decoration_top AS stipe_decoration_top,
+    st.staining AS stipe_staining,
+    st.annulus AS stipe_annulus_present,
+    st.universal_veil AS stipe_universal_veil_present,
+    st.context_type AS stipe_context_type,
+    st.context_color AS stipe_context_color,
+    st.context_stain AS stipe_context_stain,
+
+    uvp.form AS veil_cap_form,
+    uvp.color AS veil_cap_color,
+    uvp.texture AS veil_cap_texture,
+    uvp.attachment AS veil_cap_attachment,
+    uvp.distribution AS veil_cap_distribution,
+
+    uvsb.type AS veil_base_type,
+    uvsb.texture AS veil_base_texture,
+    uvsb.color AS veil_base_color,
+    uvsb.layered AS veil_base_layered,
+    uvsb.toughorflimsy AS veil_base_toughorflimsy
+
+FROM public.specimens s
+LEFT JOIN public.pileus p ON p.specimen_id = s.specimen_id
+LEFT JOIN public.annulus a ON a.specimen_id = s.specimen_id
+LEFT JOIN public.basal_bulb bb ON bb.specimen_id = s.specimen_id
+LEFT JOIN public.stipe st ON st.specimen_id = s.specimen_id
+LEFT JOIN public.universal_veil_pileus uvp ON uvp.specimen_id = s.specimen_id
+LEFT JOIN public.universal_veil_stipe_base uvsb ON uvsb.specimen_id = s.specimen_id;
+
+GRANT SELECT ON public.specimen_search TO anon, authenticated;
 
 

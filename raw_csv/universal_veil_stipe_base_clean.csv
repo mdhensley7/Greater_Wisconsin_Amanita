@@ -77,7 +77,7 @@ specimen_id,species,type,texture,color,layered,toughorflimsy
 30257,Amanita confundens,sheathing,submembranous,white,not layered,flimsy
 30258,Amanita brunnescens,not evident,,,not layered,
 30259,Amanita brunnescens,limbate,membranous,light brown,not layered,tough
-30260,Amanita solaniolens,limbate,membranous,light brown,not layered,tough.
+30260,Amanita solaniolens,limbate,membranous,light brown,not layered,tough
 30261,Amanita frostiana,collared,membranous,white light yellow,layered,tough
 30262,Amanita subnigra nom prov.,saccate,membranous,white,not layered,
 30263,Amanita brunnescens,not evident,,,not layered,
@@ -90,11 +90,11 @@ specimen_id,species,type,texture,color,layered,toughorflimsy
 30271,Amanita brunnescens,loose patches,pulverulent,white,not layered,
 30272,Amanita brunnescens,loose patches,pulverulent,brown,not layered,
 30273,Amanita bisporigera,saccate,submembranous,white,not layered,
-30274,Amanita sp. 'GWA-ami2',saccate,membranous,white light brown,not layered,tough thick
+30274,Amanita sp. 'GWA-ami2',saccate,membranous,white light brown,not layered,tough
 30275,Amanita bisporigera,saccate,submembranous,white,not layered,flimsy
 30276,Amanita sp. 'GWA-phal1',saccate,membranous,white,not layered,tough
 30277,Amanita bisporigera,saccate,submembranous,white,not layered,flimsy
-30278,Amanita centrascura,sheathing,membranous,white,not layered,thick
+30278,Amanita centrascura,sheathing,membranous,white,not layered,tough
 30279,Amanita suballiacea,limbate,membranous,light grey,not layered,tough
 30280,Amanita populiphila,limbate,membranous,white light yellow,not layered,tough
 30281,Amanita fusca,saccate,submembranous,white,not layered,toughish
@@ -134,7 +134,7 @@ specimen_id,species,type,texture,color,layered,toughorflimsy
 30249_2,Amanita stranella,limbate,membranous,white,not layered,flimsy
 30250_2,Amanita coryli,,,,,
 30257_2,Amanita confundens,sheathing,submembranous,white,not layered,flimsy
-30274_2,Amanita sp. 'GWA-ami2',saccate,membranous,white light brown,not layered,tough thick
+30274_2,Amanita sp. 'GWA-ami2',saccate,membranous,white light brown,not layered,tough
 30280_2,Amanita populiphila,limbate,membranous,white light yellow,not layered,tough
 30280_3,Amanita populiphila,limbate,membranous,white light yellow,not layered,tough
 30280_4,Amanita populiphila,limbate,membranous,white light yellow,not layered,tough

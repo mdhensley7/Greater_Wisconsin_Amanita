@@ -191,6 +191,40 @@ details.field-help summary {
     font-weight: 700;
 }
 
+.section-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.section-tab {
+    background: none;
+    color: var(--muted);
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    margin-bottom: -2px;
+    padding: 0.65rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.section-tab:hover {
+    background: none;
+    color: var(--accent-dark);
+}
+
+.section-tab.is-active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.section-panel {
+    margin-top: 1.1rem;
+}
+
 details.more-traits {
     background: var(--accent-light);
     border-radius: var(--radius);
@@ -257,6 +291,35 @@ button.secondary:hover {
 
 #results:empty {
     display: none;
+}
+
+.species-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.species-card:last-child {
+    margin-bottom: 0;
+}
+
+.species-card h3 {
+    margin-top: 0;
+}
+
+.species-card h3 a {
+    color: var(--accent-dark);
+    text-decoration: none;
+}
+
+.species-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.species-card p {
+    color: var(--muted);
+    font-size: 0.92rem;
 }
 
 .query-preview {

@@ -29,7 +29,7 @@ specimen_id,species,position,form,color,staining,remainingpercent,condition
 30208,Amanita cf. lavendula,superior,membranous,light yellow,no,100,free
 30209,Amanita amerivirosa,,,,,,
 30210,Amanita chrysoblema,at apex,submembranous,light yellow,no,25,collapsed
-30211,Amanita chrysoblema,immature specimen,,,,,
+30211,Amanita chrysoblema,immature specimen,not observed,,,,
 30212,Amanita sp. 'GWA-ami1',,,,,,
 30213,Amanita cf. lavendula,superior,membranous,light yellow,no,75,free
 30214,Amanita cf. lavendula,superior,"membranous, folded",yellow,no,50,collapsed
@@ -71,7 +71,7 @@ specimen_id,species,position,form,color,staining,remainingpercent,condition
 30251,Amanita coryli,,,,,,
 30252,Amanita amerirubescens nom prov.,superior,membranous,white,no,75,collapsed
 30253,Amanita brunnescens,,,,,,
-30254,Amanita brunnescens,superior,mebranous,white,no,100,free
+30254,Amanita brunnescens,superior,membranous,white,no,100,free
 30255,Amanita aff. fulva,,,,,,
 30256,Amanita rhacopus,,,,,,
 30257,Amanita confundens,,,,,,

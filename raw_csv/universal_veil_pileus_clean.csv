@@ -26,7 +26,7 @@ specimen_id,species,form,color,texture,attachment,distribution
 30205,Amanita flavoconia,warts,dingy white brown,membranous,adnate,center
 30206,Amanita flavoconia,warts,dingy brown,friable,easily removed,sparse center
 30207,Amanita porphyria,patches,dingy brown,membranous,easily removed,sparse uneven
-30208,Amanita cf. lavendula,patches,dingy white,submembranous,removable,sparse
+30208,Amanita cf. lavendula,patches,dingy white,submembranous,easily removed,sparse
 30209,Amanita amerivirosa,,,,,
 30210,Amanita chrysoblema,warts,dingy white  brown,friable,easily removed,common
 30211,Amanita chrysoblema,warts,white,membranous,adnate,dense even
@@ -90,7 +90,7 @@ specimen_id,species,form,color,texture,attachment,distribution
 30271,Amanita brunnescens,powder,white,pulverulent,easily removed,sparse margin
 30272,Amanita brunnescens,powder,white,pulverulent,easily removed,sparse margin
 30273,Amanita bisporigera,,,,,
-30274,Amanita sp. 'GWA-ami2',scales,white,membranous,removable,dense even
+30274,Amanita sp. 'GWA-ami2',scales,white,membranous,easily removed,dense even
 30275,Amanita bisporigera,,,,,
 30276,Amanita sp. 'GWA-phal1',,,,,
 30277,Amanita bisporigera,,,,,
@@ -118,7 +118,7 @@ specimen_id,species,form,color,texture,attachment,distribution
 30204_2,Amanita amerivirosa,,,,,
 30204_3,Amanita amerivirosa,,,,,
 30204_4,Amanita amerivirosa,,,,,
-30208_2,Amanita cf. lavendula,patches,dingy white,submembranous,removable,sparse
+30208_2,Amanita cf. lavendula,patches,dingy white,submembranous,easily removed,sparse
 30223_2,Amanita multisquamosa,warts,white light brown,submembranous,easily removed,dense even
 30223_3,Amanita multisquamosa,warts,white light brown,submembranous,easily removed,dense even
 30224_2,Amanita multisquamosa,warts,white light brown,submembranous,easily removed,dense even
@@ -134,7 +134,7 @@ specimen_id,species,form,color,texture,attachment,distribution
 30249_2,Amanita stranella,warts,white,membranous,easily removed,sparse
 30250_2,Amanita coryli,,,,,
 30257_2,Amanita confundens,,,,,
-30274_2,Amanita sp. 'GWA-ami2',scales,white,membranous,removable,dense even
+30274_2,Amanita sp. 'GWA-ami2',scales,white,membranous,easily removed,dense even
 30280_2,Amanita populiphila,warts,dingy white grey,membranous,adnate,dense center
 30280_3,Amanita populiphila,warts,dingy white grey,membranous,adnate,dense center
 30280_4,Amanita populiphila,warts,dingy white grey,membranous,adnate,dense center

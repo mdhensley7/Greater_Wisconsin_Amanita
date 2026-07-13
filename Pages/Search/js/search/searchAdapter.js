@@ -1,16 +1,32 @@
 // js/search/searchAdapter.js
 import { supabase } from "../supabaseClient.js";
 
-const TABLE = "pileus"; // or "pileus_search" if you created the view
+const TABLE = "specimen_search"; // view joining specimens + pileus + annulus + basal_bulb + stipe + universal_veil_pileus + universal_veil_stipe_base
 
 const MISSING_SENTINELS = new Set([
   "", "not observed", "unknown", "n/a", "na", "null"
+]);
+
+// Sentinel values that mean "not assessed", distinct from "" (truly blank,
+// used where absence of a structure is recorded by leaving the field empty).
+const UNINFORMATIVE_SENTINELS = new Set([
+  "not observed", "unknown", "n/a", "na", "null"
 ]);
 
 function isMissing(value) {
   if (value === null || value === undefined) return true;
   const s = String(value).trim().toLowerCase();
   return MISSING_SENTINELS.has(s);
+}
+
+function isBlank(value) {
+  return String(value ?? "").trim() === "";
+}
+
+function hasRealContent(value) {
+  const s = String(value ?? "").trim().toLowerCase();
+  if (s === "") return false;
+  return !UNINFORMATIVE_SENTINELS.has(s);
 }
 
 function normalizeText(value) {
@@ -21,6 +37,10 @@ function textIncludesAnyTerms(fieldValue, terms) {
   const hay = normalizeText(fieldValue);
   if (!hay) return false;
   return terms.some(term => hay.includes(String(term).toLowerCase()));
+}
+
+function textEquals(fieldValue, value) {
+  return normalizeText(fieldValue) === normalizeText(value);
 }
 
 function textIncludes(fieldValue, value) {
@@ -65,6 +85,13 @@ function numericInRange(fieldValue, min, max) {
 function rowMatchesCondition(row, condition, missingOk) {
   const fieldValue = row[condition.field];
 
+  // text_is_blank / text_has_content intentionally test missingness itself
+  // (used for presence/absence traits like the annulus), so they must run
+  // before -- and not be short-circuited by -- the "missing values don't
+  // disqualify" rule below, which would otherwise make every row match both.
+  if (condition.mode === "text_is_blank") return isBlank(fieldValue);
+  if (condition.mode === "text_has_content") return hasRealContent(fieldValue);
+
   // Missing values do not disqualify
   if (missingOk && isMissing(fieldValue)) return true;
 
@@ -73,6 +100,8 @@ function rowMatchesCondition(row, condition, missingOk) {
       return textIncludesAnyTerms(fieldValue, condition.terms ?? []);
     case "text_contains_case_insensitive":
       return textIncludes(fieldValue, condition.value);
+    case "text_equals_case_insensitive":
+      return textEquals(fieldValue, condition.value);
     case "text_not_contains_case_insensitive":
       return textNotIncludes(fieldValue, condition.value);
     case "numeric_exact":

@@ -37,7 +37,7 @@ specimen_id,species,length_mm,width_mm,color,shape,decoration_bottom,decoration_
 30216,Amanita cf. lavendula,95,7,white light brown,cylindrical,minutely scabrous,smooth,grey,present,present,,,no
 30217,Amanita cf. lavendula,73,8,white,narrowing upward,fibrillose,smooth,light brown,present,present,,,no
 30218,Amanita cf. lavendula,70,5,light bright yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
-30219,Amanita cf. lavendula,85,10,light yellow,narrowing upward,fribrillose,smooth,not apparent,present,present,,,no
+30219,Amanita cf. lavendula,85,10,light yellow,narrowing upward,fibrillose,smooth,not apparent,present,present,,,no
 30220,Amanita centrascura,123,5,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,hollow,white,no
 30221,Amanita multisquamosa,83,8,white,narrowing upward,fibrillose,smooth,brown,present,present,,,no
 30222,Amanita multisquamosa,61,7,white,narrowing upward,floccose,smooth,not apparent,present,present,,,no
@@ -46,7 +46,7 @@ specimen_id,species,length_mm,width_mm,color,shape,decoration_bottom,decoration_
 30225,Amanita populiphila,55,10,white,narrowing upward,minutely fibrillose,smooth,not apparent,absent,present,,,no
 30226,Amanita stranella,65,9,white,narrowing upward,smooth,smooth,not apparent,absent,present,,,no
 30227,Amanita stranella,52,5,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,,,no
-30228,Amanita flavoconia,40,9,yellos,narrowing upward,smooth,smooth,not apparent,present,absent,,white,no
+30228,Amanita flavoconia,40,9,yellow,narrowing upward,smooth,smooth,not apparent,present,absent,,white,no
 30229,Amanita frostiana,55,7,yellow,cylindrical,fibrillose,smooth,not apparent,present,absent,,white,no
 30230,Amanita amerirubescens nom prov.,90,10,light pink,narrowing upward,fibrillose,smooth,brown red,present,absent,,,no
 30231,Amanita amerirubescens nom prov.,112,17,white,narrowing upward,transverse cracks,smooth,brown red,,absent,,,no

@@ -62,6 +62,27 @@ export function makeTextContainsCondition(field, value) {
 }
 
 /**
+ * Build a condition that matches only an exact value (after normalizing).
+ * Use this instead of makeTextContainsCondition when one option's text is
+ * itself a substring of another (e.g. "layered" is a substring of
+ * "not layered"), where "contains" matching would wrongly match both.
+ * Skips if value is blank OR if value is the ANY_VALUE sentinel.
+ */
+export function makeTextEqualsCondition(field, value) {
+  if (isBlankInput(value)) return null;
+  if (value === ANY_VALUE) return null;
+
+  const normalizedValue = normalize(value);
+  if (!normalizedValue) return null;
+
+  return {
+    field,
+    mode: "text_equals_case_insensitive",
+    value: normalizedValue
+  };
+}
+
+/**
  * Build a numeric condition. This enforces "intentional filtering":
  * - If the input is blank => return null (NO accidental 0).
  * - If user typed 0 => rawValue === "0" => Number("0") => 0 => VALID.

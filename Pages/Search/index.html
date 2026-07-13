@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amanita Cap Search - Amanita Key Project</title>
+    <title>Amanita Morphological Search - Amanita Key Project</title>
     <link rel="stylesheet" href="./css/search.css" />
 </head>
 <body>
@@ -15,20 +15,45 @@
                 <div>
                     <h2>Morphological Search</h2>
                     <p class="page-intro">
-                        Search Amanita records by visible cap traits. Start with the obvious features,
-                        then open “More cap traits” if you want to narrow the search.
+                        Search Amanita records by visible cap and stipe traits. Start with the obvious features,
+                        then open the "More traits" sections if you want to narrow the search.
                     </p>
                 </div>
             </div>
 
             <form id="search-form">
-                <h3>Cap</h3>
-                <div id="major-fields"></div>
+                <div class="section-tabs" role="tablist">
+                    <button type="button" class="section-tab is-active" id="tab-cap" role="tab" aria-selected="true" aria-controls="panel-cap">Cap</button>
+                    <button type="button" class="section-tab" id="tab-stipe" role="tab" aria-selected="false" aria-controls="panel-stipe">Stipe</button>
+                    <button type="button" class="section-tab" id="tab-veil" role="tab" aria-selected="false" aria-controls="panel-veil">Universal veil</button>
+                </div>
 
-                <details class="more-traits" id="more-cap-traits">
-                    <summary>More cap traits</summary>
-                    <div id="more-fields"></div>
-                </details>
+                <div class="section-panel" id="panel-cap" role="tabpanel" aria-labelledby="tab-cap">
+                    <div id="major-fields"></div>
+
+                    <details class="more-traits" id="more-cap-traits">
+                        <summary>More cap traits</summary>
+                        <div id="more-fields"></div>
+                    </details>
+                </div>
+
+                <div class="section-panel" id="panel-stipe" role="tabpanel" aria-labelledby="tab-stipe" hidden>
+                    <div id="stipe-major-fields"></div>
+
+                    <details class="more-traits" id="more-stipe-traits">
+                        <summary>More stipe traits</summary>
+                        <div id="stipe-more-fields"></div>
+                    </details>
+                </div>
+
+                <div class="section-panel" id="panel-veil" role="tabpanel" aria-labelledby="tab-veil" hidden>
+                    <div id="veil-major-fields"></div>
+
+                    <details class="more-traits" id="more-veil-traits">
+                        <summary>More universal veil traits</summary>
+                        <div id="veil-more-fields"></div>
+                    </details>
+                </div>
 
                 <div class="button-row">
                     <button type="submit">Search</button>
