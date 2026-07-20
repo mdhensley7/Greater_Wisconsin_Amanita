@@ -33,12 +33,12 @@ specimen_id,species,length_mm,width_mm,color,shape,decoration_bottom,decoration_
 30212,Amanita sp. 'GWA-ami1',45,6,white light brown,narrowing upward,floccose,scabrous,not apparent,absent,present,,,no
 30213,Amanita cf. lavendula,120,8,white light yellow,cylindrical,minutely scabrous,smooth,not apparent,present,present,hollow,white,no
 30214,Amanita cf. lavendula,60,5,white light yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
-30215,Amanita centrascura,100,9,light grey white,cylindrical,smooth,smooth,not apparent,absent,present,,,no
+30215,Amanita centriobscura,100,9,light grey white,cylindrical,smooth,smooth,not apparent,absent,present,,,no
 30216,Amanita cf. lavendula,95,7,white light brown,cylindrical,minutely scabrous,smooth,grey,present,present,,,no
 30217,Amanita cf. lavendula,73,8,white,narrowing upward,fibrillose,smooth,light brown,present,present,,,no
 30218,Amanita cf. lavendula,70,5,light bright yellow,cylindrical,smooth,smooth,not apparent,present,present,,,no
 30219,Amanita cf. lavendula,85,10,light yellow,narrowing upward,fibrillose,smooth,not apparent,present,present,,,no
-30220,Amanita centrascura,123,5,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,hollow,white,no
+30220,Amanita centriobscura,123,5,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,hollow,white,no
 30221,Amanita multisquamosa,83,8,white,narrowing upward,fibrillose,smooth,brown,present,present,,,no
 30222,Amanita multisquamosa,61,7,white,narrowing upward,floccose,smooth,not apparent,present,present,,,no
 30223,Amanita multisquamosa,67,8,white,narrowing upward,floccose,smooth,not apparent,present,present,,,no
@@ -94,7 +94,7 @@ specimen_id,species,length_mm,width_mm,color,shape,decoration_bottom,decoration_
 30275,Amanita bisporigera,140,7,white,narrowing upward,smooth,smooth,not apparent,present,present,,,no
 30276,Amanita sp. 'GWA-phal1',70,12,white,cylindrical,scabrous,scabrous,not apparent,present,present,solid,white,no
 30277,Amanita bisporigera,90,3,white,narrowing upward,smooth,minutely fibrillose,not apparent,present,present,,,no
-30278,Amanita centrascura,130,7,light brown white,narrowing upward,minutely scabrous,smooth,not apparent,absent,present,hollow,white,no
+30278,Amanita centriobscura,130,7,light brown white,narrowing upward,minutely scabrous,smooth,not apparent,absent,present,hollow,white,no
 30279,Amanita suballiacea,55,20,white,narrowing upward,scabrous,smooth,not apparent,,present,,,no
 30280,Amanita populiphila,75,15,white,narrowing upward,fibrillose,smooth,not apparent,absent,present,,,no
 30281,Amanita fusca,50,6,light brown white,cylindrical,minutely scabrous,smooth,not apparent,absent,present,stuffed,white,no

@@ -33,12 +33,12 @@ specimen_id,species,form,color,texture,attachment,distribution
 30212,Amanita sp. 'GWA-ami1',patches,dingy white light brown,membranous,easily removed,sparse
 30213,Amanita cf. lavendula,,,,,
 30214,Amanita cf. lavendula,patches,dingy brown,membranous,easily removed,sparse center
-30215,Amanita centrascura,,,,,
+30215,Amanita centriobscura,,,,,
 30216,Amanita cf. lavendula,patches,dingy white,membranous,adnate,sparse center
 30217,Amanita cf. lavendula,powder,dingy white,pulverulent,easily removed,sparse margin
 30218,Amanita cf. lavendula,,,,,
 30219,Amanita cf. lavendula,patches,white,membranous,adnate,sparse margin
-30220,Amanita centrascura,,,,,
+30220,Amanita centriobscura,,,,,
 30221,Amanita multisquamosa,warts,brown white,membranous,adnate,common even
 30222,Amanita multisquamosa,warts,white light brown,submembranous,easily removed,dense even
 30223,Amanita multisquamosa,warts,white light brown,submembranous,easily removed,dense even
@@ -94,7 +94,7 @@ specimen_id,species,form,color,texture,attachment,distribution
 30275,Amanita bisporigera,,,,,
 30276,Amanita sp. 'GWA-phal1',,,,,
 30277,Amanita bisporigera,,,,,
-30278,Amanita centrascura,,,,,
+30278,Amanita centriobscura,,,,,
 30279,Amanita suballiacea,,,,,
 30280,Amanita populiphila,warts,dingy white grey,membranous,adnate,dense center
 30281,Amanita fusca,patches,cream,submembranous,easily removed,sparse

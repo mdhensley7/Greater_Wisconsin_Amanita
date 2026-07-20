@@ -33,12 +33,12 @@ specimen_id,species,sectionid,collector,lat,long,county,site,datecollected,micro
 30212,Amanita sp. 'GWA-ami1',Amidella,MH,43.646572,-89.782858,Adams,Chapel Gorge,9/21/24,yes,white oak,Quercus alba,white pine,Pinus strobus
 30213,Amanita cf. lavendula,Validae,MH,43.646914,-89.787109,Adams,Chapel Gorge,9/21/24,yes,white oak,Quercus alba,,
 30214,Amanita cf. lavendula,Validae,MH,43.647449,-89.787718,Adams,Chapel Gorge,9/21/24,yes,white oak,Quercus alba,white pine,Pinus strobus
-30215,Amanita centrascura,Vaginatae,MH,43.560563,-89.815882,Sauk,Mirror Lake State Park,9/27/24,yes,white pine,Pinus strobus,,
+30215,Amanita centriobscura,Vaginatae,MH,43.560563,-89.815882,Sauk,Mirror Lake State Park,9/27/24,yes,white pine,Pinus strobus,,
 30216,Amanita cf. lavendula,Validae,MH,43.556478,-89.808497,Sauk,Mirror Lake State Park,9/27/24,,black oak,Quercus velutina,white pine,Pinus strobus
 30217,Amanita cf. lavendula,Validae,MH,43.563188,-89.823147,Sauk,Mirror Lake State Park,9/27/24,,white pine,Pinus strobus,white oak,Quercus alba
 30218,Amanita cf. lavendula,Validae,MH,43.563255,-89.823113,Sauk,Mirror Lake State Park,9/27/24,,white pine,Pinus strobus,white oak,Quercus alba
 30219,Amanita cf. lavendula,Validae,MH,43.564545,-89.821597,Sauk,Mirror Lake State Park,9/27/24,,white pine,Pinus strobus,white oak,Quercus alba
-30220,Amanita centrascura,Vaginatae,MH,43.227997,-89.73317,Dane,Lower Wisconsin Riverway,6/29/25,,white oak,Quercus alba,,
+30220,Amanita centriobscura,Vaginatae,MH,43.227997,-89.73317,Dane,Lower Wisconsin Riverway,6/29/25,,white oak,Quercus alba,,
 30221,Amanita multisquamosa,Amanita,UK,,,Dane,Lower Wisconsin Riverway,6/29/25,,,,,
 30222,Amanita multisquamosa,Amanita,MH,43.431252,-89.729882,Sauk,Devil's Lake State Park,7/6/25,,maple,Acer,,
 30223,Amanita multisquamosa,Amanita,MH,43.429366,-89.730068,Sauk,Devil's Lake State Park,7/6/25,,white oak,Quercus alba,,
@@ -94,7 +94,7 @@ specimen_id,species,sectionid,collector,lat,long,county,site,datecollected,micro
 30275,Amanita bisporigera,Phalloideae,MH,45.224161,-91.415863,Chippewa,Chippewa Moraine State Recreation Area,8/20/25,,oak,Quercus,,
 30276,Amanita sp. 'GWA-phal1',Phalloideae,MH,45.224975,-91.416034,Chippewa,Chippewa Moraine,8/20/25,,oak,Quercus,,
 30277,Amanita bisporigera,Phalloideae,MH,45.223999,-91.412334,Chippewa,Chippewa Moraine State Recreation Area,8/20/25,,red oak,Quercus rubra,black oak,Quercus velutina
-30278,Amanita centrascura,Vaginatae,MH,46.256701,-91.962016,Douglas,St. Croix Flowage,8/21/25,,eastern hemlock,Tsuga canadensis,,
+30278,Amanita centriobscura,Vaginatae,MH,46.256701,-91.962016,Douglas,St. Croix Flowage,8/21/25,,eastern hemlock,Tsuga canadensis,,
 30279,Amanita suballiacea,Phalloideae,MH,45.97261,-91.662941,Washburn,Wayside near Springbrook,8/21/25,,black oak,Quercus velutina,red pine,Pinus resinosa
 30280,Amanita populiphila,Vaginatae,MH,43.06898,-89.383581,Dane,Monona bike path,8/30/25,,poplar,Populus,,
 30281,Amanita fusca,Vaginatae,MH,42.857187,-89.498141,Dane,Brooklyn Wildlife Area,9/10/25,,bur oak,Quercus macrocarpa,black oak,Quercus velutina
@@ -102,10 +102,10 @@ specimen_id,species,sectionid,collector,lat,long,county,site,datecollected,micro
 30283,Amanita flavorubens,Validae,MH,42.857951,-89.499452,Dane,Brooklyn Wildlife Area,9/10/25,,oak,Quercus,,
 30284,Amanita suballiacea,Phalloideae,MH,42.858424,-89.499873,Dane,Brooklyn Wildlife Area,9/10/25,,red oak,Quercus rubra,black oak,Quercus velutina
 30285,Amanita fusca,Vaginatae,MH,42.85867,-89.49986,Dane,Brooklyn Wildlife Area,9/10/25,,oak,Quercus,,
-30286,Amanita porphyria,Validae,MH,46.885871,-87.882281,Marquette,Pine Lake,9/13/25,,eastern hemlock,Tsuga canadensis,,
-30287,Amanita cf. lavendula,Validae,CKS,46.885619,-87.878635,Marquette,Pine Lake,9/13/25,,red pine,Pinus resinosa,white pine,Pinus strobus
-30291,Amanita cf. lavendula,Validae,MH,46.87673,-87.84065,Marquette,Conway Lake,9/14/25,,eastern hemlock,Tsuga canadensis,birch,Betula
-30293,Amanita porphyria,Validae,MH,46.877,-87.841578,Marquette,Conway Lake,9/14/25,,eastern hemlock,Tsuga canadensis,fir,Abies
+30286,Amanita porphyria,Validae,MH,46.885871,-87.882281,Marquette MI,Pine Lake,9/13/25,,eastern hemlock,Tsuga canadensis,,
+30287,Amanita cf. lavendula,Validae,CKS,46.885619,-87.878635,Marquette MI,Pine Lake,9/13/25,,red pine,Pinus resinosa,white pine,Pinus strobus
+30291,Amanita cf. lavendula,Validae,MH,46.87673,-87.84065,Marquette MI,Conway Lake,9/14/25,,eastern hemlock,Tsuga canadensis,birch,Betula
+30293,Amanita porphyria,Validae,MH,46.877,-87.841578,Marquette MI,Conway Lake,9/14/25,,eastern hemlock,Tsuga canadensis,fir,Abies
 40220,Amanita cf. lavendula,Validae,AGW,46.84791,-90.82291,Bayfield,Martenson Property,8/9/25,,red oak,Quercus rubra,,
 30187_2,Amanita suballiacea,Phalloideae,MH,42.858051,-89.499412,Dane,Brooklyn Wildlife Area,8/28/24,yes,red oak,Quercus rubra,,
 30187_3,Amanita suballiacea,Phalloideae,MH,42.858089,-89.499331,Dane,Brooklyn Wildlife Area,8/28/24,yes,red oak,Quercus rubra,,

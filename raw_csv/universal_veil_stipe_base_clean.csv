@@ -33,12 +33,12 @@ specimen_id,species,type,texture,color,layered,toughorflimsy
 30212,Amanita sp. 'GWA-ami1',saccate,membranous,light brown,not layered,tough
 30213,Amanita cf. lavendula,limbate,membranous,white,not layered,tough
 30214,Amanita cf. lavendula,limbate,membranous,white,not layered,tough
-30215,Amanita centrascura,sheathing,membranous,white,not layered,tough
+30215,Amanita centriobscura,sheathing,membranous,white,not layered,tough
 30216,Amanita cf. lavendula,limbate,membranous,white,not layered,tough
 30217,Amanita cf. lavendula,limbate,membranous,white,not layered,tough
 30218,Amanita cf. lavendula,limbate,membranous,white,not layered,toughish
 30219,Amanita cf. lavendula,limbate,submembranous,white,not layered,tough
-30220,Amanita centrascura,sheathing,membranous,white,not layered,tough
+30220,Amanita centriobscura,sheathing,membranous,white,not layered,tough
 30221,Amanita multisquamosa,collared,membranous,white,not layered,tough
 30222,Amanita multisquamosa,collared,membranous,white light brown,not layered,tough
 30223,Amanita multisquamosa,collared,membranous,white light brown,not layered,tough
@@ -94,7 +94,7 @@ specimen_id,species,type,texture,color,layered,toughorflimsy
 30275,Amanita bisporigera,saccate,submembranous,white,not layered,flimsy
 30276,Amanita sp. 'GWA-phal1',saccate,membranous,white,not layered,tough
 30277,Amanita bisporigera,saccate,submembranous,white,not layered,flimsy
-30278,Amanita centrascura,sheathing,membranous,white,not layered,tough
+30278,Amanita centriobscura,sheathing,membranous,white,not layered,tough
 30279,Amanita suballiacea,limbate,membranous,light grey,not layered,tough
 30280,Amanita populiphila,limbate,membranous,white light yellow,not layered,tough
 30281,Amanita fusca,saccate,submembranous,white,not layered,toughish

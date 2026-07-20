@@ -33,12 +33,12 @@ specimen_id,species,diameter_mm,centercolor,margincolor,shape,surfacetexture,umb
 30212,Amanita sp. 'GWA-ami1',50,light brown,light brown,applanate,dry,not umbonate,7,appendiculate,universal veil present,no staining,white
 30213,Amanita cf. lavendula,37,bright yellow green,light yellow,convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,no staining,white
 30214,Amanita cf. lavendula,25,bright yellow green,light yellow,plano-convex,dry,not umbonate,0,not appendiculate,universal veil present,no staining,white
-30215,Amanita centrascura,52,dark grey ring,light grey,applanate,dry,not umbonate,7,not appendiculate,universal veil absent,no staining,white
+30215,Amanita centriobscura,52,dark grey ring,light grey,applanate,dry,not umbonate,7,not appendiculate,universal veil absent,no staining,white
 30216,Amanita cf. lavendula,55,dingy yellow, light yellow,plano-convex,dry,not umbonate,0,not appendiculate,universal veil present,no staining,white
 30217,Amanita cf. lavendula,42,dingy brown,light yellow,plano-convex,glaborous,not umbonate,0,not appendiculate,universal veil present,brown,white
 30218,Amanita cf. lavendula,45,bright yellow,bright yellow,convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,no staining,white
 30219,Amanita cf. lavendula,75,light yellow green,light yellow green,convex,glaborous,not umbonate,0,not appendiculate,universal veil present,no staining,white
-30220,Amanita centrascura,39,light grey ring,grey,applanate,viscid,minutely umbonate,7,not appendiculate,universal veil absent,no staining,white
+30220,Amanita centriobscura,39,light grey ring,grey,applanate,viscid,minutely umbonate,7,not appendiculate,universal veil absent,no staining,white
 30221,Amanita multisquamosa,42, light brown white,white,convex,viscid,not umbonate,3,not appendiculate,universal veil present,light brown,white
 30222,Amanita multisquamosa,53,dark brown, light brown white,applanate,silky,not umbonate,9,not appendiculate,universal veil present,no staining,white
 30223,Amanita multisquamosa,50,light brown,white,plano-concave,silky,not umbonate,12,not appendiculate,universal veil present,no staining,white
@@ -94,7 +94,7 @@ specimen_id,species,diameter_mm,centercolor,margincolor,shape,surfacetexture,umb
 30275,Amanita bisporigera,60,white,white,applanate,viscid,not umbonate,0,not appendiculate,universal veil absent,no staining,white
 30276,Amanita sp. 'GWA-phal1',50,light brown,white,convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,no staining,white
 30277,Amanita bisporigera,30,light brown tinge,white,applanate,dry,umbonate,0,not appendiculate,universal veil absent,no staining,white
-30278,Amanita centrascura,45,brown ring, light brown white,applanate,glaborous,not umbonate,7,not appendiculate,universal veil absent,no staining,white
+30278,Amanita centriobscura,45,brown ring, light brown white,applanate,glaborous,not umbonate,7,not appendiculate,universal veil absent,no staining,white
 30279,Amanita suballiacea,85,white,white,convex,glaborous,not umbonate,0,not appendiculate,universal veil absent,no staining,white
 30280,Amanita populiphila,85,pink  light brown white,pink  light brown white,convex,glaborous,not umbonate,10,not appendiculate,universal veil present,no staining,white
 30281,Amanita fusca,40, light brown white ring, light brown white,convex,glaborous,not umbonate,5,not appendiculate,universal veil present,no staining,white

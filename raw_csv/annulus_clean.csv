@@ -33,12 +33,12 @@ specimen_id,species,position,form,color,staining,remainingpercent,condition
 30212,Amanita sp. 'GWA-ami1',,,,,,
 30213,Amanita cf. lavendula,superior,membranous,light yellow,no,75,free
 30214,Amanita cf. lavendula,superior,"membranous, folded",yellow,no,50,collapsed
-30215,Amanita centrascura,,,,,,
+30215,Amanita centriobscura,,,,,,
 30216,Amanita cf. lavendula,superior,membranous,light yellow,no,75,collapsed
 30217,Amanita cf. lavendula,superior,submembranous,white,no,75,attached to gills
 30218,Amanita cf. lavendula,superior,membranous,light bright yellow,no,50,free
 30219,Amanita cf. lavendula,superior,submembranous,white,no,75,attached to gills
-30220,Amanita centrascura,,,,,,
+30220,Amanita centriobscura,,,,,,
 30221,Amanita multisquamosa,superior,submembranous,white,,100,
 30222,Amanita multisquamosa,superior,membranous,light brown white,no,50,free
 30223,Amanita multisquamosa,superior,membranous,light brown white,no,50,free
@@ -94,7 +94,7 @@ specimen_id,species,position,form,color,staining,remainingpercent,condition
 30275,Amanita bisporigera,superior,submembranous,white,no,,
 30276,Amanita sp. 'GWA-phal1',superior,membranous,,no,,free
 30277,Amanita bisporigera,superior,submembranous,white,no,,
-30278,Amanita centrascura,,,,,,
+30278,Amanita centriobscura,,,,,,
 30279,Amanita suballiacea,,pulverulent,,,,
 30280,Amanita populiphila,,,,,,
 30281,Amanita fusca,,,,,,

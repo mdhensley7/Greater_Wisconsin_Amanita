@@ -33,12 +33,12 @@ specimen_id,species,sectionid,spore_count,min_length,p10_length,avg_length,p90_l
 30212,Amanita sp. 'GWA-ami1',Amidella,25,9,9.5,10.34,11.5,12,5,5.5,6.38,7,7,1.5,1.626340326,2
 30213,Amanita cf. lavendula,Validae,25,6.5,7.5,8.38,9,9.5,6.5,7.5,7.98,8.5,9,1,1.050351541,1
 30214,Amanita cf. lavendula,Validae,25,9,9,10.19565,11,12,8.5,9,9.826087,11,11,1,1.040532021,1
-30215,Amanita centrascura,Vaginatae,25,9.5,10,11.52,13,13.5,10,10,11.62,13,14,1,0.992857736,1
+30215,Amanita centriobscura,Vaginatae,25,9.5,10,11.52,13,13.5,10,10,11.62,13,14,1,0.992857736,1
 30216,Amanita cf. lavendula,Validae,,,,,,,,,,,,,,
 30217,Amanita cf. lavendula,Validae,,,,,,,,,,,,,,
 30218,Amanita cf. lavendula,Validae,,,,,,,,,,,,,,
 30219,Amanita cf. lavendula,Validae,,,,,,,,,,,,,,
-30220,Amanita centrascura,Vaginatae,,,,,,,,,,,,,,
+30220,Amanita centriobscura,Vaginatae,,,,,,,,,,,,,,
 30221,Amanita multisquamosa,Amanita,11,11,11.5,12.18182,13,13.5,8,8.5,8.909091,9.5,10,1.2,1.4,1.6
 30222,Amanita multisquamosa,Amanita,21,9.5,10,10.54762,11.5,12,7.5,8,8.595238,9.5,9.5,1,1.230673497,1.5
 30223,Amanita multisquamosa,Amanita,,,,,,,,,,,,,,
@@ -94,7 +94,7 @@ specimen_id,species,sectionid,spore_count,min_length,p10_length,avg_length,p90_l
 30275,Amanita bisporigera,Phalloideae,,,,,,,,,,,,,,
 30276,Amanita sp. 'GWA-phal1',Phalloideae,25,10,11,12.32,14,14.5,6,6.5,7.58,8.5,9,1.5,1.630945306,2
 30277,Amanita bisporigera,Phalloideae,,,,,,,,,,,,,,
-30278,Amanita centrascura,Vaginatae,,,,,,,,,,,,,,
+30278,Amanita centriobscura,Vaginatae,,,,,,,,,,,,,,
 30279,Amanita suballiacea,Phalloideae,,,,,,,,,,,,,,
 30280,Amanita populiphila,Vaginatae,,,,,,,,,,,,,,
 30281,Amanita fusca,Vaginatae,,,,,,,,,,,,,,
