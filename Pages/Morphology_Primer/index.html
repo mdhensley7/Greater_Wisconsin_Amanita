@@ -72,6 +72,44 @@
             color: var(--accent);
         }
 
+        .section-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent-light);
+        }
+
+        .section-tab {
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            border-radius: 0;
+            margin-bottom: -2px;
+            padding: 0.65rem 1.1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--muted);
+            cursor: pointer;
+        }
+
+        .section-tab:hover {
+            color: var(--accent);
+        }
+
+        .section-tab.is-active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .tab-panel[hidden] {
+            display: none;
+        }
+
+        .tab-panel .section-card {
+            margin-bottom: 0;
+        }
+
         .feature-section {
             margin-top: 1rem;
         }
@@ -231,6 +269,23 @@
             display: none;
         }
 
+        .development-photo {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            aspect-ratio: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+        }
+
+        .development-photo img {
+            max-width: 100%;
+            max-height: none;
+            width: 100%;
+            height: auto;
+        }
+
         .photo-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -244,6 +299,21 @@
 
         .photo-slot-empty {
             display: none;
+        }
+
+        .photo-frame {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+        }
+
+        .photo-caption {
+            margin-top: 0.4rem;
+            font-size: 0.82rem;
+            font-style: italic;
+            color: var(--muted);
+            text-align: center;
         }
 
         /* Grid layout for desktop */
@@ -297,17 +367,29 @@
         <p class="page-intro">
             This guide explains the key morphological features used to identify <em>Amanita</em> species.
             Each feature is organized by the part of the mushroom: the <strong>cap (pileus)</strong>, the <strong>cup-like base (volva)</strong>, and
-            the <strong>stem (stipe)</strong>. Within each part of the mushroom is an array of descriptive devices which can be used to sufficiently 
-            delineate mushrooms into the section of the genus with which they belong and sometimes even down to the species.
+            the <strong>stem (stipe)</strong>.
             Expand each section below to learn more about what to look for.
         </p>
 
         <div class="section-card">
             <h2 class="section-heading"><em>Amanita</em> mushroom development</h2>
             <p class="category-intro">
-                Insert a labelled diagram of mushroom development from egg to maturity.GET DIAGRAM FROM CECELIA
+                The seven stages of <em>Amanita</em> mushroom development are shown below. The stages are not always distinct and can vary in duration depending on environmental conditions.
             </p>
+            <div class="photo-placeholder development-photo" data-feature-type="development-stages">
+                                <span class="placeholder-text">Photo: Amanita Development Stages</span>
+                                <img src="/Pages/images/morpho_primer/amanitadevelopment.png" alt="Amanita development stages, from button to mature mushroom" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
         </div>
+
+        <div class="section-tabs" role="tablist">
+            <button type="button" class="section-tab is-active" id="tab-cap" role="tab" aria-selected="true" aria-controls="panel-cap">Cap</button>
+            <button type="button" class="section-tab" id="tab-stipe" role="tab" aria-selected="false" aria-controls="panel-stipe">Stipe</button>
+            <button type="button" class="section-tab" id="tab-volva" role="tab" aria-selected="false" aria-controls="panel-volva">Volva</button>
+            <button type="button" class="section-tab" id="tab-habitat" role="tab" aria-selected="false" aria-controls="panel-habitat">Tree Host &amp; Habitat</button>
+        </div>
+
+        <div class="tab-panel" id="panel-cap" role="tabpanel" aria-labelledby="tab-cap">
         <!-- CAP (PILEUS) SECTION -->
         <div class="section-card">
             <h2 class="section-heading">Cap (Pileus)</h2>
@@ -338,11 +420,17 @@
                                 <span class="placeholder-text">Photo: Cap Diameter Measurement</span>
                                 <img src="/Pages/images/morpho_primer/diameter1.png" alt="Cap diameter measurement example" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-diameter-2">
-                                <img src="/Pages/images/morpho_primer/cap-diameter-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-diameter-2">
+                                <img src="/Pages/images/morpho_primer/cap-diameter-2.jpg" alt="Cap diameter example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-diameter-3">
-                                <img src="/Pages/images/morpho_primer/cap-diameter-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita fusca — specimen 30186</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-diameter-3">
+                                <img src="/Pages/images/morpho_primer/cap-diameter-3.jpg" alt="Cap diameter example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita suballiacea — specimen 30187</p>
                             </div>
                         </div>
                     </div>
@@ -370,11 +458,17 @@
                                 <span class="placeholder-text">Photo: Cap Color Examples</span>
                                 <img src="/Pages/images/morpho_primer/capcolor1.JPG" alt="Photo: Cap Color Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-center-color-2">
-                                <img src="/Pages/images/morpho_primer/cap-center-color-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-center-color-2">
+                                <img src="/Pages/images/morpho_primer/cap-center-color-2.jpg" alt="Cap center color example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-center-color-3">
-                                <img src="/Pages/images/morpho_primer/cap-center-color-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita frostiana — specimen 30190</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-center-color-3">
+                                <img src="/Pages/images/morpho_primer/cap-center-color-3.jpg" alt="Cap center color example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita cf. aurorae nom prov. — specimen 30185</p>
                             </div>
                         </div>
                     </div>
@@ -392,11 +486,17 @@
                                 <span class="placeholder-text">Photo: Cap Margin Colors</span>
                                 <img src="/Pages/images/morpho_primer/capcolor2.jpg" alt="Photo: Cap Margin Colors" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-margin-color-2">
-                                <img src="/Pages/images/morpho_primer/cap-margin-color-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-margin-color-2">
+                                <img src="/Pages/images/morpho_primer/cap-margin-color-2.jpg" alt="Cap margin color example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-margin-color-3">
-                                <img src="/Pages/images/morpho_primer/cap-margin-color-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita amerirubescens nom prov. — specimen 30230</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-margin-color-3">
+                                <img src="/Pages/images/morpho_primer/cap-margin-color-3.jpg" alt="Cap margin color example — Amanita porphyria" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita porphyria — specimen 30286</p>
                             </div>
                         </div>
                     </div>
@@ -424,11 +524,17 @@
                                 <span class="placeholder-text">Photo: Cap Shape Examples</span>
                                 <img src="/Pages/images/morpho_primer/capshapeplanar.JPG" alt="Photo: Cap Shape Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-shape-2">
-                                <img src="/Pages/images/morpho_primer/cap-shape-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-shape-2">
+                                <img src="/Pages/images/morpho_primer/cap-shape-2.jpg" alt="Cap shape example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-shape-3">
-                                <img src="/Pages/images/morpho_primer/cap-shape-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita frostiana — specimen 30190</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-shape-3">
+                                <img src="/Pages/images/morpho_primer/cap-shape-3.jpg" alt="Cap shape example — Amanita aff. fulva" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita aff. fulva — specimen 30243</p>
                             </div>
                         </div>
                     </div>
@@ -456,15 +562,23 @@
                             <p>Feel the cap gently and observe in different lighting. Viscid caps may lose this quality as they dry. Check if there are visible striations or wrinkles.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="cap-texture">
-                                <span class="placeholder-text">Photo: Cap Texture Examples</span>
-                                <img src="/Pages/images/morpho_primer/cap-texture.png" alt="Photo: Cap Texture Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-texture">
+                                <img src="/Pages/images/morpho_primer/cap-texture.jpg" alt="Cap surface texture example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-texture-2">
-                                <img src="/Pages/images/morpho_primer/cap-texture-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita bisporigera — specimen 30181</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-texture-3">
-                                <img src="/Pages/images/morpho_primer/cap-texture-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-texture-2">
+                                <img src="/Pages/images/morpho_primer/cap-texture-2.jpg" alt="Cap surface texture example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita frostiana — specimen 30190</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-texture-3">
+                                <img src="/Pages/images/morpho_primer/cap-texture-3.jpg" alt="Cap surface texture example — Amanita amerivirosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita amerivirosa — specimen 30195</p>
                             </div>
                         </div>
                     </div>
@@ -489,15 +603,23 @@
                             <p>Look at the cap from the side and top. A small central bump should be visible if present. This feature can diminish as the mushroom matures.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="cap-umbonate">
-                                <span class="placeholder-text">Photo: Umbonate Cap Examples</span>
-                                <img src="/Pages/images/morpho_primer/cap-umbonate.png" alt="Photo: Umbonate Cap Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-umbonate">
+                                <img src="/Pages/images/morpho_primer/cap-umbonate.jpg" alt="Umbonate cap example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-umbonate-2">
-                                <img src="/Pages/images/morpho_primer/cap-umbonate-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita cf. aurorae nom prov. — specimen 30185</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-umbonate-3">
-                                <img src="/Pages/images/morpho_primer/cap-umbonate-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-umbonate-2">
+                                <img src="/Pages/images/morpho_primer/cap-umbonate-2.jpg" alt="Umbonate cap example — Amanita sinicoflava" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita sinicoflava — specimen 30198</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-umbonate-3">
+                                <img src="/Pages/images/morpho_primer/cap-umbonate-3.jpg" alt="Umbonate cap example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita populiphila — specimen 30280</p>
                             </div>
                         </div>
                     </div>
@@ -524,12 +646,17 @@
                             <p>Look at the cap margin and estimate how far inward the grooves extend. These are often more visible on white or pale caps. Young mushrooms may not show striations yet.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="cap-striation">
-                                <span class="placeholder-text">Photo: Cap Striations</span>
-                                <img src="/Pages/images/morpho_primer/cap-striation.png" alt="Photo: Cap Striations" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-striation">
+                                <img src="/Pages/images/morpho_primer/cap-striation.jpg" alt="Cap striation example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-striation-2">
-                                <img src="/Pages/images/morpho_primer/cap-striation-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita bisporigera — specimen 30199</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-striation-2">
+                                <img src="/Pages/images/morpho_primer/cap-striation-2.jpg" alt="Cap striation example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita populiphila — specimen 30280</p>
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-striation-3">
                                 <img src="/Pages/images/morpho_primer/cap-striation-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
@@ -592,15 +719,23 @@
                             <p>Look for raised bumps or white/pale patches on the colored cap surface. These are more visible on young specimens. They can wash off in rain or wear away with handling.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="cap-universal-veil">
-                                <span class="placeholder-text">Photo: Cap Warts and Patches</span>
-                                <img src="/Pages/images/morpho_primer/cap-universal-veil.png" alt="Photo: Cap Warts and Patches" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-universal-veil">
+                                <img src="/Pages/images/morpho_primer/cap-universal-veil.jpg" alt="Cap universal veil (warts/patches) example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-universal-veil-2">
-                                <img src="/Pages/images/morpho_primer/cap-universal-veil-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita cf. oberwinkleriana — specimen 30183</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-universal-veil-3">
-                                <img src="/Pages/images/morpho_primer/cap-universal-veil-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-universal-veil-2">
+                                <img src="/Pages/images/morpho_primer/cap-universal-veil-2.jpg" alt="Cap universal veil (warts/patches) example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita multisquamosa — specimen 30223</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-universal-veil-3">
+                                <img src="/Pages/images/morpho_primer/cap-universal-veil-3.jpg" alt="Cap universal veil (warts/patches) example — Amanita sp. 'GWA-ami2'" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita sp. 'GWA-ami2' — specimen 30274</p>
                             </div>
                         </div>
                     </div>
@@ -627,12 +762,17 @@
                             <p>Observe if the cap has discolored areas from recent bruising. This is most obvious on young mushrooms. Handle gently to avoid creating additional staining.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="cap-staining">
-                                <span class="placeholder-text">Photo: Cap Staining Examples</span>
-                                <img src="/Pages/images/morpho_primer/cap-staining.png" alt="Photo: Cap Staining Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-staining">
+                                <img src="/Pages/images/morpho_primer/cap-staining.jpg" alt="Cap staining example — Amanita flavorubens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-staining-2">
-                                <img src="/Pages/images/morpho_primer/cap-staining-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita flavorubens — specimen 30238</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-staining-2">
+                                <img src="/Pages/images/morpho_primer/cap-staining-2.jpg" alt="Cap staining example — Amanita sp. 'GWA-ami2'" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita sp. 'GWA-ami2' — specimen 30274</p>
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-staining-3">
                                 <img src="/Pages/images/morpho_primer/cap-staining-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
@@ -662,9 +802,11 @@
                             <p>Cut the cap vertically to see the interior flesh. The context color is just below the surface. Note if it changes color when exposed to air (oxidation).</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="cap-context">
-                                <span class="placeholder-text">Photo: Cap Cross-Section Examples</span>
-                                <img src="/Pages/images/morpho_primer/cap-context.png" alt="Photo: Cap Cross-Section Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-context">
+                                <img src="/Pages/images/morpho_primer/cap-context.jpg" alt="Cap cross-section example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita bisporigera — specimen 30240</p>
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-context-2">
                                 <img src="/Pages/images/morpho_primer/cap-context-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
@@ -677,191 +819,9 @@
                 </details>
             </div>
         </div>
-
-        <!-- VOLVA (UNIVERSAL VEIL BASE) SECTION -->
-        <div class="section-card">
-            <h2 class="section-heading">Volva (Base Cup)</h2>
-            <p class="category-intro">
-                The volva is the cup-like or sac-like structure at the base of the stipe, formed from the universal veil. It is one of the most diagnostic features for Amanita identification.
-            </p>
-
-            <div class="feature-section">
-                <details>
-                    <summary>Form</summary>
-                    <div class="feature-content">
-                        <div class="feature-definition">
-                            <h4>Definition</h4>
-                            <p>The overall shape and structure of the volva at the base of the mushroom.</p>
-                        </div>
-                        <div class="feature-variations">
-                            <h4>Volva Forms</h4>
-                            <ul class="variations-list">
-                                <li><strong>Saccate:</strong> Deep, cup-like pouch enclosing the stipe base</li>
-                                <li><strong>Free:</strong> Loose, bag-like structure not adhered to the stipe</li>
-                                <li><strong>Rim:</strong> Simple collar or rim around the stipe base</li>
-                                <li><strong>Patchy:</strong> Broken, irregular pieces around the base</li>
-                                <li><strong>Absent:</strong> No volva present</li>
-                            </ul>
-                        </div>
-                        <div class="feature-observation">
-                            <h4>What to Look For</h4>
-                            <p>Gently dig around the base to expose the volva. Pull up the mushroom carefully to see if there is a cup, rings, or just scattered debris. Different forms are diagnostic of different species.</p>
-                        </div>
-                        <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="volva-form">
-                                <span class="placeholder-text">Photo: Volva Forms</span>
-                                <img src="/Pages/images/morpho_primer/volva-form.png" alt="Photo: Volva Forms" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-form-2">
-                                <img src="/Pages/images/morpho_primer/volva-form-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-form-3">
-                                <img src="/Pages/images/morpho_primer/volva-form-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details>
-                    <summary>Color</summary>
-                    <div class="feature-content">
-                        <div class="feature-definition">
-                            <h4>Definition</h4>
-                            <p>The color of the volva tissue, which often differs from the cap or stipe color.</p>
-                        </div>
-                        <div class="feature-variations">
-                            <h4>Common Volva Colors</h4>
-                            <ul class="variations-list">
-                                <li><strong>White:</strong> Pure or off-white</li>
-                                <li><strong>Pale/Cream:</strong> Light yellow or pale tan</li>
-                                <li><strong>Yellow/Brown:</strong> Brownish or earthy tones</li>
-                                <li><strong>Gray:</strong> Silvery or muted gray</li>
-                            </ul>
-                        </div>
-                        <div class="feature-observation">
-                            <h4>What to Look For</h4>
-                            <p>Observe the volva color in natural light. The color can vary depending on moisture and soil conditions. Compare it to the stipe color for contrast.</p>
-                        </div>
-                        <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="volva-color">
-                                <span class="placeholder-text">Photo: Volva Colors</span>
-                                <img src="/Pages/images/morpho_primer/volva-color.png" alt="Photo: Volva Colors" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-color-2">
-                                <img src="/Pages/images/morpho_primer/volva-color-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-color-3">
-                                <img src="/Pages/images/morpho_primer/volva-color-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details>
-                    <summary>Texture</summary>
-                    <div class="feature-content">
-                        <div class="feature-definition">
-                            <h4>Definition</h4>
-                            <p>The surface texture of the volva: whether it is smooth, scaly, fibrous, or membranous.</p>
-                        </div>
-                        <div class="feature-variations">
-                            <h4>Texture Types</h4>
-                            <ul class="variations-list">
-                                <li><strong>Smooth:</strong> Plain, even surface</li>
-                                <li><strong>Scaly:</strong> Raised bumps or scales on surface</li>
-                                <li><strong>Fibrous:</strong> Thread-like or hair-like texture</li>
-                                <li><strong>Membranous:</strong> Thin, papery, delicate appearance</li>
-                            </ul>
-                        </div>
-                        <div class="feature-observation">
-                            <h4>What to Look For</h4>
-                            <p>Feel the volva gently and observe the surface under magnification if possible. The texture can help distinguish between similar-looking volvae.</p>
-                        </div>
-                        <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="volva-texture">
-                                <span class="placeholder-text">Photo: Volva Textures</span>
-                                <img src="/Pages/images/morpho_primer/volva-texture.png" alt="Photo: Volva Textures" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-texture-2">
-                                <img src="/Pages/images/morpho_primer/volva-texture-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-texture-3">
-                                <img src="/Pages/images/morpho_primer/volva-texture-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details>
-                    <summary>Attachment</summary>
-                    <div class="feature-content">
-                        <div class="feature-definition">
-                            <h4>Definition</h4>
-                            <p>How the volva is connected to or positioned relative to the stipe base (firmly attached, loose, or free).</p>
-                        </div>
-                        <div class="feature-variations">
-                            <h4>Attachment Types</h4>
-                            <ul class="variations-list">
-                                <li><strong>Firmly attached:</strong> Volva is adhered to the stipe</li>
-                                <li><strong>Loose:</strong> Volva is not firmly attached; may move</li>
-                                <li><strong>Free:</strong> Volva is a separate bag-like structure</li>
-                            </ul>
-                        </div>
-                        <div class="feature-observation">
-                            <h4>What to Look For</h4>
-                            <p>Gently try to move the volva relative to the stipe. Note whether it is a cup that moves freely or a structure that appears fused to the stem base.</p>
-                        </div>
-                        <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="volva-attachment">
-                                <span class="placeholder-text">Photo: Volva Attachment Examples</span>
-                                <img src="/Pages/images/morpho_primer/volva-attachment.png" alt="Photo: Volva Attachment Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-attachment-2">
-                                <img src="/Pages/images/morpho_primer/volva-attachment-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-attachment-3">
-                                <img src="/Pages/images/morpho_primer/volva-attachment-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details>
-                    <summary>Distribution / Coverage</summary>
-                    <div class="feature-content">
-                        <div class="feature-definition">
-                            <h4>Definition</h4>
-                            <p>How the volva is distributed around the stipe base: complete enclosure, partial coverage, or scattered pieces.</p>
-                        </div>
-                        <div class="feature-variations">
-                            <h4>Distribution Patterns</h4>
-                            <ul class="variations-list">
-                                <li><strong>Complete:</strong> Volva encircles the entire stipe base</li>
-                                <li><strong>Incomplete/Patchy:</strong> Volva covers only part of the base</li>
-                                <li><strong>Scattered:</strong> Veil fragments are dispersed around the base</li>
-                            </ul>
-                        </div>
-                        <div class="feature-observation">
-                            <h4>What to Look For</h4>
-                            <p>Examine the stipe base from all angles. Note if the volva completely surrounds the stipe or only portions of it. Some volvae appear as a complete rim; others as scattered patches.</p>
-                        </div>
-                        <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="volva-distribution">
-                                <span class="placeholder-text">Photo: Volva Coverage Examples</span>
-                                <img src="/Pages/images/morpho_primer/volva-distribution.png" alt="Photo: Volva Coverage Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-distribution-2">
-                                <img src="/Pages/images/morpho_primer/volva-distribution-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-distribution-3">
-                                <img src="/Pages/images/morpho_primer/volva-distribution-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                        </div>
-                    </div>
-                </details>
-            </div>
         </div>
 
+        <div class="tab-panel" id="panel-stipe" role="tabpanel" aria-labelledby="tab-stipe" hidden>
         <!-- STIPE (STEM) SECTION -->
         <div class="section-card">
             <h2 class="section-heading">Stipe (Stem)</h2>
@@ -890,12 +850,17 @@
                             <p>Measure the stipe from where it attaches to the cap to the base. Be aware that stipes can compress or expand depending on moisture and conditions.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="stipe-length">
-                                <span class="placeholder-text">Photo: Stipe Length Comparison</span>
-                                <img src="/Pages/images/morpho_primer/stipe-length.png" alt="Photo: Stipe Length Comparison" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-length">
+                                <img src="/Pages/images/morpho_primer/stipe-length.jpg" alt="Stipe length example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-length-2">
-                                <img src="/Pages/images/morpho_primer/stipe-length-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita fusca — specimen 30186</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-length-2">
+                                <img src="/Pages/images/morpho_primer/stipe-length-2.jpg" alt="Stipe length example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita suballiacea — specimen 30187</p>
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-length-3">
                                 <img src="/Pages/images/morpho_primer/stipe-length-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
@@ -924,12 +889,17 @@
                             <p>Measure the diameter of the stipe mid-way along its length. Note if the stipe is uniform, tapers toward the top, or widens at the base.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="stipe-width">
-                                <span class="placeholder-text">Photo: Stipe Width Examples</span>
-                                <img src="/Pages/images/morpho_primer/stipe-width.png" alt="Photo: Stipe Width Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-width">
+                                <img src="/Pages/images/morpho_primer/stipe-width.jpg" alt="Stipe width example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-width-2">
-                                <img src="/Pages/images/morpho_primer/stipe-width-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita cf. aurorae nom prov. — specimen 30185</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-width-2">
+                                <img src="/Pages/images/morpho_primer/stipe-width-2.jpg" alt="Stipe width example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita populiphila — specimen 30280</p>
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-width-3">
                                 <img src="/Pages/images/morpho_primer/stipe-width-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
@@ -959,15 +929,23 @@
                             <p>Observe the stipe color in natural light. Note if the color is uniform from top to bottom or if it changes (e.g., yellower at the base).</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="stipe-color">
-                                <span class="placeholder-text">Photo: Stipe Color Examples</span>
-                                <img src="/Pages/images/morpho_primer/stipe-color.png" alt="Photo: Stipe Color Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-color">
+                                <img src="/Pages/images/morpho_primer/stipe-color.jpg" alt="Stipe color example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-color-2">
-                                <img src="/Pages/images/morpho_primer/stipe-color-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita suballiacea — specimen 30182</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-color-3">
-                                <img src="/Pages/images/morpho_primer/stipe-color-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-color-2">
+                                <img src="/Pages/images/morpho_primer/stipe-color-2.jpg" alt="Stipe color example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita amerirubescens nom prov. — specimen 30230</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-color-3">
+                                <img src="/Pages/images/morpho_primer/stipe-color-3.jpg" alt="Stipe color example — Amanita cf. lavendula" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita cf. lavendula — specimen 30218</p>
                             </div>
                         </div>
                     </div>
@@ -994,15 +972,23 @@
                             <p>Observe the stipe from the side. Note if it maintains consistent width or if there are bulges, tapers, or curves.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="stipe-shape">
-                                <span class="placeholder-text">Photo: Stipe Shape Examples</span>
-                                <img src="/Pages/images/morpho_primer/stipe-shape.png" alt="Photo: Stipe Shape Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-shape">
+                                <img src="/Pages/images/morpho_primer/stipe-shape.jpg" alt="Stipe shape example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-shape-2">
-                                <img src="/Pages/images/morpho_primer/stipe-shape-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita bisporigera — specimen 30199</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-shape-3">
-                                <img src="/Pages/images/morpho_primer/stipe-shape-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-shape-2">
+                                <img src="/Pages/images/morpho_primer/stipe-shape-2.jpg" alt="Stipe shape example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita bisporigera — specimen 30181</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-shape-3">
+                                <img src="/Pages/images/morpho_primer/stipe-shape-3.jpg" alt="Stipe shape example — Amanita brunnescens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita brunnescens — specimen 30259</p>
                             </div>
                         </div>
                     </div>
@@ -1030,15 +1016,23 @@
                             <p>Examine the stipe carefully for any patterns, zones, or texture changes. Note separately the appearance near the annulus and below it.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="stipe-decoration">
-                                <span class="placeholder-text">Photo: Stipe Decoration Examples</span>
-                                <img src="/Pages/images/morpho_primer/stipe-decoration.png" alt="Photo: Stipe Decoration Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-decoration">
+                                <img src="/Pages/images/morpho_primer/stipe-decoration.jpg" alt="Stipe surface decoration example — Amanita centriobscura" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-decoration-2">
-                                <img src="/Pages/images/morpho_primer/stipe-decoration-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita centriobscura — specimen 30215</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-decoration-3">
-                                <img src="/Pages/images/morpho_primer/stipe-decoration-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-decoration-2">
+                                <img src="/Pages/images/morpho_primer/stipe-decoration-2.jpg" alt="Stipe surface decoration example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita multisquamosa — specimen 30223</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-decoration-3">
+                                <img src="/Pages/images/morpho_primer/stipe-decoration-3.jpg" alt="Stipe surface decoration example — Amanita sinicoflava" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita sinicoflava — specimen 30198</p>
                             </div>
                         </div>
                     </div>
@@ -1065,12 +1059,17 @@
                             <p>Observe if there are any discolored areas from handling or weather. Note whether staining occurs quickly or slowly after bruising.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="stipe-staining">
-                                <span class="placeholder-text">Photo: Stipe Staining Examples</span>
-                                <img src="/Pages/images/morpho_primer/stipe-staining.png" alt="Photo: Stipe Staining Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-staining">
+                                <img src="/Pages/images/morpho_primer/stipe-staining.jpg" alt="Stipe staining example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-staining-2">
-                                <img src="/Pages/images/morpho_primer/stipe-staining-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita amerirubescens nom prov. — specimen 30264</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-staining-2">
+                                <img src="/Pages/images/morpho_primer/stipe-staining-2.jpg" alt="Stipe staining example — Amanita brunnescens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita brunnescens — specimen 30272</p>
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-staining-3">
                                 <img src="/Pages/images/morpho_primer/stipe-staining-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
@@ -1101,15 +1100,23 @@
                             <p>Look for a distinct ring or collar on the stipe. Note its position and whether the underside is grooved or smooth. In young mushrooms, the annulus may be attached to the cap edge.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="stipe-annulus">
-                                <span class="placeholder-text">Photo: Annulus Examples</span>
-                                <img src="/Pages/images/morpho_primer/stipe-annulus.png" alt="Photo: Annulus Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-annulus">
+                                <img src="/Pages/images/morpho_primer/stipe-annulus.jpg" alt="Stipe annulus (ring) example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-annulus-2">
-                                <img src="/Pages/images/morpho_primer/stipe-annulus-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita suballiacea — specimen 30187</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-annulus-3">
-                                <img src="/Pages/images/morpho_primer/stipe-annulus-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-annulus-2">
+                                <img src="/Pages/images/morpho_primer/stipe-annulus-2.jpg" alt="Stipe annulus (ring) example — Amanita chrysoblema" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita chrysoblema — specimen 30210</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-annulus-3">
+                                <img src="/Pages/images/morpho_primer/stipe-annulus-3.jpg" alt="Stipe annulus (ring) example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita frostiana — specimen 30242</p>
                             </div>
                         </div>
                     </div>
@@ -1136,15 +1143,23 @@
                             <p>Carefully dig around the base to expose any veil material. Pull the mushroom straight up to avoid damaging the volva. Check if the veil is firmly attached or loose.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="stipe-veil-base">
-                                <span class="placeholder-text">Photo: Stipe Base Veil Examples</span>
-                                <img src="/Pages/images/morpho_primer/stipe-veil-base.png" alt="Photo: Stipe Base Veil Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-veil-base">
+                                <img src="/Pages/images/morpho_primer/stipe-veil-base.jpg" alt="Universal veil remnant at stipe base example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-veil-base-2">
-                                <img src="/Pages/images/morpho_primer/stipe-veil-base-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita fusca — specimen 30186</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-veil-base-3">
-                                <img src="/Pages/images/morpho_primer/stipe-veil-base-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-veil-base-2">
+                                <img src="/Pages/images/morpho_primer/stipe-veil-base-2.jpg" alt="Universal veil remnant at stipe base example — Amanita centriobscura" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita centriobscura — specimen 30220</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="stipe-veil-base-3">
+                                <img src="/Pages/images/morpho_primer/stipe-veil-base-3.jpg" alt="Universal veil remnant at stipe base example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita multisquamosa — specimen 30223</p>
                             </div>
                         </div>
                     </div>
@@ -1186,84 +1201,246 @@
                 </details>
             </div>
         </div>
+        </div>
 
-        <!-- TREE HOST SECTION -->
+        <div class="tab-panel" id="panel-volva" role="tabpanel" aria-labelledby="tab-volva" hidden>
+        <!-- VOLVA (UNIVERSAL VEIL BASE) SECTION -->
         <div class="section-card">
-            <h2 class="section-heading">Tree Host (Mycorrhizal Association)</h2>
+            <h2 class="section-heading">Volva (Base Cup)</h2>
             <p class="category-intro">
-                Amanita species form mycorrhizal relationships with specific tree species. The host tree is a key diagnostic feature and can aid in field identification.
+                The volva is the cup-like or sac-like structure at the base of the stipe, formed from the universal veil. It is one of the most diagnostic features for Amanita identification.
             </p>
 
             <div class="feature-section">
                 <details>
-                    <summary>Common Tree Hosts in Wisconsin</summary>
+                    <summary>Form</summary>
                     <div class="feature-content">
                         <div class="feature-definition">
                             <h4>Definition</h4>
-                            <p>Tree species with which Amanita mushrooms form symbiotic relationships in Wisconsin forests.</p>
+                            <p>The overall shape and structure of the volva at the base of the mushroom.</p>
                         </div>
                         <div class="feature-variations">
-                            <h4>Primary Tree Hosts</h4>
+                            <h4>Volva Forms</h4>
                             <ul class="variations-list">
-                                <li><strong>Oak (Quercus):</strong> Many Amanita species associate with oak trees</li>
-                                <li><strong>Birch (Betula):</strong> Specific species prefer birch association</li>
-                                <li><strong>Pine (Pinus):</strong> Conifer-associated Amanita species</li>
-                                <li><strong>Spruce (Picea):</strong> Common in northern regions</li>
-                                <li><strong>Fir (Abies):</strong> Alpine and northern conifer association</li>
-                                <li><strong>Hardwood (mixed deciduous):</strong> Some species are generalists</li>
+                                <li><strong>Saccate:</strong> Deep, cup-like pouch enclosing the stipe base</li>
+                                <li><strong>Free:</strong> Loose, bag-like structure not adhered to the stipe</li>
+                                <li><strong>Rim:</strong> Simple collar or rim around the stipe base</li>
+                                <li><strong>Patchy:</strong> Broken, irregular pieces around the base</li>
+                                <li><strong>Absent:</strong> No volva present</li>
                             </ul>
                         </div>
                         <div class="feature-observation">
                             <h4>What to Look For</h4>
-                            <p>Note the trees in the immediate vicinity of the mushroom. Some Amanita species are highly host-specific, while others are more flexible. The presence of certain tree species can narrow down possible species identifications.</p>
+                            <p>Gently dig around the base to expose the volva. A spoon is an incredibly effective <em>Amanita</em> extractor.Pull up the mushroom carefully to see if there is a cup, rings, or just scattered debris. Different forms are diagnostic of different species.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="tree-host-overview">
-                                <span class="placeholder-text">Photo: Wisconsin Tree Species</span>
-                                <img src="/Pages/images/morpho_primer/tree-host-overview.png" alt="Photo: Wisconsin Tree Species" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-form">
+                                <img src="/Pages/images/morpho_primer/volva-form.jpg" alt="Volva form example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-host-overview-2">
-                                <img src="/Pages/images/morpho_primer/tree-host-overview-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita fusca — specimen 30281</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-host-overview-3">
-                                <img src="/Pages/images/morpho_primer/tree-host-overview-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-form-2">
+                                <img src="/Pages/images/morpho_primer/volva-form-2.jpg" alt="Volva form example — Amanita centriobscura" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita centriobscura — specimen 30278</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-form-3">
+                                <img src="/Pages/images/morpho_primer/volva-form-3.jpg" alt="Volva form example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita frostiana — specimen 30190</p>
                             </div>
                         </div>
                     </div>
                 </details>
 
                 <details>
-                    <summary>Identifying the Host Tree</summary>
+                    <summary>Color</summary>
                     <div class="feature-content">
                         <div class="feature-definition">
                             <h4>Definition</h4>
-                            <p>Features to observe and compare when identifying the tree associated with your Amanita specimen.</p>
+                            <p>The color of the volva tissue, which often differs from the cap or stipe color.</p>
                         </div>
                         <div class="feature-variations">
-                            <h4>Tree Identification Tips</h4>
+                            <h4>Common Volva Colors</h4>
                             <ul class="variations-list">
-                                <li><strong>Bark:</strong> Observe texture and color (smooth, birch white, oak ridged, pine plated)</li>
-                                <li><strong>Leaves:</strong> Shape, arrangement, and serration (oak lobed, birch oval, pine needles)</li>
-                                <li><strong>Twigs:</strong> Color, bud arrangement, and terminal features</li>
-                                <li><strong>Canopy:</strong> Overall tree shape and branching pattern</li>
-                                <li><strong>Height/Age:</strong> Note if trees are young saplings or mature</li>
+                                <li><strong>White:</strong> Pure or off-white</li>
+                                <li><strong>Pale/Cream:</strong> Light yellow or pale tan</li>
+                                <li><strong>Yellow/Brown:</strong> Brownish or earthy tones</li>
+                                <li><strong>Gray:</strong> Silvery or muted gray</li>
                             </ul>
                         </div>
                         <div class="feature-observation">
                             <h4>What to Look For</h4>
-                            <p>Examine the trees immediately surrounding the mushroom. Look for a tree within 1-3 meters (3-10 feet) that is approximately 1-2 meters (3-6 feet) in diameter at breast height. Take note of multiple tree characteristics if uncertain.</p>
+                            <p>Observe the volva color in natural light. The color can vary depending on moisture and soil conditions. Compare it to the stipe color for contrast.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="tree-identification">
-                                <span class="placeholder-text">Photo: Tree Identification Guide</span>
-                                <img src="/Pages/images/morpho_primer/tree-identification.png" alt="Photo: Tree Identification Guide" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-color">
+                                <img src="/Pages/images/morpho_primer/volva-color.jpg" alt="Volva color example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-identification-2">
-                                <img src="/Pages/images/morpho_primer/tree-identification-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita fusca — specimen 30281</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-identification-3">
-                                <img src="/Pages/images/morpho_primer/tree-identification-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-color-2">
+                                <img src="/Pages/images/morpho_primer/volva-color-2.jpg" alt="Volva color example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
+                            <p class="photo-caption">Amanita multisquamosa — specimen 30223</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-color-3">
+                                <img src="/Pages/images/morpho_primer/volva-color-3.jpg" alt="Volva color example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita frostiana — specimen 30191</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Texture</summary>
+                    <div class="feature-content">
+                        <div class="feature-definition">
+                            <h4>Definition</h4>
+                            <p>The surface texture of the volva: whether it is smooth, scaly, fibrous, or membranous.</p>
+                        </div>
+                        <div class="feature-variations">
+                            <h4>Texture Types</h4>
+                            <ul class="variations-list">
+                                <li><strong>Smooth:</strong> Plain, even surface</li>
+                                <li><strong>Scaly:</strong> Raised bumps or scales on surface</li>
+                                <li><strong>Fibrous:</strong> Thread-like or hair-like texture</li>
+                                <li><strong>Membranous:</strong> Thin, papery, delicate appearance</li>
+                            </ul>
+                        </div>
+                        <div class="feature-observation">
+                            <h4>What to Look For</h4>
+                            <p>Feel the volva gently and observe the surface under magnification if possible. The texture can help distinguish between similar-looking volvae.</p>
+                        </div>
+                        <div class="photo-gallery">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-texture">
+                                <img src="/Pages/images/morpho_primer/volva-texture.jpg" alt="Volva texture example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita fusca — specimen 30281</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-texture-2">
+                                <img src="/Pages/images/morpho_primer/volva-texture-2.jpg" alt="Volva texture example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita cf. oberwinkleriana — specimen 30183</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-texture-3">
+                                <img src="/Pages/images/morpho_primer/volva-texture-3.jpg" alt="Volva texture example — Amanita brunnescens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita brunnescens — specimen 30272</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Attachment</summary>
+                    <div class="feature-content">
+                        <div class="feature-definition">
+                            <h4>Definition</h4>
+                            <p>How the volva is connected to or positioned relative to the stipe base (firmly attached, loose, or free).</p>
+                        </div>
+                        <div class="feature-variations">
+                            <h4>Attachment Types</h4>
+                            <ul class="variations-list">
+                                <li><strong>Firmly attached:</strong> Volva is adhered to the stipe</li>
+                                <li><strong>Loose:</strong> Volva is not firmly attached; may move</li>
+                                <li><strong>Free:</strong> Volva is a separate bag-like structure</li>
+                            </ul>
+                        </div>
+                        <div class="feature-observation">
+                            <h4>What to Look For</h4>
+                            <p>Gently try to move the volva relative to the stipe. Note whether it is a cup that moves freely or a structure that appears fused to the stem base.</p>
+                        </div>
+                        <div class="photo-gallery">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-attachment">
+                                <img src="/Pages/images/morpho_primer/volva-attachment.jpg" alt="Volva attachment example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita multisquamosa — specimen 30223</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-attachment-2">
+                                <img src="/Pages/images/morpho_primer/volva-attachment-2.jpg" alt="Volva attachment example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita cf. oberwinkleriana — specimen 30183</p>
+                            </div>
+                            <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-attachment-3">
+                                <img src="/Pages/images/morpho_primer/volva-attachment-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Distribution / Coverage</summary>
+                    <div class="feature-content">
+                        <div class="feature-definition">
+                            <h4>Definition</h4>
+                            <p>How the volva is distributed around the stipe base: complete enclosure, partial coverage, or scattered pieces.</p>
+                        </div>
+                        <div class="feature-variations">
+                            <h4>Distribution Patterns</h4>
+                            <ul class="variations-list">
+                                <li><strong>Complete:</strong> Volva encircles the entire stipe base</li>
+                                <li><strong>Incomplete/Patchy:</strong> Volva covers only part of the base</li>
+                                <li><strong>Scattered:</strong> Veil fragments are dispersed around the base</li>
+                            </ul>
+                        </div>
+                        <div class="feature-observation">
+                            <h4>What to Look For</h4>
+                            <p>Examine the stipe base from all angles. Note if the volva completely surrounds the stipe or only portions of it. Some volvae appear as a complete rim; others as scattered patches.</p>
+                        </div>
+                        <div class="photo-gallery">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-distribution">
+                                <img src="/Pages/images/morpho_primer/volva-distribution.jpg" alt="Volva distribution example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita fusca — specimen 30281</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-distribution-2">
+                                <img src="/Pages/images/morpho_primer/volva-distribution-2.jpg" alt="Volva distribution example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita frostiana — specimen 30190</p>
+                            </div>
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="volva-distribution-3">
+                                <img src="/Pages/images/morpho_primer/volva-distribution-3.jpg" alt="Volva distribution example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                            </div>
+                            <p class="photo-caption">Amanita frostiana — specimen 30191</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        </div>
+
+        <div class="tab-panel" id="panel-habitat" role="tabpanel" aria-labelledby="tab-habitat" hidden>
+        <!-- TREE HOST SECTION -->
+        <div class="section-card">
+            <h2 class="section-heading">Tree host and habitat information</h2>
+            <p class="category-intro">
+                <em>Amanita</em> species form mycorrhizal relationships with specific tree species. They are usually generalists that can associate with Oak or Conifers; although some species have been found associated with Birch, Beech, Maple, and Poplar.
+            </p>
+
+            <div class="feature-section">
+                <details>
+                    <summary>Identifying the Host Tree</summary>
+                    <div class="feature-content">
+                        <div class="feature-observation">
+                            <h4>What to Look For</h4>
+                            <p>Examine the trees immediately surrounding the mushroom. Look for a tree within 1-3 meters (3-10 feet) of the mushroom. Note multiple tree species if present.</p>
                         </div>
                     </div>
                 </details>
@@ -1291,18 +1468,6 @@
                             <h4>What to Look For</h4>
                             <p>Record the common and scientific names of trees near your specimen. This information is valuable for future reference and database records. A field guide or tree identification app can assist in confirmation.</p>
                         </div>
-                        <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="tree-scientific">
-                                <span class="placeholder-text">Photo: Tree Bark &amp; Leaf Details</span>
-                                <img src="/Pages/images/morpho_primer/tree-scientific.png" alt="Photo: Tree Bark &amp; Leaf Details" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-scientific-2">
-                                <img src="/Pages/images/morpho_primer/tree-scientific-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="tree-scientific-3">
-                                <img src="/Pages/images/morpho_primer/tree-scientific-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                        </div>
                     </div>
                 </details>
 
@@ -1323,25 +1488,26 @@
                                 <li><strong>Disturbed areas:</strong> Roadsides, recently cleared areas, or parks with planted trees</li>
                             </ul>
                         </div>
+                       <div class="feature-observation">
+                            <h4>A note on soil type</h4>
+                            <p>Soil make up plays a fundamental role in the moisture retention and nutrient availability in a habitat which ultimately influences fungal species composition. If possible, note the soil type:</p>
+                                <ul class="variations-list">
+                                <li><strong>Sandy:</strong> Coarse, fast-draining, low nutrient and moisture retention</li>
+                                <li><strong>Loamy:</strong> Balanced mix of sand, silt, and clay; good drainage and fertility</li>
+                                <li><strong>Clay:</strong> Fine-particled, dense, and slow-draining; retains moisture</li>
+                                <li><strong>Silty:</strong> Smooth, fertile, and moisture-retentive but can compact easily</li>
+                                <li><strong>Peaty/Organic:</strong> High organic matter, acidic, found in bogs and wet lowlands</li>
+                                <li><strong>Rocky/Gravelly:</strong> Shallow, well-drained soil with abundant stone content</li>
+                            </ul>
+                        </div>
                         <div class="feature-observation">
                             <h4>What to Look For</h4>
                             <p>Note the overall forest composition and habitat type. Amanita fruiting is influenced by moisture, temperature, and tree community. The combination of habitat and tree host can help narrow species identification.</p>
                         </div>
-                        <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="habitat-type">
-                                <span class="placeholder-text">Photo: Wisconsin Habitat Examples</span>
-                                <img src="/Pages/images/morpho_primer/habitat-type.png" alt="Photo: Wisconsin Habitat Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="habitat-type-2">
-                                <img src="/Pages/images/morpho_primer/habitat-type-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="habitat-type-3">
-                                <img src="/Pages/images/morpho_primer/habitat-type-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                        </div>
                     </div>
                 </details>
             </div>
+        </div>
         </div>
 
         <!-- CLOSING SECTION -->
@@ -1364,5 +1530,20 @@
         <p>&copy; 2026 Greater Wisconsin Amanita Project. All rights reserved.</p>
         <p><a href="../../index.html">Home</a> | <a href="../About/index.html">About</a> | <a href="../Search/index.html">Search</a></p>
     </footer>
+
+    <script>
+        const tabs = document.querySelectorAll(".section-tab");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                tabs.forEach(other => {
+                    const isActive = other === tab;
+                    other.classList.toggle("is-active", isActive);
+                    other.setAttribute("aria-selected", String(isActive));
+                    document.getElementById(other.getAttribute("aria-controls")).hidden = !isActive;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
