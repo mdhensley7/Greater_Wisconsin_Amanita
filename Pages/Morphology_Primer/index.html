@@ -269,6 +269,43 @@
             display: none;
         }
 
+        .photo-placeholder.photo-diagram {
+            max-width: 480px;
+            height: auto;
+            padding: 0.5rem;
+        }
+
+        .photo-placeholder.photo-diagram img {
+            max-height: none;
+            width: 100%;
+            height: auto;
+        }
+
+        .photo-gallery.gallery-wide {
+            gap: 1.2rem;
+            align-items: flex-start;
+        }
+
+        .photo-gallery.gallery-wide .photo-frame {
+            flex: 1 1 260px;
+            max-width: 420px;
+        }
+
+        .photo-gallery.gallery-wide .photo-placeholder {
+            width: 100%;
+            max-width: none;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            padding: 0;
+        }
+
+        .photo-gallery.gallery-wide .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
         .development-photo {
             max-width: 100%;
             width: 100%;
@@ -416,22 +453,11 @@
                             <p>Size can vary drastically within a species depending on conditions and maturity. Noting relative maturity stage can help alleviate confusion.</p>
                         </div>
                         <div class="photo-gallery">
-                            <div class="photo-placeholder" data-feature-type="cap-diameter">
+                            <div class="photo-placeholder photo-diagram" data-feature-type="cap-diameter">
                                 <span class="placeholder-text">Photo: Cap Diameter Measurement</span>
-                                <img src="/Pages/images/morpho_primer/diameter1.png" alt="Cap diameter measurement example" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="/Pages/images/morpho_primer/cap/diameter30235.png" alt="Cap diameter measurement example" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
-                            <div class="photo-frame">
-                            <div class="photo-placeholder has-image" data-feature-type="cap-diameter-2">
-                                <img src="/Pages/images/morpho_primer/cap-diameter-2.jpg" alt="Cap diameter example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
-                            </div>
-                            <p class="photo-caption">Amanita fusca — specimen 30186</p>
-                            </div>
-                            <div class="photo-frame">
-                            <div class="photo-placeholder has-image" data-feature-type="cap-diameter-3">
-                                <img src="/Pages/images/morpho_primer/cap-diameter-3.jpg" alt="Cap diameter example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
-                            </div>
-                            <p class="photo-caption">Amanita suballiacea — specimen 30187</p>
-                            </div>
+                            <p class="photo-caption"><em>Amanita solaniolens</em> — specimen 30235</p>
                         </div>
                     </div>
                 </details>
@@ -453,20 +479,17 @@
                             <h4>What to Look For</h4>
                             <p>Observe the cap color in natural light if possible. Staining or bruising may change color over time so document color before removing mushroom</p>
                         </div>
-                        <div class="photo-gallery">
+                        <div class="photo-gallery gallery-wide">
+                            <div class="photo-frame">
                             <div class="photo-placeholder" data-feature-type="cap-center-color">
                                 <span class="placeholder-text">Photo: Cap Color Examples</span>
-                                <img src="/Pages/images/morpho_primer/capcolor1.JPG" alt="Photo: Cap Color Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="/Pages/images/morpho_primer/cap/capcolor30278.png" alt="Photo: Cap Color Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
-                            <div class="photo-frame">
-                            <div class="photo-placeholder has-image" data-feature-type="cap-center-color-2">
-                                <img src="/Pages/images/morpho_primer/cap-center-color-2.jpg" alt="Cap center color example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
-                            </div>
-                            <p class="photo-caption">Amanita frostiana — specimen 30190</p>
+                            <p class="photo-caption">Amanita centriobscura — specimen 30278</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-center-color-3">
-                                <img src="/Pages/images/morpho_primer/cap-center-color-3.jpg" alt="Cap center color example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/capcolor30185.jpg" alt="Cap center color example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita cf. aurorae nom prov. — specimen 30185</p>
                             </div>
@@ -481,22 +504,19 @@
                             <h4>Definition</h4>
                             <p>The color of the edge or outer rim of the cap. Often differs from the center even just slightly.</p>
                         </div>
-                        <div class="photo-gallery">
+                        <div class="photo-gallery gallery-wide">
+                            <div class="photo-frame">
                             <div class="photo-placeholder" data-feature-type="cap-margin-color">
                                 <span class="placeholder-text">Photo: Cap Margin Colors</span>
-                                <img src="/Pages/images/morpho_primer/capcolor2.jpg" alt="Photo: Cap Margin Colors" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="/Pages/images/morpho_primer/cap/margincolor30207.jpg" alt="Photo: Cap Margin Color of Amanita porphyria" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <p class="photo-caption"><em>Amanita porphyria</em> — specimen 30207</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-margin-color-2">
-                                <img src="/Pages/images/morpho_primer/cap-margin-color-2.jpg" alt="Cap margin color example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/margincolor30243.jpg" alt="Cap margin color example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita amerirubescens nom prov. — specimen 30230</p>
-                            </div>
-                            <div class="photo-frame">
-                            <div class="photo-placeholder has-image" data-feature-type="cap-margin-color-3">
-                                <img src="/Pages/images/morpho_primer/cap-margin-color-3.jpg" alt="Cap margin color example — Amanita porphyria" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
-                            </div>
-                            <p class="photo-caption">Amanita porphyria — specimen 30286</p>
+                            <p class="photo-caption"><em>Amanita aff. fulva</em> — specimen 30243</p>
                             </div>
                         </div>
                     </div>
@@ -519,22 +539,25 @@
                             <h4>What to Look For</h4>
                             <p>View the cap from the side. Note that young mushrooms often have more convex caps that flatten or depress as they age.</p>
                         </div>
-                        <div class="photo-gallery">
+                        <div class="photo-gallery gallery-wide">
+                            <div class="photo-frame">
                             <div class="photo-placeholder" data-feature-type="cap-shape">
                                 <span class="placeholder-text">Photo: Cap Shape Examples</span>
-                                <img src="/Pages/images/morpho_primer/capshapeplanar.JPG" alt="Photo: Cap Shape Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="/Pages/images/morpho_primer/cap/capshape30233.jpg" alt="Photo: Cap Shape Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                            </div>
+                            <p class="photo-caption">Amanita rhacopus — specimen 30233 <strong>planar</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-shape-2">
-                                <img src="/Pages/images/morpho_primer/cap-shape-2.jpg" alt="Cap shape example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/capshape30229.jpg" alt="Cap shape example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita frostiana — specimen 30190</p>
+                            <p class="photo-caption">Amanita frostiana — specimen 30229 <strong>convex</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-shape-3">
-                                <img src="/Pages/images/morpho_primer/cap-shape-3.jpg" alt="Cap shape example — Amanita aff. fulva" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/capshape30268.jpg" alt="Cap shape example — Amanita aff. fulva" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita aff. fulva — specimen 30243</p>
+                            <p class="photo-caption">Amanita jakeslandingensis nom. prov. — specimen 30268 <strong>plano-concave</strong></p>
                             </div>
                         </div>
                     </div>
@@ -550,35 +573,35 @@
                         <div class="feature-variations">
                             <h4>Texture Types</h4>
                             <ul class="variations-list">
-                                <li><strong>Glabrous (Smooth):</strong> Very smooth to the touch and eye</li>
-                                <li><strong>Dry:</strong> Matte appearance, may feel slightly rough</li>
+                                <li><strong>Glabrous:</strong> Smooth to the touch, skin-like</li>
+                                <li><strong>Dry:</strong> Matte appearance and feel</li>
                                 <li><strong>Viscid:</strong> Slimy or slippery when wet, sticky when moist</li>
                                 <li><strong>Silky:</strong> Shiny and smooth with a silken appearance</li>
-                                <li><strong>Wrinkly/Fibrous:</strong> Textured or lined surface</li>
+                                <li><strong>Wrinkly:</strong> Often due to drying or age</li>
                             </ul>
                         </div>
                         <div class="feature-observation">
                             <h4>What to Look For</h4>
                             <p>Feel the cap gently and observe in different lighting. Viscid caps may lose this quality as they dry. Check if there are visible striations or wrinkles.</p>
                         </div>
-                        <div class="photo-gallery">
+                        <div class="photo-gallery gallery-wide">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-texture">
-                                <img src="/Pages/images/morpho_primer/cap-texture.jpg" alt="Cap surface texture example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/captexture30222.jpg" alt="Cap surface silky texture example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita bisporigera — specimen 30181</p>
+                            <p class="photo-caption">Amanita multisquamosa — specimen 30222 <strong>silky</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-texture-2">
-                                <img src="/Pages/images/morpho_primer/cap-texture-2.jpg" alt="Cap surface texture example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/captexture30223.jpg" alt="Cap surface viscid texture example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita frostiana — specimen 30190</p>
+                            <p class="photo-caption">Amanita multisquamosa — specimen 30223 <strong>viscid</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-texture-3">
-                                <img src="/Pages/images/morpho_primer/cap-texture-3.jpg" alt="Cap surface texture example — Amanita amerivirosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/captexture30195.jpg" alt="Cap surface wrinkly texture example — Amanita amerivirosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita amerivirosa — specimen 30195</p>
+                            <p class="photo-caption">Amanita amerivirosa — specimen 30195 <strong>Wrinkly</strong></p>
                             </div>
                         </div>
                     </div>
@@ -602,24 +625,24 @@
                             <h4>What to Look For</h4>
                             <p>Look at the cap from the side and top. A small central bump should be visible if present. This feature can diminish as the mushroom matures.</p>
                         </div>
-                        <div class="photo-gallery">
+                        <div class="photo-gallery gallery-wide">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-umbonate">
-                                <img src="/Pages/images/morpho_primer/cap-umbonate.jpg" alt="Umbonate cap example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/capumbo30185.jpg" alt="Umbonate cap example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita cf. aurorae nom prov. — specimen 30185</p>
+                            <p class="photo-caption">Amanita cf. aurorae nom prov. — specimen 30185 <strong>umbonate</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-umbonate-2">
-                                <img src="/Pages/images/morpho_primer/cap-umbonate-2.jpg" alt="Umbonate cap example — Amanita sinicoflava" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/capshape30268.jpg" alt="Umbonate cap example — Amanita jakeslandingensis nom. prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita sinicoflava — specimen 30198</p>
+                            <p class="photo-caption">Amanita jakeslandingensis nom. prov. — specimen 30269 <strong>umbonate</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-umbonate-3">
-                                <img src="/Pages/images/morpho_primer/cap-umbonate-3.jpg" alt="Umbonate cap example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/capumbo30189.jpg" alt="Umbonate cap example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita populiphila — specimen 30280</p>
+                            <p class="photo-caption">Amanita rhacopus — specimen 30189 <strong>minutely umbonate</strong></p>
                             </div>
                         </div>
                     </div>
@@ -635,31 +658,22 @@
                         <div class="feature-variations">
                             <h4>Striation Patterns</h4>
                             <ul class="variations-list">
-                                <li><strong>Absent (0mm):</strong> No visible grooves or lines</li>
-                                <li><strong>Slight (1-3mm):</strong> Fine lines visible only near the margin</li>
-                                <li><strong>Moderate (3-8mm):</strong> Clear grooves extending partway toward center</li>
-                                <li><strong>Strong (8mm+):</strong> Deep grooves extending well toward center</li>
+                                <li><strong>Striate:</strong> Visible lines but no texture</li>
+                                <li><strong>Sulcate:</strong> Textured lines</li>
                             </ul>
                         </div>
-                        <div class="feature-observation">
-                            <h4>What to Look For</h4>
-                            <p>Look at the cap margin and estimate how far inward the grooves extend. These are often more visible on white or pale caps. Young mushrooms may not show striations yet.</p>
-                        </div>
-                        <div class="photo-gallery">
-                            <div class="photo-frame">
-                            <div class="photo-placeholder has-image" data-feature-type="cap-striation">
-                                <img src="/Pages/images/morpho_primer/cap-striation.jpg" alt="Cap striation example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
-                            </div>
-                            <p class="photo-caption">Amanita bisporigera — specimen 30199</p>
-                            </div>
+                        <div class="photo-gallery gallery-wide">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-striation-2">
-                                <img src="/Pages/images/morpho_primer/cap-striation-2.jpg" alt="Cap striation example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/striation30280.jpg" alt="Cap striation example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita populiphila — specimen 30280</p>
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-striation-3">
-                                <img src="/Pages/images/morpho_primer/cap-striation-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <div class="photo-frame">
+                            <div class="photo-placeholder has-image" data-feature-type="cap-striation-3">
+                                <img src="/Pages/images/morpho_primer/cap/striation30262.jpg" alt="Amanita subnigra nom. prov. — specimen 30262" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            </div>
+                            <p class="photo-caption">Amanita subnigra nom. prov. — specimen 30262</p>
                             </div>
                         </div>
                     </div>
@@ -670,30 +684,18 @@
                     <div class="feature-content">
                         <div class="feature-definition">
                             <h4>Definition</h4>
-                            <p>The presence of fragments or tags from the partial veil hanging from the cap margin, appearing as hair-like strands or tags on the edge.</p>
-                        </div>
-                        <div class="feature-variations">
-                            <h4>Conditions</h4>
-                            <ul class="variations-list">
-                                <li><strong>Appendiculate:</strong> Fragments or veil tags visible on the cap margin</li>
-                                <li><strong>Not appendiculate:</strong> No veil fragments present</li>
-                            </ul>
+                            <p>The presence of fragments of the partial veil hanging from the cap margin, appearing as strands or tufts on the edge.</p>
                         </div>
                         <div class="feature-observation">
                             <h4>What to Look For</h4>
                             <p>Check the margin of the cap for any hanging veil material, especially in young mushrooms. These fragments often wear away as the mushroom ages or weathers.</p>
                         </div>
-                        <div class="photo-gallery">
+                        <div class="photo-gallery gallery-wide">
                             <div class="photo-placeholder" data-feature-type="cap-appendiculate">
                                 <span class="placeholder-text">Photo: Cap Margin Fragments</span>
-                                <img src="/Pages/images/morpho_primer/cap-appendiculate.png" alt="Photo: Cap Margin Fragments" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="/Pages/images/morpho_primer/cap/appendiculate30219.jpg" alt="Photo: Amanita cf. lavendula cap appendiculate" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-appendiculate-2">
-                                <img src="/Pages/images/morpho_primer/cap-appendiculate-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-appendiculate-3">
-                                <img src="/Pages/images/morpho_primer/cap-appendiculate-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
+                            <p class="photo-caption">Amanita cf. lavendula — specimen 30219</p>                      
                         </div>
                     </div>
                 </details>
@@ -703,39 +705,39 @@
                     <div class="feature-content">
                         <div class="feature-definition">
                             <h4>Definition</h4>
-                            <p>Remnants of the universal veil covering young mushrooms, appearing as warts, patches, or warty residue on the cap surface.</p>
+                            <p>Remnants of the universal veil covering young mushrooms, appearing as warts, patches, or pulverized residue on the cap surface.</p>
                         </div>
                         <div class="feature-variations">
                             <h4>Veil Conditions</h4>
                             <ul class="variations-list">
-                                <li><strong>Universal veil present:</strong> Visible as warts or patches on the cap</li>
-                                <li><strong>Universal veil absent:</strong> No veil fragments visible on cap</li>
                                 <li><strong>Warts:</strong> Scattered bumpy pieces</li>
                                 <li><strong>Patches:</strong> Larger, flatter pieces of veil material</li>
+                                <li><strong>Powder (pulverulent):</strong> Fine, pulverized veil material</li>
+                                <li><strong>Scales:</strong> Odd shaped, scab-like material that are hard to remove</li>
                             </ul>
                         </div>
                         <div class="feature-observation">
                             <h4>What to Look For</h4>
                             <p>Look for raised bumps or white/pale patches on the colored cap surface. These are more visible on young specimens. They can wash off in rain or wear away with handling.</p>
                         </div>
-                        <div class="photo-gallery">
+                        <div class="photo-gallery gallery-wide">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-universal-veil">
-                                <img src="/Pages/images/morpho_primer/cap-universal-veil.jpg" alt="Cap universal veil (warts/patches) example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/captexture30222.jpg" alt="Cap universal veil (warts/patches) example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita cf. oberwinkleriana — specimen 30183</p>
+                            <p class="photo-caption">Amanita multisquamosa — specimen 30222 <strong>Small warts</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-universal-veil-2">
-                                <img src="/Pages/images/morpho_primer/cap-universal-veil-2.jpg" alt="Cap universal veil (warts/patches) example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/uv30281.jpg" alt="Cap universal veil (warts/patches) example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita multisquamosa — specimen 30223</p>
+                            <p class="photo-caption">Amanita fusca — specimen 30281 <strong>Large patch</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-universal-veil-3">
-                                <img src="/Pages/images/morpho_primer/cap-universal-veil-3.jpg" alt="Cap universal veil (warts/patches) example — Amanita sp. 'GWA-ami2'" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/uv30286.jpg" alt="Cap universal veil (warts/patches) example — Amanita sp. 'GWA-ami2'" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita sp. 'GWA-ami2' — specimen 30274</p>
+                            <p class="photo-caption">Amanita porphyria — specimen 30286 <strong>Powder (pulverulent)</strong></p>
                             </div>
                         </div>
                     </div>
@@ -754,65 +756,18 @@
                                 <li><strong>No staining:</strong> Cap color remains uniform</li>
                                 <li><strong>Brown staining:</strong> Bruised areas turn brown</li>
                                 <li><strong>Red/Pink staining:</strong> Bruised areas turn red or pinkish</li>
-                                <li><strong>Yellow staining:</strong> Oxidation produces yellow discoloration</li>
                             </ul>
                         </div>
                         <div class="feature-observation">
                             <h4>What to Look For</h4>
                             <p>Observe if the cap has discolored areas from recent bruising. This is most obvious on young mushrooms. Handle gently to avoid creating additional staining.</p>
                         </div>
-                        <div class="photo-gallery">
+                        <div class="photo-gallery gallery-wide">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-staining">
-                                <img src="/Pages/images/morpho_primer/cap-staining.jpg" alt="Cap staining example — Amanita flavorubens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="/Pages/images/morpho_primer/cap/stain30232.jpg" alt="Cap staining example — Amanita amerirubescens nom. prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
-                            <p class="photo-caption">Amanita flavorubens — specimen 30238</p>
-                            </div>
-                            <div class="photo-frame">
-                            <div class="photo-placeholder has-image" data-feature-type="cap-staining-2">
-                                <img src="/Pages/images/morpho_primer/cap-staining-2.jpg" alt="Cap staining example — Amanita sp. 'GWA-ami2'" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
-                            </div>
-                            <p class="photo-caption">Amanita sp. 'GWA-ami2' — specimen 30274</p>
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-staining-3">
-                                <img src="/Pages/images/morpho_primer/cap-staining-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details>
-                    <summary>Cap Context / Flesh Color</summary>
-                    <div class="feature-content">
-                        <div class="feature-definition">
-                            <h4>Definition</h4>
-                            <p>The color of the flesh or tissue inside the cap when cut or broken open, just below the cap skin.</p>
-                        </div>
-                        <div class="feature-variations">
-                            <h4>Context Colors</h4>
-                            <ul class="variations-list">
-                                <li><strong>White:</strong> Most common; pure or off-white</li>
-                                <li><strong>Cream/Pale yellow:</strong> Slightly yellowed or pale</li>
-                                <li><strong>Yellow:</strong> Distinctly yellow</li>
-                                <li><strong>Pink/Red:</strong> Reddish or pinkish tissue</li>
-                            </ul>
-                        </div>
-                        <div class="feature-observation">
-                            <h4>What to Look For</h4>
-                            <p>Cut the cap vertically to see the interior flesh. The context color is just below the surface. Note if it changes color when exposed to air (oxidation).</p>
-                        </div>
-                        <div class="photo-gallery">
-                            <div class="photo-frame">
-                            <div class="photo-placeholder has-image" data-feature-type="cap-context">
-                                <img src="/Pages/images/morpho_primer/cap-context.jpg" alt="Cap cross-section example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
-                            </div>
-                            <p class="photo-caption">Amanita bisporigera — specimen 30240</p>
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-context-2">
-                                <img src="/Pages/images/morpho_primer/cap-context-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
-                            </div>
-                            <div class="photo-placeholder photo-slot-empty" data-feature-type="cap-context-3">
-                                <img src="/Pages/images/morpho_primer/cap-context-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                            <p class="photo-caption">Amanita amerirubescens nom. prov. — specimen 30232 <strong>red staining</strong></p>
                             </div>
                         </div>
                     </div>

@@ -20,7 +20,7 @@ export function buildSearchPayload() {
             acrossFields: "AND",
             withinTextField: "OR",
             caseSensitive: false,
-            missingDatabaseValuesDisqualify: false,
+            missingDatabaseValuesDisqualify: true,
             matchScore: "not implemented yet"
         },
         conditions: conditions.filter(Boolean)
@@ -69,12 +69,14 @@ function addMajorTraitConditions(conditions) {
 }
 
 function addMoreTraitConditions(conditions) {
-    const diameterCondition = makeNumericCondition(
-        FIELD_COLUMNS.diameter,
-        getNumberValue("diameter-mm"),
-        getCheckboxValue("diameter-approximate")
-    );
-    if (diameterCondition) conditions.push(diameterCondition);
+    const diameterBucket = getRadioValue("diameter");
+    if (diameterBucket === "small") {
+        conditions.push({ field: FIELD_COLUMNS.diameter, mode: "numeric_less_than", value: 40 });
+    } else if (diameterBucket === "medium") {
+        conditions.push({ field: FIELD_COLUMNS.diameter, mode: "numeric_range", min: 40, max: 80 });
+    } else if (diameterBucket === "large") {
+        conditions.push({ field: FIELD_COLUMNS.diameter, mode: "numeric_greater_than", value: 80 });
+    }
 
     const surfaceTextureCondition = makeTextAnyTermsCondition(
         FIELD_COLUMNS.surfaceTexture,
@@ -82,7 +84,9 @@ function addMoreTraitConditions(conditions) {
     );
     if (surfaceTextureCondition) conditions.push(surfaceTextureCondition);
 
-    const umbonateCondition = makeTextContainsCondition(
+    // "umbonate" is a substring of both "minutely umbonate" and "not umbonate" --
+    // exact match required, same as veilBaseLayered below.
+    const umbonateCondition = makeTextEqualsCondition(
         FIELD_COLUMNS.umbonate,
         getSelectValue("umbonate")
     );

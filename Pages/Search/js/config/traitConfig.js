@@ -4,6 +4,7 @@ import {
     BASAL_BULB_SHAPE_OPTIONS,
     COLOR_MODIFIERS,
     COLOR_OPTIONS,
+    DIAMETER_BUCKET_OPTIONS,
     SHAPE_OPTIONS,
     STAINING_COLOR_OPTIONS,
     STAINING_STATE_OPTIONS,
@@ -109,14 +110,13 @@ export const MAJOR_FIELDS = [
 export const MORE_FIELDS = [
     {
         id: "diameter",
-        type: "numberWithApprox",
+        type: "triState",
         label: "Cap diameter",
         column: FIELD_COLUMNS.diameter,
-        inputId: "diameter-mm",
-        approximateId: "diameter-approximate",
-        placeholder: "e.g., 55",
-        unit: "mm",
-        note: "Enter the approximate cap diameter in millimeters."
+        options: DIAMETER_BUCKET_OPTIONS,
+        note: "Choose the size range that best matches the cap.",
+        helpSummary: "Size ranges",
+        helpText: "**Small** = less than 40mm (~1.5 in). **Medium** = 40–80mm (~1.5–3 in). **Large** = greater than 80mm (~3+ in)."
     },
     {
         id: "surfaceTexture",

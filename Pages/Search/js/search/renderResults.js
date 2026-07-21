@@ -27,10 +27,11 @@ export function renderResults(container, response) {
 
 function renderSpeciesCard(result) {
     const href = `/Pages/Species_Descriptions/${slugifySpecies(result.species)}/`;
+    const specimenIds = result.matched_specimen_ids.map(escapeHtml).join(", ");
     return `
         <article class="species-card">
             <h3><a href="${escapeHtml(href)}">${escapeHtml(result.species)}</a></h3>
-            <p>${escapeHtml(result.matched_specimen_count)} matching specimen(s)</p>
+            <p>Specimen ID(s): ${specimenIds}</p>
         </article>
     `;
 }

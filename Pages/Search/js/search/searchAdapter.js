@@ -58,6 +58,9 @@ function textNotIncludes(fieldValue, value) {
 }
 
 function numericEquals(fieldValue, value) {
+  // Number(null) and Number("") both coerce to 0, which would otherwise
+  // silently satisfy a "less than"/exact-0 filter for unmeasured specimens.
+  if (isMissing(fieldValue)) return false;
   const n = Number(fieldValue);
   const target = Number(value);
   if (!Number.isFinite(n) || !Number.isFinite(target)) return false;
@@ -66,10 +69,19 @@ function numericEquals(fieldValue, value) {
 }
 
 function numericGreaterThan(fieldValue, value) {
+  if (isMissing(fieldValue)) return false;
   const n = Number(fieldValue);
   const target = Number(value);
   if (!Number.isFinite(n) || !Number.isFinite(target)) return false;
   return n > target;
+}
+
+function numericLessThan(fieldValue, value) {
+  if (isMissing(fieldValue)) return false;
+  const n = Number(fieldValue);
+  const target = Number(value);
+  if (!Number.isFinite(n) || !Number.isFinite(target)) return false;
+  return n < target;
 }
 
 function numericExact(fieldValue, value) {
@@ -77,6 +89,7 @@ function numericExact(fieldValue, value) {
 }
 
 function numericInRange(fieldValue, min, max) {
+  if (isMissing(fieldValue)) return false;
   const n = Number(fieldValue);
   if (!Number.isFinite(n)) return false;
   return n >= min && n <= max;
@@ -107,9 +120,12 @@ function rowMatchesCondition(row, condition, missingOk) {
     case "numeric_exact":
       return numericExact(fieldValue, condition.value);
     case "numeric_range_approximate":
+    case "numeric_range":
       return numericInRange(fieldValue, condition.min, condition.max);
     case "numeric_greater_than":
       return numericGreaterThan(fieldValue, condition.value);
+    case "numeric_less_than":
+      return numericLessThan(fieldValue, condition.value);
     case "numeric_equals":
       return numericEquals(fieldValue, condition.value);
     default:
@@ -129,15 +145,16 @@ function filterRows(rows, payload) {
 }
 
 function groupBySpecies(rows) {
-  const counts = new Map();
+  const bySpecies = new Map();
   for (const row of rows) {
     const sp = row.species ?? "Unknown species";
-    counts.set(sp, (counts.get(sp) ?? 0) + 1);
+    if (!bySpecies.has(sp)) bySpecies.set(sp, []);
+    bySpecies.get(sp).push(row.specimen_id);
   }
-  return Array.from(counts.entries())
-    .map(([species, matched_specimen_count]) => ({ species, matched_specimen_count }))
+  return Array.from(bySpecies.entries())
+    .map(([species, matched_specimen_ids]) => ({ species, matched_specimen_ids }))
     .sort((a, b) =>
-      b.matched_specimen_count - a.matched_specimen_count ||
+      b.matched_specimen_ids.length - a.matched_specimen_ids.length ||
       a.species.localeCompare(b.species)
     );
 }

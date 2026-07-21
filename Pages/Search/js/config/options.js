@@ -61,6 +61,12 @@ export const TRI_STATE_OPTIONS = [
     { label: "Absent", value: "absent" }
 ];
 
+export const DIAMETER_BUCKET_OPTIONS = [
+    { label: "Small (< 40mm)", value: "small" },
+    { label: "Medium (40–80mm)", value: "medium" },
+    { label: "Large (> 80mm)", value: "large" }
+];
+
 export const STAINING_STATE_OPTIONS = [
     { label: "Any", value: ANY_VALUE },
     { label: "Present", value: "present" },
