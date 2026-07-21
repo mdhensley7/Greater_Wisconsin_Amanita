@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -374,48 +374,48 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_bisporigera/30181/30181-01.jpg",
-            "/images/specimens/A_bisporigera/30181/30181-03.jpg",
-            "/images/specimens/A_bisporigera/30181/30181-04.jpg",
-            "/images/specimens/A_bisporigera/30181/30181-05.jpg",
-            "/images/specimens/A_bisporigera/30181/30181-06.jpg",
-            "/images/specimens/A_bisporigera/30181/30181-07.jpg",
-            "/images/specimens/A_bisporigera/30181/30181-08.jpg",
-            "/images/specimens/A_bisporigera/30181/30181-09.jpg",
-            "/images/specimens/A_bisporigera/30181/30181-10.jpg",
-            "/images/specimens/A_bisporigera/30181/30181-11.jpg",
-            "/images/specimens/A_bisporigera/30199/30199-1.jpg",
-            "/images/specimens/A_bisporigera/30199/30199-2.jpg",
-            "/images/specimens/A_bisporigera/30199/30199-3.jpg",
-            "/images/specimens/A_bisporigera/30199/30199-4.jpg",
-            "/images/specimens/A_bisporigera/30199/30199-5.jpg",
-            "/images/specimens/A_bisporigera/30199/30199-6.jpg",
-            "/images/specimens/A_bisporigera/30199/30199-7.jpg",
-            "/images/specimens/A_bisporigera/30199/30199-8.jpg",
-            "/images/specimens/A_bisporigera/30199/30199-9.jpg",
-            "/images/specimens/A_bisporigera/30200/30200-1.jpg",
-            "/images/specimens/A_bisporigera/30200/30200-2.jpg",
-            "/images/specimens/A_bisporigera/30200/30200-3.jpg",
-            "/images/specimens/A_bisporigera/30200/30200-4.jpg",
-            "/images/specimens/A_bisporigera/30240/30240-1.jpg",
-            "/images/specimens/A_bisporigera/30240/30240-2.jpg",
-            "/images/specimens/A_bisporigera/30240/30240-3.jpg",
-            "/images/specimens/A_bisporigera/30240/30240-4.jpg",
-            "/images/specimens/A_bisporigera/30240/30240-5.jpg",
-            "/images/specimens/A_bisporigera/30273/30273-1.jpg",
-            "/images/specimens/A_bisporigera/30273/30273-2.jpg",
-            "/images/specimens/A_bisporigera/30273/30273-3.jpg",
-            "/images/specimens/A_bisporigera/30273/30273-4.jpg",
-            "/images/specimens/A_bisporigera/30273/30273-5.jpg",
-            "/images/specimens/A_bisporigera/30275/30275-1.jpg",
-            "/images/specimens/A_bisporigera/30275/30275-2.jpg",
-            "/images/specimens/A_bisporigera/30275/30275-3.jpg",
-            "/images/specimens/A_bisporigera/30275/30275-4.jpg",
-            "/images/specimens/A_bisporigera/30275/30275-5.jpg",
-            "/images/specimens/A_bisporigera/30277/30277-1.jpg",
-            "/images/specimens/A_bisporigera/30277/30277-2.jpg",
-            "/images/specimens/A_bisporigera/30277/30277-3.jpg",
-            "/images/specimens/A_bisporigera/30277/30277-4.jpg"
+            "../../../images/specimens/A_bisporigera/30181/30181-01.jpg",
+            "../../../images/specimens/A_bisporigera/30181/30181-03.jpg",
+            "../../../images/specimens/A_bisporigera/30181/30181-04.jpg",
+            "../../../images/specimens/A_bisporigera/30181/30181-05.jpg",
+            "../../../images/specimens/A_bisporigera/30181/30181-06.jpg",
+            "../../../images/specimens/A_bisporigera/30181/30181-07.jpg",
+            "../../../images/specimens/A_bisporigera/30181/30181-08.jpg",
+            "../../../images/specimens/A_bisporigera/30181/30181-09.jpg",
+            "../../../images/specimens/A_bisporigera/30181/30181-10.jpg",
+            "../../../images/specimens/A_bisporigera/30181/30181-11.jpg",
+            "../../../images/specimens/A_bisporigera/30199/30199-1.jpg",
+            "../../../images/specimens/A_bisporigera/30199/30199-2.jpg",
+            "../../../images/specimens/A_bisporigera/30199/30199-3.jpg",
+            "../../../images/specimens/A_bisporigera/30199/30199-4.jpg",
+            "../../../images/specimens/A_bisporigera/30199/30199-5.jpg",
+            "../../../images/specimens/A_bisporigera/30199/30199-6.jpg",
+            "../../../images/specimens/A_bisporigera/30199/30199-7.jpg",
+            "../../../images/specimens/A_bisporigera/30199/30199-8.jpg",
+            "../../../images/specimens/A_bisporigera/30199/30199-9.jpg",
+            "../../../images/specimens/A_bisporigera/30200/30200-1.jpg",
+            "../../../images/specimens/A_bisporigera/30200/30200-2.jpg",
+            "../../../images/specimens/A_bisporigera/30200/30200-3.jpg",
+            "../../../images/specimens/A_bisporigera/30200/30200-4.jpg",
+            "../../../images/specimens/A_bisporigera/30240/30240-1.jpg",
+            "../../../images/specimens/A_bisporigera/30240/30240-2.jpg",
+            "../../../images/specimens/A_bisporigera/30240/30240-3.jpg",
+            "../../../images/specimens/A_bisporigera/30240/30240-4.jpg",
+            "../../../images/specimens/A_bisporigera/30240/30240-5.jpg",
+            "../../../images/specimens/A_bisporigera/30273/30273-1.jpg",
+            "../../../images/specimens/A_bisporigera/30273/30273-2.jpg",
+            "../../../images/specimens/A_bisporigera/30273/30273-3.jpg",
+            "../../../images/specimens/A_bisporigera/30273/30273-4.jpg",
+            "../../../images/specimens/A_bisporigera/30273/30273-5.jpg",
+            "../../../images/specimens/A_bisporigera/30275/30275-1.jpg",
+            "../../../images/specimens/A_bisporigera/30275/30275-2.jpg",
+            "../../../images/specimens/A_bisporigera/30275/30275-3.jpg",
+            "../../../images/specimens/A_bisporigera/30275/30275-4.jpg",
+            "../../../images/specimens/A_bisporigera/30275/30275-5.jpg",
+            "../../../images/specimens/A_bisporigera/30277/30277-1.jpg",
+            "../../../images/specimens/A_bisporigera/30277/30277-2.jpg",
+            "../../../images/specimens/A_bisporigera/30277/30277-3.jpg",
+            "../../../images/specimens/A_bisporigera/30277/30277-4.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

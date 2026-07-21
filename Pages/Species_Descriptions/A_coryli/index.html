@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -363,19 +363,19 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_coryli/30244/30244-1.jpg",
-            "/images/specimens/A_coryli/30244/30244-2.jpg",
-            "/images/specimens/A_coryli/30244/30244-3.jpg",
-            "/images/specimens/A_coryli/30244/30244-4.jpg",
-            "/images/specimens/A_coryli/30244/30244-5.jpg",
-            "/images/specimens/A_coryli/30250/30250-1.jpg",
-            "/images/specimens/A_coryli/30250/30250-2.jpg",
-            "/images/specimens/A_coryli/30250/30250-3.jpg",
-            "/images/specimens/A_coryli/30250/30250-4.jpg",
-            "/images/specimens/A_coryli/30250/30250-5.jpg",
-            "/images/specimens/A_coryli/30251/30250-6.jpg",
-            "/images/specimens/A_coryli/30251/30250-7.jpg",
-            "/images/specimens/A_coryli/30251/30250-8.jpg"
+            "../../../images/specimens/A_coryli/30244/30244-1.jpg",
+            "../../../images/specimens/A_coryli/30244/30244-2.jpg",
+            "../../../images/specimens/A_coryli/30244/30244-3.jpg",
+            "../../../images/specimens/A_coryli/30244/30244-4.jpg",
+            "../../../images/specimens/A_coryli/30244/30244-5.jpg",
+            "../../../images/specimens/A_coryli/30250/30250-1.jpg",
+            "../../../images/specimens/A_coryli/30250/30250-2.jpg",
+            "../../../images/specimens/A_coryli/30250/30250-3.jpg",
+            "../../../images/specimens/A_coryli/30250/30250-4.jpg",
+            "../../../images/specimens/A_coryli/30250/30250-5.jpg",
+            "../../../images/specimens/A_coryli/30251/30250-6.jpg",
+            "../../../images/specimens/A_coryli/30251/30250-7.jpg",
+            "../../../images/specimens/A_coryli/30251/30250-8.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

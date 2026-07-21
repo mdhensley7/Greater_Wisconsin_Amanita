@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -363,32 +363,32 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_frostiana/30190/30190-1.jpg",
-            "/images/specimens/A_frostiana/30190/30190-2.jpg",
-            "/images/specimens/A_frostiana/30190/30190-3.jpg",
-            "/images/specimens/A_frostiana/30190/30190-4.jpg",
-            "/images/specimens/A_frostiana/30190/30190-5.jpg",
-            "/images/specimens/A_frostiana/30190/30190-6.jpg",
-            "/images/specimens/A_frostiana/30190/30190-7.jpg",
-            "/images/specimens/A_frostiana/30190/30190-8.jpg",
-            "/images/specimens/A_frostiana/30191/30191-1.jpg",
-            "/images/specimens/A_frostiana/30191/30191-2.jpg",
-            "/images/specimens/A_frostiana/30191/30191-3.jpg",
-            "/images/specimens/A_frostiana/30191/30191-4.jpg",
-            "/images/specimens/A_frostiana/30191/30191-5.jpg",
-            "/images/specimens/A_frostiana/30191/30191-6.jpg",
-            "/images/specimens/A_frostiana/30229/30229-1.jpg",
-            "/images/specimens/A_frostiana/30229/30229-2.jpg",
-            "/images/specimens/A_frostiana/30229/30229-3.jpg",
-            "/images/specimens/A_frostiana/30242/30242-1.jpg",
-            "/images/specimens/A_frostiana/30242/30242-2.jpg",
-            "/images/specimens/A_frostiana/30242/30242-3.jpg",
-            "/images/specimens/A_frostiana/30242/30242-4.jpg",
-            "/images/specimens/A_frostiana/30242/30242-5.jpg",
-            "/images/specimens/A_frostiana/30261/30261-1.jpg",
-            "/images/specimens/A_frostiana/30261/30261-2.jpg",
-            "/images/specimens/A_frostiana/30261/30261-3.jpg",
-            "/images/specimens/A_frostiana/30261/IMG_0303.jpeg"
+            "../../../images/specimens/A_frostiana/30190/30190-1.jpg",
+            "../../../images/specimens/A_frostiana/30190/30190-2.jpg",
+            "../../../images/specimens/A_frostiana/30190/30190-3.jpg",
+            "../../../images/specimens/A_frostiana/30190/30190-4.jpg",
+            "../../../images/specimens/A_frostiana/30190/30190-5.jpg",
+            "../../../images/specimens/A_frostiana/30190/30190-6.jpg",
+            "../../../images/specimens/A_frostiana/30190/30190-7.jpg",
+            "../../../images/specimens/A_frostiana/30190/30190-8.jpg",
+            "../../../images/specimens/A_frostiana/30191/30191-1.jpg",
+            "../../../images/specimens/A_frostiana/30191/30191-2.jpg",
+            "../../../images/specimens/A_frostiana/30191/30191-3.jpg",
+            "../../../images/specimens/A_frostiana/30191/30191-4.jpg",
+            "../../../images/specimens/A_frostiana/30191/30191-5.jpg",
+            "../../../images/specimens/A_frostiana/30191/30191-6.jpg",
+            "../../../images/specimens/A_frostiana/30229/30229-1.jpg",
+            "../../../images/specimens/A_frostiana/30229/30229-2.jpg",
+            "../../../images/specimens/A_frostiana/30229/30229-3.jpg",
+            "../../../images/specimens/A_frostiana/30242/30242-1.jpg",
+            "../../../images/specimens/A_frostiana/30242/30242-2.jpg",
+            "../../../images/specimens/A_frostiana/30242/30242-3.jpg",
+            "../../../images/specimens/A_frostiana/30242/30242-4.jpg",
+            "../../../images/specimens/A_frostiana/30242/30242-5.jpg",
+            "../../../images/specimens/A_frostiana/30261/30261-1.jpg",
+            "../../../images/specimens/A_frostiana/30261/30261-2.jpg",
+            "../../../images/specimens/A_frostiana/30261/30261-3.jpg",
+            "../../../images/specimens/A_frostiana/30261/IMG_0303.jpeg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

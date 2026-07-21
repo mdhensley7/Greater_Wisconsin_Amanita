@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -362,22 +362,22 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_centrascura/30215/30215-1.jpg",
-            "/images/specimens/A_centrascura/30215/30215-2.jpg",
-            "/images/specimens/A_centrascura/30215/30215-3.jpg",
-            "/images/specimens/A_centrascura/30215/30215-4.jpg",
-            "/images/specimens/A_centrascura/30215/30215-5.jpg",
-            "/images/specimens/A_centrascura/30220/30220-1.jpg",
-            "/images/specimens/A_centrascura/30220/30220-2.jpg",
-            "/images/specimens/A_centrascura/30220/30220-3.jpg",
-            "/images/specimens/A_centrascura/30220/30220-4.jpg",
-            "/images/specimens/A_centrascura/30220/30220-5.jpg",
-            "/images/specimens/A_centrascura/30278/30278-1.jpg",
-            "/images/specimens/A_centrascura/30278/30278-2.jpg",
-            "/images/specimens/A_centrascura/30278/30278-3.jpg",
-            "/images/specimens/A_centrascura/30278/30278-4.jpg",
-            "/images/specimens/A_centrascura/30278/30278-5.jpg",
-            "/images/specimens/A_centrascura/30278/30278-6.jpg"
+            "../../../images/specimens/A_centrascura/30215/30215-1.jpg",
+            "../../../images/specimens/A_centrascura/30215/30215-2.jpg",
+            "../../../images/specimens/A_centrascura/30215/30215-3.jpg",
+            "../../../images/specimens/A_centrascura/30215/30215-4.jpg",
+            "../../../images/specimens/A_centrascura/30215/30215-5.jpg",
+            "../../../images/specimens/A_centrascura/30220/30220-1.jpg",
+            "../../../images/specimens/A_centrascura/30220/30220-2.jpg",
+            "../../../images/specimens/A_centrascura/30220/30220-3.jpg",
+            "../../../images/specimens/A_centrascura/30220/30220-4.jpg",
+            "../../../images/specimens/A_centrascura/30220/30220-5.jpg",
+            "../../../images/specimens/A_centrascura/30278/30278-1.jpg",
+            "../../../images/specimens/A_centrascura/30278/30278-2.jpg",
+            "../../../images/specimens/A_centrascura/30278/30278-3.jpg",
+            "../../../images/specimens/A_centrascura/30278/30278-4.jpg",
+            "../../../images/specimens/A_centrascura/30278/30278-5.jpg",
+            "../../../images/specimens/A_centrascura/30278/30278-6.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

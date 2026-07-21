@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -363,42 +363,42 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_suballiacea/30182/30182-01.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-02.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-03.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-04.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-05.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-06.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-07.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-08.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-09.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-10.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-11.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-12.jpg",
-            "/images/specimens/A_suballiacea/30182/30182-13.jpg",
-            "/images/specimens/A_suballiacea/30184/30184-1.jpg",
-            "/images/specimens/A_suballiacea/30184/30184-2.jpg",
-            "/images/specimens/A_suballiacea/30184/30184-3.jpg",
-            "/images/specimens/A_suballiacea/30184/30184-4.jpg",
-            "/images/specimens/A_suballiacea/30184/30184-5.jpg",
-            "/images/specimens/A_suballiacea/30187/30187-1.jpg",
-            "/images/specimens/A_suballiacea/30187/30187-2.jpg",
-            "/images/specimens/A_suballiacea/30187/30187-3.jpg",
-            "/images/specimens/A_suballiacea/30187/30187-4.jpg",
-            "/images/specimens/A_suballiacea/30187/30187-5.jpg",
-            "/images/specimens/A_suballiacea/30187/30187-6.jpg",
-            "/images/specimens/A_suballiacea/30187/30187-7.jpg",
-            "/images/specimens/A_suballiacea/30187/30187-8.jpg",
-            "/images/specimens/A_suballiacea/30187/30187-9.jpg",
-            "/images/specimens/A_suballiacea/30279/30279-1.jpg",
-            "/images/specimens/A_suballiacea/30279/30279-2.jpg",
-            "/images/specimens/A_suballiacea/30279/30279-3.jpg",
-            "/images/specimens/A_suballiacea/30279/30279-4.jpg",
-            "/images/specimens/A_suballiacea/30284/30284-1.jpg",
-            "/images/specimens/A_suballiacea/30284/30284-2.jpg",
-            "/images/specimens/A_suballiacea/30284/30284-3.jpg",
-            "/images/specimens/A_suballiacea/30284/30284-4.jpg",
-            "/images/specimens/A_suballiacea/30284/30284-5.jpg"
+            "../../../images/specimens/A_suballiacea/30182/30182-01.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-02.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-03.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-04.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-05.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-06.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-07.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-08.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-09.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-10.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-11.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-12.jpg",
+            "../../../images/specimens/A_suballiacea/30182/30182-13.jpg",
+            "../../../images/specimens/A_suballiacea/30184/30184-1.jpg",
+            "../../../images/specimens/A_suballiacea/30184/30184-2.jpg",
+            "../../../images/specimens/A_suballiacea/30184/30184-3.jpg",
+            "../../../images/specimens/A_suballiacea/30184/30184-4.jpg",
+            "../../../images/specimens/A_suballiacea/30184/30184-5.jpg",
+            "../../../images/specimens/A_suballiacea/30187/30187-1.jpg",
+            "../../../images/specimens/A_suballiacea/30187/30187-2.jpg",
+            "../../../images/specimens/A_suballiacea/30187/30187-3.jpg",
+            "../../../images/specimens/A_suballiacea/30187/30187-4.jpg",
+            "../../../images/specimens/A_suballiacea/30187/30187-5.jpg",
+            "../../../images/specimens/A_suballiacea/30187/30187-6.jpg",
+            "../../../images/specimens/A_suballiacea/30187/30187-7.jpg",
+            "../../../images/specimens/A_suballiacea/30187/30187-8.jpg",
+            "../../../images/specimens/A_suballiacea/30187/30187-9.jpg",
+            "../../../images/specimens/A_suballiacea/30279/30279-1.jpg",
+            "../../../images/specimens/A_suballiacea/30279/30279-2.jpg",
+            "../../../images/specimens/A_suballiacea/30279/30279-3.jpg",
+            "../../../images/specimens/A_suballiacea/30279/30279-4.jpg",
+            "../../../images/specimens/A_suballiacea/30284/30284-1.jpg",
+            "../../../images/specimens/A_suballiacea/30284/30284-2.jpg",
+            "../../../images/specimens/A_suballiacea/30284/30284-3.jpg",
+            "../../../images/specimens/A_suballiacea/30284/30284-4.jpg",
+            "../../../images/specimens/A_suballiacea/30284/30284-5.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

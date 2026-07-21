@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -366,26 +366,26 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_populiphila/30225/30225-1.jpg",
-            "/images/specimens/A_populiphila/30225/30225-2.jpg",
-            "/images/specimens/A_populiphila/30225/30225-3.jpg",
-            "/images/specimens/A_populiphila/30225/30225-4.jpg",
-            "/images/specimens/A_populiphila/30225/30225-5.jpg",
-            "/images/specimens/A_populiphila/30225/30225-6.jpg",
-            "/images/specimens/A_populiphila/30225/30225-7.jpg",
-            "/images/specimens/A_populiphila/30225/30225-8.jpg",
-            "/images/specimens/A_populiphila/30225/30225-9.jpg",
-            "/images/specimens/A_populiphila/30280/30280-01.jpg",
-            "/images/specimens/A_populiphila/30280/30280-02.jpg",
-            "/images/specimens/A_populiphila/30280/30280-03.jpg",
-            "/images/specimens/A_populiphila/30280/30280-04.jpg",
-            "/images/specimens/A_populiphila/30280/30280-05.jpg",
-            "/images/specimens/A_populiphila/30280/30280-06.jpg",
-            "/images/specimens/A_populiphila/30280/30280-07.jpg",
-            "/images/specimens/A_populiphila/30280/30280-08.jpg",
-            "/images/specimens/A_populiphila/30280/30280-09.jpg",
-            "/images/specimens/A_populiphila/30280/30280-10.jpg",
-            "/images/specimens/A_populiphila/30280/30280-11.jpg"
+            "../../../images/specimens/A_populiphila/30225/30225-1.jpg",
+            "../../../images/specimens/A_populiphila/30225/30225-2.jpg",
+            "../../../images/specimens/A_populiphila/30225/30225-3.jpg",
+            "../../../images/specimens/A_populiphila/30225/30225-4.jpg",
+            "../../../images/specimens/A_populiphila/30225/30225-5.jpg",
+            "../../../images/specimens/A_populiphila/30225/30225-6.jpg",
+            "../../../images/specimens/A_populiphila/30225/30225-7.jpg",
+            "../../../images/specimens/A_populiphila/30225/30225-8.jpg",
+            "../../../images/specimens/A_populiphila/30225/30225-9.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-01.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-02.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-03.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-04.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-05.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-06.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-07.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-08.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-09.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-10.jpg",
+            "../../../images/specimens/A_populiphila/30280/30280-11.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

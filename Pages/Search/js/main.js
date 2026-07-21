@@ -39,7 +39,7 @@ function loadSharedHeader() {
     fetch("../../Components/header.html")
         .then(response => response.ok ? response.text() : "")
         .then(html => {
-            document.getElementById("header-placeholder").innerHTML = html;
+            document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../');
         })
         .catch(() => {
             // Header is optional. The page still works if the shared component fails to load.

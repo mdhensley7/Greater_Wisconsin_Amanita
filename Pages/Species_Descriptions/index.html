@@ -116,10 +116,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../');
             });
     </script>
 
@@ -161,86 +161,86 @@
 
             <h3 id="A">A</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_amerirubescens_nom_prov/">Amanita amerirubescens nom prov.</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_amerivirosa/">Amanita amerivirosa</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_cf_aurorae_nom_prov/">Amanita cf. aurorae nom prov.</a></li>
+                <li><a href="A_amerirubescens_nom_prov/">Amanita amerirubescens nom prov.</a></li>
+                <li><a href="A_amerivirosa/">Amanita amerivirosa</a></li>
+                <li><a href="A_cf_aurorae_nom_prov/">Amanita cf. aurorae nom prov.</a></li>
             </ul>
 
             <h3 id="B">B</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_bisporigera/">Amanita bisporigera</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_brunnescens/">Amanita brunnescens</a></li>
+                <li><a href="A_bisporigera/">Amanita bisporigera</a></li>
+                <li><a href="A_brunnescens/">Amanita brunnescens</a></li>
             </ul>
 
             <h3 id="C">C</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_centrascura/">Amanita centrascura</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_chrysoblema/">Amanita chrysoblema</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_confundens/">Amanita confundens</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_coryli/">Amanita coryli</a></li>
+                <li><a href="A_centrascura/">Amanita centrascura</a></li>
+                <li><a href="A_chrysoblema/">Amanita chrysoblema</a></li>
+                <li><a href="A_confundens/">Amanita confundens</a></li>
+                <li><a href="A_coryli/">Amanita coryli</a></li>
             </ul>
 
             <h3 id="F">F</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_flavoconia/">Amanita flavoconia</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_flavorubens/">Amanita flavorubens</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_frostiana/">Amanita frostiana</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_aff_fulva/">Amanita aff. fulva</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_fusca/">Amanita fusca</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_fuscozonata/">Amanita fuscozonata</a></li>
+                <li><a href="A_flavoconia/">Amanita flavoconia</a></li>
+                <li><a href="A_flavorubens/">Amanita flavorubens</a></li>
+                <li><a href="A_frostiana/">Amanita frostiana</a></li>
+                <li><a href="A_aff_fulva/">Amanita aff. fulva</a></li>
+                <li><a href="A_fusca/">Amanita fusca</a></li>
+                <li><a href="A_fuscozonata/">Amanita fuscozonata</a></li>
             </ul>
 
             <h3 id="G">G</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_sp_GWA_ami1/">Amanita sp. 'GWA-ami1'</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_sp_GWA_ami2/">Amanita sp. 'GWA-ami2'</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_sp_GWA_phal1/">Amanita sp. 'GWA-phal1'</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_aff_griseoumbonata/">Amanita aff. griseoumbonata</a></li>
+                <li><a href="A_sp_GWA_ami1/">Amanita sp. 'GWA-ami1'</a></li>
+                <li><a href="A_sp_GWA_ami2/">Amanita sp. 'GWA-ami2'</a></li>
+                <li><a href="A_sp_GWA_phal1/">Amanita sp. 'GWA-phal1'</a></li>
+                <li><a href="A_aff_griseoumbonata/">Amanita aff. griseoumbonata</a></li>
             </ul>
 
             <h3 id="J">J</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_jakeslandingensis_nom_prov/">Amanita jakeslandingensis nom prov.</a></li>
+                <li><a href="A_jakeslandingensis_nom_prov/">Amanita jakeslandingensis nom prov.</a></li>
             </ul>
 
             <h3 id="L">L</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_cf_lavendula/">Amanita cf. lavendula</a></li>
+                <li><a href="A_cf_lavendula/">Amanita cf. lavendula</a></li>
             </ul>
 
             <h3 id="M">M</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_multisquamosa/">Amanita multisquamosa</a></li>
+                <li><a href="A_multisquamosa/">Amanita multisquamosa</a></li>
             </ul>
 
             <h3 id="O">O</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_cf_oberwinkleriana/">Amanita cf. oberwinkleriana</a></li>
+                <li><a href="A_cf_oberwinkleriana/">Amanita cf. oberwinkleriana</a></li>
             </ul>
 
             <h3 id="P">P</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_populiphila/">Amanita populiphila</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_porphyria/">Amanita porphyria</a></li>
+                <li><a href="A_populiphila/">Amanita populiphila</a></li>
+                <li><a href="A_porphyria/">Amanita porphyria</a></li>
             </ul>
 
             <h3 id="R">R</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_rhacopus/">Amanita rhacopus</a></li>
+                <li><a href="A_rhacopus/">Amanita rhacopus</a></li>
             </ul>
 
             <h3 id="S">S</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_sinicoflava/">Amanita sinicoflava</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_solaniolens/">Amanita solaniolens</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_stranella/">Amanita stranella</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_suballiacea/">Amanita suballiacea</a></li>
-                <li><a href="/Pages/Species_Descriptions/A_subnigra_nom_prov/">Amanita subnigra nom prov.</a></li>
+                <li><a href="A_sinicoflava/">Amanita sinicoflava</a></li>
+                <li><a href="A_solaniolens/">Amanita solaniolens</a></li>
+                <li><a href="A_stranella/">Amanita stranella</a></li>
+                <li><a href="A_suballiacea/">Amanita suballiacea</a></li>
+                <li><a href="A_subnigra_nom_prov/">Amanita subnigra nom prov.</a></li>
             </ul>
 
             <h3 id="V">V</h3>
             <ul class="species-list">
-                <li><a href="/Pages/Species_Descriptions/A_virginiana/">Amanita virginiana</a></li>
+                <li><a href="A_virginiana/">Amanita virginiana</a></li>
             </ul>
 
             <p style="margin-top: 2rem; color: #555; font-size: 0.9rem;">

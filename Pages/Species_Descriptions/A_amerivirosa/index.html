@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -363,34 +363,34 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_amerivirosa/30195/30195-1.jpg",
-            "/images/specimens/A_amerivirosa/30195/30195-2.jpg",
-            "/images/specimens/A_amerivirosa/30195/30195-3.jpg",
-            "/images/specimens/A_amerivirosa/30195/30195-4.jpg",
-            "/images/specimens/A_amerivirosa/30203/30203-1.jpg",
-            "/images/specimens/A_amerivirosa/30203/30203-2.jpg",
-            "/images/specimens/A_amerivirosa/30203/30203-3.jpg",
-            "/images/specimens/A_amerivirosa/30203/30203-4.jpg",
-            "/images/specimens/A_amerivirosa/30204/30204-1.jpg",
-            "/images/specimens/A_amerivirosa/30204/30204-2.jpg",
-            "/images/specimens/A_amerivirosa/30204/30204-3.jpg",
-            "/images/specimens/A_amerivirosa/30204/30204-4.jpg",
-            "/images/specimens/A_amerivirosa/30209/30209-1.jpg",
-            "/images/specimens/A_amerivirosa/30209/30209-2.jpg",
-            "/images/specimens/A_amerivirosa/30267/30267-1.jpg",
-            "/images/specimens/A_amerivirosa/30267/30267-2.jpg",
-            "/images/specimens/A_amerivirosa/30267/30267-3.jpg",
-            "/images/specimens/A_amerivirosa/30267/30267-4.jpg",
-            "/images/specimens/A_amerivirosa/30267/30267-5.jpg",
-            "/images/specimens/A_amerivirosa/30269/30269-1.jpg",
-            "/images/specimens/A_amerivirosa/30269/30269-2.jpg",
-            "/images/specimens/A_amerivirosa/30269/30269-3.jpg",
-            "/images/specimens/A_amerivirosa/30269/30269-4.jpg",
-            "/images/specimens/A_amerivirosa/30269/30269-5.jpg",
-            "/images/specimens/A_amerivirosa/30270/30270-1.jpg",
-            "/images/specimens/A_amerivirosa/30270/30270-2.jpg",
-            "/images/specimens/A_amerivirosa/30270/30270-3.jpg",
-            "/images/specimens/A_amerivirosa/30270/30270-4.jpg"
+            "../../../images/specimens/A_amerivirosa/30195/30195-1.jpg",
+            "../../../images/specimens/A_amerivirosa/30195/30195-2.jpg",
+            "../../../images/specimens/A_amerivirosa/30195/30195-3.jpg",
+            "../../../images/specimens/A_amerivirosa/30195/30195-4.jpg",
+            "../../../images/specimens/A_amerivirosa/30203/30203-1.jpg",
+            "../../../images/specimens/A_amerivirosa/30203/30203-2.jpg",
+            "../../../images/specimens/A_amerivirosa/30203/30203-3.jpg",
+            "../../../images/specimens/A_amerivirosa/30203/30203-4.jpg",
+            "../../../images/specimens/A_amerivirosa/30204/30204-1.jpg",
+            "../../../images/specimens/A_amerivirosa/30204/30204-2.jpg",
+            "../../../images/specimens/A_amerivirosa/30204/30204-3.jpg",
+            "../../../images/specimens/A_amerivirosa/30204/30204-4.jpg",
+            "../../../images/specimens/A_amerivirosa/30209/30209-1.jpg",
+            "../../../images/specimens/A_amerivirosa/30209/30209-2.jpg",
+            "../../../images/specimens/A_amerivirosa/30267/30267-1.jpg",
+            "../../../images/specimens/A_amerivirosa/30267/30267-2.jpg",
+            "../../../images/specimens/A_amerivirosa/30267/30267-3.jpg",
+            "../../../images/specimens/A_amerivirosa/30267/30267-4.jpg",
+            "../../../images/specimens/A_amerivirosa/30267/30267-5.jpg",
+            "../../../images/specimens/A_amerivirosa/30269/30269-1.jpg",
+            "../../../images/specimens/A_amerivirosa/30269/30269-2.jpg",
+            "../../../images/specimens/A_amerivirosa/30269/30269-3.jpg",
+            "../../../images/specimens/A_amerivirosa/30269/30269-4.jpg",
+            "../../../images/specimens/A_amerivirosa/30269/30269-5.jpg",
+            "../../../images/specimens/A_amerivirosa/30270/30270-1.jpg",
+            "../../../images/specimens/A_amerivirosa/30270/30270-2.jpg",
+            "../../../images/specimens/A_amerivirosa/30270/30270-3.jpg",
+            "../../../images/specimens/A_amerivirosa/30270/30270-4.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

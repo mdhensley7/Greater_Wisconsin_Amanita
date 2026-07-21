@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -366,32 +366,32 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_amerirubescens_nom_prov/30230/30230-1.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30230/30230-2.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30230/30230-3.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30230/30230-4.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30230/30230-5.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30230/30230-6.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30230/30230-7.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30230/30230-8.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30231/30231-1.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30231/30231-2.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30231/30231-3.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30231/30231-4.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30232/30232-1.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30232/30232-2.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30232/30232-3.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30232/30232-4.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30232/30232-5.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30252/30252-1.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30252/30252-2.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30252/30252-3.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30264/30264-1.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30264/30264-2.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30264/30264-3.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30264/30264-4.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30264/30264-5.jpg",
-            "/images/specimens/A_amerirubescens_nom_prov/30264/IMG_0318.jpeg"
+            "../../../images/specimens/A_amerirubescens_nom_prov/30230/30230-1.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30230/30230-2.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30230/30230-3.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30230/30230-4.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30230/30230-5.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30230/30230-6.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30230/30230-7.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30230/30230-8.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30231/30231-1.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30231/30231-2.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30231/30231-3.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30231/30231-4.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30232/30232-1.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30232/30232-2.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30232/30232-3.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30232/30232-4.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30232/30232-5.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30252/30252-1.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30252/30252-2.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30252/30252-3.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30264/30264-1.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30264/30264-2.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30264/30264-3.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30264/30264-4.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30264/30264-5.jpg",
+            "../../../images/specimens/A_amerirubescens_nom_prov/30264/IMG_0318.jpeg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

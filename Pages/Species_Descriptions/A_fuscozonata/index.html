@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -368,11 +368,11 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_fuscozonata/30188/30188-1.jpg",
-            "/images/specimens/A_fuscozonata/30188/30188-2.jpg",
-            "/images/specimens/A_fuscozonata/30188/30188-3.jpg",
-            "/images/specimens/A_fuscozonata/30188/30188-4.jpg",
-            "/images/specimens/A_fuscozonata/30188/30188-5.jpg"
+            "../../../images/specimens/A_fuscozonata/30188/30188-1.jpg",
+            "../../../images/specimens/A_fuscozonata/30188/30188-2.jpg",
+            "../../../images/specimens/A_fuscozonata/30188/30188-3.jpg",
+            "../../../images/specimens/A_fuscozonata/30188/30188-4.jpg",
+            "../../../images/specimens/A_fuscozonata/30188/30188-5.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

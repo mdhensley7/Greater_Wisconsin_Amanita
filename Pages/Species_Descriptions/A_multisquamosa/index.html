@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -366,29 +366,29 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_multisquamosa/30221/30221-1.jpg",
-            "/images/specimens/A_multisquamosa/30221/30221-2.jpg",
-            "/images/specimens/A_multisquamosa/30222/30222-1.jpg",
-            "/images/specimens/A_multisquamosa/30222/30222-2.jpg",
-            "/images/specimens/A_multisquamosa/30222/30222-3.jpg",
-            "/images/specimens/A_multisquamosa/30222/30222-4.jpg",
-            "/images/specimens/A_multisquamosa/30222/30222-5.jpg",
-            "/images/specimens/A_multisquamosa/30223/30223-1.jpg",
-            "/images/specimens/A_multisquamosa/30223/30223-2.jpg",
-            "/images/specimens/A_multisquamosa/30223/30223-3.jpg",
-            "/images/specimens/A_multisquamosa/30223/30223-4.jpg",
-            "/images/specimens/A_multisquamosa/30223/30223-5.jpg",
-            "/images/specimens/A_multisquamosa/30223/30223-6.jpg",
-            "/images/specimens/A_multisquamosa/30223/30223-7.jpg",
-            "/images/specimens/A_multisquamosa/30223/30223-8.jpg",
-            "/images/specimens/A_multisquamosa/30224/30224-1.jpg",
-            "/images/specimens/A_multisquamosa/30224/30224-2.jpg",
-            "/images/specimens/A_multisquamosa/30224/30224-3.jpg",
-            "/images/specimens/A_multisquamosa/30224/30224-4.jpg",
-            "/images/specimens/A_multisquamosa/30224/30224-5.jpg",
-            "/images/specimens/A_multisquamosa/30224/30224-6.jpg",
-            "/images/specimens/A_multisquamosa/30224/30224-7.jpg",
-            "/images/specimens/A_multisquamosa/30224/30224-8.jpg"
+            "../../../images/specimens/A_multisquamosa/30221/30221-1.jpg",
+            "../../../images/specimens/A_multisquamosa/30221/30221-2.jpg",
+            "../../../images/specimens/A_multisquamosa/30222/30222-1.jpg",
+            "../../../images/specimens/A_multisquamosa/30222/30222-2.jpg",
+            "../../../images/specimens/A_multisquamosa/30222/30222-3.jpg",
+            "../../../images/specimens/A_multisquamosa/30222/30222-4.jpg",
+            "../../../images/specimens/A_multisquamosa/30222/30222-5.jpg",
+            "../../../images/specimens/A_multisquamosa/30223/30223-1.jpg",
+            "../../../images/specimens/A_multisquamosa/30223/30223-2.jpg",
+            "../../../images/specimens/A_multisquamosa/30223/30223-3.jpg",
+            "../../../images/specimens/A_multisquamosa/30223/30223-4.jpg",
+            "../../../images/specimens/A_multisquamosa/30223/30223-5.jpg",
+            "../../../images/specimens/A_multisquamosa/30223/30223-6.jpg",
+            "../../../images/specimens/A_multisquamosa/30223/30223-7.jpg",
+            "../../../images/specimens/A_multisquamosa/30223/30223-8.jpg",
+            "../../../images/specimens/A_multisquamosa/30224/30224-1.jpg",
+            "../../../images/specimens/A_multisquamosa/30224/30224-2.jpg",
+            "../../../images/specimens/A_multisquamosa/30224/30224-3.jpg",
+            "../../../images/specimens/A_multisquamosa/30224/30224-4.jpg",
+            "../../../images/specimens/A_multisquamosa/30224/30224-5.jpg",
+            "../../../images/specimens/A_multisquamosa/30224/30224-6.jpg",
+            "../../../images/specimens/A_multisquamosa/30224/30224-7.jpg",
+            "../../../images/specimens/A_multisquamosa/30224/30224-8.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -365,32 +365,32 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_fusca/30186/30186-01.jpg",
-            "/images/specimens/A_fusca/30186/30186-02.jpg",
-            "/images/specimens/A_fusca/30186/30186-03.jpg",
-            "/images/specimens/A_fusca/30186/30186-04.jpg",
-            "/images/specimens/A_fusca/30186/30186-05.jpg",
-            "/images/specimens/A_fusca/30186/30186-06.jpg",
-            "/images/specimens/A_fusca/30186/30186-07.jpg",
-            "/images/specimens/A_fusca/30186/30186-08.jpg",
-            "/images/specimens/A_fusca/30186/30186-09.jpg",
-            "/images/specimens/A_fusca/30186/30186-10.jpg",
-            "/images/specimens/A_fusca/30186/30186-11.jpg",
-            "/images/specimens/A_fusca/30186/30186-12.jpg",
-            "/images/specimens/A_fusca/30186/30186-13.jpg",
-            "/images/specimens/A_fusca/30281/30281-1.jpg",
-            "/images/specimens/A_fusca/30281/30281-2.jpg",
-            "/images/specimens/A_fusca/30281/30281-3.jpg",
-            "/images/specimens/A_fusca/30281/30281-4.jpg",
-            "/images/specimens/A_fusca/30281/30281-5.jpg",
-            "/images/specimens/A_fusca/30282/30282-1.jpg",
-            "/images/specimens/A_fusca/30282/30282-2.jpg",
-            "/images/specimens/A_fusca/30282/30282-3.jpg",
-            "/images/specimens/A_fusca/30282/30282-4.jpg",
-            "/images/specimens/A_fusca/30285/30285-1.jpg",
-            "/images/specimens/A_fusca/30285/30285-2.jpg",
-            "/images/specimens/A_fusca/30285/30285-3.jpg",
-            "/images/specimens/A_fusca/30285/30285-4.jpg"
+            "../../../images/specimens/A_fusca/30186/30186-01.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-02.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-03.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-04.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-05.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-06.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-07.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-08.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-09.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-10.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-11.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-12.jpg",
+            "../../../images/specimens/A_fusca/30186/30186-13.jpg",
+            "../../../images/specimens/A_fusca/30281/30281-1.jpg",
+            "../../../images/specimens/A_fusca/30281/30281-2.jpg",
+            "../../../images/specimens/A_fusca/30281/30281-3.jpg",
+            "../../../images/specimens/A_fusca/30281/30281-4.jpg",
+            "../../../images/specimens/A_fusca/30281/30281-5.jpg",
+            "../../../images/specimens/A_fusca/30282/30282-1.jpg",
+            "../../../images/specimens/A_fusca/30282/30282-2.jpg",
+            "../../../images/specimens/A_fusca/30282/30282-3.jpg",
+            "../../../images/specimens/A_fusca/30282/30282-4.jpg",
+            "../../../images/specimens/A_fusca/30285/30285-1.jpg",
+            "../../../images/specimens/A_fusca/30285/30285-2.jpg",
+            "../../../images/specimens/A_fusca/30285/30285-3.jpg",
+            "../../../images/specimens/A_fusca/30285/30285-4.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

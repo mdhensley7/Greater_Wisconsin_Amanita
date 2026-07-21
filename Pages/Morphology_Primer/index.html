@@ -392,10 +392,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../');
             });
     </script>
 
@@ -415,14 +415,14 @@
             </p>
             <div class="photo-placeholder development-photo" data-feature-type="development-stages">
                                 <span class="placeholder-text">Photo: Amanita Development Stages</span>
-                                <img src="/Pages/images/morpho_primer/amanitadevelopment.png" alt="Amanita development stages, from button to mature mushroom" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="../images/morpho_primer/amanitadevelopment.png" alt="Amanita development stages, from button to mature mushroom" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
         </div>
 
         <div class="section-tabs" role="tablist">
-            <button type="button" class="section-tab is-active" id="tab-cap" role="tab" aria-selected="true" aria-controls="panel-cap">Cap</button>
-            <button type="button" class="section-tab" id="tab-stipe" role="tab" aria-selected="false" aria-controls="panel-stipe">Stipe</button>
-            <button type="button" class="section-tab" id="tab-volva" role="tab" aria-selected="false" aria-controls="panel-volva">Volva</button>
+            <button type="button" class="section-tab is-active" id="tab-cap" role="tab" aria-selected="true" aria-controls="panel-cap">Pileus (cap)</button>
+            <button type="button" class="section-tab" id="tab-stipe" role="tab" aria-selected="false" aria-controls="panel-stipe">Stipe (stem)</button>
+            <button type="button" class="section-tab" id="tab-volva" role="tab" aria-selected="false" aria-controls="panel-volva">Universal veil</button>
             <button type="button" class="section-tab" id="tab-habitat" role="tab" aria-selected="false" aria-controls="panel-habitat">Tree Host &amp; Habitat</button>
         </div>
 
@@ -455,7 +455,7 @@
                         <div class="photo-gallery">
                             <div class="photo-placeholder photo-diagram" data-feature-type="cap-diameter">
                                 <span class="placeholder-text">Photo: Cap Diameter Measurement</span>
-                                <img src="/Pages/images/morpho_primer/cap/diameter30235.png" alt="Cap diameter measurement example" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="../images/morpho_primer/cap/diameter30235.png" alt="Cap diameter measurement example" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
                             <p class="photo-caption"><em>Amanita solaniolens</em> — specimen 30235</p>
                         </div>
@@ -483,13 +483,13 @@
                             <div class="photo-frame">
                             <div class="photo-placeholder" data-feature-type="cap-center-color">
                                 <span class="placeholder-text">Photo: Cap Color Examples</span>
-                                <img src="/Pages/images/morpho_primer/cap/capcolor30278.png" alt="Photo: Cap Color Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="../images/morpho_primer/cap/capcolor30278.png" alt="Photo: Cap Color Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
                             <p class="photo-caption">Amanita centriobscura — specimen 30278</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-center-color-3">
-                                <img src="/Pages/images/morpho_primer/cap/capcolor30185.jpg" alt="Cap center color example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/capcolor30185.jpg" alt="Cap center color example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita cf. aurorae nom prov. — specimen 30185</p>
                             </div>
@@ -508,13 +508,13 @@
                             <div class="photo-frame">
                             <div class="photo-placeholder" data-feature-type="cap-margin-color">
                                 <span class="placeholder-text">Photo: Cap Margin Colors</span>
-                                <img src="/Pages/images/morpho_primer/cap/margincolor30207.jpg" alt="Photo: Cap Margin Color of Amanita porphyria" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="../images/morpho_primer/cap/margincolor30207.jpg" alt="Photo: Cap Margin Color of Amanita porphyria" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
                             <p class="photo-caption"><em>Amanita porphyria</em> — specimen 30207</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-margin-color-2">
-                                <img src="/Pages/images/morpho_primer/cap/margincolor30243.jpg" alt="Cap margin color example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/margincolor30243.jpg" alt="Cap margin color example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption"><em>Amanita aff. fulva</em> — specimen 30243</p>
                             </div>
@@ -543,19 +543,19 @@
                             <div class="photo-frame">
                             <div class="photo-placeholder" data-feature-type="cap-shape">
                                 <span class="placeholder-text">Photo: Cap Shape Examples</span>
-                                <img src="/Pages/images/morpho_primer/cap/capshape30233.jpg" alt="Photo: Cap Shape Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="../images/morpho_primer/cap/capshape30233.jpg" alt="Photo: Cap Shape Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
                             <p class="photo-caption">Amanita rhacopus — specimen 30233 <strong>planar</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-shape-2">
-                                <img src="/Pages/images/morpho_primer/cap/capshape30229.jpg" alt="Cap shape example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/capshape30229.jpg" alt="Cap shape example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita frostiana — specimen 30229 <strong>convex</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-shape-3">
-                                <img src="/Pages/images/morpho_primer/cap/capshape30268.jpg" alt="Cap shape example — Amanita aff. fulva" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/capshape30268.jpg" alt="Cap shape example — Amanita aff. fulva" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita jakeslandingensis nom. prov. — specimen 30268 <strong>plano-concave</strong></p>
                             </div>
@@ -587,19 +587,19 @@
                         <div class="photo-gallery gallery-wide">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-texture">
-                                <img src="/Pages/images/morpho_primer/cap/captexture30222.jpg" alt="Cap surface silky texture example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/captexture30222.jpg" alt="Cap surface silky texture example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita multisquamosa — specimen 30222 <strong>silky</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-texture-2">
-                                <img src="/Pages/images/morpho_primer/cap/captexture30223.jpg" alt="Cap surface viscid texture example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/captexture30223.jpg" alt="Cap surface viscid texture example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita multisquamosa — specimen 30223 <strong>viscid</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-texture-3">
-                                <img src="/Pages/images/morpho_primer/cap/captexture30195.jpg" alt="Cap surface wrinkly texture example — Amanita amerivirosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/captexture30195.jpg" alt="Cap surface wrinkly texture example — Amanita amerivirosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita amerivirosa — specimen 30195 <strong>Wrinkly</strong></p>
                             </div>
@@ -628,19 +628,19 @@
                         <div class="photo-gallery gallery-wide">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-umbonate">
-                                <img src="/Pages/images/morpho_primer/cap/capumbo30185.jpg" alt="Umbonate cap example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/capumbo30185.jpg" alt="Umbonate cap example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita cf. aurorae nom prov. — specimen 30185 <strong>umbonate</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-umbonate-2">
-                                <img src="/Pages/images/morpho_primer/cap/capshape30268.jpg" alt="Umbonate cap example — Amanita jakeslandingensis nom. prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/capshape30268.jpg" alt="Umbonate cap example — Amanita jakeslandingensis nom. prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita jakeslandingensis nom. prov. — specimen 30269 <strong>umbonate</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-umbonate-3">
-                                <img src="/Pages/images/morpho_primer/cap/capumbo30189.jpg" alt="Umbonate cap example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/capumbo30189.jpg" alt="Umbonate cap example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita rhacopus — specimen 30189 <strong>minutely umbonate</strong></p>
                             </div>
@@ -665,13 +665,13 @@
                         <div class="photo-gallery gallery-wide">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-striation-2">
-                                <img src="/Pages/images/morpho_primer/cap/striation30280.jpg" alt="Cap striation example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/striation30280.jpg" alt="Cap striation example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita populiphila — specimen 30280</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-striation-3">
-                                <img src="/Pages/images/morpho_primer/cap/striation30262.jpg" alt="Amanita subnigra nom. prov. — specimen 30262" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                                <img src="../images/morpho_primer/cap/striation30262.jpg" alt="Amanita subnigra nom. prov. — specimen 30262" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
                             </div>
                             <p class="photo-caption">Amanita subnigra nom. prov. — specimen 30262</p>
                             </div>
@@ -693,7 +693,7 @@
                         <div class="photo-gallery gallery-wide">
                             <div class="photo-placeholder" data-feature-type="cap-appendiculate">
                                 <span class="placeholder-text">Photo: Cap Margin Fragments</span>
-                                <img src="/Pages/images/morpho_primer/cap/appendiculate30219.jpg" alt="Photo: Amanita cf. lavendula cap appendiculate" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="../images/morpho_primer/cap/appendiculate30219.jpg" alt="Photo: Amanita cf. lavendula cap appendiculate" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
                             <p class="photo-caption">Amanita cf. lavendula — specimen 30219</p>                      
                         </div>
@@ -723,19 +723,19 @@
                         <div class="photo-gallery gallery-wide">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-universal-veil">
-                                <img src="/Pages/images/morpho_primer/cap/captexture30222.jpg" alt="Cap universal veil (warts/patches) example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/captexture30222.jpg" alt="Cap universal veil (warts/patches) example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita multisquamosa — specimen 30222 <strong>Small warts</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-universal-veil-2">
-                                <img src="/Pages/images/morpho_primer/cap/uv30281.jpg" alt="Cap universal veil (warts/patches) example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/uv30281.jpg" alt="Cap universal veil (warts/patches) example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita fusca — specimen 30281 <strong>Large patch</strong></p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-universal-veil-3">
-                                <img src="/Pages/images/morpho_primer/cap/uv30286.jpg" alt="Cap universal veil (warts/patches) example — Amanita sp. 'GWA-ami2'" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/uv30286.jpg" alt="Cap universal veil (warts/patches) example — Amanita sp. 'GWA-ami2'" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita porphyria — specimen 30286 <strong>Powder (pulverulent)</strong></p>
                             </div>
@@ -765,7 +765,7 @@
                         <div class="photo-gallery gallery-wide">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="cap-staining">
-                                <img src="/Pages/images/morpho_primer/cap/stain30232.jpg" alt="Cap staining example — Amanita amerirubescens nom. prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/cap/stain30232.jpg" alt="Cap staining example — Amanita amerirubescens nom. prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita amerirubescens nom. prov. — specimen 30232 <strong>red staining</strong></p>
                             </div>
@@ -780,9 +780,6 @@
         <!-- STIPE (STEM) SECTION -->
         <div class="section-card">
             <h2 class="section-heading">Stipe (Stem)</h2>
-            <p class="category-intro">
-                The stipe is the stem connecting the cap to the base. Its characteristics, including height, width, color, and surface features, are important for identification.
-            </p>
 
             <div class="feature-section">
                 <details>
@@ -790,7 +787,7 @@
                     <div class="feature-content">
                         <div class="feature-definition">
                             <h4>Definition</h4>
-                            <p>The height of the stipe from the cap attachment to the base, measured in millimeters.</p>
+                            <p>The height of the stipe from the cap attachment to the bottom of basal bulb if present, measured in millimeters. If there is no bulb, measure to the base.</p>
                         </div>
                         <div class="feature-variations">
                             <h4>Typical Lengths</h4>
@@ -800,25 +797,21 @@
                                 <li><strong>Tall:</strong> Greater than 120mm (5+ in)</li>
                             </ul>
                         </div>
-                        <div class="feature-observation">
-                            <h4>What to Look For</h4>
-                            <p>Measure the stipe from where it attaches to the cap to the base. Be aware that stipes can compress or expand depending on moisture and conditions.</p>
-                        </div>
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-length">
-                                <img src="/Pages/images/morpho_primer/stipe-length.jpg" alt="Stipe length example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-length.jpg" alt="Stipe length example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita fusca — specimen 30186</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-length-2">
-                                <img src="/Pages/images/morpho_primer/stipe-length-2.jpg" alt="Stipe length example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-length-2.jpg" alt="Stipe length example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita suballiacea — specimen 30187</p>
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-length-3">
-                                <img src="/Pages/images/morpho_primer/stipe-length-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                                <img src="../images/morpho_primer/stipe-length-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
                             </div>
                         </div>
                     </div>
@@ -846,18 +839,18 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-width">
-                                <img src="/Pages/images/morpho_primer/stipe-width.jpg" alt="Stipe width example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-width.jpg" alt="Stipe width example — Amanita cf. aurorae nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita cf. aurorae nom prov. — specimen 30185</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-width-2">
-                                <img src="/Pages/images/morpho_primer/stipe-width-2.jpg" alt="Stipe width example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-width-2.jpg" alt="Stipe width example — Amanita populiphila" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita populiphila — specimen 30280</p>
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-width-3">
-                                <img src="/Pages/images/morpho_primer/stipe-width-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                                <img src="../images/morpho_primer/stipe-width-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
                             </div>
                         </div>
                     </div>
@@ -886,19 +879,19 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-color">
-                                <img src="/Pages/images/morpho_primer/stipe-color.jpg" alt="Stipe color example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-color.jpg" alt="Stipe color example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita suballiacea — specimen 30182</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-color-2">
-                                <img src="/Pages/images/morpho_primer/stipe-color-2.jpg" alt="Stipe color example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-color-2.jpg" alt="Stipe color example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita amerirubescens nom prov. — specimen 30230</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-color-3">
-                                <img src="/Pages/images/morpho_primer/stipe-color-3.jpg" alt="Stipe color example — Amanita cf. lavendula" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-color-3.jpg" alt="Stipe color example — Amanita cf. lavendula" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita cf. lavendula — specimen 30218</p>
                             </div>
@@ -929,19 +922,19 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-shape">
-                                <img src="/Pages/images/morpho_primer/stipe-shape.jpg" alt="Stipe shape example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-shape.jpg" alt="Stipe shape example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita bisporigera — specimen 30199</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-shape-2">
-                                <img src="/Pages/images/morpho_primer/stipe-shape-2.jpg" alt="Stipe shape example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-shape-2.jpg" alt="Stipe shape example — Amanita bisporigera" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita bisporigera — specimen 30181</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-shape-3">
-                                <img src="/Pages/images/morpho_primer/stipe-shape-3.jpg" alt="Stipe shape example — Amanita brunnescens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-shape-3.jpg" alt="Stipe shape example — Amanita brunnescens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita brunnescens — specimen 30259</p>
                             </div>
@@ -973,19 +966,19 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-decoration">
-                                <img src="/Pages/images/morpho_primer/stipe-decoration.jpg" alt="Stipe surface decoration example — Amanita centriobscura" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-decoration.jpg" alt="Stipe surface decoration example — Amanita centriobscura" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita centriobscura — specimen 30215</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-decoration-2">
-                                <img src="/Pages/images/morpho_primer/stipe-decoration-2.jpg" alt="Stipe surface decoration example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-decoration-2.jpg" alt="Stipe surface decoration example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita multisquamosa — specimen 30223</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-decoration-3">
-                                <img src="/Pages/images/morpho_primer/stipe-decoration-3.jpg" alt="Stipe surface decoration example — Amanita sinicoflava" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-decoration-3.jpg" alt="Stipe surface decoration example — Amanita sinicoflava" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita sinicoflava — specimen 30198</p>
                             </div>
@@ -1016,18 +1009,18 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-staining">
-                                <img src="/Pages/images/morpho_primer/stipe-staining.jpg" alt="Stipe staining example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-staining.jpg" alt="Stipe staining example — Amanita amerirubescens nom prov." onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita amerirubescens nom prov. — specimen 30264</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-staining-2">
-                                <img src="/Pages/images/morpho_primer/stipe-staining-2.jpg" alt="Stipe staining example — Amanita brunnescens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-staining-2.jpg" alt="Stipe staining example — Amanita brunnescens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita brunnescens — specimen 30272</p>
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-staining-3">
-                                <img src="/Pages/images/morpho_primer/stipe-staining-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                                <img src="../images/morpho_primer/stipe-staining-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
                             </div>
                         </div>
                     </div>
@@ -1057,19 +1050,19 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-annulus">
-                                <img src="/Pages/images/morpho_primer/stipe-annulus.jpg" alt="Stipe annulus (ring) example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-annulus.jpg" alt="Stipe annulus (ring) example — Amanita suballiacea" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita suballiacea — specimen 30187</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-annulus-2">
-                                <img src="/Pages/images/morpho_primer/stipe-annulus-2.jpg" alt="Stipe annulus (ring) example — Amanita chrysoblema" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-annulus-2.jpg" alt="Stipe annulus (ring) example — Amanita chrysoblema" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita chrysoblema — specimen 30210</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-annulus-3">
-                                <img src="/Pages/images/morpho_primer/stipe-annulus-3.jpg" alt="Stipe annulus (ring) example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-annulus-3.jpg" alt="Stipe annulus (ring) example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita frostiana — specimen 30242</p>
                             </div>
@@ -1100,19 +1093,19 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-veil-base">
-                                <img src="/Pages/images/morpho_primer/stipe-veil-base.jpg" alt="Universal veil remnant at stipe base example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-veil-base.jpg" alt="Universal veil remnant at stipe base example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita fusca — specimen 30186</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-veil-base-2">
-                                <img src="/Pages/images/morpho_primer/stipe-veil-base-2.jpg" alt="Universal veil remnant at stipe base example — Amanita centriobscura" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-veil-base-2.jpg" alt="Universal veil remnant at stipe base example — Amanita centriobscura" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita centriobscura — specimen 30220</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="stipe-veil-base-3">
-                                <img src="/Pages/images/morpho_primer/stipe-veil-base-3.jpg" alt="Universal veil remnant at stipe base example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/stipe-veil-base-3.jpg" alt="Universal veil remnant at stipe base example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita multisquamosa — specimen 30223</p>
                             </div>
@@ -1143,13 +1136,13 @@
                         <div class="photo-gallery">
                             <div class="photo-placeholder" data-feature-type="stipe-context">
                                 <span class="placeholder-text">Photo: Stipe Cross-Section Examples</span>
-                                <img src="/Pages/images/morpho_primer/stipe-context.png" alt="Photo: Stipe Cross-Section Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
+                                <img src="../images/morpho_primer/stipe-context.png" alt="Photo: Stipe Cross-Section Examples" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()">
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-context-2">
-                                <img src="/Pages/images/morpho_primer/stipe-context-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                                <img src="../images/morpho_primer/stipe-context-2.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="stipe-context-3">
-                                <img src="/Pages/images/morpho_primer/stipe-context-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                                <img src="../images/morpho_primer/stipe-context-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
                             </div>
                         </div>
                     </div>
@@ -1191,19 +1184,19 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-form">
-                                <img src="/Pages/images/morpho_primer/volva-form.jpg" alt="Volva form example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-form.jpg" alt="Volva form example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita fusca — specimen 30281</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-form-2">
-                                <img src="/Pages/images/morpho_primer/volva-form-2.jpg" alt="Volva form example — Amanita centriobscura" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-form-2.jpg" alt="Volva form example — Amanita centriobscura" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita centriobscura — specimen 30278</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-form-3">
-                                <img src="/Pages/images/morpho_primer/volva-form-3.jpg" alt="Volva form example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-form-3.jpg" alt="Volva form example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita frostiana — specimen 30190</p>
                             </div>
@@ -1234,19 +1227,19 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-color">
-                                <img src="/Pages/images/morpho_primer/volva-color.jpg" alt="Volva color example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-color.jpg" alt="Volva color example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita fusca — specimen 30281</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-color-2">
-                                <img src="/Pages/images/morpho_primer/volva-color-2.jpg" alt="Volva color example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-color-2.jpg" alt="Volva color example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita multisquamosa — specimen 30223</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-color-3">
-                                <img src="/Pages/images/morpho_primer/volva-color-3.jpg" alt="Volva color example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-color-3.jpg" alt="Volva color example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita frostiana — specimen 30191</p>
                             </div>
@@ -1277,19 +1270,19 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-texture">
-                                <img src="/Pages/images/morpho_primer/volva-texture.jpg" alt="Volva texture example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-texture.jpg" alt="Volva texture example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita fusca — specimen 30281</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-texture-2">
-                                <img src="/Pages/images/morpho_primer/volva-texture-2.jpg" alt="Volva texture example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-texture-2.jpg" alt="Volva texture example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita cf. oberwinkleriana — specimen 30183</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-texture-3">
-                                <img src="/Pages/images/morpho_primer/volva-texture-3.jpg" alt="Volva texture example — Amanita brunnescens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-texture-3.jpg" alt="Volva texture example — Amanita brunnescens" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita brunnescens — specimen 30272</p>
                             </div>
@@ -1319,18 +1312,18 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-attachment">
-                                <img src="/Pages/images/morpho_primer/volva-attachment.jpg" alt="Volva attachment example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-attachment.jpg" alt="Volva attachment example — Amanita multisquamosa" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita multisquamosa — specimen 30223</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-attachment-2">
-                                <img src="/Pages/images/morpho_primer/volva-attachment-2.jpg" alt="Volva attachment example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-attachment-2.jpg" alt="Volva attachment example — Amanita cf. oberwinkleriana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita cf. oberwinkleriana — specimen 30183</p>
                             </div>
                             <div class="photo-placeholder photo-slot-empty" data-feature-type="volva-attachment-3">
-                                <img src="/Pages/images/morpho_primer/volva-attachment-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
+                                <img src="../images/morpho_primer/volva-attachment-3.png" alt="" onload="this.parentElement.classList.remove('photo-slot-empty'); this.parentElement.classList.add('has-image')" onerror="this.parentElement.remove()">
                             </div>
                         </div>
                     </div>
@@ -1358,19 +1351,19 @@
                         <div class="photo-gallery">
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-distribution">
-                                <img src="/Pages/images/morpho_primer/volva-distribution.jpg" alt="Volva distribution example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-distribution.jpg" alt="Volva distribution example — Amanita fusca" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita fusca — specimen 30281</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-distribution-2">
-                                <img src="/Pages/images/morpho_primer/volva-distribution-2.jpg" alt="Volva distribution example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-distribution-2.jpg" alt="Volva distribution example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita frostiana — specimen 30190</p>
                             </div>
                             <div class="photo-frame">
                             <div class="photo-placeholder has-image" data-feature-type="volva-distribution-3">
-                                <img src="/Pages/images/morpho_primer/volva-distribution-3.jpg" alt="Volva distribution example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
+                                <img src="../images/morpho_primer/volva-distribution-3.jpg" alt="Volva distribution example — Amanita frostiana" onload="this.parentElement.classList.add('has-image')" onerror="this.closest('.photo-frame').remove()">
                             </div>
                             <p class="photo-caption">Amanita frostiana — specimen 30191</p>
                             </div>

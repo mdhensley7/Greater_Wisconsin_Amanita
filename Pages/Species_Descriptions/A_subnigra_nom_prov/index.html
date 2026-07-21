@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -364,10 +364,10 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_subnigra_nom_prov/30262/30262-1.jpg",
-            "/images/specimens/A_subnigra_nom_prov/30262/30262-2.jpg",
-            "/images/specimens/A_subnigra_nom_prov/30262/30262-3.jpg",
-            "/images/specimens/A_subnigra_nom_prov/30262/IMG_0311.jpeg"
+            "../../../images/specimens/A_subnigra_nom_prov/30262/30262-1.jpg",
+            "../../../images/specimens/A_subnigra_nom_prov/30262/30262-2.jpg",
+            "../../../images/specimens/A_subnigra_nom_prov/30262/30262-3.jpg",
+            "../../../images/specimens/A_subnigra_nom_prov/30262/IMG_0311.jpeg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

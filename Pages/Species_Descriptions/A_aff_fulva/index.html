@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -367,24 +367,24 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_aff_fulva/30194/30194-1.jpg",
-            "/images/specimens/A_aff_fulva/30194/30194-2.jpg",
-            "/images/specimens/A_aff_fulva/30194/30194-3.jpg",
-            "/images/specimens/A_aff_fulva/30194/30194-4.jpg",
-            "/images/specimens/A_aff_fulva/30243/30243-1.jpg",
-            "/images/specimens/A_aff_fulva/30243/30243-2.jpg",
-            "/images/specimens/A_aff_fulva/30243/30243-3.jpg",
-            "/images/specimens/A_aff_fulva/30243/30243-4.jpg",
-            "/images/specimens/A_aff_fulva/30243/30243-5.jpg",
-            "/images/specimens/A_aff_fulva/30245/30245-1.jpg",
-            "/images/specimens/A_aff_fulva/30245/30245-2.jpg",
-            "/images/specimens/A_aff_fulva/30245/30245-3.jpg",
-            "/images/specimens/A_aff_fulva/30245/30245-4.jpg",
-            "/images/specimens/A_aff_fulva/30255/30255-1.jpg",
-            "/images/specimens/A_aff_fulva/30255/30255-2.jpg",
-            "/images/specimens/A_aff_fulva/30255/30255-3.jpg",
-            "/images/specimens/A_aff_fulva/30255/30255-4.jpg",
-            "/images/specimens/A_aff_fulva/30255/30255-5.jpg"
+            "../../../images/specimens/A_aff_fulva/30194/30194-1.jpg",
+            "../../../images/specimens/A_aff_fulva/30194/30194-2.jpg",
+            "../../../images/specimens/A_aff_fulva/30194/30194-3.jpg",
+            "../../../images/specimens/A_aff_fulva/30194/30194-4.jpg",
+            "../../../images/specimens/A_aff_fulva/30243/30243-1.jpg",
+            "../../../images/specimens/A_aff_fulva/30243/30243-2.jpg",
+            "../../../images/specimens/A_aff_fulva/30243/30243-3.jpg",
+            "../../../images/specimens/A_aff_fulva/30243/30243-4.jpg",
+            "../../../images/specimens/A_aff_fulva/30243/30243-5.jpg",
+            "../../../images/specimens/A_aff_fulva/30245/30245-1.jpg",
+            "../../../images/specimens/A_aff_fulva/30245/30245-2.jpg",
+            "../../../images/specimens/A_aff_fulva/30245/30245-3.jpg",
+            "../../../images/specimens/A_aff_fulva/30245/30245-4.jpg",
+            "../../../images/specimens/A_aff_fulva/30255/30255-1.jpg",
+            "../../../images/specimens/A_aff_fulva/30255/30255-2.jpg",
+            "../../../images/specimens/A_aff_fulva/30255/30255-3.jpg",
+            "../../../images/specimens/A_aff_fulva/30255/30255-4.jpg",
+            "../../../images/specimens/A_aff_fulva/30255/30255-5.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

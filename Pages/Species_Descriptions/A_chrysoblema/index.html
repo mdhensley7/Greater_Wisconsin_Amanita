@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -363,27 +363,27 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_chrysoblema/30192/30192-01.jpg",
-            "/images/specimens/A_chrysoblema/30192/30192-02.jpg",
-            "/images/specimens/A_chrysoblema/30192/30192-03.jpg",
-            "/images/specimens/A_chrysoblema/30192/30192-04.jpg",
-            "/images/specimens/A_chrysoblema/30196/30196-1.jpg",
-            "/images/specimens/A_chrysoblema/30196/30196-2.jpg",
-            "/images/specimens/A_chrysoblema/30196/30196-3.jpg",
-            "/images/specimens/A_chrysoblema/30196/30196-4.jpg",
-            "/images/specimens/A_chrysoblema/30197/30197-1.jpg",
-            "/images/specimens/A_chrysoblema/30197/30197-2.jpg",
-            "/images/specimens/A_chrysoblema/30197/30197-3.jpg",
-            "/images/specimens/A_chrysoblema/30197/30197-4.jpg",
-            "/images/specimens/A_chrysoblema/30210/30210-1.jpg",
-            "/images/specimens/A_chrysoblema/30210/30210-2.jpg",
-            "/images/specimens/A_chrysoblema/30210/30210-3.jpg",
-            "/images/specimens/A_chrysoblema/30210/30210-4.jpg",
-            "/images/specimens/A_chrysoblema/30211/30211-1.jpg",
-            "/images/specimens/A_chrysoblema/30211/30211-2.jpg",
-            "/images/specimens/A_chrysoblema/30211/30211-3.jpg",
-            "/images/specimens/A_chrysoblema/30211/30211-4.jpg",
-            "/images/specimens/A_chrysoblema/30211/30211-5.jpg"
+            "../../../images/specimens/A_chrysoblema/30192/30192-01.jpg",
+            "../../../images/specimens/A_chrysoblema/30192/30192-02.jpg",
+            "../../../images/specimens/A_chrysoblema/30192/30192-03.jpg",
+            "../../../images/specimens/A_chrysoblema/30192/30192-04.jpg",
+            "../../../images/specimens/A_chrysoblema/30196/30196-1.jpg",
+            "../../../images/specimens/A_chrysoblema/30196/30196-2.jpg",
+            "../../../images/specimens/A_chrysoblema/30196/30196-3.jpg",
+            "../../../images/specimens/A_chrysoblema/30196/30196-4.jpg",
+            "../../../images/specimens/A_chrysoblema/30197/30197-1.jpg",
+            "../../../images/specimens/A_chrysoblema/30197/30197-2.jpg",
+            "../../../images/specimens/A_chrysoblema/30197/30197-3.jpg",
+            "../../../images/specimens/A_chrysoblema/30197/30197-4.jpg",
+            "../../../images/specimens/A_chrysoblema/30210/30210-1.jpg",
+            "../../../images/specimens/A_chrysoblema/30210/30210-2.jpg",
+            "../../../images/specimens/A_chrysoblema/30210/30210-3.jpg",
+            "../../../images/specimens/A_chrysoblema/30210/30210-4.jpg",
+            "../../../images/specimens/A_chrysoblema/30211/30211-1.jpg",
+            "../../../images/specimens/A_chrysoblema/30211/30211-2.jpg",
+            "../../../images/specimens/A_chrysoblema/30211/30211-3.jpg",
+            "../../../images/specimens/A_chrysoblema/30211/30211-4.jpg",
+            "../../../images/specimens/A_chrysoblema/30211/30211-5.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

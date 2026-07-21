@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -366,20 +366,20 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_flavoconia/30201/30201-1.jpg",
-            "/images/specimens/A_flavoconia/30201/30201-2.jpg",
-            "/images/specimens/A_flavoconia/30205/30205-1.jpg",
-            "/images/specimens/A_flavoconia/30205/30205-2.jpg",
-            "/images/specimens/A_flavoconia/30205/30205-3.jpg",
-            "/images/specimens/A_flavoconia/30205/30205-4.jpg",
-            "/images/specimens/A_flavoconia/30206/30206-1.jpg",
-            "/images/specimens/A_flavoconia/30206/30206-2.jpg",
-            "/images/specimens/A_flavoconia/30206/30206-3.jpg",
-            "/images/specimens/A_flavoconia/30206/30206-4.jpg",
-            "/images/specimens/A_flavoconia/30228/30228-1.jpg",
-            "/images/specimens/A_flavoconia/30228/30228-2.jpg",
-            "/images/specimens/A_flavoconia/30228/30228-3.jpg",
-            "/images/specimens/A_flavoconia/30228/30228-4.jpg"
+            "../../../images/specimens/A_flavoconia/30201/30201-1.jpg",
+            "../../../images/specimens/A_flavoconia/30201/30201-2.jpg",
+            "../../../images/specimens/A_flavoconia/30205/30205-1.jpg",
+            "../../../images/specimens/A_flavoconia/30205/30205-2.jpg",
+            "../../../images/specimens/A_flavoconia/30205/30205-3.jpg",
+            "../../../images/specimens/A_flavoconia/30205/30205-4.jpg",
+            "../../../images/specimens/A_flavoconia/30206/30206-1.jpg",
+            "../../../images/specimens/A_flavoconia/30206/30206-2.jpg",
+            "../../../images/specimens/A_flavoconia/30206/30206-3.jpg",
+            "../../../images/specimens/A_flavoconia/30206/30206-4.jpg",
+            "../../../images/specimens/A_flavoconia/30228/30228-1.jpg",
+            "../../../images/specimens/A_flavoconia/30228/30228-2.jpg",
+            "../../../images/specimens/A_flavoconia/30228/30228-3.jpg",
+            "../../../images/specimens/A_flavoconia/30228/30228-4.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

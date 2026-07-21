@@ -26,7 +26,7 @@ export function renderResults(container, response) {
 }
 
 function renderSpeciesCard(result) {
-    const href = `/Pages/Species_Descriptions/${slugifySpecies(result.species)}/`;
+    const href = `../Species_Descriptions/${slugifySpecies(result.species)}/`;
     const specimenIds = result.matched_specimen_ids.map(escapeHtml).join(", ");
     return `
         <article class="species-card">

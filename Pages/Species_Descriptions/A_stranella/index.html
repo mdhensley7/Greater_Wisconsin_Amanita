@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -363,19 +363,19 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_stranella/30226/30226-1.jpg",
-            "/images/specimens/A_stranella/30226/30226-2.jpg",
-            "/images/specimens/A_stranella/30226/30226-3.jpg",
-            "/images/specimens/A_stranella/30226/30226-4.jpg",
-            "/images/specimens/A_stranella/30227/30227-1.jpg",
-            "/images/specimens/A_stranella/30227/30227-2.jpg",
-            "/images/specimens/A_stranella/30227/30227-3.jpg",
-            "/images/specimens/A_stranella/30249/30249-1.jpg",
-            "/images/specimens/A_stranella/30249/30249-2.jpg",
-            "/images/specimens/A_stranella/30249/30249-3.jpg",
-            "/images/specimens/A_stranella/30249/30249-4.jpg",
-            "/images/specimens/A_stranella/30249/30249-5.jpg",
-            "/images/specimens/A_stranella/30249/30249-6.jpg"
+            "../../../images/specimens/A_stranella/30226/30226-1.jpg",
+            "../../../images/specimens/A_stranella/30226/30226-2.jpg",
+            "../../../images/specimens/A_stranella/30226/30226-3.jpg",
+            "../../../images/specimens/A_stranella/30226/30226-4.jpg",
+            "../../../images/specimens/A_stranella/30227/30227-1.jpg",
+            "../../../images/specimens/A_stranella/30227/30227-2.jpg",
+            "../../../images/specimens/A_stranella/30227/30227-3.jpg",
+            "../../../images/specimens/A_stranella/30249/30249-1.jpg",
+            "../../../images/specimens/A_stranella/30249/30249-2.jpg",
+            "../../../images/specimens/A_stranella/30249/30249-3.jpg",
+            "../../../images/specimens/A_stranella/30249/30249-4.jpg",
+            "../../../images/specimens/A_stranella/30249/30249-5.jpg",
+            "../../../images/specimens/A_stranella/30249/30249-6.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.

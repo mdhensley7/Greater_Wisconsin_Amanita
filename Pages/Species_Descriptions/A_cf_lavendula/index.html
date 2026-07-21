@@ -275,10 +275,10 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("/Components/header.html")
+        fetch("../../../Components/header.html")
             .then(r => r.text())
             .then(html => {
-                document.getElementById("header-placeholder").innerHTML = html;
+                document.getElementById("header-placeholder").innerHTML = html.replaceAll('="/', '="../../../');
             });
     </script>
 
@@ -379,49 +379,49 @@
         // All known photos for this species. One thumbnail per specimen is shown
         // in the preview grid; the lightbox cycles through the full list.
         const galleryImages = [
-            "/images/specimens/A_cf_lavendula/30208/30208-1.jpg",
-            "/images/specimens/A_cf_lavendula/30208/30208-2.jpg",
-            "/images/specimens/A_cf_lavendula/30208/30208-3.jpg",
-            "/images/specimens/A_cf_lavendula/30208/30208-4.jpg",
-            "/images/specimens/A_cf_lavendula/30213/30213-1.jpg",
-            "/images/specimens/A_cf_lavendula/30213/30213-2.jpg",
-            "/images/specimens/A_cf_lavendula/30213/30213-3.jpg",
-            "/images/specimens/A_cf_lavendula/30213/30213-4.jpg",
-            "/images/specimens/A_cf_lavendula/30213/30213-5.jpg",
-            "/images/specimens/A_cf_lavendula/30214/30214-1.jpg",
-            "/images/specimens/A_cf_lavendula/30214/30214-2.jpg",
-            "/images/specimens/A_cf_lavendula/30214/30214-3.jpg",
-            "/images/specimens/A_cf_lavendula/30214/30214-4.jpg",
-            "/images/specimens/A_cf_lavendula/30216/30216-1.jpg",
-            "/images/specimens/A_cf_lavendula/30216/30216-2.jpg",
-            "/images/specimens/A_cf_lavendula/30216/30216-3.jpg",
-            "/images/specimens/A_cf_lavendula/30216/30216-4.jpg",
-            "/images/specimens/A_cf_lavendula/30216/30216-5.jpg",
-            "/images/specimens/A_cf_lavendula/30217/30217-1.jpg",
-            "/images/specimens/A_cf_lavendula/30217/30217-2.jpg",
-            "/images/specimens/A_cf_lavendula/30217/30217-3.jpg",
-            "/images/specimens/A_cf_lavendula/30217/30217-4.jpg",
-            "/images/specimens/A_cf_lavendula/30217/30217-5.jpg",
-            "/images/specimens/A_cf_lavendula/30217/30217-6.jpg",
-            "/images/specimens/A_cf_lavendula/30218/30218-1.jpg",
-            "/images/specimens/A_cf_lavendula/30218/30218-2.jpg",
-            "/images/specimens/A_cf_lavendula/30218/30218-3.jpg",
-            "/images/specimens/A_cf_lavendula/30218/30218-4.jpg",
-            "/images/specimens/A_cf_lavendula/30218/30218-5.jpg",
-            "/images/specimens/A_cf_lavendula/30219/30219-1.jpg",
-            "/images/specimens/A_cf_lavendula/30219/30219-2.jpg",
-            "/images/specimens/A_cf_lavendula/30219/30219-3.jpg",
-            "/images/specimens/A_cf_lavendula/30219/30219-4.jpg",
-            "/images/specimens/A_cf_lavendula/30219/30219-5.jpg",
-            "/images/specimens/A_cf_lavendula/30287/30287-1.jpg",
-            "/images/specimens/A_cf_lavendula/30287/30287-2.jpg",
-            "/images/specimens/A_cf_lavendula/30291/30291-1.jpg",
-            "/images/specimens/A_cf_lavendula/30291/30291-2.jpg",
-            "/images/specimens/A_cf_lavendula/30291/30291-3.jpg",
-            "/images/specimens/A_cf_lavendula/40220/40220-1.jpg",
-            "/images/specimens/A_cf_lavendula/40220/40220-2.jpg",
-            "/images/specimens/A_cf_lavendula/40220/40220-3.jpg",
-            "/images/specimens/A_cf_lavendula/40220/40220-4.jpg"
+            "../../../images/specimens/A_cf_lavendula/30208/30208-1.jpg",
+            "../../../images/specimens/A_cf_lavendula/30208/30208-2.jpg",
+            "../../../images/specimens/A_cf_lavendula/30208/30208-3.jpg",
+            "../../../images/specimens/A_cf_lavendula/30208/30208-4.jpg",
+            "../../../images/specimens/A_cf_lavendula/30213/30213-1.jpg",
+            "../../../images/specimens/A_cf_lavendula/30213/30213-2.jpg",
+            "../../../images/specimens/A_cf_lavendula/30213/30213-3.jpg",
+            "../../../images/specimens/A_cf_lavendula/30213/30213-4.jpg",
+            "../../../images/specimens/A_cf_lavendula/30213/30213-5.jpg",
+            "../../../images/specimens/A_cf_lavendula/30214/30214-1.jpg",
+            "../../../images/specimens/A_cf_lavendula/30214/30214-2.jpg",
+            "../../../images/specimens/A_cf_lavendula/30214/30214-3.jpg",
+            "../../../images/specimens/A_cf_lavendula/30214/30214-4.jpg",
+            "../../../images/specimens/A_cf_lavendula/30216/30216-1.jpg",
+            "../../../images/specimens/A_cf_lavendula/30216/30216-2.jpg",
+            "../../../images/specimens/A_cf_lavendula/30216/30216-3.jpg",
+            "../../../images/specimens/A_cf_lavendula/30216/30216-4.jpg",
+            "../../../images/specimens/A_cf_lavendula/30216/30216-5.jpg",
+            "../../../images/specimens/A_cf_lavendula/30217/30217-1.jpg",
+            "../../../images/specimens/A_cf_lavendula/30217/30217-2.jpg",
+            "../../../images/specimens/A_cf_lavendula/30217/30217-3.jpg",
+            "../../../images/specimens/A_cf_lavendula/30217/30217-4.jpg",
+            "../../../images/specimens/A_cf_lavendula/30217/30217-5.jpg",
+            "../../../images/specimens/A_cf_lavendula/30217/30217-6.jpg",
+            "../../../images/specimens/A_cf_lavendula/30218/30218-1.jpg",
+            "../../../images/specimens/A_cf_lavendula/30218/30218-2.jpg",
+            "../../../images/specimens/A_cf_lavendula/30218/30218-3.jpg",
+            "../../../images/specimens/A_cf_lavendula/30218/30218-4.jpg",
+            "../../../images/specimens/A_cf_lavendula/30218/30218-5.jpg",
+            "../../../images/specimens/A_cf_lavendula/30219/30219-1.jpg",
+            "../../../images/specimens/A_cf_lavendula/30219/30219-2.jpg",
+            "../../../images/specimens/A_cf_lavendula/30219/30219-3.jpg",
+            "../../../images/specimens/A_cf_lavendula/30219/30219-4.jpg",
+            "../../../images/specimens/A_cf_lavendula/30219/30219-5.jpg",
+            "../../../images/specimens/A_cf_lavendula/30287/30287-1.jpg",
+            "../../../images/specimens/A_cf_lavendula/30287/30287-2.jpg",
+            "../../../images/specimens/A_cf_lavendula/30291/30291-1.jpg",
+            "../../../images/specimens/A_cf_lavendula/30291/30291-2.jpg",
+            "../../../images/specimens/A_cf_lavendula/30291/30291-3.jpg",
+            "../../../images/specimens/A_cf_lavendula/40220/40220-1.jpg",
+            "../../../images/specimens/A_cf_lavendula/40220/40220-2.jpg",
+            "../../../images/specimens/A_cf_lavendula/40220/40220-3.jpg",
+            "../../../images/specimens/A_cf_lavendula/40220/40220-4.jpg"
         ];
 
         // Specimen id (the 30xxx folder name) embedded in each image path.
