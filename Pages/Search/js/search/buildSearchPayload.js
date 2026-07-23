@@ -175,12 +175,14 @@ function addBasalBulbConditions(conditions) {
 }
 
 function addStipeConditions(conditions) {
-    const lengthCondition = makeNumericCondition(
-        FIELD_COLUMNS.stipeLength,
-        getNumberValue("stipe-length-mm"),
-        getCheckboxValue("stipe-length-approximate")
-    );
-    if (lengthCondition) conditions.push(lengthCondition);
+    const lengthBucket = getRadioValue("stipeLength");
+    if (lengthBucket === "short") {
+        conditions.push({ field: FIELD_COLUMNS.stipeLength, mode: "numeric_less_than", value: 50 });
+    } else if (lengthBucket === "medium") {
+        conditions.push({ field: FIELD_COLUMNS.stipeLength, mode: "numeric_range", min: 50, max: 120 });
+    } else if (lengthBucket === "tall") {
+        conditions.push({ field: FIELD_COLUMNS.stipeLength, mode: "numeric_greater_than", value: 120 });
+    }
 
     const widthCondition = makeNumericCondition(
         FIELD_COLUMNS.stipeWidth,

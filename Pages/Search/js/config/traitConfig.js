@@ -9,6 +9,7 @@ import {
     STAINING_COLOR_OPTIONS,
     STAINING_STATE_OPTIONS,
     STIPE_DECORATION_OPTIONS,
+    STIPE_LENGTH_BUCKET_OPTIONS,
     STIPE_SHAPE_OPTIONS,
     SURFACE_TEXTURE_OPTIONS,
     TRI_STATE_OPTIONS,
@@ -211,14 +212,13 @@ export const STIPE_MAJOR_FIELDS = [
     },
     {
         id: "stipeLength",
-        type: "numberWithApprox",
+        type: "triState",
         label: "Stipe length",
         column: FIELD_COLUMNS.stipeLength,
-        inputId: "stipe-length-mm",
-        approximateId: "stipe-length-approximate",
-        placeholder: "e.g., 80",
-        unit: "mm",
-        note: "Enter the approximate stipe length in millimeters."
+        options: STIPE_LENGTH_BUCKET_OPTIONS,
+        note: "Choose the length range that best matches the stipe.",
+        helpSummary: "Length ranges",
+        helpText: "**Short** = less than 50mm (~2 in). **Medium** = 50–120mm (~2–5 in). **Tall** = greater than 120mm (~5+ in)."
     },
     {
         id: "stipeWidth",

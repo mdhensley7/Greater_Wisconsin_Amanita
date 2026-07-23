@@ -67,6 +67,12 @@ export const DIAMETER_BUCKET_OPTIONS = [
     { label: "Large (> 80mm)", value: "large" }
 ];
 
+export const STIPE_LENGTH_BUCKET_OPTIONS = [
+    { label: "Short (< 50mm)", value: "short" },
+    { label: "Medium (50–120mm)", value: "medium" },
+    { label: "Tall (> 120mm)", value: "tall" }
+];
+
 export const STAINING_STATE_OPTIONS = [
     { label: "Any", value: ANY_VALUE },
     { label: "Present", value: "present" },
